@@ -382,8 +382,8 @@ public class DomainPackageImpl extends EPackageImpl implements DomainPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCentroMant_UsuariosAtendidos() {
-		return (EReference)centroMantEClass.getEStructuralFeatures().get(6);
+	public EAttribute getCentroMant_IncrementalReparacion() {
+		return (EAttribute)centroMantEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -391,7 +391,7 @@ public class DomainPackageImpl extends EPackageImpl implements DomainPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCentroMant_HistorialReparacion() {
+	public EReference getCentroMant_UsuariosAtendidos() {
 		return (EReference)centroMantEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -400,7 +400,7 @@ public class DomainPackageImpl extends EPackageImpl implements DomainPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCentroMant_OwnedByDomain() {
+	public EReference getCentroMant_HistorialReparacion() {
 		return (EReference)centroMantEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -409,8 +409,17 @@ public class DomainPackageImpl extends EPackageImpl implements DomainPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCentroMant_Ubicacion() {
+	public EReference getCentroMant_OwnedByDomain() {
 		return (EReference)centroMantEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCentroMant_Ubicacion() {
+		return (EReference)centroMantEClass.getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -757,6 +766,7 @@ public class DomainPackageImpl extends EPackageImpl implements DomainPackage {
 		createEAttribute(centroMantEClass, CENTRO_MANT__DESCRIPCION);
 		createEAttribute(centroMantEClass, CENTRO_MANT__USUARIO);
 		createEAttribute(centroMantEClass, CENTRO_MANT__CONTRASENIA);
+		createEAttribute(centroMantEClass, CENTRO_MANT__INCREMENTAL_REPARACION);
 		createEReference(centroMantEClass, CENTRO_MANT__USUARIOS_ATENDIDOS);
 		createEReference(centroMantEClass, CENTRO_MANT__HISTORIAL_REPARACION);
 		createEReference(centroMantEClass, CENTRO_MANT__OWNED_BY_DOMAIN);
@@ -868,6 +878,7 @@ public class DomainPackageImpl extends EPackageImpl implements DomainPackage {
 		initEAttribute(getCentroMant_Descripcion(), thesmaPackage.getString(), "descripcion", " ", 0, 1, CentroMant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCentroMant_Usuario(), thesmaPackage.getString(), "usuario", " ", 0, 1, CentroMant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCentroMant_Contrasenia(), thesmaPackage.getString(), "contrasenia", " ", 0, 1, CentroMant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCentroMant_IncrementalReparacion(), thesmaPackage.getEIntegerObject(), "incrementalReparacion", "0", 0, 1, CentroMant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCentroMant_UsuariosAtendidos(), this.getUsuario(), this.getUsuario_CentroMant(), "usuariosAtendidos", null, 0, -1, CentroMant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCentroMant_HistorialReparacion(), theReparacionvehiculoPackage.getReparacion(), theReparacionvehiculoPackage.getReparacion_TheCentroMant(), "historialReparacion", null, 0, -1, CentroMant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCentroMant_OwnedByDomain(), this.getDomain(), this.getDomain_ListaDeCentMant(), "ownedByDomain", null, 0, 1, CentroMant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -875,6 +886,8 @@ public class DomainPackageImpl extends EPackageImpl implements DomainPackage {
 
 		EOperation op = addEOperation(centroMantEClass, null, "procesarSolicitudVisita", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getAutomovil(), "automovilReparacion", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		addEOperation(centroMantEClass, thesmaPackage.getEIntegerObject(), "incrementarIdReparaciones", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDomain_TheModelFactory(), thesmaPackage.getModelFactory(), thesmaPackage.getModelFactory_TheDomain(), "theModelFactory", null, 0, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -927,6 +940,10 @@ public class DomainPackageImpl extends EPackageImpl implements DomainPackage {
 
 		op = addEOperation(domainEClass, null, "solicitarVisita", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theContenedorsolicitudvisitaviewmodelPackage.getContenedorSolicitudVisitaViewModel(), "formulario", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = addEOperation(domainEClass, null, "mostrarInfoCmSolicitudVisita", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, thesmaPackage.getString(), "idCm", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theContenedorsolicitudvisitaviewmodelPackage.getContenedorSolicitudVisitaViewModel(), "Formulario", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(ubicacionCMEClass, UbicacionCM.class, "UbicacionCM", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getUbicacionCM_Pais(), thesmaPackage.getString(), "pais", " ", 0, 1, UbicacionCM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

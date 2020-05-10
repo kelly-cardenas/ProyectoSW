@@ -277,28 +277,58 @@ public class SolicitudVisitaViewPart  extends ViewPart {
 //
       }
       public void solicitarAction ( String  event ){
-           //semantics
-
+contenedorbusquedaViewModel.setPlacavehiculo(textPlacaVehiculoBusqueda.getText());	
+    	  
+    	  contenedorsolicitudVisitaViewModel.solicitarVisita();
+    	  
+    	  limpiarCampos();
+    
+    	  mfm.salvar();
       }
 
       public void cancelarAction ( String  event ){
-           //semantics
-
+    	  textDireccionDatosCm.setText("");
+    	  textIdCmBusqueda.setText("");
+    	  textNombreCmDatosCm.setText("");
+    	  textNombreRepresentanteDatosCm.setText("");
+    	  textPlacaVehiculoBusqueda.setText("");
+    	  
+    	  
+    	  contenedorbusquedaViewModel.setPlacavehiculo("");
+    	  contenedorbusquedaViewModel.setIdcm("");
+    	  contenedordatosCmViewModel.setDireccion("");
+    	  contenedordatosCmViewModel.setNombrecm("");
+    	  contenedordatosCmViewModel.setNombrerepresentante("");
       }
 
       public void buscarAction ( String  event ){
-           //semantics
-
+contenedorbusquedaViewModel.setIdcm(textIdCmBusqueda.getText());
+    	  contenedorsolicitudVisitaViewModel.mostrarInfoCmSolicitudVisita(textIdCmBusqueda.getText());
+    	  mfm.salvar();
       }
 
       public void constructorContenedorSolicitudVisitaViewPart (){
-                          //semantics
-
+            limpiarCampos();
       }
 
       public void syncModel (){
-                          //semantics
+             //semantics
+      }
 
+      public void limpiarCampos (){
+    	  
+    	  textDireccionDatosCm.setText("");
+    	  textIdCmBusqueda.setText("");
+    	  textNombreCmDatosCm.setText("");
+    	  textNombreRepresentanteDatosCm.setText("");
+    	  textPlacaVehiculoBusqueda.setText("");
+    	  
+    	  
+    	  contenedorbusquedaViewModel.setPlacavehiculo("");
+    	  contenedorbusquedaViewModel.setIdcm("");
+    	  contenedordatosCmViewModel.setDireccion("");
+    	  contenedordatosCmViewModel.setNombrecm("");
+    	  contenedordatosCmViewModel.setNombrerepresentante("");
       }
 
 }

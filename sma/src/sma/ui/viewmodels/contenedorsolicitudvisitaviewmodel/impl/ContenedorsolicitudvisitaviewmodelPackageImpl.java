@@ -413,6 +413,9 @@ public class ContenedorsolicitudvisitaviewmodelPackageImpl extends EPackageImpl 
 		addEOperation(contenedorSolicitudVisitaViewModelEClass, null, "implementarModelo", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		addEOperation(contenedorSolicitudVisitaViewModelEClass, null, "solicitarVisita", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = addEOperation(contenedorSolicitudVisitaViewModelEClass, null, "mostrarInfoCmSolicitudVisita", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, thesmaPackage.getString(), "idCm", 0, 1, IS_UNIQUE, IS_ORDERED);
 	}
 
 } //ContenedorsolicitudvisitaviewmodelPackageImpl

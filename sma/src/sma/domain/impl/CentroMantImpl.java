@@ -44,6 +44,7 @@ import sma.domain.reparacionvehiculo.ReparacionvehiculoPackage;
  *   <li>{@link sma.domain.impl.CentroMantImpl#getDescripcion <em>Descripcion</em>}</li>
  *   <li>{@link sma.domain.impl.CentroMantImpl#getUsuario <em>Usuario</em>}</li>
  *   <li>{@link sma.domain.impl.CentroMantImpl#getContrasenia <em>Contrasenia</em>}</li>
+ *   <li>{@link sma.domain.impl.CentroMantImpl#getIncrementalReparacion <em>Incremental Reparacion</em>}</li>
  *   <li>{@link sma.domain.impl.CentroMantImpl#getUsuariosAtendidos <em>Usuarios Atendidos</em>}</li>
  *   <li>{@link sma.domain.impl.CentroMantImpl#getHistorialReparacion <em>Historial Reparacion</em>}</li>
  *   <li>{@link sma.domain.impl.CentroMantImpl#getOwnedByDomain <em>Owned By Domain</em>}</li>
@@ -172,6 +173,26 @@ public class CentroMantImpl extends EObjectImpl implements CentroMant {
 	 * @ordered
 	 */
 	protected String contrasenia = CONTRASENIA_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getIncrementalReparacion() <em>Incremental Reparacion</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIncrementalReparacion()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Integer INCREMENTAL_REPARACION_EDEFAULT = new Integer(0);
+
+	/**
+	 * The cached value of the '{@link #getIncrementalReparacion() <em>Incremental Reparacion</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIncrementalReparacion()
+	 * @generated
+	 * @ordered
+	 */
+	protected Integer incrementalReparacion = INCREMENTAL_REPARACION_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getUsuariosAtendidos() <em>Usuarios Atendidos</em>}' reference list.
@@ -353,6 +374,27 @@ public class CentroMantImpl extends EObjectImpl implements CentroMant {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Integer getIncrementalReparacion() {
+		return incrementalReparacion;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIncrementalReparacion(Integer newIncrementalReparacion) {
+		Integer oldIncrementalReparacion = incrementalReparacion;
+		incrementalReparacion = newIncrementalReparacion;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DomainPackage.CENTRO_MANT__INCREMENTAL_REPARACION, oldIncrementalReparacion, incrementalReparacion));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<Usuario> getUsuariosAtendidos() {
 		if (usuariosAtendidos == null) {
 			usuariosAtendidos = new EObjectWithInverseResolvingEList<Usuario>(Usuario.class, this, DomainPackage.CENTRO_MANT__USUARIOS_ATENDIDOS, DomainPackage.USUARIO__CENTRO_MANT);
@@ -462,8 +504,32 @@ public class CentroMantImpl extends EObjectImpl implements CentroMant {
 	 * @generated
 	 */
 	public void procesarSolicitudVisita(final Automovil automovilReparacion) {
-		//TODO procesarSolicitudVisita
-		
+		Reparacion reparacion = sma.domain.reparacionvehiculo.ReparacionvehiculoFactory.eINSTANCE.createReparacion();
+				
+						reparacion.setId(incrementarIdReparaciones());
+						
+						reparacion.setEstado("pendiente");
+						reparacion.setTheCentroMant(this);
+						reparacion.setTheAutomovil(automovilReparacion);
+				
+						historialReparacion.add(reparacion);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Integer incrementarIdReparaciones() {
+		if (getIncrementalReparacion() == null) {
+							setIncrementalReparacion(0);
+				}
+						
+						
+						int retorno = getIncrementalReparacion();
+						
+						setIncrementalReparacion(getIncrementalReparacion() + 1); 
+						return retorno;
 	}
 
 	/**
@@ -545,6 +611,8 @@ public class CentroMantImpl extends EObjectImpl implements CentroMant {
 				return getUsuario();
 			case DomainPackage.CENTRO_MANT__CONTRASENIA:
 				return getContrasenia();
+			case DomainPackage.CENTRO_MANT__INCREMENTAL_REPARACION:
+				return getIncrementalReparacion();
 			case DomainPackage.CENTRO_MANT__USUARIOS_ATENDIDOS:
 				return getUsuariosAtendidos();
 			case DomainPackage.CENTRO_MANT__HISTORIAL_REPARACION:
@@ -583,6 +651,9 @@ public class CentroMantImpl extends EObjectImpl implements CentroMant {
 				return;
 			case DomainPackage.CENTRO_MANT__CONTRASENIA:
 				setContrasenia((String)newValue);
+				return;
+			case DomainPackage.CENTRO_MANT__INCREMENTAL_REPARACION:
+				setIncrementalReparacion((Integer)newValue);
 				return;
 			case DomainPackage.CENTRO_MANT__USUARIOS_ATENDIDOS:
 				getUsuariosAtendidos().clear();
@@ -628,6 +699,9 @@ public class CentroMantImpl extends EObjectImpl implements CentroMant {
 			case DomainPackage.CENTRO_MANT__CONTRASENIA:
 				setContrasenia(CONTRASENIA_EDEFAULT);
 				return;
+			case DomainPackage.CENTRO_MANT__INCREMENTAL_REPARACION:
+				setIncrementalReparacion(INCREMENTAL_REPARACION_EDEFAULT);
+				return;
 			case DomainPackage.CENTRO_MANT__USUARIOS_ATENDIDOS:
 				getUsuariosAtendidos().clear();
 				return;
@@ -664,6 +738,8 @@ public class CentroMantImpl extends EObjectImpl implements CentroMant {
 				return USUARIO_EDEFAULT == null ? usuario != null : !USUARIO_EDEFAULT.equals(usuario);
 			case DomainPackage.CENTRO_MANT__CONTRASENIA:
 				return CONTRASENIA_EDEFAULT == null ? contrasenia != null : !CONTRASENIA_EDEFAULT.equals(contrasenia);
+			case DomainPackage.CENTRO_MANT__INCREMENTAL_REPARACION:
+				return INCREMENTAL_REPARACION_EDEFAULT == null ? incrementalReparacion != null : !INCREMENTAL_REPARACION_EDEFAULT.equals(incrementalReparacion);
 			case DomainPackage.CENTRO_MANT__USUARIOS_ATENDIDOS:
 				return usuariosAtendidos != null && !usuariosAtendidos.isEmpty();
 			case DomainPackage.CENTRO_MANT__HISTORIAL_REPARACION:
@@ -698,6 +774,8 @@ public class CentroMantImpl extends EObjectImpl implements CentroMant {
 		result.append(usuario);
 		result.append(", contrasenia: ");
 		result.append(contrasenia);
+		result.append(", incrementalReparacion: ");
+		result.append(incrementalReparacion);
 		result.append(')');
 		return result.toString();
 	}

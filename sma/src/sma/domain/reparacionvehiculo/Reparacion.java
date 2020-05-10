@@ -24,6 +24,7 @@ import sma.domain.CentroMant;
  *   <li>{@link sma.domain.reparacionvehiculo.Reparacion#getNumeroFallasAcertadas <em>Numero Fallas Acertadas</em>}</li>
  *   <li>{@link sma.domain.reparacionvehiculo.Reparacion#getFecha <em>Fecha</em>}</li>
  *   <li>{@link sma.domain.reparacionvehiculo.Reparacion#getHora <em>Hora</em>}</li>
+ *   <li>{@link sma.domain.reparacionvehiculo.Reparacion#getId <em>Id</em>}</li>
  * </ul>
  *
  * @see sma.domain.reparacionvehiculo.ReparacionvehiculoPackage#getReparacion()
@@ -248,5 +249,32 @@ public interface Reparacion extends EObject {
 	 * @generated
 	 */
 	void setHora(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * The default value is <code>"0"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(Integer)
+	 * @see sma.domain.reparacionvehiculo.ReparacionvehiculoPackage#getReparacion_Id()
+	 * @model default="0" dataType="sma.EIntegerObject"
+	 * @generated
+	 */
+	Integer getId();
+
+	/**
+	 * Sets the value of the '{@link sma.domain.reparacionvehiculo.Reparacion#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(Integer value);
 
 } // Reparacion

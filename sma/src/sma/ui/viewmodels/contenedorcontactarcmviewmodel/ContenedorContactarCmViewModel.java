@@ -113,7 +113,7 @@ public interface ContenedorContactarCmViewModel extends ViewModel {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="sma.String" eventoDataType="sma.String"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\t\t\t\r\n\t\t\t\t\t\tString action = \"\";\r\n\t\t\t\t\t\treturn action;\r\n\t\t\t\t\r\n\t\t\t\r\n\t'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\t\t\t\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\tString action = \"\";\r\n\t\t\t\t\t\t\t\treturn action;\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\r\n\t'"
 	 * @generated
 	 */
 	String upadateDialog(String evento);
@@ -121,7 +121,7 @@ public interface ContenedorContactarCmViewModel extends ViewModel {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\t\t\t\r\n\t\t\t\tgetTheUI().mostrarCmsCercanos(this);\r\n\t\t\t\t\r\n\t\t\t\r\n\t'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\t\t\t\t\tgetOwnedByUI().mostrarCmsCercanos(this);\r\n\t\t\t\t\t\r\n\t\t\t\r\n\t'"
 	 * @generated
 	 */
 	void mostrarCmsCercanos();
@@ -129,7 +129,7 @@ public interface ContenedorContactarCmViewModel extends ViewModel {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\tContenedorUbicacionactualViewModel ubicacionActualVM \t= getTheContenedorUbicacionactualViewModel();\r\n\t\tContenedorCmrecomendadosViewModel cmRecomendadosVM\t\t= getTheContenedorCmrecomendadosViewModel();\r\n\t\t\r\n\t\tif ( ubicacionActualVM == null ) {\r\n\t\t\tubicacionActualVM = sma.ui.viewmodels.contenedorcontactarcmviewmodel.ContenedorcontactarcmviewmodelFactory\r\n\t\t\t\t\t.eINSTANCE.createContenedorUbicacionactualViewModel();\r\n\t\t}\r\n\t\t\r\n\t\tif ( cmRecomendadosVM == null ) {\r\n\t\t\tcmRecomendadosVM = sma.ui.viewmodels.contenedorcontactarcmviewmodel.ContenedorcontactarcmviewmodelFactory\r\n\t\t\t\t\t.eINSTANCE.createContenedorCmrecomendadosViewModel();\r\n\t\t}\r\n\t\t\r\n\t\tsetTheContenedorCmrecomendadosViewModel(cmRecomendadosVM);\r\n\t\tsetTheContenedorUbicacionactualViewModel(ubicacionActualVM);\r\n\t\t\r\n\t'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\t\t\t\r\n\t\t\t\tContenedorUbicacionactualViewModel ubicacionActualVM \t= getTheContenedorUbicacionactualViewModel();\r\n\t\t\t\tContenedorCmrecomendadosViewModel cmRecomendadosVM\t\t= getTheContenedorCmrecomendadosViewModel();\r\n\t\t\t\t\r\n\t\t\t\tif ( ubicacionActualVM == null ) {\r\n\t\t\t\t\tubicacionActualVM = sma.ui.viewmodels.contenedorcontactarcmviewmodel.ContenedorcontactarcmviewmodelFactory\r\n\t\t\t\t\t\t\t.eINSTANCE.createContenedorUbicacionactualViewModel();\r\n\t\t\t\t}\r\n\t\t\t\t\r\n\t\t\t\tif ( cmRecomendadosVM == null ) {\r\n\t\t\t\t\tcmRecomendadosVM = sma.ui.viewmodels.contenedorcontactarcmviewmodel.ContenedorcontactarcmviewmodelFactory\r\n\t\t\t\t\t\t\t.eINSTANCE.createContenedorCmrecomendadosViewModel();\r\n\t\t\t\t}\r\n\t\t\t\t\r\n\t\t\t\tsetTheContenedorCmrecomendadosViewModel(cmRecomendadosVM);\r\n\t\t\t\tsetTheContenedorUbicacionactualViewModel(ubicacionActualVM);\r\n\t\t\t\t\r\n\t\t\t\r\n\t'"
 	 * @generated
 	 */
 	void implementarModelo();

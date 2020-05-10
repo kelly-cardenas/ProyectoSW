@@ -213,9 +213,11 @@ public class ContenedorContactarCmViewModelImpl extends ViewModelImpl implements
 		
 				
 						
-								String action = "";
-								return action;
-						
+								
+										String action = "";
+										return action;
+								
+							
 					
 			
 	}
@@ -228,9 +230,8 @@ public class ContenedorContactarCmViewModelImpl extends ViewModelImpl implements
 	public void mostrarCmsCercanos() {
 		
 				
-						
-						getTheUI().mostrarCmsCercanos(this);
-						
+								getOwnedByUI().mostrarCmsCercanos(this);
+							
 					
 			
 	}
@@ -243,22 +244,24 @@ public class ContenedorContactarCmViewModelImpl extends ViewModelImpl implements
 	public void implementarModelo() {
 		
 				
-				ContenedorUbicacionactualViewModel ubicacionActualVM 	= getTheContenedorUbicacionactualViewModel();
-				ContenedorCmrecomendadosViewModel cmRecomendadosVM		= getTheContenedorCmrecomendadosViewModel();
-				
-				if ( ubicacionActualVM == null ) {
-					ubicacionActualVM = sma.ui.viewmodels.contenedorcontactarcmviewmodel.ContenedorcontactarcmviewmodelFactory
-							.eINSTANCE.createContenedorUbicacionactualViewModel();
-				}
-				
-				if ( cmRecomendadosVM == null ) {
-					cmRecomendadosVM = sma.ui.viewmodels.contenedorcontactarcmviewmodel.ContenedorcontactarcmviewmodelFactory
-							.eINSTANCE.createContenedorCmrecomendadosViewModel();
-				}
-				
-				setTheContenedorCmrecomendadosViewModel(cmRecomendadosVM);
-				setTheContenedorUbicacionactualViewModel(ubicacionActualVM);
-				
+						
+						ContenedorUbicacionactualViewModel ubicacionActualVM 	= getTheContenedorUbicacionactualViewModel();
+						ContenedorCmrecomendadosViewModel cmRecomendadosVM		= getTheContenedorCmrecomendadosViewModel();
+						
+						if ( ubicacionActualVM == null ) {
+							ubicacionActualVM = sma.ui.viewmodels.contenedorcontactarcmviewmodel.ContenedorcontactarcmviewmodelFactory
+									.eINSTANCE.createContenedorUbicacionactualViewModel();
+						}
+						
+						if ( cmRecomendadosVM == null ) {
+							cmRecomendadosVM = sma.ui.viewmodels.contenedorcontactarcmviewmodel.ContenedorcontactarcmviewmodelFactory
+									.eINSTANCE.createContenedorCmrecomendadosViewModel();
+						}
+						
+						setTheContenedorCmrecomendadosViewModel(cmRecomendadosVM);
+						setTheContenedorUbicacionactualViewModel(ubicacionActualVM);
+						
+					
 			
 	}
 

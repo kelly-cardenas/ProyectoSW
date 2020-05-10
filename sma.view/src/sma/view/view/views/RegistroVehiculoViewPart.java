@@ -323,7 +323,7 @@ public class RegistroVehiculoViewPart  extends ViewPart {
 
         //
         IObservableList observeList2= EMFObservables.observeList(Realm.getDefault(),contenedorvehiculosRegistradosViewModel,
-        ContenedorregistrovehiculoviewmodelPackage.Literals.CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__LISTA_VEHICULO_VIEW_MODEL);
+        ContenedorregistrovehiculoviewmodelPackage.Literals.CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__LISTA_VEHICULO);
         tableViewerVehiculo.setInput(observeList2);
             //
 
@@ -368,7 +368,7 @@ limpiarCampos();
       }
 
       public void constructorContenedorRegistroVehiculoViewPart (){
-             //semantics
+             limpiarCampos();
       }
 
       public void syncModel (){
@@ -376,6 +376,12 @@ limpiarCampos();
       }
 
       public void limpiarCampos (){
+             contenedordetalleVehiculoViewModel.setMarca("");
+    	  contenedordetalleVehiculoViewModel.setModelo("");
+    	  contenedordetalleVehiculoViewModel.setPlaca("");
+    	  contenedordetalleVehiculoViewModel.setReferencia("");
+    	  contenedordetalleVehiculoViewModel.setTipovehiculo("");
+    	  
              textMarcaDetalleVehiculo.setText("");
     	  textModeloDetalleVehiculo.setText("");
     	  textPlacaDetalleVehiculo.setText("");

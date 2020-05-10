@@ -357,7 +357,7 @@ public class CrudClienteViewPart  extends ViewPart {
         bindingContext.bindValue(observeTextUsuarioDatosdelacuentaObserveWidget,contenedordatosdelacuentaUsuarioDatosdelacuentaObserveValue, null, null);
         //
         IObservableValue observeTextContraseñaDatosdelacuentaObserveWidget = WidgetProperties.text(SWT.Modify).observe(textContraseñaDatosdelacuenta);
-        IObservableValue contenedordatosdelacuentaContraseñaDatosdelacuentaObserveValue = EMFObservables.observeValue(contenedordatosdelacuentaViewModel,ContenedorcrudclienteviewmodelPackage.Literals.CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__CONTRASEÑA);
+        IObservableValue contenedordatosdelacuentaContraseñaDatosdelacuentaObserveValue = EMFObservables.observeValue(contenedordatosdelacuentaViewModel,ContenedorcrudclienteviewmodelPackage.Literals.CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__CONTRASENIA);
         bindingContext.bindValue(observeTextContraseñaDatosdelacuentaObserveWidget,contenedordatosdelacuentaContraseñaDatosdelacuentaObserveValue, null, null);
         //
         ObservableListContentProvider listContentProvider0 = new ObservableListContentProvider();
@@ -368,7 +368,7 @@ public class CrudClienteViewPart  extends ViewPart {
 
         //
         IObservableList observeList0= EMFObservables.observeList(Realm.getDefault(),contenedormaestroClienteViewModel,
-        ContenedorcrudclienteviewmodelPackage.Literals.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__LISTA_CLIENTE_VIEW_MODEL);
+        ContenedorcrudclienteviewmodelPackage.Literals.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__LISTA_CLIENTE);
         tableViewerCliente.setInput(observeList0);
             //
 

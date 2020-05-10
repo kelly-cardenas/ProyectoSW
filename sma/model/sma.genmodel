@@ -106,6 +106,9 @@
         <genFeatures createChild="false">
           <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/CentroMant/contrasenia"/>
         </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/CentroMant/incrementalReparacion"/>
+        </genFeatures>
         <genFeatures notify="false" createChild="false" propertySortChoices="true">
           <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//domain/CentroMant/usuariosAtendidos"/>
         </genFeatures>
@@ -123,6 +126,9 @@
           <genParameters>
             <ecoreParameter href="sma.ecore#//domain/CentroMant/procesarSolicitudVisita/automovilReparacion"/>
           </genParameters>
+        </genOperations>
+        <genOperations>
+          <ecoreOperation href="sma.ecore#//domain/CentroMant/incrementarIdReparaciones"/>
         </genOperations>
       </genClasses>
       <genClasses>
@@ -232,6 +238,15 @@
             <ecoreParameter href="sma.ecore#//domain/Domain/solicitarVisita/formulario"/>
           </genParameters>
         </genOperations>
+        <genOperations>
+          <ecoreOperation href="sma.ecore#//domain/Domain/mostrarInfoCmSolicitudVisita"/>
+          <genParameters>
+            <ecoreParameter href="sma.ecore#//domain/Domain/mostrarInfoCmSolicitudVisita/idCm"/>
+          </genParameters>
+          <genParameters>
+            <ecoreParameter href="sma.ecore#//domain/Domain/mostrarInfoCmSolicitudVisita/Formulario"/>
+          </genParameters>
+        </genOperations>
       </genClasses>
       <genClasses>
         <ecoreClass href="sma.ecore#//domain/UbicacionCM"/>
@@ -332,6 +347,9 @@
           </genFeatures>
           <genFeatures createChild="false">
             <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/reparacionvehiculo/Reparacion/hora"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/reparacionvehiculo/Reparacion/id"/>
           </genFeatures>
         </genClasses>
       </nestedGenPackages>
@@ -476,6 +494,12 @@
           <ecoreOperation href="sma.ecore#//ui/UI/solicitarVisita"/>
           <genParameters>
             <ecoreParameter href="sma.ecore#//ui/UI/solicitarVisita/formulario"/>
+          </genParameters>
+        </genOperations>
+        <genOperations>
+          <ecoreOperation href="sma.ecore#//ui/UI/mostrarInfoCmSolicitudVisita"/>
+          <genParameters>
+            <ecoreParameter href="sma.ecore#//ui/UI/mostrarInfoCmSolicitudVisita/idCm"/>
           </genParameters>
         </genOperations>
       </genClasses>
@@ -1000,6 +1024,12 @@
             </genOperations>
             <genOperations>
               <ecoreOperation href="sma.ecore#//ui/viewmodels/contenedorsolicitudvisitaviewmodel/ContenedorSolicitudVisitaViewModel/solicitarVisita"/>
+            </genOperations>
+            <genOperations>
+              <ecoreOperation href="sma.ecore#//ui/viewmodels/contenedorsolicitudvisitaviewmodel/ContenedorSolicitudVisitaViewModel/mostrarInfoCmSolicitudVisita"/>
+              <genParameters>
+                <ecoreParameter href="sma.ecore#//ui/viewmodels/contenedorsolicitudvisitaviewmodel/ContenedorSolicitudVisitaViewModel/mostrarInfoCmSolicitudVisita/idCm"/>
+              </genParameters>
             </genOperations>
           </genClasses>
         </nestedGenPackages>

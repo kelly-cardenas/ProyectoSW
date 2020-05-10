@@ -138,13 +138,22 @@ public interface ReparacionvehiculoPackage extends EPackage {
 	int REPARACION__HORA = 7;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REPARACION__ID = 8;
+
+	/**
 	 * The number of structural features of the '<em>Reparacion</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REPARACION_FEATURE_COUNT = 8;
+	int REPARACION_FEATURE_COUNT = 9;
 
 
 	/**
@@ -246,6 +255,17 @@ public interface ReparacionvehiculoPackage extends EPackage {
 	EAttribute getReparacion_Hora();
 
 	/**
+	 * Returns the meta object for the attribute '{@link sma.domain.reparacionvehiculo.Reparacion#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see sma.domain.reparacionvehiculo.Reparacion#getId()
+	 * @see #getReparacion()
+	 * @generated
+	 */
+	EAttribute getReparacion_Id();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -340,6 +360,14 @@ public interface ReparacionvehiculoPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute REPARACION__HORA = eINSTANCE.getReparacion_Hora();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REPARACION__ID = eINSTANCE.getReparacion_Id();
 
 	}
 

@@ -427,6 +427,9 @@ public class UiPackageImpl extends EPackageImpl implements UiPackage {
 
 		op = addEOperation(uiEClass, null, "solicitarVisita", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theContenedorsolicitudvisitaviewmodelPackage.getContenedorSolicitudVisitaViewModel(), "formulario", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = addEOperation(uiEClass, null, "mostrarInfoCmSolicitudVisita", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, thesmaPackage.getString(), "idCm", 0, 1, IS_UNIQUE, IS_ORDERED);
 	}
 
 } //UiPackageImpl

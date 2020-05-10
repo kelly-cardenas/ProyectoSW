@@ -248,7 +248,7 @@ public class ContactarCmViewPart  extends ViewPart {
         //
         ObservableListContentProvider listContentProvider4 = new ObservableListContentProvider();
         IObservableMap[] observeMaps4= EMFObservables.observeMaps(listContentProvider4.getKnownElements(),
-        new EStructuralFeature[]{ContenedorcontactarcmviewmodelPackage.Literals.LISTA_CM_VIEW_MODEL__NOMBRE,ContenedorcontactarcmviewmodelPackage.Literals.LISTA_CM_VIEW_MODEL__NOMBRE REPRESENTANTE,ContenedorcontactarcmviewmodelPackage.Literals.LISTA_CM_VIEW_MODEL__DIRECCION});
+        new EStructuralFeature[]{ContenedorcontactarcmviewmodelPackage.Literals.LISTA_CM_VIEW_MODEL__NOMBRE,ContenedorcontactarcmviewmodelPackage.Literals.LISTA_CM_VIEW_MODEL__NOMBREREPRESENTANTE,ContenedorcontactarcmviewmodelPackage.Literals.LISTA_CM_VIEW_MODEL__DIRECCION});
         tableViewerListaCm.setLabelProvider(new ObservableMapLabelProvider(observeMaps4));
         tableViewerListaCm.setContentProvider(listContentProvider4);
 
@@ -262,19 +262,36 @@ public class ContactarCmViewPart  extends ViewPart {
 //
       }
       public void aceptarAction ( String  event ){
-contenedorubicacionactualViewModel.setPais(textPaisUbicacionactual.getText());
+    	  System.out.println("viewpart - "+textDepartamentoUbicacionactual.getText());
+    	  contenedorubicacionactualViewModel.setPais(textPaisUbicacionactual.getText());
     	  contenedorubicacionactualViewModel.setDepartamento(textDepartamentoUbicacionactual.getText());
     	  contenedorubicacionactualViewModel.setCiudad(textCiudadUbicacionactual.getText());
     	  
+    	  contenedorcmrecomendadosViewModel.getListaListaCmViewModel().clear();
     	  contenedorcontactarCmViewModel.mostrarCmsCercanos();
+    	  mfm.salvar();
       }
 
       public void constructorContenedorContactarCmViewPart (){
-             //semantics
+    	
+    	  limpiarCampos();
+    	  contenedorcmrecomendadosViewModel.getListaListaCmViewModel().clear();
       }
 
       public void syncModel (){
              //semantics
+      }
+
+      public void limpiarCampos (){
+         
+    	  textPaisUbicacionactual.setText("");
+    	  textDepartamentoUbicacionactual.setText("");
+    	  textCiudadUbicacionactual.setText("");
+    	  
+    	  contenedorubicacionactualViewModel.setCiudad("");
+    	  contenedorubicacionactualViewModel.setDepartamento("");
+    	  contenedorubicacionactualViewModel.setPais("");
+    	  
       }
 
 }

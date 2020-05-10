@@ -113,7 +113,7 @@ public interface ContenedorSolicitudVisitaViewModel extends ViewModel {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="sma.String" eventoDataType="sma.String"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='\n\t\tString action = \"\";\n\t\treturn action;\n'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\t\t\t\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\tString action = \"\";\r\n\t\t\t\t\t\t\t\treturn action;\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\r\n\t'"
 	 * @generated
 	 */
 	String upadateDialog(String evento);
@@ -121,7 +121,7 @@ public interface ContenedorSolicitudVisitaViewModel extends ViewModel {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='//TODO implementarModelo\n'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\t\t\tContenedorBusquedaViewModel busquedaVM \t= getTheContenedorBusquedaViewModel();\r\n\t\t\t\t \t\tContenedorDatosCmViewModel datosCmVM \t= getTheContenedorDatosCmViewModel();\r\n\t\t\t\t \t\t\r\n\t\t\t\t \t\tif ( busquedaVM == null ) {\r\n\t\t\t\t\t\t\tbusquedaVM = sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.ContenedorsolicitudvisitaviewmodelFactory\r\n\t\t\t\t\t\t\t\t\t\t.eINSTANCE.createContenedorBusquedaViewModel();\r\n\t\t\t\t\t\t}\r\n\t\t\t\t \t\t\r\n\t\t\t\t \t\tif (datosCmVM == null) {\r\n\t\t\t\t\t\t\tdatosCmVM\t= sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.ContenedorsolicitudvisitaviewmodelFactory\r\n\t\t\t\t\t\t\t\t\t\t.eINSTANCE.createContenedorDatosCmViewModel();\r\n\t\t\t\t\t\t}\r\n\t\t\t\t \t\t\r\n\t\t\t\t \t\tsetTheContenedorBusquedaViewModel(busquedaVM);\r\n\t\t\t\t \t\tsetTheContenedorDatosCmViewModel(datosCmVM);\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\r\n\t'"
 	 * @generated
 	 */
 	void implementarModelo();
@@ -129,9 +129,18 @@ public interface ContenedorSolicitudVisitaViewModel extends ViewModel {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='//TODO solicitarVisita\n'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\t\t\t\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\tgetOwnedByUI().solicitarVisita(this);\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\r\n\t'"
 	 * @generated
 	 */
 	void solicitarVisita();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model idCmDataType="sma.String"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\t\t\t\r\n\t\t\t\t\t\tgetOwnedByUI().mostrarInfoCmSolicitudVisita(idCm);\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\r\n\t'"
+	 * @generated
+	 */
+	void mostrarInfoCmSolicitudVisita(String idCm);
 
 } // ContenedorSolicitudVisitaViewModel

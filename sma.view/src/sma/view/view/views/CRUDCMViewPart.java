@@ -328,15 +328,15 @@ public class CRUDCMViewPart  extends ViewPart {
 //
         DataBindingContext bindingContext = new DataBindingContext();
         IObservableValue observeTextNombreCMInformacionCMObserveWidget = WidgetProperties.text(SWT.Modify).observe(textNombreCMInformacionCM);
-        IObservableValue contenedorinformacionCMNombreCMInformacionCMObserveValue = EMFObservables.observeValue(contenedorinformacionCMViewModel,ContenedorcrudcmviewmodelPackage.Literals.CONTENEDOR_INFORMACION_CM__VIEW_MODEL__NOMBRECM);
+        IObservableValue contenedorinformacionCMNombreCMInformacionCMObserveValue = EMFObservables.observeValue(contenedorinformacionCMViewModel,ContenedorcrudcmviewmodelPackage.Literals.CONTENEDOR_INFORMACION_CM_VIEW_MODEL__NOMBRECM);
         bindingContext.bindValue(observeTextNombreCMInformacionCMObserveWidget,contenedorinformacionCMNombreCMInformacionCMObserveValue, null, null);
         //
         IObservableValue observeTextNombreRepresentanteInformacionCMObserveWidget = WidgetProperties.text(SWT.Modify).observe(textNombreRepresentanteInformacionCM);
-        IObservableValue contenedorinformacionCMNombreRepresentanteInformacionCMObserveValue = EMFObservables.observeValue(contenedorinformacionCMViewModel,ContenedorcrudcmviewmodelPackage.Literals.CONTENEDOR_INFORMACION_CM__VIEW_MODEL__NOMBREREPRESENTANTE);
+        IObservableValue contenedorinformacionCMNombreRepresentanteInformacionCMObserveValue = EMFObservables.observeValue(contenedorinformacionCMViewModel,ContenedorcrudcmviewmodelPackage.Literals.CONTENEDOR_INFORMACION_CM_VIEW_MODEL__NOMBREREPRESENTANTE);
         bindingContext.bindValue(observeTextNombreRepresentanteInformacionCMObserveWidget,contenedorinformacionCMNombreRepresentanteInformacionCMObserveValue, null, null);
         //
         IObservableValue observeTextDescripcionInformacionCMObserveWidget = WidgetProperties.text(SWT.Modify).observe(textDescripcionInformacionCM);
-        IObservableValue contenedorinformacionCMDescripcionInformacionCMObserveValue = EMFObservables.observeValue(contenedorinformacionCMViewModel,ContenedorcrudcmviewmodelPackage.Literals.CONTENEDOR_INFORMACION_CM__VIEW_MODEL__DESCRIPCION);
+        IObservableValue contenedorinformacionCMDescripcionInformacionCMObserveValue = EMFObservables.observeValue(contenedorinformacionCMViewModel,ContenedorcrudcmviewmodelPackage.Literals.CONTENEDOR_INFORMACION_CM_VIEW_MODEL__DESCRIPCION);
         bindingContext.bindValue(observeTextDescripcionInformacionCMObserveWidget,contenedorinformacionCMDescripcionInformacionCMObserveValue, null, null);
         //
         IObservableValue observeTextPaisUbicacionObserveWidget = WidgetProperties.text(SWT.Modify).observe(textPaisUbicacion);
@@ -363,7 +363,7 @@ public class CRUDCMViewPart  extends ViewPart {
 
         //
         IObservableList observeList1= EMFObservables.observeList(Realm.getDefault(),contenedormaestroCMViewModel,
-        ContenedorcrudcmviewmodelPackage.Literals.CONTENEDOR_MAESTRO_CM__VIEW_MODEL__LISTA_CENTRO_MANT_VIEW_MODEL);
+        ContenedorcrudcmviewmodelPackage.Literals.CONTENEDOR_MAESTRO_CM_VIEW_MODEL__LISTA_CENTRO_MANT);
         tableViewerCentroMant.setInput(observeList1);
             //
 

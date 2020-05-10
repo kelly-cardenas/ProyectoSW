@@ -23,6 +23,7 @@ import sma.domain.reparacionvehiculo.Reparacion;
  *   <li>{@link sma.domain.CentroMant#getDescripcion <em>Descripcion</em>}</li>
  *   <li>{@link sma.domain.CentroMant#getUsuario <em>Usuario</em>}</li>
  *   <li>{@link sma.domain.CentroMant#getContrasenia <em>Contrasenia</em>}</li>
+ *   <li>{@link sma.domain.CentroMant#getIncrementalReparacion <em>Incremental Reparacion</em>}</li>
  *   <li>{@link sma.domain.CentroMant#getUsuariosAtendidos <em>Usuarios Atendidos</em>}</li>
  *   <li>{@link sma.domain.CentroMant#getHistorialReparacion <em>Historial Reparacion</em>}</li>
  *   <li>{@link sma.domain.CentroMant#getOwnedByDomain <em>Owned By Domain</em>}</li>
@@ -197,6 +198,33 @@ public interface CentroMant extends EObject {
 	void setContrasenia(String value);
 
 	/**
+	 * Returns the value of the '<em><b>Incremental Reparacion</b></em>' attribute.
+	 * The default value is <code>"0"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Incremental Reparacion</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Incremental Reparacion</em>' attribute.
+	 * @see #setIncrementalReparacion(Integer)
+	 * @see sma.domain.DomainPackage#getCentroMant_IncrementalReparacion()
+	 * @model default="0" dataType="sma.EIntegerObject"
+	 * @generated
+	 */
+	Integer getIncrementalReparacion();
+
+	/**
+	 * Sets the value of the '{@link sma.domain.CentroMant#getIncrementalReparacion <em>Incremental Reparacion</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Incremental Reparacion</em>' attribute.
+	 * @see #getIncrementalReparacion()
+	 * @generated
+	 */
+	void setIncrementalReparacion(Integer value);
+
+	/**
 	 * Returns the value of the '<em><b>Usuarios Atendidos</b></em>' reference list.
 	 * The list contents are of type {@link sma.domain.Usuario}.
 	 * It is bidirectional and its opposite is '{@link sma.domain.Usuario#getCentroMant <em>Centro Mant</em>}'.
@@ -291,9 +319,18 @@ public interface CentroMant extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='//TODO procesarSolicitudVisita\n'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='Reparacion reparacion = sma.domain.reparacionvehiculo.ReparacionvehiculoFactory.eINSTANCE.createReparacion();\r\n\t\t\r\n\t\t\t\treparacion.setId(incrementarIdReparaciones());\r\n\t\t\t\t\r\n\t\t\t\treparacion.setEstado(\"pendiente\");\r\n\t\t\t\treparacion.setTheCentroMant(this);\r\n\t\t\t\treparacion.setTheAutomovil(automovilReparacion);\r\n\t\t\r\n\t\t\t\thistorialReparacion.add(reparacion);'"
 	 * @generated
 	 */
 	void procesarSolicitudVisita(Automovil automovilReparacion);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="sma.EIntegerObject"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='if (getIncrementalReparacion() == null) {\r\n\t\t\t\t\tsetIncrementalReparacion(0);\r\n\t\t}\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\tint retorno = getIncrementalReparacion();\r\n\t\t\t\t\r\n\t\t\t\tsetIncrementalReparacion(getIncrementalReparacion() + 1); \r\n\t\t\t\treturn retorno;'"
+	 * @generated
+	 */
+	Integer incrementarIdReparaciones();
 
 } // CentroMant

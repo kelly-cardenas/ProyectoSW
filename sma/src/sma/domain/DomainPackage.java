@@ -229,13 +229,22 @@ public interface DomainPackage extends EPackage {
 	int CENTRO_MANT__CONTRASENIA = 5;
 
 	/**
+	 * The feature id for the '<em><b>Incremental Reparacion</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CENTRO_MANT__INCREMENTAL_REPARACION = 6;
+
+	/**
 	 * The feature id for the '<em><b>Usuarios Atendidos</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CENTRO_MANT__USUARIOS_ATENDIDOS = 6;
+	int CENTRO_MANT__USUARIOS_ATENDIDOS = 7;
 
 	/**
 	 * The feature id for the '<em><b>Historial Reparacion</b></em>' containment reference list.
@@ -244,7 +253,7 @@ public interface DomainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CENTRO_MANT__HISTORIAL_REPARACION = 7;
+	int CENTRO_MANT__HISTORIAL_REPARACION = 8;
 
 	/**
 	 * The feature id for the '<em><b>Owned By Domain</b></em>' container reference.
@@ -253,7 +262,7 @@ public interface DomainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CENTRO_MANT__OWNED_BY_DOMAIN = 8;
+	int CENTRO_MANT__OWNED_BY_DOMAIN = 9;
 
 	/**
 	 * The feature id for the '<em><b>Ubicacion</b></em>' containment reference.
@@ -262,7 +271,7 @@ public interface DomainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CENTRO_MANT__UBICACION = 9;
+	int CENTRO_MANT__UBICACION = 10;
 
 	/**
 	 * The number of structural features of the '<em>Centro Mant</em>' class.
@@ -271,7 +280,7 @@ public interface DomainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CENTRO_MANT_FEATURE_COUNT = 10;
+	int CENTRO_MANT_FEATURE_COUNT = 11;
 
 	/**
 	 * The meta object id for the '{@link sma.domain.impl.DomainImpl <em>Domain</em>}' class.
@@ -806,6 +815,17 @@ public interface DomainPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getCentroMant_Contrasenia();
+
+	/**
+	 * Returns the meta object for the attribute '{@link sma.domain.CentroMant#getIncrementalReparacion <em>Incremental Reparacion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Incremental Reparacion</em>'.
+	 * @see sma.domain.CentroMant#getIncrementalReparacion()
+	 * @see #getCentroMant()
+	 * @generated
+	 */
+	EAttribute getCentroMant_IncrementalReparacion();
 
 	/**
 	 * Returns the meta object for the reference list '{@link sma.domain.CentroMant#getUsuariosAtendidos <em>Usuarios Atendidos</em>}'.
@@ -1379,6 +1399,14 @@ public interface DomainPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CENTRO_MANT__CONTRASENIA = eINSTANCE.getCentroMant_Contrasenia();
+
+		/**
+		 * The meta object literal for the '<em><b>Incremental Reparacion</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CENTRO_MANT__INCREMENTAL_REPARACION = eINSTANCE.getCentroMant_IncrementalReparacion();
 
 		/**
 		 * The meta object literal for the '<em><b>Usuarios Atendidos</b></em>' reference list feature.

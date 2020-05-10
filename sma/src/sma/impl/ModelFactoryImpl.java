@@ -168,18 +168,18 @@ public class ModelFactoryImpl extends EObjectImpl implements ModelFactory {
 	 */
 	public ModelFactory cargar(final String ruta) {
 		ModelFactory modelFactory = null;
-																org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI("platform:/resource/"+ruta);
-																org.eclipse.emf.ecore.resource.ResourceSet resourceSet= new org.eclipse.emf.ecore.resource.impl.ResourceSetImpl();
-																org.eclipse.emf.ecore.resource.Resource resource = resourceSet.createResource(uri);
-																try {
-																	resource.load(java.util.Collections.EMPTY_MAP);
-																	modelFactory = (ModelFactory) resource.getContents().get(0);
-																} catch (java.io.IOException e) {
-																	// TO-DO Auto-generated catch block
-																	e.printStackTrace();
-																}
-														
-																return modelFactory;
+																		org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI("platform:/resource/"+ruta);
+																		org.eclipse.emf.ecore.resource.ResourceSet resourceSet= new org.eclipse.emf.ecore.resource.impl.ResourceSetImpl();
+																		org.eclipse.emf.ecore.resource.Resource resource = resourceSet.createResource(uri);
+																		try {
+																			resource.load(java.util.Collections.EMPTY_MAP);
+																			modelFactory = (ModelFactory) resource.getContents().get(0);
+																		} catch (java.io.IOException e) {
+																			// TO-DO Auto-generated catch block
+																			e.printStackTrace();
+																		}
+																
+																		return modelFactory;
 	}
 
 	/**
@@ -189,18 +189,18 @@ public class ModelFactoryImpl extends EObjectImpl implements ModelFactory {
 	 */
 	public void salvar(final String ruta) {
 		ModelFactory modelFactory = this;
-																org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI("platform:/resource/"+ruta);
-																org.eclipse.emf.ecore.resource.ResourceSet resourceSet= new org.eclipse.emf.ecore.resource.impl.ResourceSetImpl();
-																org.eclipse.emf.ecore.resource.Resource resource = resourceSet.createResource(uri);
-																resource.getContents().add(modelFactory);
-																try {
-																	resource.save(java.util.Collections.EMPTY_MAP);
-																} catch (java.io.IOException e) {
-																	// TO-DO Auto-generated catch block
-																	e.printStackTrace();
-																}
-														
-																return;
+																		org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI("platform:/resource/"+ruta);
+																		org.eclipse.emf.ecore.resource.ResourceSet resourceSet= new org.eclipse.emf.ecore.resource.impl.ResourceSetImpl();
+																		org.eclipse.emf.ecore.resource.Resource resource = resourceSet.createResource(uri);
+																		resource.getContents().add(modelFactory);
+																		try {
+																			resource.save(java.util.Collections.EMPTY_MAP);
+																		} catch (java.io.IOException e) {
+																			// TO-DO Auto-generated catch block
+																			e.printStackTrace();
+																		}
+																
+																		return;
 	}
 
 	/**
@@ -210,23 +210,23 @@ public class ModelFactoryImpl extends EObjectImpl implements ModelFactory {
 	 */
 	public void implementarModelo() {
 		UI ui = getTheUI();
-				Domain domain = getTheDomain();
-		
-				if (domain == null) {
-					domain = sma.domain.DomainFactory.eINSTANCE.createDomain();
-				}
-		
-				if (ui == null) {
-					ui = sma.ui.UiFactory.eINSTANCE.createUI();
-				}
-		
-				setTheDomain(domain);
-				setTheUI(ui);
-				ui.setTheDomain(domain);
-				domain.setTheUI(ui);
-		
-				domain.implementarModelo();
-				ui.implementarModelo();
+						Domain domain = getTheDomain();
+				
+						if (domain == null) {
+							domain = sma.domain.DomainFactory.eINSTANCE.createDomain();
+						}
+				
+						if (ui == null) {
+							ui = sma.ui.UiFactory.eINSTANCE.createUI();
+						}
+				
+						setTheDomain(domain);
+						setTheUI(ui);
+						ui.setTheDomain(domain);
+						domain.setTheUI(ui);
+				
+						domain.implementarModelo();
+						ui.implementarModelo();
 	}
 
 	/**

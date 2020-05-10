@@ -38,6 +38,9 @@
       <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_XoV_UI_4Eeq17ejQSDANAQ" name="solicitarVisita" id="_Xb3CgI_4Eeq17ejQSDANAQ" documentation="" description="" typeElement="Operation" body="void">
         <listParametros xmi:type="tooldataform.pmoo:Atributo" xmi:id="_pasxMI_5Eeq17ejQSDANAQ" name="formulario" id="_nX_SkI_5Eeq17ejQSDANAQ" type="ContenedorSolicitudVisitaViewModel" valueDefault="" namePresentation="formulario:ContenedorSolicitudVisitaViewModel"/>
       </listaMetodos>
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_TuRzgJBmEeqFspxjVE9CLQ" name="mostrarInfoCmSolicitudVisita" id="_TsOlEJBmEeqFspxjVE9CLQ" documentation="" description="" typeElement="Operation" body="void">
+        <listParametros xmi:type="tooldataform.pmoo:Atributo" xmi:id="_XYGZ4JBmEeqFspxjVE9CLQ" name="idCm" id="_XOZrUJBmEeqFspxjVE9CLQ" type="String" valueDefault="" namePresentation="idCm:String"/>
+      </listaMetodos>
     </listClase>
     <listClase xmi:type="tooldataform.pmoo:Clase" xmi:id="_bO5kIH-CEeqpldL-IKh_yg" name="ContenedorCrudClienteViewModel" id="_BWSC4X1qEeqT4__3zNoxqw" nameSpace="(from: contenedorcrudclienteviewmodel)" nameSpaceElement="(from: contenedorcrudclienteviewmodel)">
       <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_bRoIAH-CEeqpldL-IKh_yg" name="upadateDialog" id="_BWT4EH1qEeqT4__3zNoxqw" body="&#xA;&#x9;&#x9;String action = &quot;&quot;;&#xA;&#x9;&#x9;return action;&#xA;" returnTypeMethod="String">

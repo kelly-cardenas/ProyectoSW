@@ -73,6 +73,7 @@ public class CentroMantItemProvider
 			addDescripcionPropertyDescriptor(object);
 			addUsuarioPropertyDescriptor(object);
 			addContraseniaPropertyDescriptor(object);
+			addIncrementalReparacionPropertyDescriptor(object);
 			addUsuariosAtendidosPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -211,6 +212,28 @@ public class CentroMantItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Incremental Reparacion feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIncrementalReparacionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_CentroMant_incrementalReparacion_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CentroMant_incrementalReparacion_feature", "_UI_CentroMant_type"),
+				 DomainPackage.Literals.CENTRO_MANT__INCREMENTAL_REPARACION,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Usuarios Atendidos feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -307,6 +330,7 @@ public class CentroMantItemProvider
 			case DomainPackage.CENTRO_MANT__DESCRIPCION:
 			case DomainPackage.CENTRO_MANT__USUARIO:
 			case DomainPackage.CENTRO_MANT__CONTRASENIA:
+			case DomainPackage.CENTRO_MANT__INCREMENTAL_REPARACION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case DomainPackage.CENTRO_MANT__HISTORIAL_REPARACION:

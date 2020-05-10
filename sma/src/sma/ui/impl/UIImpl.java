@@ -729,13 +729,11 @@ public class UIImpl extends EObjectImpl implements UI {
 							.createContenedorContactarCmViewModel();
 				}
 		
-				
 				if (solicitudVisitaVM == null) {
 					solicitudVisitaVM = sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.ContenedorsolicitudvisitaviewmodelFactory.eINSTANCE
 							.createContenedorSolicitudVisitaViewModel();
 				}
-				
-				
+		
 				setTheContenedorCrudClienteViewModel(crudCLienteVM);
 				setTheContenedorCRUDCMViewModel(crudCMVM);
 				setTheContenedorRegistroVehiculoViewModel(registroVehiVM);
@@ -743,7 +741,7 @@ public class UIImpl extends EObjectImpl implements UI {
 				setTheContenedorEscaneoViewModel(escaneoClienteVM);
 				setTheContenedorContactarCmViewModel(contactarCmVM);
 				setTheContenedorSolicitudVisitaViewModel(solicitudVisitaVM);
-				
+		
 				crudCLienteVM.implementarModelo();
 				crudCMVM.implementarModelo();
 				registroVehiVM.implementarModelo();
@@ -751,6 +749,7 @@ public class UIImpl extends EObjectImpl implements UI {
 				escaneoClienteVM.implementarModelo();
 				contactarCmVM.implementarModelo();
 				solicitudVisitaVM.implementarModelo();
+		
 			
 	}
 
@@ -912,8 +911,55 @@ public class UIImpl extends EObjectImpl implements UI {
 	 * @generated
 	 */
 	public void solicitarVisita(final ContenedorSolicitudVisitaViewModel formulario) {
-		//TODO solicitarVisita
 		
+		
+				if (getTipoLogueado() != null) {
+					if (getTipoLogueado().equals("sin logueo")) {
+						System.out.println("no hay usuarios logueados");
+					} else {
+						if (getTipoLogueado().equals("cm")) {
+							System.out.println("el usuario logueado no tiene acceso a registrar vehiculos");
+						} else {
+							if (getTipoLogueado().equals("cliente")) {
+								getTheDomain().solicitarVisita(formulario);
+							}
+		
+						}
+		
+					}
+				} else {
+					System.out.println("no hay usuarios logueados");
+				}
+			
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void mostrarInfoCmSolicitudVisita(final String idCm) {
+			
+				
+				if (getTipoLogueado() != null) {
+					if (getTipoLogueado().equals("sin logueo")) {
+						System.out.println("no hay usuarios logueados");
+					} else {
+						if (getTipoLogueado().equals("cm")) {
+							System.out.println("el usuario logueado no tiene acceso a registrar vehiculos");
+						} else {
+							if (getTipoLogueado().equals("cliente")) {
+								getTheDomain().mostrarInfoCmSolicitudVisita(idCm, getTheContenedorSolicitudVisitaViewModel());
+							}
+		
+						}
+		
+					}
+				} else {
+					System.out.println("no hay usuarios logueados");
+				}
+				
+			
 	}
 
 	/**

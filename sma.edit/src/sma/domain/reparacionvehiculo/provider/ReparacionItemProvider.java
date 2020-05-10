@@ -69,6 +69,7 @@ public class ReparacionItemProvider
 			addNumeroFallasAcertadasPropertyDescriptor(object);
 			addFechaPropertyDescriptor(object);
 			addHoraPropertyDescriptor(object);
+			addIdPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -228,6 +229,28 @@ public class ReparacionItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Id feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIdPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Reparacion_id_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Reparacion_id_feature", "_UI_Reparacion_type"),
+				 ReparacionvehiculoPackage.Literals.REPARACION__ID,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns Reparacion.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -246,7 +269,8 @@ public class ReparacionItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Reparacion)object).getNombreResponsable();
+		Integer labelValue = ((Reparacion)object).getId();
+		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Reparacion_type") :
 			getString("_UI_Reparacion_type") + " " + label;
@@ -271,6 +295,7 @@ public class ReparacionItemProvider
 			case ReparacionvehiculoPackage.REPARACION__NUMERO_FALLAS_ACERTADAS:
 			case ReparacionvehiculoPackage.REPARACION__FECHA:
 			case ReparacionvehiculoPackage.REPARACION__HORA:
+			case ReparacionvehiculoPackage.REPARACION__ID:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

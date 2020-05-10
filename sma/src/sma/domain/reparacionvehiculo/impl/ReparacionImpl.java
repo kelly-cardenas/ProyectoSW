@@ -36,6 +36,7 @@ import sma.domain.reparacionvehiculo.ReparacionvehiculoPackage;
  *   <li>{@link sma.domain.reparacionvehiculo.impl.ReparacionImpl#getNumeroFallasAcertadas <em>Numero Fallas Acertadas</em>}</li>
  *   <li>{@link sma.domain.reparacionvehiculo.impl.ReparacionImpl#getFecha <em>Fecha</em>}</li>
  *   <li>{@link sma.domain.reparacionvehiculo.impl.ReparacionImpl#getHora <em>Hora</em>}</li>
+ *   <li>{@link sma.domain.reparacionvehiculo.impl.ReparacionImpl#getId <em>Id</em>}</li>
  * </ul>
  *
  * @generated
@@ -170,6 +171,26 @@ public class ReparacionImpl extends EObjectImpl implements Reparacion {
 	 * @ordered
 	 */
 	protected String hora = HORA_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Integer ID_EDEFAULT = new Integer(0);
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected Integer id = ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -422,6 +443,27 @@ public class ReparacionImpl extends EObjectImpl implements Reparacion {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Integer getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(Integer newId) {
+		Integer oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ReparacionvehiculoPackage.REPARACION__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -492,6 +534,8 @@ public class ReparacionImpl extends EObjectImpl implements Reparacion {
 				return getFecha();
 			case ReparacionvehiculoPackage.REPARACION__HORA:
 				return getHora();
+			case ReparacionvehiculoPackage.REPARACION__ID:
+				return getId();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -527,6 +571,9 @@ public class ReparacionImpl extends EObjectImpl implements Reparacion {
 				return;
 			case ReparacionvehiculoPackage.REPARACION__HORA:
 				setHora((String)newValue);
+				return;
+			case ReparacionvehiculoPackage.REPARACION__ID:
+				setId((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -564,6 +611,9 @@ public class ReparacionImpl extends EObjectImpl implements Reparacion {
 			case ReparacionvehiculoPackage.REPARACION__HORA:
 				setHora(HORA_EDEFAULT);
 				return;
+			case ReparacionvehiculoPackage.REPARACION__ID:
+				setId(ID_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -592,6 +642,8 @@ public class ReparacionImpl extends EObjectImpl implements Reparacion {
 				return FECHA_EDEFAULT == null ? fecha != null : !FECHA_EDEFAULT.equals(fecha);
 			case ReparacionvehiculoPackage.REPARACION__HORA:
 				return HORA_EDEFAULT == null ? hora != null : !HORA_EDEFAULT.equals(hora);
+			case ReparacionvehiculoPackage.REPARACION__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -618,6 +670,8 @@ public class ReparacionImpl extends EObjectImpl implements Reparacion {
 		result.append(fecha);
 		result.append(", hora: ");
 		result.append(hora);
+		result.append(", id: ");
+		result.append(id);
 		result.append(')');
 		return result.toString();
 	}

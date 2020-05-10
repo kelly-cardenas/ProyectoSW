@@ -211,9 +211,15 @@ public class ContenedorSolicitudVisitaViewModelImpl extends ViewModelImpl implem
 	 */
 	public String upadateDialog(final String evento) {
 		
-				String action = "";
-				return action;
-		
+				
+						
+								
+										String action = "";
+										return action;
+								
+							
+					
+			
 	}
 
 	/**
@@ -222,8 +228,29 @@ public class ContenedorSolicitudVisitaViewModelImpl extends ViewModelImpl implem
 	 * @generated
 	 */
 	public void implementarModelo() {
-		//TODO implementarModelo
 		
+				
+						
+							
+								ContenedorBusquedaViewModel busquedaVM 	= getTheContenedorBusquedaViewModel();
+						 		ContenedorDatosCmViewModel datosCmVM 	= getTheContenedorDatosCmViewModel();
+						 		
+						 		if ( busquedaVM == null ) {
+									busquedaVM = sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.ContenedorsolicitudvisitaviewmodelFactory
+												.eINSTANCE.createContenedorBusquedaViewModel();
+								}
+						 		
+						 		if (datosCmVM == null) {
+									datosCmVM	= sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.ContenedorsolicitudvisitaviewmodelFactory
+												.eINSTANCE.createContenedorDatosCmViewModel();
+								}
+						 		
+						 		setTheContenedorBusquedaViewModel(busquedaVM);
+						 		setTheContenedorDatosCmViewModel(datosCmVM);
+								
+							
+					
+			
 	}
 
 	/**
@@ -232,8 +259,31 @@ public class ContenedorSolicitudVisitaViewModelImpl extends ViewModelImpl implem
 	 * @generated
 	 */
 	public void solicitarVisita() {
-		//TODO solicitarVisita
 		
+				
+						
+								
+								getOwnedByUI().solicitarVisita(this);
+								
+							
+					
+			
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void mostrarInfoCmSolicitudVisita(final String idCm) {
+		
+				
+						
+								getOwnedByUI().mostrarInfoCmSolicitudVisita(idCm);
+								
+							
+					
+			
 	}
 
 	/**

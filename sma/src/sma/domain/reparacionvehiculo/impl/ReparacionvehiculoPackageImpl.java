@@ -260,6 +260,15 @@ public class ReparacionvehiculoPackageImpl extends EPackageImpl implements Repar
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getReparacion_Id() {
+		return (EAttribute)reparacionEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ReparacionvehiculoFactory getReparacionvehiculoFactory() {
 		return (ReparacionvehiculoFactory)getEFactoryInstance();
 	}
@@ -292,6 +301,7 @@ public class ReparacionvehiculoPackageImpl extends EPackageImpl implements Repar
 		createEAttribute(reparacionEClass, REPARACION__NUMERO_FALLAS_ACERTADAS);
 		createEAttribute(reparacionEClass, REPARACION__FECHA);
 		createEAttribute(reparacionEClass, REPARACION__HORA);
+		createEAttribute(reparacionEClass, REPARACION__ID);
 	}
 
 	/**
@@ -337,6 +347,7 @@ public class ReparacionvehiculoPackageImpl extends EPackageImpl implements Repar
 		initEAttribute(getReparacion_NumeroFallasAcertadas(), thesmaPackage.getEIntegerObject(), "numeroFallasAcertadas", "0", 0, 1, Reparacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getReparacion_Fecha(), thesmaPackage.getString(), "fecha", " ", 0, 1, Reparacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getReparacion_Hora(), thesmaPackage.getString(), "hora", " ", 0, 1, Reparacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getReparacion_Id(), thesmaPackage.getEIntegerObject(), "id", "0", 0, 1, Reparacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //ReparacionvehiculoPackageImpl
