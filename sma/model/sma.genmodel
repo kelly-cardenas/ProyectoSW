@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/sma/src" modelPluginID="sma" modelName="Model" complianceLevel="6.0" copyrightFields="false" editPluginID="sma.edit" editorPluginID="sma.editor">
+  <foreignModel>sma.ecore</foreignModel>
+  <genPackages prefix="sma" disposableProviderFactory="true">
+    <ecorePackage href="sma.ecore#/"/>
+    <genDataTypes>
+      <ecoreDataType href="sma.ecore#//String"/>
+    </genDataTypes>
+    <genDataTypes>
+      <ecoreDataType href="sma.ecore#//EBooleanObject"/>
+    </genDataTypes>
+    <genDataTypes>
+      <ecoreDataType href="sma.ecore#//EDoubleObject"/>
+    </genDataTypes>
+    <genDataTypes>
+      <ecoreDataType href="sma.ecore#//EIntegerObject"/>
+    </genDataTypes>
+    <genDataTypes>
+      <ecoreDataType href="sma.ecore#//EList"/>
+    </genDataTypes>
+    <genDataTypes>
+      <ecoreDataType href="sma.ecore#//EChar"/>
+    </genDataTypes>
+    <genDataTypes>
+      <ecoreDataType href="sma.ecore#//ArrayList"/>
+    </genDataTypes>
+    <genClasses>
+      <ecoreClass href="sma.ecore#//ModelFactory"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ModelFactory/theUI"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ModelFactory/theDomain"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="sma.ecore#//ModelFactory/cargar"/>
+        <genParameters>
+          <ecoreParameter href="sma.ecore#//ModelFactory/cargar/ruta"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="sma.ecore#//ModelFactory/salvar"/>
+        <genParameters>
+          <ecoreParameter href="sma.ecore#//ModelFactory/salvar/ruta"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="sma.ecore#//ModelFactory/implementarModelo"/>
+      </genOperations>
+    </genClasses>
+    <nestedGenPackages prefix="Domain" disposableProviderFactory="true">
+      <ecorePackage href="sma.ecore#//domain"/>
+      <genClasses>
+        <ecoreClass href="sma.ecore#//domain/Automovil"/>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/Automovil/id"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/Automovil/placa"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/Automovil/marca"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/Automovil/modelo"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/Automovil/referencia"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/Automovil/tipoUso"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//domain/Automovil/reparacionesHechas"/>
+        </genFeatures>
+        <genFeatures property="None" children="true" createChild="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//domain/Automovil/sensor"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//domain/Automovil/propietario"/>
+        </genFeatures>
+        <genFeatures property="None" children="true" createChild="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//domain/Automovil/listaDeFallas"/>
+        </genFeatures>
+        <genOperations>
+          <ecoreOperation href="sma.ecore#//domain/Automovil/asignarFallas"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="sma.ecore#//domain/CentroMant"/>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/CentroMant/id"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/CentroMant/nombre"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/CentroMant/nombreRepresentante"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/CentroMant/descripcion"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/CentroMant/usuario"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/CentroMant/contrasenia"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//domain/CentroMant/usuariosAtendidos"/>
+        </genFeatures>
+        <genFeatures property="None" children="true" createChild="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//domain/CentroMant/historialReparacion"/>
+        </genFeatures>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//domain/CentroMant/ownedByDomain"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//domain/CentroMant/ubicacion"/>
+        </genFeatures>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="sma.ecore#//domain/Domain"/>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//domain/Domain/theModelFactory"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/Domain/incrementalIdCliente"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/Domain/incrementalIdCm"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/Domain/incrementalIdAuto"/>
+        </genFeatures>
+        <genFeatures property="None" children="true" createChild="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//domain/Domain/listaAutomoviles"/>
+        </genFeatures>
+        <genFeatures property="None" children="true" createChild="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//domain/Domain/listaDeCentMant"/>
+        </genFeatures>
+        <genFeatures property="None" children="true" createChild="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//domain/Domain/listaUsuarios"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//domain/Domain/theUI"/>
+        </genFeatures>
+        <genOperations>
+          <ecoreOperation href="sma.ecore#//domain/Domain/implementarModelo"/>
+        </genOperations>
+        <genOperations>
+          <ecoreOperation href="sma.ecore#//domain/Domain/registrarUsuario"/>
+          <genParameters>
+            <ecoreParameter href="sma.ecore#//domain/Domain/registrarUsuario/formulario"/>
+          </genParameters>
+        </genOperations>
+        <genOperations>
+          <ecoreOperation href="sma.ecore#//domain/Domain/registrarCm"/>
+          <genParameters>
+            <ecoreParameter href="sma.ecore#//domain/Domain/registrarCm/formulario"/>
+          </genParameters>
+        </genOperations>
+        <genOperations>
+          <ecoreOperation href="sma.ecore#//domain/Domain/registrarAutomovil"/>
+          <genParameters>
+            <ecoreParameter href="sma.ecore#//domain/Domain/registrarAutomovil/formulario"/>
+          </genParameters>
+          <genParameters>
+            <ecoreParameter href="sma.ecore#//domain/Domain/registrarAutomovil/idPropietario"/>
+          </genParameters>
+        </genOperations>
+        <genOperations>
+          <ecoreOperation href="sma.ecore#//domain/Domain/incrementarIdCliente"/>
+        </genOperations>
+        <genOperations>
+          <ecoreOperation href="sma.ecore#//domain/Domain/incrementarIdCm"/>
+        </genOperations>
+        <genOperations>
+          <ecoreOperation href="sma.ecore#//domain/Domain/incrementarIdAuto"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="sma.ecore#//domain/UbicacionCM"/>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/UbicacionCM/pais"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/UbicacionCM/departamento"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/UbicacionCM/ciudad"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/UbicacionCM/direccion"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//domain/UbicacionCM/ownedBy"/>
+        </genFeatures>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="sma.ecore#//domain/UbicacionUsu"/>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/UbicacionUsu/pais"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/UbicacionUsu/departamento"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/UbicacionUsu/ciudad"/>
+        </genFeatures>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//domain/UbicacionUsu/ownerBy"/>
+        </genFeatures>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="sma.ecore#//domain/Usuario"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//domain/Usuario/CentroMant"/>
+        </genFeatures>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//domain/Usuario/ownerByDomain"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/Usuario/id"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/Usuario/numDI"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/Usuario/nombres"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/Usuario/apellidos"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/Usuario/edad"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/Usuario/email"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/Usuario/usuario"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/Usuario/contrasenia"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//domain/Usuario/automoviles"/>
+        </genFeatures>
+        <genFeatures property="None" children="true" createChild="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//domain/Usuario/ubicacion"/>
+        </genFeatures>
+      </genClasses>
+      <nestedGenPackages prefix="Reparacionvehiculo" disposableProviderFactory="true">
+        <ecorePackage href="sma.ecore#//domain/reparacionvehiculo"/>
+        <genClasses>
+          <ecoreClass href="sma.ecore#//domain/reparacionvehiculo/Reparacion"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true">
+            <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//domain/reparacionvehiculo/Reparacion/theAutomovil"/>
+          </genFeatures>
+          <genFeatures property="None" notify="false" createChild="false">
+            <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//domain/reparacionvehiculo/Reparacion/theCentroMant"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/reparacionvehiculo/Reparacion/nombreResponsable"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/reparacionvehiculo/Reparacion/estado"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/reparacionvehiculo/Reparacion/numeroFallasPredecidas"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/reparacionvehiculo/Reparacion/numeroFallasAcertadas"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/reparacionvehiculo/Reparacion/fecha"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/reparacionvehiculo/Reparacion/hora"/>
+          </genFeatures>
+        </genClasses>
+      </nestedGenPackages>
+      <nestedGenPackages prefix="Automatizacionrevision" disposableProviderFactory="true">
+        <ecorePackage href="sma.ecore#//domain/automatizacionrevision"/>
+        <genClasses>
+          <ecoreClass href="sma.ecore#//domain/automatizacionrevision/FallaMecanica"/>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/automatizacionrevision/FallaMecanica/piesaAveriada"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/automatizacionrevision/FallaMecanica/gravedad"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/automatizacionrevision/FallaMecanica/origen"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/automatizacionrevision/FallaMecanica/descripcion"/>
+          </genFeatures>
+          <genFeatures property="None" notify="false" createChild="false">
+            <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//domain/automatizacionrevision/FallaMecanica/theAutomovil"/>
+          </genFeatures>
+        </genClasses>
+        <genClasses>
+          <ecoreClass href="sma.ecore#//domain/automatizacionrevision/sensor"/>
+          <genFeatures property="None" notify="false" createChild="false">
+            <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//domain/automatizacionrevision/sensor/ownerBy"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/automatizacionrevision/sensor/id"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/automatizacionrevision/sensor/infoComp"/>
+          </genFeatures>
+        </genClasses>
+      </nestedGenPackages>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Ui" disposableProviderFactory="true">
+      <ecorePackage href="sma.ecore#//ui"/>
+      <genClasses>
+        <ecoreClass href="sma.ecore#//ui/UI"/>
+        <genFeatures property="None" notify="false" createChild="false">
+          <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/UI/theModelFactory"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/UI/idLogueado"/>
+        </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/UI/tipoLogueado"/>
+        </genFeatures>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/UI/theDomain"/>
+        </genFeatures>
+        <genFeatures property="None" children="true" createChild="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/UI/theContenedorCrudClienteViewModel"/>
+        </genFeatures>
+        <genFeatures property="None" children="true" createChild="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/UI/theContenedorCRUDCMViewModel"/>
+        </genFeatures>
+        <genFeatures property="None" children="true" createChild="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/UI/theContenedorRegistroVehiculoViewModel"/>
+        </genFeatures>
+        <genOperations>
+          <ecoreOperation href="sma.ecore#//ui/UI/implementarModelo"/>
+        </genOperations>
+        <genOperations>
+          <ecoreOperation href="sma.ecore#//ui/UI/registrarCliente"/>
+          <genParameters>
+            <ecoreParameter href="sma.ecore#//ui/UI/registrarCliente/formulario"/>
+          </genParameters>
+        </genOperations>
+        <genOperations>
+          <ecoreOperation href="sma.ecore#//ui/UI/RegistrarCm"/>
+          <genParameters>
+            <ecoreParameter href="sma.ecore#//ui/UI/RegistrarCm/formulario"/>
+          </genParameters>
+        </genOperations>
+        <genOperations>
+          <ecoreOperation href="sma.ecore#//ui/UI/registrarVehiculo"/>
+          <genParameters>
+            <ecoreParameter href="sma.ecore#//ui/UI/registrarVehiculo/formulario"/>
+          </genParameters>
+        </genOperations>
+      </genClasses>
+      <nestedGenPackages prefix="Viewmodels" disposableProviderFactory="true">
+        <ecorePackage href="sma.ecore#//ui/viewmodels"/>
+        <nestedGenPackages prefix="Contenedorcrudclienteviewmodel" disposableProviderFactory="true">
+          <ecorePackage href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel"/>
+          <genClasses>
+            <ecoreClass href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel/ClienteViewModel"/>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel/ClienteViewModel/identificacion"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel/ClienteViewModel/nombre"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel/ClienteViewModel/email"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel/ClienteViewModel/edad"/>
+            </genFeatures>
+            <genFeatures property="None" notify="false" createChild="false">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel/ClienteViewModel/the0ContenedorMaestroClienteViewModel"/>
+            </genFeatures>
+            <genFeatures notify="false" createChild="false" propertySortChoices="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel/ClienteViewModel/theContenedorMaestroClienteViewModel"/>
+            </genFeatures>
+          </genClasses>
+          <genClasses>
+            <ecoreClass href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorCrudClienteViewModel"/>
+            <genFeatures property="None" notify="false" createChild="false">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorCrudClienteViewModel/ownedByUI"/>
+            </genFeatures>
+            <genFeatures property="None" children="true" createChild="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorCrudClienteViewModel/theContenedorDetalleClienteViewModel"/>
+            </genFeatures>
+            <genFeatures property="None" children="true" createChild="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorCrudClienteViewModel/theContenedorMaestroClienteViewModel"/>
+            </genFeatures>
+            <genOperations>
+              <ecoreOperation href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorCrudClienteViewModel/upadateDialog"/>
+              <genParameters>
+                <ecoreParameter href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorCrudClienteViewModel/upadateDialog/evento"/>
+              </genParameters>
+            </genOperations>
+            <genOperations>
+              <ecoreOperation href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorCrudClienteViewModel/implementarModelo"/>
+            </genOperations>
+            <genOperations>
+              <ecoreOperation href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorCrudClienteViewModel/registrarCliente"/>
+            </genOperations>
+          </genClasses>
+          <genClasses>
+            <ecoreClass href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorDatosPersonalesViewModel"/>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorDatosPersonalesViewModel/cedula"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorDatosPersonalesViewModel/nombre"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorDatosPersonalesViewModel/apellido"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorDatosPersonalesViewModel/edad"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorDatosPersonalesViewModel/correoelectronico"/>
+            </genFeatures>
+            <genFeatures property="None" notify="false" createChild="false">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorDatosPersonalesViewModel/ownedByContenedorDetalleClienteViewModel"/>
+            </genFeatures>
+          </genClasses>
+          <genClasses>
+            <ecoreClass href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorDatosdelacuentaViewModel"/>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorDatosdelacuentaViewModel/usuario"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorDatosdelacuentaViewModel/contraseña"/>
+            </genFeatures>
+            <genFeatures property="None" notify="false" createChild="false">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorDatosdelacuentaViewModel/ownedByContenedorDetalleClienteViewModel"/>
+            </genFeatures>
+          </genClasses>
+          <genClasses>
+            <ecoreClass href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorDetalleClienteViewModel"/>
+            <genFeatures property="None" notify="false" createChild="false">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorDetalleClienteViewModel/ownedByContenedorCrudClienteViewModel"/>
+            </genFeatures>
+            <genFeatures property="None" children="true" createChild="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorDetalleClienteViewModel/theContenedorDatosPersonalesViewModel"/>
+            </genFeatures>
+            <genFeatures property="None" children="true" createChild="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorDetalleClienteViewModel/theContenedorDatosdelacuentaViewModel"/>
+            </genFeatures>
+            <genOperations>
+              <ecoreOperation href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorDetalleClienteViewModel/implementarModelo"/>
+            </genOperations>
+          </genClasses>
+          <genClasses>
+            <ecoreClass href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorMaestroClienteViewModel"/>
+            <genFeatures property="None" notify="false" createChild="false">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorMaestroClienteViewModel/ownedByContenedorCrudClienteViewModel"/>
+            </genFeatures>
+            <genFeatures property="None" children="true" createChild="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorMaestroClienteViewModel/ClienteViewModel"/>
+            </genFeatures>
+            <genFeatures notify="false" createChild="false" propertySortChoices="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorMaestroClienteViewModel/theClienteViewModel"/>
+            </genFeatures>
+          </genClasses>
+        </nestedGenPackages>
+        <nestedGenPackages prefix="Contenedorcrudcmviewmodel" disposableProviderFactory="true">
+          <ecorePackage href="sma.ecore#//ui/viewmodels/contenedorcrudcmviewmodel"/>
+          <genClasses>
+            <ecoreClass href="sma.ecore#//ui/viewmodels/contenedorcrudcmviewmodel/CentroMantViewModel"/>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorcrudcmviewmodel/CentroMantViewModel/nombrecm"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorcrudcmviewmodel/CentroMantViewModel/nombrerepresentante"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorcrudcmviewmodel/CentroMantViewModel/ciudad"/>
+            </genFeatures>
+            <genFeatures property="None" notify="false" createChild="false">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorcrudcmviewmodel/CentroMantViewModel/the0ContenedorMaestroCMViewModel"/>
+            </genFeatures>
+          </genClasses>
+          <genClasses>
+            <ecoreClass href="sma.ecore#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorCRUDCMViewModel"/>
+            <genFeatures property="None" notify="false" createChild="false">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorCRUDCMViewModel/ownedByUI"/>
+            </genFeatures>
+            <genFeatures property="None" children="true" createChild="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorCRUDCMViewModel/theContenedorDetalleCMViewModel"/>
+            </genFeatures>
+            <genFeatures property="None" children="true" createChild="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorCRUDCMViewModel/theContenedorMaestroCMViewModel"/>
+            </genFeatures>
+            <genOperations>
+              <ecoreOperation href="sma.ecore#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorCRUDCMViewModel/upadateDialog"/>
+              <genParameters>
+                <ecoreParameter href="sma.ecore#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorCRUDCMViewModel/upadateDialog/evento"/>
+              </genParameters>
+            </genOperations>
+            <genOperations>
+              <ecoreOperation href="sma.ecore#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorCRUDCMViewModel/implementarModelo"/>
+            </genOperations>
+            <genOperations>
+              <ecoreOperation href="sma.ecore#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorCRUDCMViewModel/registrarCm"/>
+            </genOperations>
+          </genClasses>
+          <genClasses>
+            <ecoreClass href="sma.ecore#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorDetalleCMViewModel"/>
+            <genFeatures property="None" notify="false" createChild="false">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorDetalleCMViewModel/ownedByContenedorCRUDCMViewModel"/>
+            </genFeatures>
+            <genFeatures property="None" children="true" createChild="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorDetalleCMViewModel/theContenedorInformacionCMViewModel"/>
+            </genFeatures>
+            <genFeatures property="None" children="true" createChild="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorDetalleCMViewModel/theContenedorUbicacionViewModel"/>
+            </genFeatures>
+            <genOperations>
+              <ecoreOperation href="sma.ecore#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorDetalleCMViewModel/implementarModelo"/>
+            </genOperations>
+          </genClasses>
+          <genClasses>
+            <ecoreClass href="sma.ecore#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorInformacionCMViewModel"/>
+            <genFeatures property="None" notify="false" createChild="false">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorInformacionCMViewModel/ownedByContenedorDetalleCMViewModel"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorInformacionCMViewModel/nombrecm"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorInformacionCMViewModel/nombrerepresentante"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorInformacionCMViewModel/descripcion"/>
+            </genFeatures>
+          </genClasses>
+          <genClasses>
+            <ecoreClass href="sma.ecore#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorMaestroCMViewModel"/>
+            <genFeatures property="None" notify="false" createChild="false">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorMaestroCMViewModel/ownedByContenedorCRUDCMViewModel"/>
+            </genFeatures>
+            <genFeatures property="None" children="true" createChild="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorMaestroCMViewModel/CentroMantViewModel"/>
+            </genFeatures>
+          </genClasses>
+          <genClasses>
+            <ecoreClass href="sma.ecore#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorUbicacionViewModel"/>
+            <genFeatures property="None" notify="false" createChild="false">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorUbicacionViewModel/ownedByContenedorDetalleCMViewModel"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorUbicacionViewModel/pais"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorUbicacionViewModel/departamento"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorUbicacionViewModel/ciudad"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorUbicacionViewModel/direccion"/>
+            </genFeatures>
+          </genClasses>
+        </nestedGenPackages>
+        <nestedGenPackages prefix="Contenedorregistrovehiculoviewmodel" disposableProviderFactory="true">
+          <ecorePackage href="sma.ecore#//ui/viewmodels/contenedorregistrovehiculoviewmodel"/>
+          <genClasses>
+            <ecoreClass href="sma.ecore#//ui/viewmodels/contenedorregistrovehiculoviewmodel/ContenedorDetalleVehiculoViewModel"/>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorregistrovehiculoviewmodel/ContenedorDetalleVehiculoViewModel/propietario"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorregistrovehiculoviewmodel/ContenedorDetalleVehiculoViewModel/marca"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorregistrovehiculoviewmodel/ContenedorDetalleVehiculoViewModel/referencia"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorregistrovehiculoviewmodel/ContenedorDetalleVehiculoViewModel/modelo"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorregistrovehiculoviewmodel/ContenedorDetalleVehiculoViewModel/tipovehiculo"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorregistrovehiculoviewmodel/ContenedorDetalleVehiculoViewModel/placa"/>
+            </genFeatures>
+            <genFeatures property="None" notify="false" createChild="false">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorregistrovehiculoviewmodel/ContenedorDetalleVehiculoViewModel/ownedByContenedorRegistroVehiculoViewModel"/>
+            </genFeatures>
+          </genClasses>
+          <genClasses>
+            <ecoreClass href="sma.ecore#//ui/viewmodels/contenedorregistrovehiculoviewmodel/ContenedorRegistroVehiculoViewModel"/>
+            <genFeatures property="None" notify="false" createChild="false">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorregistrovehiculoviewmodel/ContenedorRegistroVehiculoViewModel/ownedByUI"/>
+            </genFeatures>
+            <genFeatures property="None" children="true" createChild="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorregistrovehiculoviewmodel/ContenedorRegistroVehiculoViewModel/theContenedorDetalleVehiculoViewModel"/>
+            </genFeatures>
+            <genFeatures property="None" children="true" createChild="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorregistrovehiculoviewmodel/ContenedorRegistroVehiculoViewModel/theContenedorVehiculosRegistradosViewModel"/>
+            </genFeatures>
+            <genOperations>
+              <ecoreOperation href="sma.ecore#//ui/viewmodels/contenedorregistrovehiculoviewmodel/ContenedorRegistroVehiculoViewModel/upadateDialog"/>
+              <genParameters>
+                <ecoreParameter href="sma.ecore#//ui/viewmodels/contenedorregistrovehiculoviewmodel/ContenedorRegistroVehiculoViewModel/upadateDialog/evento"/>
+              </genParameters>
+            </genOperations>
+            <genOperations>
+              <ecoreOperation href="sma.ecore#//ui/viewmodels/contenedorregistrovehiculoviewmodel/ContenedorRegistroVehiculoViewModel/implementarModelo"/>
+            </genOperations>
+            <genOperations>
+              <ecoreOperation href="sma.ecore#//ui/viewmodels/contenedorregistrovehiculoviewmodel/ContenedorRegistroVehiculoViewModel/registrarVehiculo"/>
+            </genOperations>
+          </genClasses>
+          <genClasses>
+            <ecoreClass href="sma.ecore#//ui/viewmodels/contenedorregistrovehiculoviewmodel/ContenedorVehiculosRegistradosViewModel"/>
+            <genFeatures property="None" notify="false" createChild="false">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorregistrovehiculoviewmodel/ContenedorVehiculosRegistradosViewModel/ownedByContenedorRegistroVehiculoViewModel"/>
+            </genFeatures>
+            <genFeatures property="None" children="true" createChild="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorregistrovehiculoviewmodel/ContenedorVehiculosRegistradosViewModel/VehiculoViewModel"/>
+            </genFeatures>
+          </genClasses>
+          <genClasses>
+            <ecoreClass href="sma.ecore#//ui/viewmodels/contenedorregistrovehiculoviewmodel/VehiculoViewModel"/>
+            <genFeatures property="None" notify="false" createChild="false">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorregistrovehiculoviewmodel/VehiculoViewModel/the0ContenedorVehiculosRegistradosViewModel"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorregistrovehiculoviewmodel/VehiculoViewModel/marca"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorregistrovehiculoviewmodel/VehiculoViewModel/referencia"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorregistrovehiculoviewmodel/VehiculoViewModel/placa"/>
+            </genFeatures>
+          </genClasses>
+        </nestedGenPackages>
+      </nestedGenPackages>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

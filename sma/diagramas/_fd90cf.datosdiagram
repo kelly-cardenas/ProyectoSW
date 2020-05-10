@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:tooldataform.core="http:///tooldataform/core.ecore" xmlns:tooldataform.pmoo="http:///tooldataform/pmoo.ecore" xsi:schemaLocation="http:///tooldataform/core.ecore http:///tooldataform.ecore#//core http:///tooldataform/pmoo.ecore http:///tooldataform.ecore#//pmoo">
+  <tooldataform.core:Datos_Diagram xmi:id="_P0iJQIRxEemeoZLzaonNpw">
+    <listClase xmi:type="tooldataform.pmoo:Clase" xmi:id="_RAwEwIRxEemeoZLzaonNpw" name="ModelFactory" id="_p0LDwBc7EeiSj8tKu3ogxw" description="" nameSpace="" nameSpaceElement="">
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_dv5uAExNEeqn3OiIt93rEQ" name="cargar" id="_dv7jMExNEeqn3OiIt93rEQ" description="" typeElement="Operation" urlIcon="platform:/plugin/tooldataform.datosdiagram/icons/Metodo.gif" body="&#xD;&#xA;&#x9;&#x9;ModelFactory modelFactory = null;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI(&quot;platform:/resource/&quot;+ruta);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;org.eclipse.emf.ecore.resource.ResourceSet resourceSet= new org.eclipse.emf.ecore.resource.impl.ResourceSetImpl();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;org.eclipse.emf.ecore.resource.Resource resource = resourceSet.createResource(uri);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;try {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;resource.load(java.util.Collections.EMPTY_MAP);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;modelFactory = (ModelFactory) resource.getContents().get(0);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;} catch (java.io.IOException e) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;// TO-DO Auto-generated catch block&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;e.printStackTrace();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;return modelFactory;&#xD;&#xA;&#x9;" returnTypeMethod="ModelFactory">
+        <listParametros xmi:type="tooldataform.pmoo:Atributo" xmi:id="_3N0ssE8oEeqRb54lDFvOYQ" name="ruta" id="_xVIBIExNEeqn3OiIt93rEQ" type="String" valueDefault="" namePresentation="ruta:String"/>
+      </listaMetodos>
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_eZtgAExNEeqn3OiIt93rEQ" name="salvar" id="_eZtgAUxNEeqn3OiIt93rEQ" description="" typeElement="Operation" urlIcon="platform:/plugin/tooldataform.datosdiagram/icons/Metodo.gif" body="&#xD;&#xA;&#x9;&#x9;ModelFactory modelFactory = this;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI(&quot;platform:/resource/&quot;+ruta);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;org.eclipse.emf.ecore.resource.ResourceSet resourceSet= new org.eclipse.emf.ecore.resource.impl.ResourceSetImpl();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;org.eclipse.emf.ecore.resource.Resource resource = resourceSet.createResource(uri);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;resource.getContents().add(modelFactory);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;try {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;resource.save(java.util.Collections.EMPTY_MAP);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;} catch (java.io.IOException e) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;// TO-DO Auto-generated catch block&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;e.printStackTrace();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;return;&#xD;&#xA;&#x9;" returnTypeMethod="">
+        <listParametros xmi:type="tooldataform.pmoo:Atributo" xmi:id="_6aId0kxNEeqn3OiIt93rEQ" name="ruta" id="_6aId0UxNEeqn3OiIt93rEQ" type="String" typeElement="Attribute" urlIcon="platform:/plugin/tooldataform.datosdiagram/icons/Atributo.gif" valueDefault="" namePresentation="ruta:String"/>
+      </listaMetodos>
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_XBxQsGsbEeqv98S2YDhvpQ" name="implementarModelo" id="_XBlqgGsbEeqv98S2YDhvpQ" description="" body="UI ui&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;= getTheUI();&#xD;&#xA;&#x9;&#x9;Domain domain&#x9;&#x9;&#x9;&#x9;= getTheDomain();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;if(domain == null) {&#xD;&#xA;&#x9;&#x9;&#x9;domain&#x9;= sma.domain.DomainFactory.eINSTANCE.createDomain();&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;if(ui == null) {&#xD;&#xA;&#x9;&#x9;&#x9;ui &#x9;&#x9;= sma.ui.UiFactory.eINSTANCE.createUI();&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;setTheDomain(domain);&#xD;&#xA;&#x9;&#x9;setTheUI(ui);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ui.setTheDomain(domain);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;domain.setTheUI(ui);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;domain.implementarModelo();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ui.implementarModelo();"/>
+    </listClase>
+    <listClase xmi:type="tooldataform.pmoo:Clase" xmi:id="_SBrWQIRxEemeoZLzaonNpw" name="Domain" id="_t31tgBc7EeiSj8tKu3ogxw" nameSpace="(from: domain)" nameSpaceElement="(from: domain)">
+      <listaAtributos xmi:type="tooldataform.pmoo:Atributo" xmi:id="_docncIAcEeq2fJEaaMN8Uw" name="incrementalIdCliente" id="_dlzjIIAcEeq2fJEaaMN8Uw" type="Integer" valueDefault="" namePresentation="incrementalIdCliente:Integer"/>
+      <listaAtributos xmi:type="tooldataform.pmoo:Atributo" xmi:id="_q7Lo0IAcEeq2fJEaaMN8Uw" name="incrementalIdCm" id="_q5pXwIAcEeq2fJEaaMN8Uw" type="String" valueDefault="" namePresentation="incrementalIdCm:Integer"/>
+      <listaAtributos xmi:type="tooldataform.pmoo:Atributo" xmi:id="_s_5SkIAcEeq2fJEaaMN8Uw" name="incrementalIdAuto" id="_s-p8cIAcEeq2fJEaaMN8Uw" type="String" valueDefault="" namePresentation="incrementalIdAuto:Integer"/>
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_dXxJcGsbEeqv98S2YDhvpQ" name="implementarModelo" id="_dXeOgGsbEeqv98S2YDhvpQ" description="" body="&#xD;&#xA;&#x9;&#x9;//implementar modelo&#xD;&#xA;&#x9;"/>
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_TyxKUH_xEeqq_5zgqPJiRA" name="registrarUsuario" id="_TrMisH_xEeqq_5zgqPJiRA" description="" body="&#xD;&#xA;&#x9;&#x9;Usuario usuario = &#x9;&#x9;&#x9;sma.domain.DomainFactory.eINSTANCE.createUsuario();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;sma.domain.UbicacionUsu ubicacionUsu = sma.domain.DomainFactory.eINSTANCE.createUbicacionUsu();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;//-------------------------------------------Asignacion el ID autoincremental al usuario-------------------------------------------------------&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;usuario.setId(String.valueOf(incrementarIdCliente()));&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;//-------------------------------------------Asignacion de atributos personales al usuario-------------------------------------------------------&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;usuario.setNombres(formulario.getTheContenedorDetalleClienteViewModel().getTheContenedorDatosPersonalesViewModel().getNombre());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;usuario.setApellidos(formulario.getTheContenedorDetalleClienteViewModel().getTheContenedorDatosPersonalesViewModel().getApellido());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;usuario.setNumDI(formulario.getTheContenedorDetalleClienteViewModel().getTheContenedorDatosPersonalesViewModel().getCedula());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;usuario.setEdad(Integer.parseInt(formulario.getTheContenedorDetalleClienteViewModel().getTheContenedorDatosPersonalesViewModel().getEdad()));&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;usuario.setEmail(formulario.getTheContenedorDetalleClienteViewModel().getTheContenedorDatosPersonalesViewModel().getCorreoelectronico());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;//-------------------------------------------Asignacion de atributos de la cuenta del usuario-------------------------------------------------------&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;usuario.setUsuario(formulario.getTheContenedorDetalleClienteViewModel().getTheContenedorDatosdelacuentaViewModel().getContraseña());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;usuario.setContrasenia(formulario.getTheContenedorDetalleClienteViewModel().getTheContenedorDatosdelacuentaViewModel().getContraseña());&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;//-------------------------------------------Asignacion de la ubicacion-------------------------------------------------------&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;usuario.setUbicacion(ubicacionUsu);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ubicacionUsu.setOwnerBy(usuario);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;listaUsuarios.add(usuario);&#xD;&#xA;&#x9;">
+        <listParametros xmi:type="tooldataform.pmoo:Atributo" xmi:id="_KwGroIAgEeq2fJEaaMN8Uw" name="formulario" id="_-Dky0IAYEeq2fJEaaMN8Uw" type="ContenedorCrudClienteViewModel" valueDefault="" namePresentation="formulario:ContenedorCrudClienteViewModel"/>
+      </listaMetodos>
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_0v6PEIAYEeq2fJEaaMN8Uw" name="registrarCm" id="_0ui9IIAYEeq2fJEaaMN8Uw" description="" body="&#xD;&#xA;&#x9;&#x9;CentroMant centroMantenimiento &#x9;= sma.domain.DomainFactory.eINSTANCE.createCentroMant();&#xD;&#xA;&#x9;&#x9;sma.domain.UbicacionCM ubicacionCM&#x9;&#x9;&#x9;= sma.domain.DomainFactory.eINSTANCE.createUbicacionCM();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;//-------------------------------------------Asignacion informacion de CM-------------------------------------------------------&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;centroMantenimiento.setId(String.valueOf(incrementalIdCm));&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;//-------------------------------------------Asignacion informacion de CM-------------------------------------------------------&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;centroMantenimiento.setNombre(formulario.getTheContenedorDetalleCMViewModel().getTheContenedorInformacionCMViewModel().getNombrecm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;centroMantenimiento.setNombreRepresentante(formulario.getTheContenedorDetalleCMViewModel().getTheContenedorInformacionCMViewModel().getNombrerepresentante());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;centroMantenimiento.setDescripcion(formulario.getTheContenedorDetalleCMViewModel().getTheContenedorInformacionCMViewModel().getDescripcion());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;//-------------------------------------------Asignacion de ubicacion de CM-------------------------------------------------------&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;ubicacionCM.setPais(formulario.getTheContenedorDetalleCMViewModel().getTheContenedorUbicacionViewModel().getPais());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;ubicacionCM.setDepartamento(formulario.getTheContenedorDetalleCMViewModel().getTheContenedorUbicacionViewModel().getDepartamento());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;ubicacionCM.setCiudad(formulario.getTheContenedorDetalleCMViewModel().getTheContenedorUbicacionViewModel().getCiudad());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;ubicacionCM.setDireccion(formulario.getTheContenedorDetalleCMViewModel().getTheContenedorUbicacionViewModel().getDireccion());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;centroMantenimiento.setUbicacion(ubicacionCM);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;ubicacionCM.setOwnedBy(centroMantenimiento);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;listaDeCentMant.add(centroMantenimiento);&#xD;&#xA;&#x9;">
+        <listParametros xmi:type="tooldataform.pmoo:Atributo" xmi:id="_gMj_cIAbEeq2fJEaaMN8Uw" name="formulario" id="_5Q9YYIAYEeq2fJEaaMN8Uw" type="ContenedorCRUDCMViewModel" valueDefault="" namePresentation="formulario:ContenedorCRUDCMViewModel"/>
+      </listaMetodos>
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_ZwOgEIAZEeq2fJEaaMN8Uw" name="registrarAutomovil" id="_ZuKDgIAZEeq2fJEaaMN8Uw" description="" body="&#xD;&#xA;&#x9;&#x9;Automovil automovil = sma.domain.DomainFactory.eINSTANCE.createAutomovil();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;//Usuario usuario = sma.domain.DomainFactory.eINSTANCE.createUsuario();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;//-------------------------------Asignar id incremental al automovil-------------------------------------------------------&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;automovil.setId(String.valueOf(incrementalIdAuto));&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;//-------------------------------Asignar Propiedades al automovil--------------------------------------------------------------&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;automovil.setMarca(formulario.getTheContenedorDetalleVehiculoViewModel().getMarca());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;automovil.setModelo(Integer.parseInt(formulario.getTheContenedorDetalleVehiculoViewModel().getModelo()));&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;automovil.setPlaca(formulario.getTheContenedorDetalleVehiculoViewModel().getPlaca());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;automovil.setReferencia(formulario.getTheContenedorDetalleVehiculoViewModel().getReferencia());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;automovil.setTipoUso(formulario.getTheContenedorDetalleVehiculoViewModel().getTipovehiculo());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;//--------------------------------------------Agregar a la lista de Autos registrados del usuario-------------------------------------&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;for (Usuario usu : listaUsuarios) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;if ( usu.getId().equals( idPropietario ) ) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;automovil.setPropietario(usu);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;usu.getAutomoviles().add(automovil);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;">
+        <listParametros xmi:type="tooldataform.pmoo:Atributo" xmi:id="_Jd-ssIAxEeqb86H6fnJvzQ" name="formulario" id="_d4y38IAZEeq2fJEaaMN8Uw" type="ContenedorRegistroVehiculoViewModel" valueDefault="" namePresentation="formulario:ContenedorRegistroVehiculoViewModel"/>
+        <listParametros xmi:type="tooldataform.pmoo:Atributo" xmi:id="_Jd-ssYAxEeqb86H6fnJvzQ" name="idPropietario" id="_JUtb8IAxEeqb86H6fnJvzQ" type="String" valueDefault="" namePresentation="idPropietario:String"/>
+      </listaMetodos>
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_DgWGEIAwEeqb86H6fnJvzQ" name="incrementarIdCliente" id="_Deed0IAwEeqb86H6fnJvzQ" description="" body="&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;int retorno = incrementalIdCliente;&#xD;&#xA;&#x9;&#x9;incrementalIdCliente = incrementalIdCliente +1;&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;return retorno;&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;" returnTypeMethod="Integer"/>
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_IRqgAIAwEeqb86H6fnJvzQ" name="incrementarIdCm" id="_IQKEIIAwEeqb86H6fnJvzQ" description="" body="&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;int retorno = incrementalIdCm;&#xD;&#xA;&#x9;&#x9;incrementalIdCm = incrementalIdCm +1;&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;return retorno;&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;" returnTypeMethod="Integer"/>
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_QurIkIAwEeqb86H6fnJvzQ" name="incrementarIdAuto" id="_QsewMIAwEeqb86H6fnJvzQ" description="" body="&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;int retorno = incrementalIdAuto;&#xD;&#xA;&#x9;&#x9;incrementalIdAuto = incrementalIdAuto +1;&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;return retorno;&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;" returnTypeMethod="Integer"/>
+    </listClase>
+    <listClase xmi:type="tooldataform.pmoo:Clase" xmi:id="_Ug-DMIRxEemeoZLzaonNpw" name="UI" id="_v0Q98Bc7EeiSj8tKu3ogxw" nameSpace="(from: ui)" nameSpaceElement="(from: ui)">
+      <listaAtributos xmi:type="tooldataform.pmoo:Atributo" xmi:id="_MRA_kIAyEeqb86H6fnJvzQ" name="idLogueado" id="_MPCCkIAyEeqb86H6fnJvzQ" type="String" valueDefault="" namePresentation="idLogueado:String"/>
+      <listaAtributos xmi:type="tooldataform.pmoo:Atributo" xmi:id="_Ofvg8IAyEeqb86H6fnJvzQ" name="tipoLogueado" id="_OedHgIAyEeqb86H6fnJvzQ" type="String" valueDefault="" namePresentation="tipoLogueado:String"/>
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_QvrnkGsbEeqv98S2YDhvpQ" name="implementarModelo" id="_QvhPgGsbEeqv98S2YDhvpQ" description="" body="void"/>
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="__jDeAIAXEeq2fJEaaMN8Uw" name="registrarCliente" id="__f7RgIAXEeq2fJEaaMN8Uw" description="" body="&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;getTheDomain().registrarUsuario(formulario);&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;">
+        <listParametros xmi:type="tooldataform.pmoo:Atributo" xmi:id="_CnUY4IAbEeq2fJEaaMN8Uw" name="formulario" id="_UR2BQIAYEeq2fJEaaMN8Uw" type="ContenedorCrudClienteViewModel" valueDefault="" namePresentation="formulario:ContenedorCrudClienteViewModel"/>
+      </listaMetodos>
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_tty3MIAYEeq2fJEaaMN8Uw" name="RegistrarCm" id="_trqwQIAYEeq2fJEaaMN8Uw" description="" body="&#xD;&#xA;&#x9;&#x9;getTheDomain().registrarCm(formulario);&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;">
+        <listParametros xmi:type="tooldataform.pmoo:Atributo" xmi:id="_iu6ncIAbEeq2fJEaaMN8Uw" name="formulario" id="_yoFm8IAYEeq2fJEaaMN8Uw" type="ContenedorCRUDCMViewModel" valueDefault="" namePresentation="formulario:ContenedorCRUDCMViewModel"/>
+      </listaMetodos>
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_MYRAcIAZEeq2fJEaaMN8Uw" name="registrarVehiculo" id="_MW2rMIAZEeq2fJEaaMN8Uw" description="" body="&#xD;&#xA;&#x9;&#x9;getTheDomain().registrarAutomovil(formulario);&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;">
+        <listParametros xmi:type="tooldataform.pmoo:Atributo" xmi:id="_aTR14IAxEeqb86H6fnJvzQ" name="formulario" id="_RFVMgIAZEeq2fJEaaMN8Uw" type="ContenedorRegistroVehiculoViewModel" valueDefault="" namePresentation="formulario:ContenedorRegistroVehiculoViewModel"/>
+      </listaMetodos>
+    </listClase>
+    <listRelacion_Data xmi:type="tooldataform.pmoo:Relacion_Data" xmi:id="_HGNL4GsbEeqv98S2YDhvpQ" name="theDomain(Domain)" id="_HGPoIGsbEeqv98S2YDhvpQ" aRol="theUI" bRol="theDomain" aMultiplicidad="_1" bMultiplicidad="_1" multiplicidadB="1" multiplicidadA="1" source="_Ug-DMIRxEemeoZLzaonNpw" target="_SBrWQIRxEemeoZLzaonNpw"/>
+    <listRelacion_Data xmi:type="tooldataform.pmoo:Relacion_Data" xmi:id="_6bq50H1sEeqT4__3zNoxqw" name="theUI(UI)" id="_6bsH8H1sEeqT4__3zNoxqw" aRol="theModelFactory" bRol="theUI" aMultiplicidad="_1" bMultiplicidad="_1" multiplicidadB="1" multiplicidadA=" " bContainment="si" bAgregacion="si" source="_RAwEwIRxEemeoZLzaonNpw" target="_Ug-DMIRxEemeoZLzaonNpw"/>
+    <listRelacion_Data xmi:type="tooldataform.pmoo:Relacion_Data" xmi:id="_9cUAUH1sEeqT4__3zNoxqw" name="theDomain(Domain)" id="_9cVOcH1sEeqT4__3zNoxqw" aRol="theModelFactory" bRol="theDomain" aMultiplicidad="_1" bMultiplicidad="_1" multiplicidadB="1" multiplicidadA=" " bContainment="si" bAgregacion="si" source="_RAwEwIRxEemeoZLzaonNpw" target="_SBrWQIRxEemeoZLzaonNpw"/>
+    <listPackageParent xmi:type="tooldataform.core:Package" xmi:id="_Fl4nsHt5EeqbaPY9Lz0hzw" name="ui" id="_sgEpURc7EeiSj8tKu3ogxw" nameSpace=""/>
+    <listPackageParent xmi:type="tooldataform.core:Package" xmi:id="_GHGeYHt5EeqbaPY9Lz0hzw" name="domain" id="_rb-vEBc7EeiSj8tKu3ogxw" nameSpace=""/>
+  </tooldataform.core:Datos_Diagram>
+  <notation:Diagram xmi:id="_P1krEIRxEemeoZLzaonNpw" type="MetamodelodataformDatosDiagram" element="_P0iJQIRxEemeoZLzaonNpw" name="Main" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_RCWAMIRxEemeoZLzaonNpw" type="2002" element="_RAwEwIRxEemeoZLzaonNpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_RCX1YIRxEemeoZLzaonNpw" type="5003"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_RCX1YYRxEemeoZLzaonNpw" type="5004"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_RCZDgIRxEemeoZLzaonNpw" type="7001">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_RCZDgYRxEemeoZLzaonNpw"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_RCZDgoRxEemeoZLzaonNpw"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_RCZDg4RxEemeoZLzaonNpw" type="7002">
+        <children xmi:type="notation:Node" xmi:id="_dwAbsExNEeqn3OiIt93rEQ" type="3002" element="_dv5uAExNEeqn3OiIt93rEQ">
+          <children xmi:type="notation:DecorationNode" xmi:id="_dwBCwExNEeqn3OiIt93rEQ" type="5006"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_dwAbsUxNEeqn3OiIt93rEQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_dwAbskxNEeqn3OiIt93rEQ" fontName="Segoe UI"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_dwAbs0xNEeqn3OiIt93rEQ"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dwAbtExNEeqn3OiIt93rEQ"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_eZxxcExNEeqn3OiIt93rEQ" type="3002" element="_eZtgAExNEeqn3OiIt93rEQ">
+          <children xmi:type="notation:DecorationNode" xmi:id="_eZxxdUxNEeqn3OiIt93rEQ" type="5006"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_eZxxcUxNEeqn3OiIt93rEQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_eZxxckxNEeqn3OiIt93rEQ" fontName="Segoe UI"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_eZxxc0xNEeqn3OiIt93rEQ"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eZxxdExNEeqn3OiIt93rEQ"/>
+        </children>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_RCZDhIRxEemeoZLzaonNpw"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_RCZDhYRxEemeoZLzaonNpw"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_RCWAMYRxEemeoZLzaonNpw"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_RCWAMoRxEemeoZLzaonNpw" fontName="Segoe UI"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_RCWAM4RxEemeoZLzaonNpw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RCWANIRxEemeoZLzaonNpw" x="395" y="195" width="146" height="106"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_SBskYIRxEemeoZLzaonNpw" type="2002" element="_SBrWQIRxEemeoZLzaonNpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_SBskZYRxEemeoZLzaonNpw" type="5003"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_SBskZoRxEemeoZLzaonNpw" type="5004"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_SBskZ4RxEemeoZLzaonNpw" type="7001">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_SBskaIRxEemeoZLzaonNpw"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_SBskaYRxEemeoZLzaonNpw"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_SBskaoRxEemeoZLzaonNpw" type="7002">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_SBska4RxEemeoZLzaonNpw"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_SBskbIRxEemeoZLzaonNpw"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_SBskYYRxEemeoZLzaonNpw"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_SBskYoRxEemeoZLzaonNpw" fontName="Segoe UI"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_SBskY4RxEemeoZLzaonNpw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SBskZIRxEemeoZLzaonNpw" x="665" y="325" width="144" height="96"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_Ug_4YIRxEemeoZLzaonNpw" type="2002" element="_Ug-DMIRxEemeoZLzaonNpw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_UhAfcIRxEemeoZLzaonNpw" type="5003"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_UhAfcYRxEemeoZLzaonNpw" type="5004"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_UhAfcoRxEemeoZLzaonNpw" type="7001">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_UhAfc4RxEemeoZLzaonNpw"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_UhAfdIRxEemeoZLzaonNpw"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_UhAfdYRxEemeoZLzaonNpw" type="7002">
+        <styles xmi:type="notation:SortingStyle" xmi:id="_UhAfdoRxEemeoZLzaonNpw"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_UhAfd4RxEemeoZLzaonNpw"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_Ug_4YYRxEemeoZLzaonNpw"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_Ug_4YoRxEemeoZLzaonNpw" fontName="Segoe UI"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_Ug_4Y4RxEemeoZLzaonNpw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ug_4ZIRxEemeoZLzaonNpw" x="150" y="330" width="175" height="96"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_FmNX0Ht5EeqbaPY9Lz0hzw" type="2001" element="_Fl4nsHt5EeqbaPY9Lz0hzw" fontName="Segoe UI">
+      <children xmi:type="notation:DecorationNode" xmi:id="_FmOl8Ht5EeqbaPY9Lz0hzw" type="5001"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_FmOl8Xt5EeqbaPY9Lz0hzw" type="5002"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FmNX0Xt5EeqbaPY9Lz0hzw" x="170" y="75"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_GHITkHt5EeqbaPY9Lz0hzw" type="2001" element="_GHGeYHt5EeqbaPY9Lz0hzw" fontName="Segoe UI">
+      <children xmi:type="notation:DecorationNode" xmi:id="_GHJhsHt5EeqbaPY9Lz0hzw" type="5001"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_GHKv0Ht5EeqbaPY9Lz0hzw" type="5002"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GHITkXt5EeqbaPY9Lz0hzw" x="630" y="75"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_P1lSIIRxEemeoZLzaonNpw"/>
+    <edges xmi:type="notation:Connector" xmi:id="_HG028GsbEeqv98S2YDhvpQ" type="4002" element="_HGNL4GsbEeqv98S2YDhvpQ" source="_Ug_4YIRxEemeoZLzaonNpw" target="_SBskYIRxEemeoZLzaonNpw" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_HG0282sbEeqv98S2YDhvpQ" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_HG1eAGsbEeqv98S2YDhvpQ" x="-22" y="17"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_HG1eAWsbEeqv98S2YDhvpQ" type="6002">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_HG1eAmsbEeqv98S2YDhvpQ" x="13" y="-13"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_HG1eA2sbEeqv98S2YDhvpQ" type="6003">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_HG1eBGsbEeqv98S2YDhvpQ" x="-28" y="-13"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_HG1eBWsbEeqv98S2YDhvpQ" type="6004">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_HG1eBmsbEeqv98S2YDhvpQ" x="12" y="12"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_HG028WsbEeqv98S2YDhvpQ" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_HG028msbEeqv98S2YDhvpQ" points="[35, 15, -270, 2]$[273, 15, -32, 2]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_HG6WgGsbEeqv98S2YDhvpQ" id="(0.8166666666666667,0.2625)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_HG6WgWsbEeqv98S2YDhvpQ" id="(0.20930232558139536,0.45)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_6cZSkH1sEeqT4__3zNoxqw" type="4002" element="_6bq50H1sEeqT4__3zNoxqw" source="_RCWAMIRxEemeoZLzaonNpw" target="_Ug_4YIRxEemeoZLzaonNpw" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_6cZ5oH1sEeqT4__3zNoxqw" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_6cZ5oX1sEeqT4__3zNoxqw" x="18" y="11"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_6cZ5on1sEeqT4__3zNoxqw" type="6002">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_6cZ5o31sEeqT4__3zNoxqw" x="19" y="-18"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_6cZ5pH1sEeqT4__3zNoxqw" type="6003">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_6cZ5pX1sEeqT4__3zNoxqw" x="16" y="-12"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_6cZ5pn1sEeqT4__3zNoxqw" type="6004">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_6cZ5p31sEeqT4__3zNoxqw" x="14" y="8"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_6cZSkX1sEeqT4__3zNoxqw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_6cZSkn1sEeqT4__3zNoxqw" points="[-12, 7, 159, -95]$[-172, 99, -1, -3]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_6cmG4H1sEeqT4__3zNoxqw" id="(0.0759493670886076,0.33962264150943394)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_6cmG4X1sEeqT4__3zNoxqw" id="(0.45989304812834225,0.03125)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_9c4BAH1sEeqT4__3zNoxqw" type="4002" element="_9cUAUH1sEeqT4__3zNoxqw" source="_RCWAMIRxEemeoZLzaonNpw" target="_SBskYIRxEemeoZLzaonNpw" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_9c4oEH1sEeqT4__3zNoxqw" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9c4oEX1sEeqT4__3zNoxqw" x="10" y="14"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_9c4oEn1sEeqT4__3zNoxqw" type="6002">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9c7rYH1sEeqT4__3zNoxqw" x="19" y="-36"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_9c7rYX1sEeqT4__3zNoxqw" type="6003">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9c7rYn1sEeqT4__3zNoxqw" x="16" y="-12"/>
+      </children>
+      <children xmi:type="notation:DecorationNode" xmi:id="_9c7rY31sEeqT4__3zNoxqw" type="6004">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9c8ScH1sEeqT4__3zNoxqw" x="19" y="15"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_9c4BAX1sEeqT4__3zNoxqw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9c4BAn1sEeqT4__3zNoxqw" points="[3, 1, -208, -95]$[214, 88, 3, -8]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9c_80H1sEeqT4__3zNoxqw" id="(0.9810126582278481,0.39622641509433965)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9c_80X1sEeqT4__3zNoxqw" id="(0.6153846153846154,0.08333333333333333)"/>
+    </edges>
+  </notation:Diagram>
+</xmi:XMI>

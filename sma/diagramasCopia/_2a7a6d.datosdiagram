@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:tooldataform.core="http:///tooldataform/core.ecore" xsi:schemaLocation="http:///tooldataform/core.ecore http:///tooldataform.ecore#//core">
+  <tooldataform.core:Datos_Diagram xmi:id="_OdNJYH95EeqpldL-IKh_yg" name="Datos: Registro Vehiculo"/>
+  <notation:Diagram xmi:id="_OdW6YH95EeqpldL-IKh_yg" type="MetamodelodataformDatosDiagram" element="_OdNJYH95EeqpldL-IKh_yg" name="Datos: Registro Vehiculo" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_OdW6YX95EeqpldL-IKh_yg"/>
+  </notation:Diagram>
+</xmi:XMI>

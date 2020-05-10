@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated sma -->
+      <package
+            uri="http:///sma.ecore"
+            class="sma.smaPackage"
+            genModel="model/sma.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated sma -->
+      <package
+            uri="http:///sma/domain.ecore"
+            class="sma.domain.DomainPackage"
+            genModel="model/sma.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated sma -->
+      <package
+            uri="http:///sma/domain/reparacionvehiculo.ecore"
+            class="sma.domain.reparacionvehiculo.ReparacionvehiculoPackage"
+            genModel="model/sma.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated sma -->
+      <package
+            uri="http:///sma/domain/automatizacionrevision.ecore"
+            class="sma.domain.automatizacionrevision.AutomatizacionrevisionPackage"
+            genModel="model/sma.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated sma -->
+      <package
+            uri="http:///sma/ui.ecore"
+            class="sma.ui.UiPackage"
+            genModel="model/sma.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated sma -->
+      <package
+            uri="http:///sma/ui/viewmodels/contenedorcrudclienteviewmodel.ecore"
+            class="sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelPackage"
+            genModel="model/sma.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated sma -->
+      <package
+            uri="http:///sma/ui/viewmodels/contenedorcrudcmviewmodel.ecore"
+            class="sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelPackage"
+            genModel="model/sma.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated sma -->
+      <package
+            uri="http:///sma/ui/viewmodels/contenedorregistrovehiculoviewmodel.ecore"
+            class="sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorregistrovehiculoviewmodelPackage"
+            genModel="model/sma.genmodel"/>
+   </extension>
+
+</plugin>

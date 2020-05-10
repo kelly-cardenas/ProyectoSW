@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated sma -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="sma.presentation.smaModelWizardID"
+            name="%_UI_smaModelWizard_label"
+            class="sma.presentation.smaModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/smaModelFile.gif">
+         <description>%_UI_smaModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated sma -->
+      <editor
+            id="sma.presentation.smaEditorID"
+            name="%_UI_smaEditor_label"
+            icon="icons/full/obj16/smaModelFile.gif"
+            extensions="sma"
+            class="sma.presentation.smaEditor"
+            contributorClass="sma.presentation.smaActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated sma -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="sma.domain.presentation.DomainModelWizardID"
+            name="%_UI_DomainModelWizard_label"
+            class="sma.domain.presentation.DomainModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/DomainModelFile.gif">
+         <description>%_UI_DomainModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated sma -->
+      <editor
+            id="sma.domain.presentation.DomainEditorID"
+            name="%_UI_DomainEditor_label"
+            icon="icons/full/obj16/DomainModelFile.gif"
+            extensions="domain"
+            class="sma.domain.presentation.DomainEditor"
+            contributorClass="sma.domain.presentation.DomainActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated sma -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="sma.domain.reparacionvehiculo.presentation.ReparacionvehiculoModelWizardID"
+            name="%_UI_ReparacionvehiculoModelWizard_label"
+            class="sma.domain.reparacionvehiculo.presentation.ReparacionvehiculoModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ReparacionvehiculoModelFile.gif">
+         <description>%_UI_ReparacionvehiculoModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated sma -->
+      <editor
+            id="sma.domain.reparacionvehiculo.presentation.ReparacionvehiculoEditorID"
+            name="%_UI_ReparacionvehiculoEditor_label"
+            icon="icons/full/obj16/ReparacionvehiculoModelFile.gif"
+            extensions="reparacionvehiculo"
+            class="sma.domain.reparacionvehiculo.presentation.ReparacionvehiculoEditor"
+            contributorClass="sma.domain.reparacionvehiculo.presentation.ReparacionvehiculoActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated sma -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="sma.domain.automatizacionrevision.presentation.AutomatizacionrevisionModelWizardID"
+            name="%_UI_AutomatizacionrevisionModelWizard_label"
+            class="sma.domain.automatizacionrevision.presentation.AutomatizacionrevisionModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/AutomatizacionrevisionModelFile.gif">
+         <description>%_UI_AutomatizacionrevisionModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated sma -->
+      <editor
+            id="sma.domain.automatizacionrevision.presentation.AutomatizacionrevisionEditorID"
+            name="%_UI_AutomatizacionrevisionEditor_label"
+            icon="icons/full/obj16/AutomatizacionrevisionModelFile.gif"
+            extensions="automatizacionrevision"
+            class="sma.domain.automatizacionrevision.presentation.AutomatizacionrevisionEditor"
+            contributorClass="sma.domain.automatizacionrevision.presentation.AutomatizacionrevisionActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated sma -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="sma.ui.presentation.UiModelWizardID"
+            name="%_UI_UiModelWizard_label"
+            class="sma.ui.presentation.UiModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/UiModelFile.gif">
+         <description>%_UI_UiModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated sma -->
+      <editor
+            id="sma.ui.presentation.UiEditorID"
+            name="%_UI_UiEditor_label"
+            icon="icons/full/obj16/UiModelFile.gif"
+            extensions="ui"
+            class="sma.ui.presentation.UiEditor"
+            contributorClass="sma.ui.presentation.UiActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated sma -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="sma.ui.viewmodels.contenedorcrudclienteviewmodel.presentation.ContenedorcrudclienteviewmodelModelWizardID"
+            name="%_UI_ContenedorcrudclienteviewmodelModelWizard_label"
+            class="sma.ui.viewmodels.contenedorcrudclienteviewmodel.presentation.ContenedorcrudclienteviewmodelModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ContenedorcrudclienteviewmodelModelFile.gif">
+         <description>%_UI_ContenedorcrudclienteviewmodelModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated sma -->
+      <editor
+            id="sma.ui.viewmodels.contenedorcrudclienteviewmodel.presentation.ContenedorcrudclienteviewmodelEditorID"
+            name="%_UI_ContenedorcrudclienteviewmodelEditor_label"
+            icon="icons/full/obj16/ContenedorcrudclienteviewmodelModelFile.gif"
+            extensions="contenedorcrudclienteviewmodel"
+            class="sma.ui.viewmodels.contenedorcrudclienteviewmodel.presentation.ContenedorcrudclienteviewmodelEditor"
+            contributorClass="sma.ui.viewmodels.contenedorcrudclienteviewmodel.presentation.ContenedorcrudclienteviewmodelActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated sma -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="sma.ui.viewmodels.contenedorcrudcmviewmodel.presentation.ContenedorcrudcmviewmodelModelWizardID"
+            name="%_UI_ContenedorcrudcmviewmodelModelWizard_label"
+            class="sma.ui.viewmodels.contenedorcrudcmviewmodel.presentation.ContenedorcrudcmviewmodelModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ContenedorcrudcmviewmodelModelFile.gif">
+         <description>%_UI_ContenedorcrudcmviewmodelModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated sma -->
+      <editor
+            id="sma.ui.viewmodels.contenedorcrudcmviewmodel.presentation.ContenedorcrudcmviewmodelEditorID"
+            name="%_UI_ContenedorcrudcmviewmodelEditor_label"
+            icon="icons/full/obj16/ContenedorcrudcmviewmodelModelFile.gif"
+            extensions="contenedorcrudcmviewmodel"
+            class="sma.ui.viewmodels.contenedorcrudcmviewmodel.presentation.ContenedorcrudcmviewmodelEditor"
+            contributorClass="sma.ui.viewmodels.contenedorcrudcmviewmodel.presentation.ContenedorcrudcmviewmodelActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated sma -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.presentation.ContenedorregistrovehiculoviewmodelModelWizardID"
+            name="%_UI_ContenedorregistrovehiculoviewmodelModelWizard_label"
+            class="sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.presentation.ContenedorregistrovehiculoviewmodelModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ContenedorregistrovehiculoviewmodelModelFile.gif">
+         <description>%_UI_ContenedorregistrovehiculoviewmodelModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated sma -->
+      <editor
+            id="sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.presentation.ContenedorregistrovehiculoviewmodelEditorID"
+            name="%_UI_ContenedorregistrovehiculoviewmodelEditor_label"
+            icon="icons/full/obj16/ContenedorregistrovehiculoviewmodelModelFile.gif"
+            extensions="contenedorregistrovehiculoviewmodel"
+            class="sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.presentation.ContenedorregistrovehiculoviewmodelEditor"
+            contributorClass="sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.presentation.ContenedorregistrovehiculoviewmodelActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

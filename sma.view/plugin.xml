@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+<extension
+  point="org.eclipse.ui.views">
+<view
+  category="sma.view.category1"    class="sma.view.view.views.CrudClienteViewPart"
+    id="sma.view.view.views.CrudCliente" 
+   name="CrudCliente">
+ </view>
+<view
+  category="sma.view.category1"    class="sma.view.view.views.CRUDCMViewPart"
+    id="sma.view.view.views.CRUDCM" 
+   name="CRUDCM">
+ </view>
+<view
+  category="sma.view.category1"    class="sma.view.view.views.RegistroVehiculoViewPart"
+    id="sma.view.view.views.RegistroVehiculo" 
+   name="RegistroVehiculo">
+ </view>
+<category
+   id="sma.view.category1"
+    name="ViewsDF">
+</category>
+</extension> 
+
+       <extension
+             point="org.eclipse.ui.actionSets">
+         <actionSet
+               label="Update View"
+               visible="true"
+               id="test.update.actionSet">
+            <menu
+                 label="Sample &amp;Menu"
+                 id="sampleMenu">
+              <separator
+                    name="sampleGroup">
+              </separator>
+            </menu>
+            <action
+                      label="UpdateData"
+                      icon="button.png"
+                      class="sma.view.update.actions.UpdateAction"
+                      tooltip="Update View"
+                      menubarPath="sampleMenu/sampleGroup"
+                      toolbarPath="sampleGroup"
+                      id="test.update.actions.SampleAction">
+            </action>
+          </actionSet>
+       </extension>
+</plugin>
