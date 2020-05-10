@@ -66,4 +66,12 @@
             genModel="model/sma.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated sma -->
+      <package
+            uri="http:///sma/ui/viewmodels/contenedorloginviewmodel.ecore"
+            class="sma.ui.viewmodels.contenedorloginviewmodel.ContenedorloginviewmodelPackage"
+            genModel="model/sma.genmodel"/>
+   </extension>
+
 </plugin>

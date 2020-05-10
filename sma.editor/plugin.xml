@@ -230,4 +230,32 @@
       </editor>
    </extension>
 
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated sma -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="sma.ui.viewmodels.contenedorloginviewmodel.presentation.ContenedorloginviewmodelModelWizardID"
+            name="%_UI_ContenedorloginviewmodelModelWizard_label"
+            class="sma.ui.viewmodels.contenedorloginviewmodel.presentation.ContenedorloginviewmodelModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ContenedorloginviewmodelModelFile.gif">
+         <description>%_UI_ContenedorloginviewmodelModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated sma -->
+      <editor
+            id="sma.ui.viewmodels.contenedorloginviewmodel.presentation.ContenedorloginviewmodelEditorID"
+            name="%_UI_ContenedorloginviewmodelEditor_label"
+            icon="icons/full/obj16/ContenedorloginviewmodelModelFile.gif"
+            extensions="contenedorloginviewmodel"
+            class="sma.ui.viewmodels.contenedorloginviewmodel.presentation.ContenedorloginviewmodelEditor"
+            contributorClass="sma.ui.viewmodels.contenedorloginviewmodel.presentation.ContenedorloginviewmodelActionBarContributor">
+      </editor>
+   </extension>
+
 </plugin>

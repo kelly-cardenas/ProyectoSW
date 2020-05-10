@@ -340,6 +340,9 @@
         <genFeatures property="None" children="true" createChild="true">
           <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/UI/theContenedorRegistroVehiculoViewModel"/>
         </genFeatures>
+        <genFeatures property="None" children="true" createChild="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/UI/theContenedorLoginViewModel"/>
+        </genFeatures>
         <genOperations>
           <ecoreOperation href="sma.ecore#//ui/UI/implementarModelo"/>
         </genOperations>
@@ -644,6 +647,42 @@
             <genFeatures createChild="false">
               <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorregistrovehiculoviewmodel/VehiculoViewModel/placa"/>
             </genFeatures>
+          </genClasses>
+        </nestedGenPackages>
+        <nestedGenPackages prefix="Contenedorloginviewmodel" disposableProviderFactory="true">
+          <ecorePackage href="sma.ecore#//ui/viewmodels/contenedorloginviewmodel"/>
+          <genClasses>
+            <ecoreClass href="sma.ecore#//ui/viewmodels/contenedorloginviewmodel/ContenedorDetalleLoginViewModel"/>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorloginviewmodel/ContenedorDetalleLoginViewModel/usuario"/>
+            </genFeatures>
+            <genFeatures property="None" notify="false" createChild="false">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorloginviewmodel/ContenedorDetalleLoginViewModel/ownedByContenedorLoginViewModel"/>
+            </genFeatures>
+          </genClasses>
+          <genClasses>
+            <ecoreClass href="sma.ecore#//ui/viewmodels/contenedorloginviewmodel/ContenedorLoginViewModel"/>
+            <genFeatures property="None" notify="false" createChild="false">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorloginviewmodel/ContenedorLoginViewModel/ownedByUI"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorloginviewmodel/ContenedorLoginViewModel/usuario"/>
+            </genFeatures>
+            <genFeatures property="None" children="true" createChild="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorloginviewmodel/ContenedorLoginViewModel/theContenedorDetalleLoginViewModel"/>
+            </genFeatures>
+            <genOperations>
+              <ecoreOperation href="sma.ecore#//ui/viewmodels/contenedorloginviewmodel/ContenedorLoginViewModel/upadateDialog"/>
+              <genParameters>
+                <ecoreParameter href="sma.ecore#//ui/viewmodels/contenedorloginviewmodel/ContenedorLoginViewModel/upadateDialog/evento"/>
+              </genParameters>
+            </genOperations>
+            <genOperations>
+              <ecoreOperation href="sma.ecore#//ui/viewmodels/contenedorloginviewmodel/ContenedorLoginViewModel/prueba"/>
+            </genOperations>
+            <genOperations>
+              <ecoreOperation href="sma.ecore#//ui/viewmodels/contenedorloginviewmodel/ContenedorLoginViewModel/implementarModelo"/>
+            </genOperations>
           </genClasses>
         </nestedGenPackages>
       </nestedGenPackages>

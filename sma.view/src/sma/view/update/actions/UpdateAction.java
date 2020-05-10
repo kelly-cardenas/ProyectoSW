@@ -34,6 +34,10 @@ public class UpdateAction implements IWorkbenchWindowActionDelegate {
 		           RegistroVehiculoViewPart registroVehiculoViewPart = (RegistroVehiculoViewPart)iWorkbenchPage2;
 		            registroVehiculoViewPart.updateData();
 					}
+					if(iWorkbenchPage2 instanceof LoginViewPart) {
+		           LoginViewPart loginViewPart = (LoginViewPart)iWorkbenchPage2;
+		            loginViewPart.updateData();
+					}
 				}
 			}
 		}

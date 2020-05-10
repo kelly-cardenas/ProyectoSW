@@ -19,6 +19,11 @@
     id="sma.view.view.views.RegistroVehiculo" 
    name="RegistroVehiculo">
  </view>
+<view
+  category="sma.view.category1"    class="sma.view.view.views.LoginViewPart"
+    id="sma.view.view.views.Login" 
+   name="Login">
+ </view>
 <category
    id="sma.view.category1"
     name="ViewsDF">

@@ -15,6 +15,7 @@ Export-Package: sma.domain.automatizacionrevision.provider,
  sma.ui.provider,
  sma.ui.viewmodels.contenedorcrudclienteviewmodel.provider,
  sma.ui.viewmodels.contenedorcrudcmviewmodel.provider,
+ sma.ui.viewmodels.contenedorloginviewmodel.provider,
  sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.provider
 Require-Bundle: org.eclipse.core.runtime,
  sma;visibility:=reexport,

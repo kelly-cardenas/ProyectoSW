@@ -10,6 +10,7 @@ import sma.ui.viewmodels.*;
 import sma.ui.viewmodels.contenedorcrudclienteviewmodel.*;
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.*;
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.*;
+import sma.ui.viewmodels.contenedorloginviewmodel.*;
 
 import sma.view.model.ModelFactoryModel;
 import org.eclipse.wb.swt.SWTResourceManager;
@@ -297,25 +298,25 @@ public class CrudClienteViewPart  extends ViewPart {
 		         clienteViewModelSeleccionado  = (ClienteViewModel)e.item.getData();
 		  } 
           });
-		TableViewerColumn  tableViewerColumn0Identificacion = new TableViewerColumn(tableViewerCliente, SWT.NONE);
-		TableColumn tblclmn0Identificacion = tableViewerColumn0Identificacion.getColumn();
-		tblclmn0Identificacion.setWidth(100);
-		tblclmn0Identificacion .setText("identificacion");
+		TableViewerColumn  tableViewerColumn10Identificacion = new TableViewerColumn(tableViewerCliente, SWT.NONE);
+		TableColumn tblclmn10Identificacion = tableViewerColumn10Identificacion.getColumn();
+		tblclmn10Identificacion.setWidth(100);
+		tblclmn10Identificacion .setText("identificacion");
 
-		TableViewerColumn  tableViewerColumn1Nombre = new TableViewerColumn(tableViewerCliente, SWT.NONE);
-		TableColumn tblclmn1Nombre = tableViewerColumn1Nombre.getColumn();
-		tblclmn1Nombre.setWidth(100);
-		tblclmn1Nombre .setText("Nombre");
+		TableViewerColumn  tableViewerColumn11Nombre = new TableViewerColumn(tableViewerCliente, SWT.NONE);
+		TableColumn tblclmn11Nombre = tableViewerColumn11Nombre.getColumn();
+		tblclmn11Nombre.setWidth(100);
+		tblclmn11Nombre .setText("Nombre");
 
-		TableViewerColumn  tableViewerColumn2Email = new TableViewerColumn(tableViewerCliente, SWT.NONE);
-		TableColumn tblclmn2Email = tableViewerColumn2Email.getColumn();
-		tblclmn2Email.setWidth(100);
-		tblclmn2Email .setText("Email");
+		TableViewerColumn  tableViewerColumn12Email = new TableViewerColumn(tableViewerCliente, SWT.NONE);
+		TableColumn tblclmn12Email = tableViewerColumn12Email.getColumn();
+		tblclmn12Email.setWidth(100);
+		tblclmn12Email .setText("Email");
 
-		TableViewerColumn  tableViewerColumn3Edad = new TableViewerColumn(tableViewerCliente, SWT.NONE);
-		TableColumn tblclmn3Edad = tableViewerColumn3Edad.getColumn();
-		tblclmn3Edad.setWidth(100);
-		tblclmn3Edad .setText("Edad");
+		TableViewerColumn  tableViewerColumn13Edad = new TableViewerColumn(tableViewerCliente, SWT.NONE);
+		TableColumn tblclmn13Edad = tableViewerColumn13Edad.getColumn();
+		tblclmn13Edad.setWidth(100);
+		tblclmn13Edad .setText("Edad");
 
         try {
 	       initDataBindings();
@@ -356,16 +357,16 @@ public class CrudClienteViewPart  extends ViewPart {
         IObservableValue contenedordatosdelacuentaContraseñaDatosdelacuentaObserveValue = EMFObservables.observeValue(contenedordatosdelacuentaViewModel,ContenedorcrudclienteviewmodelPackage.Literals.CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__CONTRASEÑA);
         bindingContext.bindValue(observeTextContraseñaDatosdelacuentaObserveWidget,contenedordatosdelacuentaContraseñaDatosdelacuentaObserveValue, null, null);
         //
-        ObservableListContentProvider listContentProvider0 = new ObservableListContentProvider();
-        IObservableMap[] observeMaps0= EMFObservables.observeMaps(listContentProvider0.getKnownElements(),
+        ObservableListContentProvider listContentProvider3 = new ObservableListContentProvider();
+        IObservableMap[] observeMaps3= EMFObservables.observeMaps(listContentProvider3.getKnownElements(),
         new EStructuralFeature[]{ContenedorcrudclienteviewmodelPackage.Literals.CLIENTE_VIEW_MODEL__IDENTIFICACION,ContenedorcrudclienteviewmodelPackage.Literals.CLIENTE_VIEW_MODEL__NOMBRE,ContenedorcrudclienteviewmodelPackage.Literals.CLIENTE_VIEW_MODEL__EMAIL,ContenedorcrudclienteviewmodelPackage.Literals.CLIENTE_VIEW_MODEL__EDAD});
-        tableViewerCliente.setLabelProvider(new ObservableMapLabelProvider(observeMaps0));
-        tableViewerCliente.setContentProvider(listContentProvider0);
+        tableViewerCliente.setLabelProvider(new ObservableMapLabelProvider(observeMaps3));
+        tableViewerCliente.setContentProvider(listContentProvider3);
 
         //
-        IObservableList observeList0= EMFObservables.observeList(Realm.getDefault(),contenedormaestroClienteViewModel,
+        IObservableList observeList3= EMFObservables.observeList(Realm.getDefault(),contenedormaestroClienteViewModel,
         ContenedorcrudclienteviewmodelPackage.Literals.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__CLIENTE_VIEW_MODEL);
-        tableViewerCliente.setInput(observeList0);
+        tableViewerCliente.setInput(observeList3);
             //
 
          return bindingContext;

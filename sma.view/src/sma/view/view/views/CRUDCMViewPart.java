@@ -10,6 +10,7 @@ import sma.ui.viewmodels.*;
 import sma.ui.viewmodels.contenedorcrudclienteviewmodel.*;
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.*;
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.*;
+import sma.ui.viewmodels.contenedorloginviewmodel.*;
 
 import sma.view.model.ModelFactoryModel;
 import org.eclipse.wb.swt.SWTResourceManager;
@@ -297,20 +298,20 @@ public class CRUDCMViewPart  extends ViewPart {
 		         centroMantViewModelSeleccionado  = (CentroMantViewModel)e.item.getData();
 		  } 
           });
-		TableViewerColumn  tableViewerColumn4NombreCM = new TableViewerColumn(tableViewerCentroMant, SWT.NONE);
-		TableColumn tblclmn4NombreCM = tableViewerColumn4NombreCM.getColumn();
-		tblclmn4NombreCM.setWidth(100);
-		tblclmn4NombreCM .setText("nombreCM");
+		TableViewerColumn  tableViewerColumn14NombreCM = new TableViewerColumn(tableViewerCentroMant, SWT.NONE);
+		TableColumn tblclmn14NombreCM = tableViewerColumn14NombreCM.getColumn();
+		tblclmn14NombreCM.setWidth(100);
+		tblclmn14NombreCM .setText("nombreCM");
 
-		TableViewerColumn  tableViewerColumn5NombreRepresentante = new TableViewerColumn(tableViewerCentroMant, SWT.NONE);
-		TableColumn tblclmn5NombreRepresentante = tableViewerColumn5NombreRepresentante.getColumn();
-		tblclmn5NombreRepresentante.setWidth(100);
-		tblclmn5NombreRepresentante .setText("nombreRepresentante");
+		TableViewerColumn  tableViewerColumn15NombreRepresentante = new TableViewerColumn(tableViewerCentroMant, SWT.NONE);
+		TableColumn tblclmn15NombreRepresentante = tableViewerColumn15NombreRepresentante.getColumn();
+		tblclmn15NombreRepresentante.setWidth(100);
+		tblclmn15NombreRepresentante .setText("nombreRepresentante");
 
-		TableViewerColumn  tableViewerColumn6Ciudad = new TableViewerColumn(tableViewerCentroMant, SWT.NONE);
-		TableColumn tblclmn6Ciudad = tableViewerColumn6Ciudad.getColumn();
-		tblclmn6Ciudad.setWidth(100);
-		tblclmn6Ciudad .setText("ciudad");
+		TableViewerColumn  tableViewerColumn16Ciudad = new TableViewerColumn(tableViewerCentroMant, SWT.NONE);
+		TableColumn tblclmn16Ciudad = tableViewerColumn16Ciudad.getColumn();
+		tblclmn16Ciudad.setWidth(100);
+		tblclmn16Ciudad .setText("ciudad");
 
         try {
 	       initDataBindings();
@@ -351,16 +352,16 @@ public class CRUDCMViewPart  extends ViewPart {
         IObservableValue contenedorubicacionDireccionUbicacionObserveValue = EMFObservables.observeValue(contenedorubicacionViewModel,ContenedorcrudcmviewmodelPackage.Literals.CONTENEDOR_UBICACION_VIEW_MODEL__DIRECCION);
         bindingContext.bindValue(observeTextDireccionUbicacionObserveWidget,contenedorubicacionDireccionUbicacionObserveValue, null, null);
         //
-        ObservableListContentProvider listContentProvider1 = new ObservableListContentProvider();
-        IObservableMap[] observeMaps1= EMFObservables.observeMaps(listContentProvider1.getKnownElements(),
+        ObservableListContentProvider listContentProvider4 = new ObservableListContentProvider();
+        IObservableMap[] observeMaps4= EMFObservables.observeMaps(listContentProvider4.getKnownElements(),
         new EStructuralFeature[]{ContenedorcrudcmviewmodelPackage.Literals.CENTRO_MANT_VIEW_MODEL__NOMBRECM,ContenedorcrudcmviewmodelPackage.Literals.CENTRO_MANT_VIEW_MODEL__NOMBREREPRESENTANTE,ContenedorcrudcmviewmodelPackage.Literals.CENTRO_MANT_VIEW_MODEL__CIUDAD});
-        tableViewerCentroMant.setLabelProvider(new ObservableMapLabelProvider(observeMaps1));
-        tableViewerCentroMant.setContentProvider(listContentProvider1);
+        tableViewerCentroMant.setLabelProvider(new ObservableMapLabelProvider(observeMaps4));
+        tableViewerCentroMant.setContentProvider(listContentProvider4);
 
         //
-        IObservableList observeList1= EMFObservables.observeList(Realm.getDefault(),contenedormaestroCMViewModel,
+        IObservableList observeList4= EMFObservables.observeList(Realm.getDefault(),contenedormaestroCMViewModel,
         ContenedorcrudcmviewmodelPackage.Literals.CONTENEDOR_MAESTRO_C_M_VIEW_MODEL__CENTRO_MANT_VIEW_MODEL);
-        tableViewerCentroMant.setInput(observeList1);
+        tableViewerCentroMant.setInput(observeList4);
             //
 
          return bindingContext;

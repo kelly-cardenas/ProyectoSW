@@ -233,7 +233,7 @@ public class ContenedorCrudClienteViewModelImpl extends EObjectImpl implements C
 				
 						
 								
-							//--	
+							//--prueba	
 										ContenedorDetalleClienteViewModel detalleClienteVM = getTheContenedorDetalleClienteViewModel();
 										ContenedorMaestroClienteViewModel maestroClienteVM = getTheContenedorMaestroClienteViewModel();
 											

@@ -29,6 +29,9 @@ import sma.ui.viewmodels.contenedorcrudclienteviewmodel.Contenedorcrudclientevie
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorCRUDCMViewModel;
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelPackage;
 
+import sma.ui.viewmodels.contenedorloginviewmodel.ContenedorLoginViewModel;
+import sma.ui.viewmodels.contenedorloginviewmodel.ContenedorloginviewmodelPackage;
+
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorRegistroVehiculoViewModel;
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorregistrovehiculoviewmodelPackage;
 
@@ -47,6 +50,7 @@ import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.Contenedorregistrov
  *   <li>{@link sma.ui.impl.UIImpl#getTheContenedorCrudClienteViewModel <em>The Contenedor Crud Cliente View Model</em>}</li>
  *   <li>{@link sma.ui.impl.UIImpl#getTheContenedorCRUDCMViewModel <em>The Contenedor CRUDCM View Model</em>}</li>
  *   <li>{@link sma.ui.impl.UIImpl#getTheContenedorRegistroVehiculoViewModel <em>The Contenedor Registro Vehiculo View Model</em>}</li>
+ *   <li>{@link sma.ui.impl.UIImpl#getTheContenedorLoginViewModel <em>The Contenedor Login View Model</em>}</li>
  * </ul>
  *
  * @generated
@@ -131,6 +135,16 @@ public class UIImpl extends EObjectImpl implements UI {
 	 * @ordered
 	 */
 	protected ContenedorRegistroVehiculoViewModel theContenedorRegistroVehiculoViewModel;
+
+	/**
+	 * The cached value of the '{@link #getTheContenedorLoginViewModel() <em>The Contenedor Login View Model</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTheContenedorLoginViewModel()
+	 * @generated
+	 * @ordered
+	 */
+	protected ContenedorLoginViewModel theContenedorLoginViewModel;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -428,6 +442,49 @@ public class UIImpl extends EObjectImpl implements UI {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ContenedorLoginViewModel getTheContenedorLoginViewModel() {
+		return theContenedorLoginViewModel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTheContenedorLoginViewModel(ContenedorLoginViewModel newTheContenedorLoginViewModel, NotificationChain msgs) {
+		ContenedorLoginViewModel oldTheContenedorLoginViewModel = theContenedorLoginViewModel;
+		theContenedorLoginViewModel = newTheContenedorLoginViewModel;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, UiPackage.UI__THE_CONTENEDOR_LOGIN_VIEW_MODEL, oldTheContenedorLoginViewModel, newTheContenedorLoginViewModel);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTheContenedorLoginViewModel(ContenedorLoginViewModel newTheContenedorLoginViewModel) {
+		if (newTheContenedorLoginViewModel != theContenedorLoginViewModel) {
+			NotificationChain msgs = null;
+			if (theContenedorLoginViewModel != null)
+				msgs = ((InternalEObject)theContenedorLoginViewModel).eInverseRemove(this, ContenedorloginviewmodelPackage.CONTENEDOR_LOGIN_VIEW_MODEL__OWNED_BY_UI, ContenedorLoginViewModel.class, msgs);
+			if (newTheContenedorLoginViewModel != null)
+				msgs = ((InternalEObject)newTheContenedorLoginViewModel).eInverseAdd(this, ContenedorloginviewmodelPackage.CONTENEDOR_LOGIN_VIEW_MODEL__OWNED_BY_UI, ContenedorLoginViewModel.class, msgs);
+			msgs = basicSetTheContenedorLoginViewModel(newTheContenedorLoginViewModel, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UiPackage.UI__THE_CONTENEDOR_LOGIN_VIEW_MODEL, newTheContenedorLoginViewModel, newTheContenedorLoginViewModel));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void implementarModelo() {
 		
 				
@@ -538,6 +595,10 @@ public class UIImpl extends EObjectImpl implements UI {
 				if (theContenedorRegistroVehiculoViewModel != null)
 					msgs = ((InternalEObject)theContenedorRegistroVehiculoViewModel).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - UiPackage.UI__THE_CONTENEDOR_REGISTRO_VEHICULO_VIEW_MODEL, null, msgs);
 				return basicSetTheContenedorRegistroVehiculoViewModel((ContenedorRegistroVehiculoViewModel)otherEnd, msgs);
+			case UiPackage.UI__THE_CONTENEDOR_LOGIN_VIEW_MODEL:
+				if (theContenedorLoginViewModel != null)
+					msgs = ((InternalEObject)theContenedorLoginViewModel).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - UiPackage.UI__THE_CONTENEDOR_LOGIN_VIEW_MODEL, null, msgs);
+				return basicSetTheContenedorLoginViewModel((ContenedorLoginViewModel)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -560,6 +621,8 @@ public class UIImpl extends EObjectImpl implements UI {
 				return basicSetTheContenedorCRUDCMViewModel(null, msgs);
 			case UiPackage.UI__THE_CONTENEDOR_REGISTRO_VEHICULO_VIEW_MODEL:
 				return basicSetTheContenedorRegistroVehiculoViewModel(null, msgs);
+			case UiPackage.UI__THE_CONTENEDOR_LOGIN_VIEW_MODEL:
+				return basicSetTheContenedorLoginViewModel(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -601,6 +664,8 @@ public class UIImpl extends EObjectImpl implements UI {
 				return getTheContenedorCRUDCMViewModel();
 			case UiPackage.UI__THE_CONTENEDOR_REGISTRO_VEHICULO_VIEW_MODEL:
 				return getTheContenedorRegistroVehiculoViewModel();
+			case UiPackage.UI__THE_CONTENEDOR_LOGIN_VIEW_MODEL:
+				return getTheContenedorLoginViewModel();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -633,6 +698,9 @@ public class UIImpl extends EObjectImpl implements UI {
 				return;
 			case UiPackage.UI__THE_CONTENEDOR_REGISTRO_VEHICULO_VIEW_MODEL:
 				setTheContenedorRegistroVehiculoViewModel((ContenedorRegistroVehiculoViewModel)newValue);
+				return;
+			case UiPackage.UI__THE_CONTENEDOR_LOGIN_VIEW_MODEL:
+				setTheContenedorLoginViewModel((ContenedorLoginViewModel)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -667,6 +735,9 @@ public class UIImpl extends EObjectImpl implements UI {
 			case UiPackage.UI__THE_CONTENEDOR_REGISTRO_VEHICULO_VIEW_MODEL:
 				setTheContenedorRegistroVehiculoViewModel((ContenedorRegistroVehiculoViewModel)null);
 				return;
+			case UiPackage.UI__THE_CONTENEDOR_LOGIN_VIEW_MODEL:
+				setTheContenedorLoginViewModel((ContenedorLoginViewModel)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -693,6 +764,8 @@ public class UIImpl extends EObjectImpl implements UI {
 				return theContenedorCRUDCMViewModel != null;
 			case UiPackage.UI__THE_CONTENEDOR_REGISTRO_VEHICULO_VIEW_MODEL:
 				return theContenedorRegistroVehiculoViewModel != null;
+			case UiPackage.UI__THE_CONTENEDOR_LOGIN_VIEW_MODEL:
+				return theContenedorLoginViewModel != null;
 		}
 		return super.eIsSet(featureID);
 	}

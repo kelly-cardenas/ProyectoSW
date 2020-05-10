@@ -236,6 +236,9 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="theContenedorRegistroVehiculoViewModel"
           eType="#//ui/viewmodels/contenedorregistrovehiculoviewmodel/ContenedorRegistroVehiculoViewModel"
           containment="true" eOpposite="#//ui/viewmodels/contenedorregistrovehiculoviewmodel/ContenedorRegistroVehiculoViewModel/ownedByUI"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="theContenedorLoginViewModel"
+          eType="#//ui/viewmodels/contenedorloginviewmodel/ContenedorLoginViewModel"
+          containment="true" eOpposite="#//ui/viewmodels/contenedorloginviewmodel/ContenedorLoginViewModel/ownedByUI"/>
     </eClassifiers>
     <eSubpackages name="viewmodels" nsURI="http:///sma/ui/viewmodels.ecore" nsPrefix="sma.ui.viewmodels">
       <eSubpackages name="contenedorcrudclienteviewmodel" nsURI="http:///sma/ui/viewmodels/contenedorcrudclienteviewmodel.ecore"
@@ -458,6 +461,39 @@
           <eStructuralFeatures xsi:type="ecore:EAttribute" name="marca" eType="#//String"/>
           <eStructuralFeatures xsi:type="ecore:EAttribute" name="referencia" eType="#//String"/>
           <eStructuralFeatures xsi:type="ecore:EAttribute" name="placa" eType="#//String"/>
+        </eClassifiers>
+      </eSubpackages>
+      <eSubpackages name="contenedorloginviewmodel" nsURI="http:///sma/ui/viewmodels/contenedorloginviewmodel.ecore"
+          nsPrefix="sma.ui.viewmodels.contenedorloginviewmodel">
+        <eClassifiers xsi:type="ecore:EClass" name="ContenedorDetalleLoginViewModel">
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="usuario" eType="#//String"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="ownedByContenedorLoginViewModel"
+              eType="#//ui/viewmodels/contenedorloginviewmodel/ContenedorLoginViewModel"
+              eOpposite="#//ui/viewmodels/contenedorloginviewmodel/ContenedorLoginViewModel/theContenedorDetalleLoginViewModel"/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="ContenedorLoginViewModel">
+          <eOperations name="upadateDialog" eType="#//String">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="body" value="&#xA;&#x9;&#x9;String action = &quot;&quot;;&#xA;&#x9;&#x9;return action;&#xA;"/>
+            </eAnnotations>
+            <eParameters name="evento" eType="#//String"/>
+          </eOperations>
+          <eOperations name="prueba">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="body" value="//TODO prueba&#xA;"/>
+            </eAnnotations>
+          </eOperations>
+          <eOperations name="implementarModelo">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="body" value="//TODO implementarModelo&#xA;"/>
+            </eAnnotations>
+          </eOperations>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="ownedByUI" eType="#//ui/UI"
+              eOpposite="#//ui/UI/theContenedorLoginViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="usuario" eType="#//String"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="theContenedorDetalleLoginViewModel"
+              eType="#//ui/viewmodels/contenedorloginviewmodel/ContenedorDetalleLoginViewModel"
+              containment="true" eOpposite="#//ui/viewmodels/contenedorloginviewmodel/ContenedorDetalleLoginViewModel/ownedByContenedorLoginViewModel"/>
         </eClassifiers>
       </eSubpackages>
     </eSubpackages>

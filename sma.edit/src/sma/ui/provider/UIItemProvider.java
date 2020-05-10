@@ -33,6 +33,8 @@ import sma.ui.viewmodels.contenedorcrudclienteviewmodel.Contenedorcrudclientevie
 
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelFactory;
 
+import sma.ui.viewmodels.contenedorloginviewmodel.ContenedorloginviewmodelFactory;
+
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorregistrovehiculoviewmodelFactory;
 
 /**
@@ -158,6 +160,7 @@ public class UIItemProvider
 			childrenFeatures.add(UiPackage.Literals.UI__THE_CONTENEDOR_CRUD_CLIENTE_VIEW_MODEL);
 			childrenFeatures.add(UiPackage.Literals.UI__THE_CONTENEDOR_CRUDCM_VIEW_MODEL);
 			childrenFeatures.add(UiPackage.Literals.UI__THE_CONTENEDOR_REGISTRO_VEHICULO_VIEW_MODEL);
+			childrenFeatures.add(UiPackage.Literals.UI__THE_CONTENEDOR_LOGIN_VIEW_MODEL);
 		}
 		return childrenFeatures;
 	}
@@ -220,6 +223,7 @@ public class UIItemProvider
 			case UiPackage.UI__THE_CONTENEDOR_CRUD_CLIENTE_VIEW_MODEL:
 			case UiPackage.UI__THE_CONTENEDOR_CRUDCM_VIEW_MODEL:
 			case UiPackage.UI__THE_CONTENEDOR_REGISTRO_VEHICULO_VIEW_MODEL:
+			case UiPackage.UI__THE_CONTENEDOR_LOGIN_VIEW_MODEL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -251,6 +255,11 @@ public class UIItemProvider
 			(createChildParameter
 				(UiPackage.Literals.UI__THE_CONTENEDOR_REGISTRO_VEHICULO_VIEW_MODEL,
 				 ContenedorregistrovehiculoviewmodelFactory.eINSTANCE.createContenedorRegistroVehiculoViewModel()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(UiPackage.Literals.UI__THE_CONTENEDOR_LOGIN_VIEW_MODEL,
+				 ContenedorloginviewmodelFactory.eINSTANCE.createContenedorLoginViewModel()));
 	}
 
 	/**

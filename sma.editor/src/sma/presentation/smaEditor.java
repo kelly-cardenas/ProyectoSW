@@ -170,6 +170,8 @@ import sma.ui.viewmodels.contenedorcrudclienteviewmodel.provider.Contenedorcrudc
 
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.provider.ContenedorcrudcmviewmodelItemProviderAdapterFactory;
 
+import sma.ui.viewmodels.contenedorloginviewmodel.provider.ContenedorloginviewmodelItemProviderAdapterFactory;
+
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.provider.ContenedorregistrovehiculoviewmodelItemProviderAdapterFactory;
 
 
@@ -720,6 +722,7 @@ public class smaEditor
 		adapterFactory.addAdapterFactory(new ContenedorcrudclienteviewmodelItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ContenedorcrudcmviewmodelItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ContenedorregistrovehiculoviewmodelItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new ContenedorloginviewmodelItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.

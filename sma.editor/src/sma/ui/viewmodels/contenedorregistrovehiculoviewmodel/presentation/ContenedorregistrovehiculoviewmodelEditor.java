@@ -174,6 +174,8 @@ import sma.ui.viewmodels.contenedorcrudclienteviewmodel.provider.Contenedorcrudc
 
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.provider.ContenedorcrudcmviewmodelItemProviderAdapterFactory;
 
+import sma.ui.viewmodels.contenedorloginviewmodel.provider.ContenedorloginviewmodelItemProviderAdapterFactory;
+
 
 /**
  * This is an example of a Contenedorregistrovehiculoviewmodel model editor.
@@ -722,6 +724,7 @@ public class ContenedorregistrovehiculoviewmodelEditor
 		adapterFactory.addAdapterFactory(new ContenedorcrudclienteviewmodelItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ContenedorcrudcmviewmodelItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ContenedorregistrovehiculoviewmodelItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new ContenedorloginviewmodelItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.

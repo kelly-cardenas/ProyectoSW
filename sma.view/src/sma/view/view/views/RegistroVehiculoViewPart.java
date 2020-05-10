@@ -10,6 +10,7 @@ import sma.ui.viewmodels.*;
 import sma.ui.viewmodels.contenedorcrudclienteviewmodel.*;
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.*;
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.*;
+import sma.ui.viewmodels.contenedorloginviewmodel.*;
 
 import sma.view.model.ModelFactoryModel;
 import org.eclipse.wb.swt.SWTResourceManager;
@@ -261,20 +262,20 @@ public class RegistroVehiculoViewPart  extends ViewPart {
 		         vehiculoViewModelSeleccionado  = (VehiculoViewModel)e.item.getData();
 		  } 
           });
-		TableViewerColumn  tableViewerColumn7Marca = new TableViewerColumn(tableViewerVehiculo, SWT.NONE);
-		TableColumn tblclmn7Marca = tableViewerColumn7Marca.getColumn();
-		tblclmn7Marca.setWidth(100);
-		tblclmn7Marca .setText("marca");
+		TableViewerColumn  tableViewerColumn17Marca = new TableViewerColumn(tableViewerVehiculo, SWT.NONE);
+		TableColumn tblclmn17Marca = tableViewerColumn17Marca.getColumn();
+		tblclmn17Marca.setWidth(100);
+		tblclmn17Marca .setText("marca");
 
-		TableViewerColumn  tableViewerColumn8Referencia = new TableViewerColumn(tableViewerVehiculo, SWT.NONE);
-		TableColumn tblclmn8Referencia = tableViewerColumn8Referencia.getColumn();
-		tblclmn8Referencia.setWidth(100);
-		tblclmn8Referencia .setText("referencia");
+		TableViewerColumn  tableViewerColumn18Referencia = new TableViewerColumn(tableViewerVehiculo, SWT.NONE);
+		TableColumn tblclmn18Referencia = tableViewerColumn18Referencia.getColumn();
+		tblclmn18Referencia.setWidth(100);
+		tblclmn18Referencia .setText("referencia");
 
-		TableViewerColumn  tableViewerColumn9Placa = new TableViewerColumn(tableViewerVehiculo, SWT.NONE);
-		TableColumn tblclmn9Placa = tableViewerColumn9Placa.getColumn();
-		tblclmn9Placa.setWidth(100);
-		tblclmn9Placa .setText("placa");
+		TableViewerColumn  tableViewerColumn19Placa = new TableViewerColumn(tableViewerVehiculo, SWT.NONE);
+		TableColumn tblclmn19Placa = tableViewerColumn19Placa.getColumn();
+		tblclmn19Placa.setWidth(100);
+		tblclmn19Placa .setText("placa");
 
         try {
 	       initDataBindings();
@@ -311,16 +312,16 @@ public class RegistroVehiculoViewPart  extends ViewPart {
         IObservableValue contenedordetalleVehiculoPlacaDetalleVehiculoObserveValue = EMFObservables.observeValue(contenedordetalleVehiculoViewModel,ContenedorregistrovehiculoviewmodelPackage.Literals.CONTENEDOR_DETALLE_VEHICULO_VIEW_MODEL__PLACA);
         bindingContext.bindValue(observeTextPlacaDetalleVehiculoObserveWidget,contenedordetalleVehiculoPlacaDetalleVehiculoObserveValue, null, null);
         //
-        ObservableListContentProvider listContentProvider2 = new ObservableListContentProvider();
-        IObservableMap[] observeMaps2= EMFObservables.observeMaps(listContentProvider2.getKnownElements(),
+        ObservableListContentProvider listContentProvider5 = new ObservableListContentProvider();
+        IObservableMap[] observeMaps5= EMFObservables.observeMaps(listContentProvider5.getKnownElements(),
         new EStructuralFeature[]{ContenedorregistrovehiculoviewmodelPackage.Literals.VEHICULO_VIEW_MODEL__MARCA,ContenedorregistrovehiculoviewmodelPackage.Literals.VEHICULO_VIEW_MODEL__REFERENCIA,ContenedorregistrovehiculoviewmodelPackage.Literals.VEHICULO_VIEW_MODEL__PLACA});
-        tableViewerVehiculo.setLabelProvider(new ObservableMapLabelProvider(observeMaps2));
-        tableViewerVehiculo.setContentProvider(listContentProvider2);
+        tableViewerVehiculo.setLabelProvider(new ObservableMapLabelProvider(observeMaps5));
+        tableViewerVehiculo.setContentProvider(listContentProvider5);
 
         //
-        IObservableList observeList2= EMFObservables.observeList(Realm.getDefault(),contenedorvehiculosRegistradosViewModel,
+        IObservableList observeList5= EMFObservables.observeList(Realm.getDefault(),contenedorvehiculosRegistradosViewModel,
         ContenedorregistrovehiculoviewmodelPackage.Literals.CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__VEHICULO_VIEW_MODEL);
-        tableViewerVehiculo.setInput(observeList2);
+        tableViewerVehiculo.setInput(observeList5);
             //
 
          return bindingContext;

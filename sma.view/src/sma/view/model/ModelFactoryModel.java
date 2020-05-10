@@ -9,6 +9,7 @@ import sma.ui.viewmodels.*;
 import sma.ui.viewmodels.contenedorcrudclienteviewmodel.*;
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.*;
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.*;
+import sma.ui.viewmodels.contenedorloginviewmodel.*;
 
 
 
@@ -34,6 +35,8 @@ public class ModelFactoryModel {
 
    RegistroVehiculoViewPart registroVehiculoViewPart = null;
 
+   LoginViewPart loginViewPart = null;
+
    public CrudClienteViewPart getCrudClienteViewPart(){
        return  crudClienteViewPart;
    }
@@ -56,6 +59,14 @@ public class ModelFactoryModel {
 
   public void setRegistroVehiculoViewPart(RegistroVehiculoViewPart registroVehiculoViewPart) {
       this.registroVehiculoViewPart = registroVehiculoViewPart ;
+   }
+
+   public LoginViewPart getLoginViewPart(){
+       return  loginViewPart;
+   }
+
+  public void setLoginViewPart(LoginViewPart loginViewPart) {
+      this.loginViewPart = loginViewPart ;
    }
 
    ModelFactory modelFactory = smaFactory.eINSTANCE.createModelFactory();
@@ -126,6 +137,12 @@ public class ModelFactoryModel {
    }
    public ContenedorVehiculosRegistradosViewModel getTheContenedorVehiculosRegistradosViewModel() {
      return getTheContenedorRegistroVehiculoViewModel().getTheContenedorVehiculosRegistradosViewModel();
+   }
+   public ContenedorLoginViewModel getTheContenedorLoginViewModel() {
+     return getTheUI().getTheContenedorLoginViewModel();
+   }
+   public ContenedorDetalleLoginViewModel getTheContenedorDetalleLoginViewModel() {
+     return getTheContenedorLoginViewModel().getTheContenedorDetalleLoginViewModel();
    }
 
 }

@@ -12,6 +12,8 @@ import sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorCrudClienteVie
 
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorCRUDCMViewModel;
 
+import sma.ui.viewmodels.contenedorloginviewmodel.ContenedorLoginViewModel;
+
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorRegistroVehiculoViewModel;
 
 /**
@@ -30,6 +32,7 @@ import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorRegistroV
  *   <li>{@link sma.ui.UI#getTheContenedorCrudClienteViewModel <em>The Contenedor Crud Cliente View Model</em>}</li>
  *   <li>{@link sma.ui.UI#getTheContenedorCRUDCMViewModel <em>The Contenedor CRUDCM View Model</em>}</li>
  *   <li>{@link sma.ui.UI#getTheContenedorRegistroVehiculoViewModel <em>The Contenedor Registro Vehiculo View Model</em>}</li>
+ *   <li>{@link sma.ui.UI#getTheContenedorLoginViewModel <em>The Contenedor Login View Model</em>}</li>
  * </ul>
  *
  * @see sma.ui.UiPackage#getUI()
@@ -228,6 +231,34 @@ public interface UI extends EObject {
 	 * @generated
 	 */
 	void setTheContenedorRegistroVehiculoViewModel(ContenedorRegistroVehiculoViewModel value);
+
+	/**
+	 * Returns the value of the '<em><b>The Contenedor Login View Model</b></em>' containment reference.
+	 * It is bidirectional and its opposite is '{@link sma.ui.viewmodels.contenedorloginviewmodel.ContenedorLoginViewModel#getOwnedByUI <em>Owned By UI</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>The Contenedor Login View Model</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>The Contenedor Login View Model</em>' containment reference.
+	 * @see #setTheContenedorLoginViewModel(ContenedorLoginViewModel)
+	 * @see sma.ui.UiPackage#getUI_TheContenedorLoginViewModel()
+	 * @see sma.ui.viewmodels.contenedorloginviewmodel.ContenedorLoginViewModel#getOwnedByUI
+	 * @model opposite="ownedByUI" containment="true"
+	 * @generated
+	 */
+	ContenedorLoginViewModel getTheContenedorLoginViewModel();
+
+	/**
+	 * Sets the value of the '{@link sma.ui.UI#getTheContenedorLoginViewModel <em>The Contenedor Login View Model</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>The Contenedor Login View Model</em>' containment reference.
+	 * @see #getTheContenedorLoginViewModel()
+	 * @generated
+	 */
+	void setTheContenedorLoginViewModel(ContenedorLoginViewModel value);
 
 	/**
 	 * <!-- begin-user-doc -->

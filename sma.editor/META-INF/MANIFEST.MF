@@ -15,6 +15,7 @@ Export-Package: sma.domain.automatizacionrevision.presentation,
  sma.ui.presentation,
  sma.ui.viewmodels.contenedorcrudclienteviewmodel.presentation,
  sma.ui.viewmodels.contenedorcrudcmviewmodel.presentation,
+ sma.ui.viewmodels.contenedorloginviewmodel.presentation,
  sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,

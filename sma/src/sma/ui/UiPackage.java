@@ -129,13 +129,22 @@ public interface UiPackage extends EPackage {
 	int UI__THE_CONTENEDOR_REGISTRO_VEHICULO_VIEW_MODEL = 6;
 
 	/**
+	 * The feature id for the '<em><b>The Contenedor Login View Model</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UI__THE_CONTENEDOR_LOGIN_VIEW_MODEL = 7;
+
+	/**
 	 * The number of structural features of the '<em>UI</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UI_FEATURE_COUNT = 7;
+	int UI_FEATURE_COUNT = 8;
 
 
 	/**
@@ -226,6 +235,17 @@ public interface UiPackage extends EPackage {
 	EReference getUI_TheContenedorRegistroVehiculoViewModel();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link sma.ui.UI#getTheContenedorLoginViewModel <em>The Contenedor Login View Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>The Contenedor Login View Model</em>'.
+	 * @see sma.ui.UI#getTheContenedorLoginViewModel()
+	 * @see #getUI()
+	 * @generated
+	 */
+	EReference getUI_TheContenedorLoginViewModel();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -312,6 +332,14 @@ public interface UiPackage extends EPackage {
 		 * @generated
 		 */
 		EReference UI__THE_CONTENEDOR_REGISTRO_VEHICULO_VIEW_MODEL = eINSTANCE.getUI_TheContenedorRegistroVehiculoViewModel();
+
+		/**
+		 * The meta object literal for the '<em><b>The Contenedor Login View Model</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference UI__THE_CONTENEDOR_LOGIN_VIEW_MODEL = eINSTANCE.getUI_TheContenedorLoginViewModel();
 
 	}
 

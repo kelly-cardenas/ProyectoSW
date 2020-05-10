@@ -221,8 +221,7 @@ public class ContenedorCRUDCMViewModelImpl extends EObjectImpl implements Conten
 	 * @generated
 	 */
 	public void implementarModelo() {
-		//--------------------------
-		ContenedorDetalleCMViewModel detalleCMVM = getTheContenedorDetalleCMViewModel();
+			ContenedorDetalleCMViewModel detalleCMVM = getTheContenedorDetalleCMViewModel();
 				ContenedorMaestroCMViewModel maestroCMVM = getTheContenedorMaestroCMViewModel();
 				
 				if ( detalleCMVM == null ) {
