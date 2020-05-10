@@ -30,6 +30,12 @@ import sma.ui.UiPackage;
 
 import sma.ui.impl.UiPackageImpl;
 
+import sma.ui.viewmodels.ViewmodelsPackage;
+
+import sma.ui.viewmodels.contenedorcontactarcmviewmodel.ContenedorcontactarcmviewmodelPackage;
+
+import sma.ui.viewmodels.contenedorcontactarcmviewmodel.impl.ContenedorcontactarcmviewmodelPackageImpl;
+
 import sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelPackage;
 
 import sma.ui.viewmodels.contenedorcrudclienteviewmodel.impl.ContenedorcrudclienteviewmodelPackageImpl;
@@ -38,6 +44,10 @@ import sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelPack
 
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.impl.ContenedorcrudcmviewmodelPackageImpl;
 
+import sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorescaneoviewmodelPackage;
+
+import sma.ui.viewmodels.contenedorescaneoviewmodel.impl.ContenedorescaneoviewmodelPackageImpl;
+
 import sma.ui.viewmodels.contenedorloginviewmodel.ContenedorloginviewmodelPackage;
 
 import sma.ui.viewmodels.contenedorloginviewmodel.impl.ContenedorloginviewmodelPackageImpl;
@@ -45,6 +55,12 @@ import sma.ui.viewmodels.contenedorloginviewmodel.impl.ContenedorloginviewmodelP
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorregistrovehiculoviewmodelPackage;
 
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.impl.ContenedorregistrovehiculoviewmodelPackageImpl;
+
+import sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.ContenedorsolicitudvisitaviewmodelPackage;
+
+import sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.impl.ContenedorsolicitudvisitaviewmodelPackageImpl;
+
+import sma.ui.viewmodels.impl.ViewmodelsPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -118,10 +134,14 @@ public class AutomatizacionrevisionPackageImpl extends EPackageImpl implements A
 		DomainPackageImpl theDomainPackage = (DomainPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(DomainPackage.eNS_URI) instanceof DomainPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(DomainPackage.eNS_URI) : DomainPackage.eINSTANCE);
 		ReparacionvehiculoPackageImpl theReparacionvehiculoPackage = (ReparacionvehiculoPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ReparacionvehiculoPackage.eNS_URI) instanceof ReparacionvehiculoPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ReparacionvehiculoPackage.eNS_URI) : ReparacionvehiculoPackage.eINSTANCE);
 		UiPackageImpl theUiPackage = (UiPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(UiPackage.eNS_URI) instanceof UiPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(UiPackage.eNS_URI) : UiPackage.eINSTANCE);
+		ViewmodelsPackageImpl theViewmodelsPackage = (ViewmodelsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ViewmodelsPackage.eNS_URI) instanceof ViewmodelsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ViewmodelsPackage.eNS_URI) : ViewmodelsPackage.eINSTANCE);
 		ContenedorcrudclienteviewmodelPackageImpl theContenedorcrudclienteviewmodelPackage = (ContenedorcrudclienteviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorcrudclienteviewmodelPackage.eNS_URI) instanceof ContenedorcrudclienteviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorcrudclienteviewmodelPackage.eNS_URI) : ContenedorcrudclienteviewmodelPackage.eINSTANCE);
 		ContenedorcrudcmviewmodelPackageImpl theContenedorcrudcmviewmodelPackage = (ContenedorcrudcmviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorcrudcmviewmodelPackage.eNS_URI) instanceof ContenedorcrudcmviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorcrudcmviewmodelPackage.eNS_URI) : ContenedorcrudcmviewmodelPackage.eINSTANCE);
 		ContenedorregistrovehiculoviewmodelPackageImpl theContenedorregistrovehiculoviewmodelPackage = (ContenedorregistrovehiculoviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorregistrovehiculoviewmodelPackage.eNS_URI) instanceof ContenedorregistrovehiculoviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorregistrovehiculoviewmodelPackage.eNS_URI) : ContenedorregistrovehiculoviewmodelPackage.eINSTANCE);
 		ContenedorloginviewmodelPackageImpl theContenedorloginviewmodelPackage = (ContenedorloginviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorloginviewmodelPackage.eNS_URI) instanceof ContenedorloginviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorloginviewmodelPackage.eNS_URI) : ContenedorloginviewmodelPackage.eINSTANCE);
+		ContenedorescaneoviewmodelPackageImpl theContenedorescaneoviewmodelPackage = (ContenedorescaneoviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorescaneoviewmodelPackage.eNS_URI) instanceof ContenedorescaneoviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorescaneoviewmodelPackage.eNS_URI) : ContenedorescaneoviewmodelPackage.eINSTANCE);
+		ContenedorcontactarcmviewmodelPackageImpl theContenedorcontactarcmviewmodelPackage = (ContenedorcontactarcmviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorcontactarcmviewmodelPackage.eNS_URI) instanceof ContenedorcontactarcmviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorcontactarcmviewmodelPackage.eNS_URI) : ContenedorcontactarcmviewmodelPackage.eINSTANCE);
+		ContenedorsolicitudvisitaviewmodelPackageImpl theContenedorsolicitudvisitaviewmodelPackage = (ContenedorsolicitudvisitaviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorsolicitudvisitaviewmodelPackage.eNS_URI) instanceof ContenedorsolicitudvisitaviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorsolicitudvisitaviewmodelPackage.eNS_URI) : ContenedorsolicitudvisitaviewmodelPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theAutomatizacionrevisionPackage.createPackageContents();
@@ -129,10 +149,14 @@ public class AutomatizacionrevisionPackageImpl extends EPackageImpl implements A
 		theDomainPackage.createPackageContents();
 		theReparacionvehiculoPackage.createPackageContents();
 		theUiPackage.createPackageContents();
+		theViewmodelsPackage.createPackageContents();
 		theContenedorcrudclienteviewmodelPackage.createPackageContents();
 		theContenedorcrudcmviewmodelPackage.createPackageContents();
 		theContenedorregistrovehiculoviewmodelPackage.createPackageContents();
 		theContenedorloginviewmodelPackage.createPackageContents();
+		theContenedorescaneoviewmodelPackage.createPackageContents();
+		theContenedorcontactarcmviewmodelPackage.createPackageContents();
+		theContenedorsolicitudvisitaviewmodelPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theAutomatizacionrevisionPackage.initializePackageContents();
@@ -140,10 +164,14 @@ public class AutomatizacionrevisionPackageImpl extends EPackageImpl implements A
 		theDomainPackage.initializePackageContents();
 		theReparacionvehiculoPackage.initializePackageContents();
 		theUiPackage.initializePackageContents();
+		theViewmodelsPackage.initializePackageContents();
 		theContenedorcrudclienteviewmodelPackage.initializePackageContents();
 		theContenedorcrudcmviewmodelPackage.initializePackageContents();
 		theContenedorregistrovehiculoviewmodelPackage.initializePackageContents();
 		theContenedorloginviewmodelPackage.initializePackageContents();
+		theContenedorescaneoviewmodelPackage.initializePackageContents();
+		theContenedorcontactarcmviewmodelPackage.initializePackageContents();
+		theContenedorsolicitudvisitaviewmodelPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theAutomatizacionrevisionPackage.freeze();
@@ -320,16 +348,16 @@ public class AutomatizacionrevisionPackageImpl extends EPackageImpl implements A
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(fallaMecanicaEClass, FallaMecanica.class, "FallaMecanica", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFallaMecanica_PiesaAveriada(), thesmaPackage.getString(), "piesaAveriada", null, 0, 1, FallaMecanica.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFallaMecanica_Gravedad(), thesmaPackage.getString(), "gravedad", null, 0, 1, FallaMecanica.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFallaMecanica_Origen(), thesmaPackage.getString(), "origen", null, 0, 1, FallaMecanica.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFallaMecanica_Descripcion(), thesmaPackage.getString(), "descripcion", null, 0, 1, FallaMecanica.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFallaMecanica_PiesaAveriada(), thesmaPackage.getString(), "piesaAveriada", " ", 0, 1, FallaMecanica.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFallaMecanica_Gravedad(), thesmaPackage.getString(), "gravedad", " ", 0, 1, FallaMecanica.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFallaMecanica_Origen(), thesmaPackage.getString(), "origen", " ", 0, 1, FallaMecanica.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFallaMecanica_Descripcion(), thesmaPackage.getString(), "descripcion", " ", 0, 1, FallaMecanica.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFallaMecanica_TheAutomovil(), theDomainPackage.getAutomovil(), theDomainPackage.getAutomovil_ListaDeFallas(), "theAutomovil", null, 0, 1, FallaMecanica.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(sensorEClass, sensor.class, "sensor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getsensor_OwnerBy(), theDomainPackage.getAutomovil(), theDomainPackage.getAutomovil_Sensor(), "ownerBy", null, 0, 1, sensor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getsensor_Id(), thesmaPackage.getString(), "id", null, 0, 1, sensor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getsensor_InfoComp(), thesmaPackage.getString(), "infoComp", null, 0, 1, sensor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getsensor_Id(), thesmaPackage.getString(), "id", " ", 0, 1, sensor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getsensor_InfoComp(), thesmaPackage.getString(), "infoComp", " ", 0, 1, sensor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //AutomatizacionrevisionPackageImpl

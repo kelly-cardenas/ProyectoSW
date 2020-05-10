@@ -79,7 +79,7 @@ public class ContenedorVehiculosRegistradosViewModelItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ContenedorregistrovehiculoviewmodelPackage.Literals.CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__VEHICULO_VIEW_MODEL);
+			childrenFeatures.add(ContenedorregistrovehiculoviewmodelPackage.Literals.CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__LISTA_VEHICULO);
 		}
 		return childrenFeatures;
 	}
@@ -132,7 +132,7 @@ public class ContenedorVehiculosRegistradosViewModelItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ContenedorVehiculosRegistradosViewModel.class)) {
-			case ContenedorregistrovehiculoviewmodelPackage.CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__VEHICULO_VIEW_MODEL:
+			case ContenedorregistrovehiculoviewmodelPackage.CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__LISTA_VEHICULO:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -152,7 +152,7 @@ public class ContenedorVehiculosRegistradosViewModelItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ContenedorregistrovehiculoviewmodelPackage.Literals.CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__VEHICULO_VIEW_MODEL,
+				(ContenedorregistrovehiculoviewmodelPackage.Literals.CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__LISTA_VEHICULO,
 				 ContenedorregistrovehiculoviewmodelFactory.eINSTANCE.createVehiculoViewModel()));
 	}
 

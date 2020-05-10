@@ -92,6 +92,7 @@ public interface Usuario extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
@@ -101,7 +102,7 @@ public interface Usuario extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(String)
 	 * @see sma.domain.DomainPackage#getUsuario_Id()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getId();
@@ -118,6 +119,7 @@ public interface Usuario extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Num DI</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Num DI</em>' attribute isn't clear,
@@ -127,7 +129,7 @@ public interface Usuario extends EObject {
 	 * @return the value of the '<em>Num DI</em>' attribute.
 	 * @see #setNumDI(String)
 	 * @see sma.domain.DomainPackage#getUsuario_NumDI()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getNumDI();
@@ -144,6 +146,7 @@ public interface Usuario extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Nombres</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Nombres</em>' attribute isn't clear,
@@ -153,7 +156,7 @@ public interface Usuario extends EObject {
 	 * @return the value of the '<em>Nombres</em>' attribute.
 	 * @see #setNombres(String)
 	 * @see sma.domain.DomainPackage#getUsuario_Nombres()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getNombres();
@@ -170,6 +173,7 @@ public interface Usuario extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Apellidos</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Apellidos</em>' attribute isn't clear,
@@ -179,7 +183,7 @@ public interface Usuario extends EObject {
 	 * @return the value of the '<em>Apellidos</em>' attribute.
 	 * @see #setApellidos(String)
 	 * @see sma.domain.DomainPackage#getUsuario_Apellidos()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getApellidos();
@@ -196,6 +200,7 @@ public interface Usuario extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Edad</b></em>' attribute.
+	 * The default value is <code>"0"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Edad</em>' attribute isn't clear,
@@ -205,7 +210,7 @@ public interface Usuario extends EObject {
 	 * @return the value of the '<em>Edad</em>' attribute.
 	 * @see #setEdad(Integer)
 	 * @see sma.domain.DomainPackage#getUsuario_Edad()
-	 * @model dataType="sma.EIntegerObject"
+	 * @model default="0" dataType="sma.EIntegerObject"
 	 * @generated
 	 */
 	Integer getEdad();
@@ -222,6 +227,7 @@ public interface Usuario extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Email</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Email</em>' attribute isn't clear,
@@ -231,7 +237,7 @@ public interface Usuario extends EObject {
 	 * @return the value of the '<em>Email</em>' attribute.
 	 * @see #setEmail(String)
 	 * @see sma.domain.DomainPackage#getUsuario_Email()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getEmail();
@@ -248,6 +254,7 @@ public interface Usuario extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Usuario</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Usuario</em>' attribute isn't clear,
@@ -257,7 +264,7 @@ public interface Usuario extends EObject {
 	 * @return the value of the '<em>Usuario</em>' attribute.
 	 * @see #setUsuario(String)
 	 * @see sma.domain.DomainPackage#getUsuario_Usuario()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getUsuario();
@@ -274,6 +281,7 @@ public interface Usuario extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Contrasenia</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Contrasenia</em>' attribute isn't clear,
@@ -283,7 +291,7 @@ public interface Usuario extends EObject {
 	 * @return the value of the '<em>Contrasenia</em>' attribute.
 	 * @see #setContrasenia(String)
 	 * @see sma.domain.DomainPackage#getUsuario_Contrasenia()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getContrasenia();

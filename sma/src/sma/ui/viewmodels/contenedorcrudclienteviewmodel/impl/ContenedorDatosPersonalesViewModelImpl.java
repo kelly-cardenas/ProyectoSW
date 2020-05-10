@@ -44,7 +44,7 @@ public class ContenedorDatosPersonalesViewModelImpl extends EObjectImpl implemen
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CEDULA_EDEFAULT = null;
+	protected static final String CEDULA_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getCedula() <em>Cedula</em>}' attribute.
@@ -64,7 +64,7 @@ public class ContenedorDatosPersonalesViewModelImpl extends EObjectImpl implemen
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NOMBRE_EDEFAULT = null;
+	protected static final String NOMBRE_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
@@ -84,7 +84,7 @@ public class ContenedorDatosPersonalesViewModelImpl extends EObjectImpl implemen
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String APELLIDO_EDEFAULT = null;
+	protected static final String APELLIDO_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getApellido() <em>Apellido</em>}' attribute.
@@ -104,7 +104,7 @@ public class ContenedorDatosPersonalesViewModelImpl extends EObjectImpl implemen
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String EDAD_EDEFAULT = null;
+	protected static final String EDAD_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getEdad() <em>Edad</em>}' attribute.
@@ -124,7 +124,7 @@ public class ContenedorDatosPersonalesViewModelImpl extends EObjectImpl implemen
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CORREOELECTRONICO_EDEFAULT = null;
+	protected static final String CORREOELECTRONICO_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getCorreoelectronico() <em>Correoelectronico</em>}' attribute.

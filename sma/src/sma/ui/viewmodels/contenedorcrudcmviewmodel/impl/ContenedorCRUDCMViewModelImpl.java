@@ -210,9 +210,11 @@ public class ContenedorCRUDCMViewModelImpl extends EObjectImpl implements Conten
 	 */
 	public String upadateDialog(final String evento) {
 		
-				String action = "";
-				return action;
-		
+				
+						String action = "";
+						return action;
+				
+			
 	}
 
 	/**
@@ -221,23 +223,27 @@ public class ContenedorCRUDCMViewModelImpl extends EObjectImpl implements Conten
 	 * @generated
 	 */
 	public void implementarModelo() {
-			ContenedorDetalleCMViewModel detalleCMVM = getTheContenedorDetalleCMViewModel();
-				ContenedorMaestroCMViewModel maestroCMVM = getTheContenedorMaestroCMViewModel();
+		
+					ContenedorDetalleCMViewModel detalleCMVM = getTheContenedorDetalleCMViewModel();
+						ContenedorMaestroCMViewModel maestroCMVM = getTheContenedorMaestroCMViewModel();
+						
+						if ( detalleCMVM == null ) {
+							detalleCMVM = sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelFactory
+										.eINSTANCE.createContenedorDetalleCMViewModel();
+						}
+						
+						if ( maestroCMVM == null ) {
+							
+							maestroCMVM = sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelFactory
+										.eINSTANCE.createContenedorMaestroCMViewModel();
+							
+						}
+						
+						setTheContenedorDetalleCMViewModel(detalleCMVM);
+						setTheContenedorMaestroCMViewModel(maestroCMVM);
 				
-				if ( detalleCMVM == null ) {
-					detalleCMVM = sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelFactory
-								.eINSTANCE.createContenedorDetalleCMViewModel();
-				}
-				
-				if ( maestroCMVM == null ) {
-					
-					maestroCMVM = sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelFactory
-								.eINSTANCE.createContenedorMaestroCMViewModel();
-					
-				}
-				
-				setTheContenedorDetalleCMViewModel(detalleCMVM);
-				setTheContenedorMaestroCMViewModel(maestroCMVM);
+				detalleCMVM.implementarModelo();
+			
 	}
 
 	/**
@@ -246,7 +252,20 @@ public class ContenedorCRUDCMViewModelImpl extends EObjectImpl implements Conten
 	 * @generated
 	 */
 	public void registrarCm() {
-		getOwnedByUI().RegistrarCm(this);
+		
+				getOwnedByUI().RegistrarCm(this);
+			
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void actualizarCrudCm() {
+		
+				getOwnedByUI().actualizarCrudCm(this);
+			
 	}
 
 	/**

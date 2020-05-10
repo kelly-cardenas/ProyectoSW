@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorMaestroCMViewModel#getOwnedByContenedorCRUDCMViewModel <em>Owned By Contenedor CRUDCM View Model</em>}</li>
- *   <li>{@link sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorMaestroCMViewModel#getCentroMantViewModel <em>Centro Mant View Model</em>}</li>
+ *   <li>{@link sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorMaestroCMViewModel#getListaCentroMant <em>Lista Centro Mant</em>}</li>
  * </ul>
  *
  * @see sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelPackage#getContenedorMaestroCMViewModel()
@@ -53,21 +53,21 @@ public interface ContenedorMaestroCMViewModel extends EObject {
 	void setOwnedByContenedorCRUDCMViewModel(ContenedorCRUDCMViewModel value);
 
 	/**
-	 * Returns the value of the '<em><b>Centro Mant View Model</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Lista Centro Mant</b></em>' containment reference list.
 	 * The list contents are of type {@link sma.ui.viewmodels.contenedorcrudcmviewmodel.CentroMantViewModel}.
 	 * It is bidirectional and its opposite is '{@link sma.ui.viewmodels.contenedorcrudcmviewmodel.CentroMantViewModel#getThe0ContenedorMaestroCMViewModel <em>The0 Contenedor Maestro CM View Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Centro Mant View Model</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Lista Centro Mant</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Centro Mant View Model</em>' containment reference list.
-	 * @see sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelPackage#getContenedorMaestroCMViewModel_CentroMantViewModel()
+	 * @return the value of the '<em>Lista Centro Mant</em>' containment reference list.
+	 * @see sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelPackage#getContenedorMaestroCMViewModel_ListaCentroMant()
 	 * @see sma.ui.viewmodels.contenedorcrudcmviewmodel.CentroMantViewModel#getThe0ContenedorMaestroCMViewModel
 	 * @model opposite="the0ContenedorMaestroCMViewModel" containment="true"
 	 * @generated
 	 */
-	EList<CentroMantViewModel> getCentroMantViewModel();
+	EList<CentroMantViewModel> getListaCentroMant();
 
 } // ContenedorMaestroCMViewModel

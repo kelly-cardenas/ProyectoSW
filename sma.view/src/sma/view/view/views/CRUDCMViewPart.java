@@ -11,6 +11,9 @@ import sma.ui.viewmodels.contenedorcrudclienteviewmodel.*;
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.*;
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.*;
 import sma.ui.viewmodels.contenedorloginviewmodel.*;
+import sma.ui.viewmodels.contenedorescaneoviewmodel.*;
+import sma.ui.viewmodels.contenedorcontactarcmviewmodel.*;
+import sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.*;
 
 import sma.view.model.ModelFactoryModel;
 import org.eclipse.wb.swt.SWTResourceManager;
@@ -298,20 +301,20 @@ public class CRUDCMViewPart  extends ViewPart {
 		         centroMantViewModelSeleccionado  = (CentroMantViewModel)e.item.getData();
 		  } 
           });
-		TableViewerColumn  tableViewerColumn14NombreCM = new TableViewerColumn(tableViewerCentroMant, SWT.NONE);
-		TableColumn tblclmn14NombreCM = tableViewerColumn14NombreCM.getColumn();
-		tblclmn14NombreCM.setWidth(100);
-		tblclmn14NombreCM .setText("nombreCM");
+		TableViewerColumn  tableViewerColumn4NombreCM = new TableViewerColumn(tableViewerCentroMant, SWT.NONE);
+		TableColumn tblclmn4NombreCM = tableViewerColumn4NombreCM.getColumn();
+		tblclmn4NombreCM.setWidth(100);
+		tblclmn4NombreCM .setText("nombreCM");
 
-		TableViewerColumn  tableViewerColumn15NombreRepresentante = new TableViewerColumn(tableViewerCentroMant, SWT.NONE);
-		TableColumn tblclmn15NombreRepresentante = tableViewerColumn15NombreRepresentante.getColumn();
-		tblclmn15NombreRepresentante.setWidth(100);
-		tblclmn15NombreRepresentante .setText("nombreRepresentante");
+		TableViewerColumn  tableViewerColumn5NombreRepresentante = new TableViewerColumn(tableViewerCentroMant, SWT.NONE);
+		TableColumn tblclmn5NombreRepresentante = tableViewerColumn5NombreRepresentante.getColumn();
+		tblclmn5NombreRepresentante.setWidth(100);
+		tblclmn5NombreRepresentante .setText("nombreRepresentante");
 
-		TableViewerColumn  tableViewerColumn16Ciudad = new TableViewerColumn(tableViewerCentroMant, SWT.NONE);
-		TableColumn tblclmn16Ciudad = tableViewerColumn16Ciudad.getColumn();
-		tblclmn16Ciudad.setWidth(100);
-		tblclmn16Ciudad .setText("ciudad");
+		TableViewerColumn  tableViewerColumn6Ciudad = new TableViewerColumn(tableViewerCentroMant, SWT.NONE);
+		TableColumn tblclmn6Ciudad = tableViewerColumn6Ciudad.getColumn();
+		tblclmn6Ciudad.setWidth(100);
+		tblclmn6Ciudad .setText("ciudad");
 
         try {
 	       initDataBindings();
@@ -325,15 +328,15 @@ public class CRUDCMViewPart  extends ViewPart {
 //
         DataBindingContext bindingContext = new DataBindingContext();
         IObservableValue observeTextNombreCMInformacionCMObserveWidget = WidgetProperties.text(SWT.Modify).observe(textNombreCMInformacionCM);
-        IObservableValue contenedorinformacionCMNombreCMInformacionCMObserveValue = EMFObservables.observeValue(contenedorinformacionCMViewModel,ContenedorcrudcmviewmodelPackage.Literals.CONTENEDOR_INFORMACION_C_M_VIEW_MODEL__NOMBRECM);
+        IObservableValue contenedorinformacionCMNombreCMInformacionCMObserveValue = EMFObservables.observeValue(contenedorinformacionCMViewModel,ContenedorcrudcmviewmodelPackage.Literals.CONTENEDOR_INFORMACION_CM__VIEW_MODEL__NOMBRECM);
         bindingContext.bindValue(observeTextNombreCMInformacionCMObserveWidget,contenedorinformacionCMNombreCMInformacionCMObserveValue, null, null);
         //
         IObservableValue observeTextNombreRepresentanteInformacionCMObserveWidget = WidgetProperties.text(SWT.Modify).observe(textNombreRepresentanteInformacionCM);
-        IObservableValue contenedorinformacionCMNombreRepresentanteInformacionCMObserveValue = EMFObservables.observeValue(contenedorinformacionCMViewModel,ContenedorcrudcmviewmodelPackage.Literals.CONTENEDOR_INFORMACION_C_M_VIEW_MODEL__NOMBREREPRESENTANTE);
+        IObservableValue contenedorinformacionCMNombreRepresentanteInformacionCMObserveValue = EMFObservables.observeValue(contenedorinformacionCMViewModel,ContenedorcrudcmviewmodelPackage.Literals.CONTENEDOR_INFORMACION_CM__VIEW_MODEL__NOMBREREPRESENTANTE);
         bindingContext.bindValue(observeTextNombreRepresentanteInformacionCMObserveWidget,contenedorinformacionCMNombreRepresentanteInformacionCMObserveValue, null, null);
         //
         IObservableValue observeTextDescripcionInformacionCMObserveWidget = WidgetProperties.text(SWT.Modify).observe(textDescripcionInformacionCM);
-        IObservableValue contenedorinformacionCMDescripcionInformacionCMObserveValue = EMFObservables.observeValue(contenedorinformacionCMViewModel,ContenedorcrudcmviewmodelPackage.Literals.CONTENEDOR_INFORMACION_C_M_VIEW_MODEL__DESCRIPCION);
+        IObservableValue contenedorinformacionCMDescripcionInformacionCMObserveValue = EMFObservables.observeValue(contenedorinformacionCMViewModel,ContenedorcrudcmviewmodelPackage.Literals.CONTENEDOR_INFORMACION_CM__VIEW_MODEL__DESCRIPCION);
         bindingContext.bindValue(observeTextDescripcionInformacionCMObserveWidget,contenedorinformacionCMDescripcionInformacionCMObserveValue, null, null);
         //
         IObservableValue observeTextPaisUbicacionObserveWidget = WidgetProperties.text(SWT.Modify).observe(textPaisUbicacion);
@@ -352,32 +355,58 @@ public class CRUDCMViewPart  extends ViewPart {
         IObservableValue contenedorubicacionDireccionUbicacionObserveValue = EMFObservables.observeValue(contenedorubicacionViewModel,ContenedorcrudcmviewmodelPackage.Literals.CONTENEDOR_UBICACION_VIEW_MODEL__DIRECCION);
         bindingContext.bindValue(observeTextDireccionUbicacionObserveWidget,contenedorubicacionDireccionUbicacionObserveValue, null, null);
         //
-        ObservableListContentProvider listContentProvider4 = new ObservableListContentProvider();
-        IObservableMap[] observeMaps4= EMFObservables.observeMaps(listContentProvider4.getKnownElements(),
-        new EStructuralFeature[]{ContenedorcrudcmviewmodelPackage.Literals.CENTRO_MANT_VIEW_MODEL__NOMBRECM,ContenedorcrudcmviewmodelPackage.Literals.CENTRO_MANT_VIEW_MODEL__NOMBREREPRESENTANTE,ContenedorcrudcmviewmodelPackage.Literals.CENTRO_MANT_VIEW_MODEL__CIUDAD});
-        tableViewerCentroMant.setLabelProvider(new ObservableMapLabelProvider(observeMaps4));
-        tableViewerCentroMant.setContentProvider(listContentProvider4);
+        ObservableListContentProvider listContentProvider1 = new ObservableListContentProvider();
+        IObservableMap[] observeMaps1= EMFObservables.observeMaps(listContentProvider1.getKnownElements(),
+        new EStructuralFeature[]{ContenedorcrudcmviewmodelPackage.Literals.CENTRO_MANT_VIEW_MODEL__NOMBRECM                                     ,ContenedorcrudcmviewmodelPackage.Literals.CENTRO_MANT_VIEW_MODEL__NOMBREREPRESENTANTE                                                                          ,ContenedorcrudcmviewmodelPackage.Literals.CENTRO_MANT_VIEW_MODEL__CIUDAD                                  });
+        tableViewerCentroMant.setLabelProvider(new ObservableMapLabelProvider(observeMaps1));
+        tableViewerCentroMant.setContentProvider(listContentProvider1);
 
         //
-        IObservableList observeList4= EMFObservables.observeList(Realm.getDefault(),contenedormaestroCMViewModel,
-        ContenedorcrudcmviewmodelPackage.Literals.CONTENEDOR_MAESTRO_C_M_VIEW_MODEL__CENTRO_MANT_VIEW_MODEL);
-        tableViewerCentroMant.setInput(observeList4);
+        IObservableList observeList1= EMFObservables.observeList(Realm.getDefault(),contenedormaestroCMViewModel,
+        ContenedorcrudcmviewmodelPackage.Literals.CONTENEDOR_MAESTRO_CM__VIEW_MODEL__LISTA_CENTRO_MANT_VIEW_MODEL);
+        tableViewerCentroMant.setInput(observeList1);
             //
 
          return bindingContext;
 //
       }
       public void registrarAction ( String  event ){
-contenedorinformacionCMViewModel.setNombrecm(textNombreCMInformacionCM.getText());
-    	  contenedorinformacionCMViewModel.setNombrerepresentante(textNombreRepresentanteInformacionCM.getText());
-    	  contenedorinformacionCMViewModel.setDescripcion(textDescripcionInformacionCM.getText());
+String arreglo [][] = {{"Taller1", "Taller2", "Taller3"},
+ 				  {"Santiago sanchez", "Natalia suaza", "Alvaro cardona"},
+ 				  { "descripcion" ,"descripcion", "descripcion" },
+ 				  { "colombia" , "colombia", "colombia" },
+ 				  { "quindio", "risaralda", "antioquia" },
+ 				  { "armenia", "pereira", "medellin" },
+ 				  { "direccion", "direccion", "direccion" }};
+
+		 for (int i = 0; i < 3; i++) {
+			contenedorinformacionCMViewModel.setNombrecm(arreglo[0][i]);
+		    contenedorinformacionCMViewModel.setNombrerepresentante(arreglo[1][i]);
+		    contenedorinformacionCMViewModel.setDescripcion(arreglo[2][i]);
+		    	  
+		    contenedorubicacionViewModel.setPais( arreglo[3][i] );
+		    contenedorubicacionViewModel.setDepartamento(arreglo[4][i]);
+		    contenedorubicacionViewModel.setCiudad(arreglo[5][i]);
+		    contenedorubicacionViewModel.setDireccion(arreglo[6][i]);
+		    contenedorcRUDCMViewModel.registrarCm();
+			 
+		}
+
     	  
-    	  contenedorubicacionViewModel.setPais( textPaisUbicacion.getText() );
-    	  contenedorubicacionViewModel.setDepartamento(textDepartamentoUbicacion.getText());
-    	  contenedorubicacionViewModel.setCiudad(textCiudadUbicacion.getText());
-    	  contenedorubicacionViewModel.setDireccion(textDireccionUbicacion.getText());
     	  
-    	  contenedorcRUDCMViewModel.registrarCm();
+//			contenedorinformacionCMViewModel.setNombrecm(textNombreCMInformacionCM.getText());
+//    	  contenedorinformacionCMViewModel.setNombrerepresentante(textNombreRepresentanteInformacionCM.getText());
+//    	  contenedorinformacionCMViewModel.setDescripcion(textDescripcionInformacionCM.getText());
+//    	  
+//    	  contenedorubicacionViewModel.setPais( textPaisUbicacion.getText() );
+//    	  contenedorubicacionViewModel.setDepartamento(textDepartamentoUbicacion.getText());
+//    	  contenedorubicacionViewModel.setCiudad(textCiudadUbicacion.getText());
+//    	  contenedorubicacionViewModel.setDireccion(textDireccionUbicacion.getText());
+//    	  
+    	 // contenedorcRUDCMViewModel.registrarCm();
+    	  mfm.salvar();
+    	  contenedorcRUDCMViewModel.actualizarCrudCm();
+    	  limpiarCampos();
       }
 
       public void cancelarAction ( String  event ){
@@ -385,11 +414,21 @@ contenedorinformacionCMViewModel.setNombrecm(textNombreCMInformacionCM.getText()
       }
 
       public void constructorContenedorCRUDCMViewPart (){
-//semantics
+             //semantics
       }
 
       public void syncModel (){
-//semantics
+             //semantics
+      }
+
+      public void limpiarCampos (){
+             textNombreCMInformacionCM.setText("");
+    	  textNombreRepresentanteInformacionCM.setText("");
+    	  textDescripcionInformacionCM.setText("");
+    	  textPaisUbicacion.setText("");
+    	  textDepartamentoUbicacion.setText("");
+    	  textCiudadUbicacion.setText("");
+    	  textDireccionUbicacion.setText("");
       }
 
 }

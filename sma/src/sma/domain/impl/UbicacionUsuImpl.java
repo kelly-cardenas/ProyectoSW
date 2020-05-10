@@ -42,7 +42,7 @@ public class UbicacionUsuImpl extends EObjectImpl implements UbicacionUsu {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String PAIS_EDEFAULT = null;
+	protected static final String PAIS_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getPais() <em>Pais</em>}' attribute.
@@ -62,7 +62,7 @@ public class UbicacionUsuImpl extends EObjectImpl implements UbicacionUsu {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DEPARTAMENTO_EDEFAULT = null;
+	protected static final String DEPARTAMENTO_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getDepartamento() <em>Departamento</em>}' attribute.
@@ -82,7 +82,7 @@ public class UbicacionUsuImpl extends EObjectImpl implements UbicacionUsu {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CIUDAD_EDEFAULT = null;
+	protected static final String CIUDAD_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getCiudad() <em>Ciudad</em>}' attribute.

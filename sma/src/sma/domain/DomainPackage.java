@@ -256,7 +256,7 @@ public interface DomainPackage extends EPackage {
 	int CENTRO_MANT__OWNED_BY_DOMAIN = 8;
 
 	/**
-	 * The feature id for the '<em><b>Ubicacion</b></em>' reference.
+	 * The feature id for the '<em><b>Ubicacion</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -411,7 +411,7 @@ public interface DomainPackage extends EPackage {
 	int UBICACION_CM__DIRECCION = 3;
 
 	/**
-	 * The feature id for the '<em><b>Owned By</b></em>' reference.
+	 * The feature id for the '<em><b>Owned By</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -841,10 +841,10 @@ public interface DomainPackage extends EPackage {
 	EReference getCentroMant_OwnedByDomain();
 
 	/**
-	 * Returns the meta object for the reference '{@link sma.domain.CentroMant#getUbicacion <em>Ubicacion</em>}'.
+	 * Returns the meta object for the containment reference '{@link sma.domain.CentroMant#getUbicacion <em>Ubicacion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Ubicacion</em>'.
+	 * @return the meta object for the containment reference '<em>Ubicacion</em>'.
 	 * @see sma.domain.CentroMant#getUbicacion()
 	 * @see #getCentroMant()
 	 * @generated
@@ -1004,10 +1004,10 @@ public interface DomainPackage extends EPackage {
 	EAttribute getUbicacionCM_Direccion();
 
 	/**
-	 * Returns the meta object for the reference '{@link sma.domain.UbicacionCM#getOwnedBy <em>Owned By</em>}'.
+	 * Returns the meta object for the container reference '{@link sma.domain.UbicacionCM#getOwnedBy <em>Owned By</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Owned By</em>'.
+	 * @return the meta object for the container reference '<em>Owned By</em>'.
 	 * @see sma.domain.UbicacionCM#getOwnedBy()
 	 * @see #getUbicacionCM()
 	 * @generated
@@ -1405,7 +1405,7 @@ public interface DomainPackage extends EPackage {
 		EReference CENTRO_MANT__OWNED_BY_DOMAIN = eINSTANCE.getCentroMant_OwnedByDomain();
 
 		/**
-		 * The meta object literal for the '<em><b>Ubicacion</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Ubicacion</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1529,7 +1529,7 @@ public interface DomainPackage extends EPackage {
 		EAttribute UBICACION_CM__DIRECCION = eINSTANCE.getUbicacionCM_Direccion();
 
 		/**
-		 * The meta object literal for the '<em><b>Owned By</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Owned By</b></em>' container reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

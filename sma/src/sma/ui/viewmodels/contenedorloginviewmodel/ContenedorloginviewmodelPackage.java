@@ -75,13 +75,22 @@ public interface ContenedorloginviewmodelPackage extends EPackage {
 	int CONTENEDOR_DETALLE_LOGIN_VIEW_MODEL__USUARIO = 0;
 
 	/**
+	 * The feature id for the '<em><b>Contrasenia</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTENEDOR_DETALLE_LOGIN_VIEW_MODEL__CONTRASENIA = 1;
+
+	/**
 	 * The feature id for the '<em><b>Owned By Contenedor Login View Model</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENEDOR_DETALLE_LOGIN_VIEW_MODEL__OWNED_BY_CONTENEDOR_LOGIN_VIEW_MODEL = 1;
+	int CONTENEDOR_DETALLE_LOGIN_VIEW_MODEL__OWNED_BY_CONTENEDOR_LOGIN_VIEW_MODEL = 2;
 
 	/**
 	 * The number of structural features of the '<em>Contenedor Detalle Login View Model</em>' class.
@@ -90,7 +99,7 @@ public interface ContenedorloginviewmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENEDOR_DETALLE_LOGIN_VIEW_MODEL_FEATURE_COUNT = 2;
+	int CONTENEDOR_DETALLE_LOGIN_VIEW_MODEL_FEATURE_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link sma.ui.viewmodels.contenedorloginviewmodel.impl.ContenedorLoginViewModelImpl <em>Contenedor Login View Model</em>}' class.
@@ -159,6 +168,17 @@ public interface ContenedorloginviewmodelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getContenedorDetalleLoginViewModel_Usuario();
+
+	/**
+	 * Returns the meta object for the attribute '{@link sma.ui.viewmodels.contenedorloginviewmodel.ContenedorDetalleLoginViewModel#getContrasenia <em>Contrasenia</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Contrasenia</em>'.
+	 * @see sma.ui.viewmodels.contenedorloginviewmodel.ContenedorDetalleLoginViewModel#getContrasenia()
+	 * @see #getContenedorDetalleLoginViewModel()
+	 * @generated
+	 */
+	EAttribute getContenedorDetalleLoginViewModel_Contrasenia();
 
 	/**
 	 * Returns the meta object for the container reference '{@link sma.ui.viewmodels.contenedorloginviewmodel.ContenedorDetalleLoginViewModel#getOwnedByContenedorLoginViewModel <em>Owned By Contenedor Login View Model</em>}'.
@@ -253,6 +273,14 @@ public interface ContenedorloginviewmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CONTENEDOR_DETALLE_LOGIN_VIEW_MODEL__USUARIO = eINSTANCE.getContenedorDetalleLoginViewModel_Usuario();
+
+		/**
+		 * The meta object literal for the '<em><b>Contrasenia</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONTENEDOR_DETALLE_LOGIN_VIEW_MODEL__CONTRASENIA = eINSTANCE.getContenedorDetalleLoginViewModel_Contrasenia();
 
 		/**
 		 * The meta object literal for the '<em><b>Owned By Contenedor Login View Model</b></em>' container reference feature.

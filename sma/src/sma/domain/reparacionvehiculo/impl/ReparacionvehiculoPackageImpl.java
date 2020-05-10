@@ -29,6 +29,12 @@ import sma.ui.UiPackage;
 
 import sma.ui.impl.UiPackageImpl;
 
+import sma.ui.viewmodels.ViewmodelsPackage;
+
+import sma.ui.viewmodels.contenedorcontactarcmviewmodel.ContenedorcontactarcmviewmodelPackage;
+
+import sma.ui.viewmodels.contenedorcontactarcmviewmodel.impl.ContenedorcontactarcmviewmodelPackageImpl;
+
 import sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelPackage;
 
 import sma.ui.viewmodels.contenedorcrudclienteviewmodel.impl.ContenedorcrudclienteviewmodelPackageImpl;
@@ -37,6 +43,10 @@ import sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelPack
 
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.impl.ContenedorcrudcmviewmodelPackageImpl;
 
+import sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorescaneoviewmodelPackage;
+
+import sma.ui.viewmodels.contenedorescaneoviewmodel.impl.ContenedorescaneoviewmodelPackageImpl;
+
 import sma.ui.viewmodels.contenedorloginviewmodel.ContenedorloginviewmodelPackage;
 
 import sma.ui.viewmodels.contenedorloginviewmodel.impl.ContenedorloginviewmodelPackageImpl;
@@ -44,6 +54,12 @@ import sma.ui.viewmodels.contenedorloginviewmodel.impl.ContenedorloginviewmodelP
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorregistrovehiculoviewmodelPackage;
 
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.impl.ContenedorregistrovehiculoviewmodelPackageImpl;
+
+import sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.ContenedorsolicitudvisitaviewmodelPackage;
+
+import sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.impl.ContenedorsolicitudvisitaviewmodelPackageImpl;
+
+import sma.ui.viewmodels.impl.ViewmodelsPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -110,10 +126,14 @@ public class ReparacionvehiculoPackageImpl extends EPackageImpl implements Repar
 		DomainPackageImpl theDomainPackage = (DomainPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(DomainPackage.eNS_URI) instanceof DomainPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(DomainPackage.eNS_URI) : DomainPackage.eINSTANCE);
 		AutomatizacionrevisionPackageImpl theAutomatizacionrevisionPackage = (AutomatizacionrevisionPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(AutomatizacionrevisionPackage.eNS_URI) instanceof AutomatizacionrevisionPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(AutomatizacionrevisionPackage.eNS_URI) : AutomatizacionrevisionPackage.eINSTANCE);
 		UiPackageImpl theUiPackage = (UiPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(UiPackage.eNS_URI) instanceof UiPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(UiPackage.eNS_URI) : UiPackage.eINSTANCE);
+		ViewmodelsPackageImpl theViewmodelsPackage = (ViewmodelsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ViewmodelsPackage.eNS_URI) instanceof ViewmodelsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ViewmodelsPackage.eNS_URI) : ViewmodelsPackage.eINSTANCE);
 		ContenedorcrudclienteviewmodelPackageImpl theContenedorcrudclienteviewmodelPackage = (ContenedorcrudclienteviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorcrudclienteviewmodelPackage.eNS_URI) instanceof ContenedorcrudclienteviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorcrudclienteviewmodelPackage.eNS_URI) : ContenedorcrudclienteviewmodelPackage.eINSTANCE);
 		ContenedorcrudcmviewmodelPackageImpl theContenedorcrudcmviewmodelPackage = (ContenedorcrudcmviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorcrudcmviewmodelPackage.eNS_URI) instanceof ContenedorcrudcmviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorcrudcmviewmodelPackage.eNS_URI) : ContenedorcrudcmviewmodelPackage.eINSTANCE);
 		ContenedorregistrovehiculoviewmodelPackageImpl theContenedorregistrovehiculoviewmodelPackage = (ContenedorregistrovehiculoviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorregistrovehiculoviewmodelPackage.eNS_URI) instanceof ContenedorregistrovehiculoviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorregistrovehiculoviewmodelPackage.eNS_URI) : ContenedorregistrovehiculoviewmodelPackage.eINSTANCE);
 		ContenedorloginviewmodelPackageImpl theContenedorloginviewmodelPackage = (ContenedorloginviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorloginviewmodelPackage.eNS_URI) instanceof ContenedorloginviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorloginviewmodelPackage.eNS_URI) : ContenedorloginviewmodelPackage.eINSTANCE);
+		ContenedorescaneoviewmodelPackageImpl theContenedorescaneoviewmodelPackage = (ContenedorescaneoviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorescaneoviewmodelPackage.eNS_URI) instanceof ContenedorescaneoviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorescaneoviewmodelPackage.eNS_URI) : ContenedorescaneoviewmodelPackage.eINSTANCE);
+		ContenedorcontactarcmviewmodelPackageImpl theContenedorcontactarcmviewmodelPackage = (ContenedorcontactarcmviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorcontactarcmviewmodelPackage.eNS_URI) instanceof ContenedorcontactarcmviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorcontactarcmviewmodelPackage.eNS_URI) : ContenedorcontactarcmviewmodelPackage.eINSTANCE);
+		ContenedorsolicitudvisitaviewmodelPackageImpl theContenedorsolicitudvisitaviewmodelPackage = (ContenedorsolicitudvisitaviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorsolicitudvisitaviewmodelPackage.eNS_URI) instanceof ContenedorsolicitudvisitaviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorsolicitudvisitaviewmodelPackage.eNS_URI) : ContenedorsolicitudvisitaviewmodelPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theReparacionvehiculoPackage.createPackageContents();
@@ -121,10 +141,14 @@ public class ReparacionvehiculoPackageImpl extends EPackageImpl implements Repar
 		theDomainPackage.createPackageContents();
 		theAutomatizacionrevisionPackage.createPackageContents();
 		theUiPackage.createPackageContents();
+		theViewmodelsPackage.createPackageContents();
 		theContenedorcrudclienteviewmodelPackage.createPackageContents();
 		theContenedorcrudcmviewmodelPackage.createPackageContents();
 		theContenedorregistrovehiculoviewmodelPackage.createPackageContents();
 		theContenedorloginviewmodelPackage.createPackageContents();
+		theContenedorescaneoviewmodelPackage.createPackageContents();
+		theContenedorcontactarcmviewmodelPackage.createPackageContents();
+		theContenedorsolicitudvisitaviewmodelPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theReparacionvehiculoPackage.initializePackageContents();
@@ -132,10 +156,14 @@ public class ReparacionvehiculoPackageImpl extends EPackageImpl implements Repar
 		theDomainPackage.initializePackageContents();
 		theAutomatizacionrevisionPackage.initializePackageContents();
 		theUiPackage.initializePackageContents();
+		theViewmodelsPackage.initializePackageContents();
 		theContenedorcrudclienteviewmodelPackage.initializePackageContents();
 		theContenedorcrudcmviewmodelPackage.initializePackageContents();
 		theContenedorregistrovehiculoviewmodelPackage.initializePackageContents();
 		theContenedorloginviewmodelPackage.initializePackageContents();
+		theContenedorescaneoviewmodelPackage.initializePackageContents();
+		theContenedorcontactarcmviewmodelPackage.initializePackageContents();
+		theContenedorsolicitudvisitaviewmodelPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theReparacionvehiculoPackage.freeze();
@@ -303,12 +331,12 @@ public class ReparacionvehiculoPackageImpl extends EPackageImpl implements Repar
 		initEClass(reparacionEClass, Reparacion.class, "Reparacion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getReparacion_TheAutomovil(), theDomainPackage.getAutomovil(), theDomainPackage.getAutomovil_ReparacionesHechas(), "theAutomovil", null, 0, 1, Reparacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getReparacion_TheCentroMant(), theDomainPackage.getCentroMant(), theDomainPackage.getCentroMant_HistorialReparacion(), "theCentroMant", null, 0, 1, Reparacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getReparacion_NombreResponsable(), thesmaPackage.getString(), "nombreResponsable", null, 0, 1, Reparacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getReparacion_Estado(), thesmaPackage.getString(), "estado", null, 0, 1, Reparacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getReparacion_NumeroFallasPredecidas(), thesmaPackage.getEIntegerObject(), "numeroFallasPredecidas", null, 0, 1, Reparacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getReparacion_NumeroFallasAcertadas(), thesmaPackage.getEIntegerObject(), "numeroFallasAcertadas", null, 0, 1, Reparacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getReparacion_Fecha(), thesmaPackage.getString(), "fecha", null, 0, 1, Reparacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getReparacion_Hora(), thesmaPackage.getString(), "hora", null, 0, 1, Reparacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getReparacion_NombreResponsable(), thesmaPackage.getString(), "nombreResponsable", " ", 0, 1, Reparacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getReparacion_Estado(), thesmaPackage.getString(), "estado", " ", 0, 1, Reparacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getReparacion_NumeroFallasPredecidas(), thesmaPackage.getEIntegerObject(), "numeroFallasPredecidas", "0", 0, 1, Reparacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getReparacion_NumeroFallasAcertadas(), thesmaPackage.getEIntegerObject(), "numeroFallasAcertadas", "0", 0, 1, Reparacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getReparacion_Fecha(), thesmaPackage.getString(), "fecha", " ", 0, 1, Reparacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getReparacion_Hora(), thesmaPackage.getString(), "hora", " ", 0, 1, Reparacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //ReparacionvehiculoPackageImpl

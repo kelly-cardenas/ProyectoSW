@@ -59,7 +59,7 @@ public class ReparacionImpl extends EObjectImpl implements Reparacion {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NOMBRE_RESPONSABLE_EDEFAULT = null;
+	protected static final String NOMBRE_RESPONSABLE_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getNombreResponsable() <em>Nombre Responsable</em>}' attribute.
@@ -79,7 +79,7 @@ public class ReparacionImpl extends EObjectImpl implements Reparacion {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ESTADO_EDEFAULT = null;
+	protected static final String ESTADO_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getEstado() <em>Estado</em>}' attribute.
@@ -99,7 +99,7 @@ public class ReparacionImpl extends EObjectImpl implements Reparacion {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Integer NUMERO_FALLAS_PREDECIDAS_EDEFAULT = null;
+	protected static final Integer NUMERO_FALLAS_PREDECIDAS_EDEFAULT = new Integer(0);
 
 	/**
 	 * The cached value of the '{@link #getNumeroFallasPredecidas() <em>Numero Fallas Predecidas</em>}' attribute.
@@ -119,7 +119,7 @@ public class ReparacionImpl extends EObjectImpl implements Reparacion {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Integer NUMERO_FALLAS_ACERTADAS_EDEFAULT = null;
+	protected static final Integer NUMERO_FALLAS_ACERTADAS_EDEFAULT = new Integer(0);
 
 	/**
 	 * The cached value of the '{@link #getNumeroFallasAcertadas() <em>Numero Fallas Acertadas</em>}' attribute.
@@ -139,7 +139,7 @@ public class ReparacionImpl extends EObjectImpl implements Reparacion {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String FECHA_EDEFAULT = null;
+	protected static final String FECHA_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getFecha() <em>Fecha</em>}' attribute.
@@ -159,7 +159,7 @@ public class ReparacionImpl extends EObjectImpl implements Reparacion {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String HORA_EDEFAULT = null;
+	protected static final String HORA_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getHora() <em>Hora</em>}' attribute.

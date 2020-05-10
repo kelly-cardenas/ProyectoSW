@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface VehiculoViewModel extends EObject {
 	/**
 	 * Returns the value of the '<em><b>The0 Contenedor Vehiculos Registrados View Model</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorVehiculosRegistradosViewModel#getVehiculoViewModel <em>Vehiculo View Model</em>}'.
+	 * It is bidirectional and its opposite is '{@link sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorVehiculosRegistradosViewModel#getListaVehiculo <em>Lista Vehiculo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>The0 Contenedor Vehiculos Registrados View Model</em>' container reference isn't clear,
@@ -36,8 +36,8 @@ public interface VehiculoViewModel extends EObject {
 	 * @return the value of the '<em>The0 Contenedor Vehiculos Registrados View Model</em>' container reference.
 	 * @see #setThe0ContenedorVehiculosRegistradosViewModel(ContenedorVehiculosRegistradosViewModel)
 	 * @see sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorregistrovehiculoviewmodelPackage#getVehiculoViewModel_The0ContenedorVehiculosRegistradosViewModel()
-	 * @see sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorVehiculosRegistradosViewModel#getVehiculoViewModel
-	 * @model opposite="VehiculoViewModel" transient="false"
+	 * @see sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorVehiculosRegistradosViewModel#getListaVehiculo
+	 * @model opposite="listaVehiculo" transient="false"
 	 * @generated
 	 */
 	ContenedorVehiculosRegistradosViewModel getThe0ContenedorVehiculosRegistradosViewModel();
@@ -54,6 +54,7 @@ public interface VehiculoViewModel extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Marca</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Marca</em>' attribute isn't clear,
@@ -63,7 +64,7 @@ public interface VehiculoViewModel extends EObject {
 	 * @return the value of the '<em>Marca</em>' attribute.
 	 * @see #setMarca(String)
 	 * @see sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorregistrovehiculoviewmodelPackage#getVehiculoViewModel_Marca()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getMarca();
@@ -80,6 +81,7 @@ public interface VehiculoViewModel extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Referencia</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Referencia</em>' attribute isn't clear,
@@ -89,7 +91,7 @@ public interface VehiculoViewModel extends EObject {
 	 * @return the value of the '<em>Referencia</em>' attribute.
 	 * @see #setReferencia(String)
 	 * @see sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorregistrovehiculoviewmodelPackage#getVehiculoViewModel_Referencia()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getReferencia();
@@ -106,6 +108,7 @@ public interface VehiculoViewModel extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Placa</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Placa</em>' attribute isn't clear,
@@ -115,7 +118,7 @@ public interface VehiculoViewModel extends EObject {
 	 * @return the value of the '<em>Placa</em>' attribute.
 	 * @see #setPlaca(String)
 	 * @see sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorregistrovehiculoviewmodelPackage#getVehiculoViewModel_Placa()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getPlaca();

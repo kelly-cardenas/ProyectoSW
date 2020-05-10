@@ -113,7 +113,7 @@ public interface ContenedorCRUDCMViewModel extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="sma.String" eventoDataType="sma.String"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='\n\t\tString action = \"\";\n\t\treturn action;\n'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\t\t\tString action = \"\";\r\n\t\t\t\treturn action;\r\n\t\t\r\n\t'"
 	 * @generated
 	 */
 	String upadateDialog(String evento);
@@ -121,7 +121,7 @@ public interface ContenedorCRUDCMViewModel extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\tContenedorDetalleCMViewModel detalleCMVM = getTheContenedorDetalleCMViewModel();\r\n\t\tContenedorMaestroCMViewModel maestroCMVM = getTheContenedorMaestroCMViewModel();\r\n\t\t\r\n\t\tif ( detalleCMVM == null ) {\r\n\t\t\tdetalleCMVM = sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelFactory\r\n\t\t\t\t\t\t.eINSTANCE.createContenedorDetalleCMViewModel();\r\n\t\t}\r\n\t\t\r\n\t\tif ( maestroCMVM == null ) {\r\n\t\t\t\r\n\t\t\tmaestroCMVM = sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelFactory\r\n\t\t\t\t\t\t.eINSTANCE.createContenedorMaestroCMViewModel();\r\n\t\t\t\r\n\t\t}\r\n\t\t\r\n\t\tsetTheContenedorDetalleCMViewModel(detalleCMVM);\r\n\t\tsetTheContenedorMaestroCMViewModel(maestroCMVM);'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\tContenedorDetalleCMViewModel detalleCMVM = getTheContenedorDetalleCMViewModel();\r\n\t\t\t\tContenedorMaestroCMViewModel maestroCMVM = getTheContenedorMaestroCMViewModel();\r\n\t\t\t\t\r\n\t\t\t\tif ( detalleCMVM == null ) {\r\n\t\t\t\t\tdetalleCMVM = sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelFactory\r\n\t\t\t\t\t\t\t\t.eINSTANCE.createContenedorDetalleCMViewModel();\r\n\t\t\t\t}\r\n\t\t\t\t\r\n\t\t\t\tif ( maestroCMVM == null ) {\r\n\t\t\t\t\t\r\n\t\t\t\t\tmaestroCMVM = sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelFactory\r\n\t\t\t\t\t\t\t\t.eINSTANCE.createContenedorMaestroCMViewModel();\r\n\t\t\t\t\t\r\n\t\t\t\t}\r\n\t\t\t\t\r\n\t\t\t\tsetTheContenedorDetalleCMViewModel(detalleCMVM);\r\n\t\t\t\tsetTheContenedorMaestroCMViewModel(maestroCMVM);\r\n\t\t\r\n\t\tdetalleCMVM.implementarModelo();\r\n\t'"
 	 * @generated
 	 */
 	void implementarModelo();
@@ -129,9 +129,17 @@ public interface ContenedorCRUDCMViewModel extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='getOwnedByUI().RegistrarCm(this);'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\tgetOwnedByUI().RegistrarCm(this);\r\n\t'"
 	 * @generated
 	 */
 	void registrarCm();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\tgetOwnedByUI().actualizarCrudCm(this);\r\n\t'"
+	 * @generated
+	 */
+	void actualizarCrudCm();
 
 } // ContenedorCRUDCMViewModel

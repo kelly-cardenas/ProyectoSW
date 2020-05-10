@@ -44,7 +44,7 @@ public class ContenedorLoginViewModelImpl extends EObjectImpl implements Contene
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String USUARIO_EDEFAULT = null;
+	protected static final String USUARIO_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getUsuario() <em>Usuario</em>}' attribute.
@@ -207,9 +207,8 @@ public class ContenedorLoginViewModelImpl extends EObjectImpl implements Contene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void prueba() {
-		//TODO prueba
-		
+	public Boolean prueba() {
+		return getOwnedByUI().hacerLogin(this);
 	}
 
 	/**
@@ -219,8 +218,15 @@ public class ContenedorLoginViewModelImpl extends EObjectImpl implements Contene
 	 */
 	public void implementarModelo() {
 		
-		// codigo para implementar modelo
-		
+				 ContenedorDetalleLoginViewModel detalleLoginVM = getTheContenedorDetalleLoginViewModel();
+				
+				 if ( getTheContenedorDetalleLoginViewModel() == null ) {
+					
+					 detalleLoginVM = sma.ui.viewmodels.contenedorloginviewmodel.ContenedorloginviewmodelFactory
+							 	.eINSTANCE.createContenedorDetalleLoginViewModel();
+				}
+				 
+				 setTheContenedorDetalleLoginViewModel(detalleLoginVM);
 	}
 
 	/**

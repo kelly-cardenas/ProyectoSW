@@ -111,22 +111,13 @@ public interface ContenedorcrudclienteviewmodelPackage extends EPackage {
 	int CLIENTE_VIEW_MODEL__THE0_CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL = 4;
 
 	/**
-	 * The feature id for the '<em><b>The Contenedor Maestro Cliente View Model</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLIENTE_VIEW_MODEL__THE_CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL = 5;
-
-	/**
 	 * The number of structural features of the '<em>Cliente View Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLIENTE_VIEW_MODEL_FEATURE_COUNT = 6;
+	int CLIENTE_VIEW_MODEL_FEATURE_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.impl.ContenedorCrudClienteViewModelImpl <em>Contenedor Crud Cliente View Model</em>}' class.
@@ -267,13 +258,13 @@ public interface ContenedorcrudclienteviewmodelPackage extends EPackage {
 	int CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__USUARIO = 0;
 
 	/**
-	 * The feature id for the '<em><b>Contraseña</b></em>' attribute.
+	 * The feature id for the '<em><b>Contrasenia</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__CONTRASEÑA = 1;
+	int CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__CONTRASENIA = 1;
 
 	/**
 	 * The feature id for the '<em><b>Owned By Contenedor Detalle Cliente View Model</b></em>' container reference.
@@ -359,22 +350,13 @@ public interface ContenedorcrudclienteviewmodelPackage extends EPackage {
 	int CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__OWNED_BY_CONTENEDOR_CRUD_CLIENTE_VIEW_MODEL = 0;
 
 	/**
-	 * The feature id for the '<em><b>Cliente View Model</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Lista Cliente</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__CLIENTE_VIEW_MODEL = 1;
-
-	/**
-	 * The feature id for the '<em><b>The Cliente View Model</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__THE_CLIENTE_VIEW_MODEL = 2;
+	int CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__LISTA_CLIENTE = 1;
 
 	/**
 	 * The number of structural features of the '<em>Contenedor Maestro Cliente View Model</em>' class.
@@ -383,7 +365,7 @@ public interface ContenedorcrudclienteviewmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL_FEATURE_COUNT = 3;
+	int CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL_FEATURE_COUNT = 2;
 
 
 	/**
@@ -450,17 +432,6 @@ public interface ContenedorcrudclienteviewmodelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getClienteViewModel_The0ContenedorMaestroClienteViewModel();
-
-	/**
-	 * Returns the meta object for the reference '{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.ClienteViewModel#getTheContenedorMaestroClienteViewModel <em>The Contenedor Maestro Cliente View Model</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>The Contenedor Maestro Cliente View Model</em>'.
-	 * @see sma.ui.viewmodels.contenedorcrudclienteviewmodel.ClienteViewModel#getTheContenedorMaestroClienteViewModel()
-	 * @see #getClienteViewModel()
-	 * @generated
-	 */
-	EReference getClienteViewModel_TheContenedorMaestroClienteViewModel();
 
 	/**
 	 * Returns the meta object for class '{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorCrudClienteViewModel <em>Contenedor Crud Cliente View Model</em>}'.
@@ -603,15 +574,15 @@ public interface ContenedorcrudclienteviewmodelPackage extends EPackage {
 	EAttribute getContenedorDatosdelacuentaViewModel_Usuario();
 
 	/**
-	 * Returns the meta object for the attribute '{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorDatosdelacuentaViewModel#getContraseña <em>Contraseña</em>}'.
+	 * Returns the meta object for the attribute '{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorDatosdelacuentaViewModel#getContrasenia <em>Contrasenia</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Contraseña</em>'.
-	 * @see sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorDatosdelacuentaViewModel#getContraseña()
+	 * @return the meta object for the attribute '<em>Contrasenia</em>'.
+	 * @see sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorDatosdelacuentaViewModel#getContrasenia()
 	 * @see #getContenedorDatosdelacuentaViewModel()
 	 * @generated
 	 */
-	EAttribute getContenedorDatosdelacuentaViewModel_Contraseña();
+	EAttribute getContenedorDatosdelacuentaViewModel_Contrasenia();
 
 	/**
 	 * Returns the meta object for the container reference '{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorDatosdelacuentaViewModel#getOwnedByContenedorDetalleClienteViewModel <em>Owned By Contenedor Detalle Cliente View Model</em>}'.
@@ -689,26 +660,15 @@ public interface ContenedorcrudclienteviewmodelPackage extends EPackage {
 	EReference getContenedorMaestroClienteViewModel_OwnedByContenedorCrudClienteViewModel();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorMaestroClienteViewModel#getClienteViewModel <em>Cliente View Model</em>}'.
+	 * Returns the meta object for the containment reference list '{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorMaestroClienteViewModel#getListaCliente <em>Lista Cliente</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Cliente View Model</em>'.
-	 * @see sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorMaestroClienteViewModel#getClienteViewModel()
+	 * @return the meta object for the containment reference list '<em>Lista Cliente</em>'.
+	 * @see sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorMaestroClienteViewModel#getListaCliente()
 	 * @see #getContenedorMaestroClienteViewModel()
 	 * @generated
 	 */
-	EReference getContenedorMaestroClienteViewModel_ClienteViewModel();
-
-	/**
-	 * Returns the meta object for the reference list '{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorMaestroClienteViewModel#getTheClienteViewModel <em>The Cliente View Model</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>The Cliente View Model</em>'.
-	 * @see sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorMaestroClienteViewModel#getTheClienteViewModel()
-	 * @see #getContenedorMaestroClienteViewModel()
-	 * @generated
-	 */
-	EReference getContenedorMaestroClienteViewModel_TheClienteViewModel();
+	EReference getContenedorMaestroClienteViewModel_ListaCliente();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -781,14 +741,6 @@ public interface ContenedorcrudclienteviewmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CLIENTE_VIEW_MODEL__THE0_CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL = eINSTANCE.getClienteViewModel_The0ContenedorMaestroClienteViewModel();
-
-		/**
-		 * The meta object literal for the '<em><b>The Contenedor Maestro Cliente View Model</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CLIENTE_VIEW_MODEL__THE_CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL = eINSTANCE.getClienteViewModel_TheContenedorMaestroClienteViewModel();
 
 		/**
 		 * The meta object literal for the '{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.impl.ContenedorCrudClienteViewModelImpl <em>Contenedor Crud Cliente View Model</em>}' class.
@@ -901,12 +853,12 @@ public interface ContenedorcrudclienteviewmodelPackage extends EPackage {
 		EAttribute CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__USUARIO = eINSTANCE.getContenedorDatosdelacuentaViewModel_Usuario();
 
 		/**
-		 * The meta object literal for the '<em><b>Contraseña</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Contrasenia</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__CONTRASEÑA = eINSTANCE.getContenedorDatosdelacuentaViewModel_Contraseña();
+		EAttribute CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__CONTRASENIA = eINSTANCE.getContenedorDatosdelacuentaViewModel_Contrasenia();
 
 		/**
 		 * The meta object literal for the '<em><b>Owned By Contenedor Detalle Cliente View Model</b></em>' container reference feature.
@@ -969,20 +921,12 @@ public interface ContenedorcrudclienteviewmodelPackage extends EPackage {
 		EReference CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__OWNED_BY_CONTENEDOR_CRUD_CLIENTE_VIEW_MODEL = eINSTANCE.getContenedorMaestroClienteViewModel_OwnedByContenedorCrudClienteViewModel();
 
 		/**
-		 * The meta object literal for the '<em><b>Cliente View Model</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Lista Cliente</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__CLIENTE_VIEW_MODEL = eINSTANCE.getContenedorMaestroClienteViewModel_ClienteViewModel();
-
-		/**
-		 * The meta object literal for the '<em><b>The Cliente View Model</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__THE_CLIENTE_VIEW_MODEL = eINSTANCE.getContenedorMaestroClienteViewModel_TheClienteViewModel();
+		EReference CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__LISTA_CLIENTE = eINSTANCE.getContenedorMaestroClienteViewModel_ListaCliente();
 
 	}
 

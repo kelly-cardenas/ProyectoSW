@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
-import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -34,32 +33,21 @@ import sma.ui.viewmodels.contenedorcrudclienteviewmodel.Contenedorcrudclientevie
  * </p>
  * <ul>
  *   <li>{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.impl.ContenedorMaestroClienteViewModelImpl#getOwnedByContenedorCrudClienteViewModel <em>Owned By Contenedor Crud Cliente View Model</em>}</li>
- *   <li>{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.impl.ContenedorMaestroClienteViewModelImpl#getClienteViewModel <em>Cliente View Model</em>}</li>
- *   <li>{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.impl.ContenedorMaestroClienteViewModelImpl#getTheClienteViewModel <em>The Cliente View Model</em>}</li>
+ *   <li>{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.impl.ContenedorMaestroClienteViewModelImpl#getListaCliente <em>Lista Cliente</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ContenedorMaestroClienteViewModelImpl extends EObjectImpl implements ContenedorMaestroClienteViewModel {
 	/**
-	 * The cached value of the '{@link #getClienteViewModel() <em>Cliente View Model</em>}' containment reference list.
+	 * The cached value of the '{@link #getListaCliente() <em>Lista Cliente</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getClienteViewModel()
+	 * @see #getListaCliente()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ClienteViewModel> clienteViewModel;
-
-	/**
-	 * The cached value of the '{@link #getTheClienteViewModel() <em>The Cliente View Model</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTheClienteViewModel()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ClienteViewModel> theClienteViewModel;
+	protected EList<ClienteViewModel> listaCliente;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -126,23 +114,11 @@ public class ContenedorMaestroClienteViewModelImpl extends EObjectImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ClienteViewModel> getClienteViewModel() {
-		if (clienteViewModel == null) {
-			clienteViewModel = new EObjectContainmentWithInverseEList<ClienteViewModel>(ClienteViewModel.class, this, ContenedorcrudclienteviewmodelPackage.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__CLIENTE_VIEW_MODEL, ContenedorcrudclienteviewmodelPackage.CLIENTE_VIEW_MODEL__THE0_CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL);
+	public EList<ClienteViewModel> getListaCliente() {
+		if (listaCliente == null) {
+			listaCliente = new EObjectContainmentWithInverseEList<ClienteViewModel>(ClienteViewModel.class, this, ContenedorcrudclienteviewmodelPackage.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__LISTA_CLIENTE, ContenedorcrudclienteviewmodelPackage.CLIENTE_VIEW_MODEL__THE0_CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL);
 		}
-		return clienteViewModel;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<ClienteViewModel> getTheClienteViewModel() {
-		if (theClienteViewModel == null) {
-			theClienteViewModel = new EObjectWithInverseResolvingEList<ClienteViewModel>(ClienteViewModel.class, this, ContenedorcrudclienteviewmodelPackage.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__THE_CLIENTE_VIEW_MODEL, ContenedorcrudclienteviewmodelPackage.CLIENTE_VIEW_MODEL__THE_CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL);
-		}
-		return theClienteViewModel;
+		return listaCliente;
 	}
 
 	/**
@@ -158,10 +134,8 @@ public class ContenedorMaestroClienteViewModelImpl extends EObjectImpl implement
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetOwnedByContenedorCrudClienteViewModel((ContenedorCrudClienteViewModel)otherEnd, msgs);
-			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__CLIENTE_VIEW_MODEL:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getClienteViewModel()).basicAdd(otherEnd, msgs);
-			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__THE_CLIENTE_VIEW_MODEL:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getTheClienteViewModel()).basicAdd(otherEnd, msgs);
+			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__LISTA_CLIENTE:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getListaCliente()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -176,10 +150,8 @@ public class ContenedorMaestroClienteViewModelImpl extends EObjectImpl implement
 		switch (featureID) {
 			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__OWNED_BY_CONTENEDOR_CRUD_CLIENTE_VIEW_MODEL:
 				return basicSetOwnedByContenedorCrudClienteViewModel(null, msgs);
-			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__CLIENTE_VIEW_MODEL:
-				return ((InternalEList<?>)getClienteViewModel()).basicRemove(otherEnd, msgs);
-			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__THE_CLIENTE_VIEW_MODEL:
-				return ((InternalEList<?>)getTheClienteViewModel()).basicRemove(otherEnd, msgs);
+			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__LISTA_CLIENTE:
+				return ((InternalEList<?>)getListaCliente()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -208,10 +180,8 @@ public class ContenedorMaestroClienteViewModelImpl extends EObjectImpl implement
 		switch (featureID) {
 			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__OWNED_BY_CONTENEDOR_CRUD_CLIENTE_VIEW_MODEL:
 				return getOwnedByContenedorCrudClienteViewModel();
-			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__CLIENTE_VIEW_MODEL:
-				return getClienteViewModel();
-			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__THE_CLIENTE_VIEW_MODEL:
-				return getTheClienteViewModel();
+			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__LISTA_CLIENTE:
+				return getListaCliente();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -228,13 +198,9 @@ public class ContenedorMaestroClienteViewModelImpl extends EObjectImpl implement
 			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__OWNED_BY_CONTENEDOR_CRUD_CLIENTE_VIEW_MODEL:
 				setOwnedByContenedorCrudClienteViewModel((ContenedorCrudClienteViewModel)newValue);
 				return;
-			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__CLIENTE_VIEW_MODEL:
-				getClienteViewModel().clear();
-				getClienteViewModel().addAll((Collection<? extends ClienteViewModel>)newValue);
-				return;
-			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__THE_CLIENTE_VIEW_MODEL:
-				getTheClienteViewModel().clear();
-				getTheClienteViewModel().addAll((Collection<? extends ClienteViewModel>)newValue);
+			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__LISTA_CLIENTE:
+				getListaCliente().clear();
+				getListaCliente().addAll((Collection<? extends ClienteViewModel>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -251,11 +217,8 @@ public class ContenedorMaestroClienteViewModelImpl extends EObjectImpl implement
 			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__OWNED_BY_CONTENEDOR_CRUD_CLIENTE_VIEW_MODEL:
 				setOwnedByContenedorCrudClienteViewModel((ContenedorCrudClienteViewModel)null);
 				return;
-			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__CLIENTE_VIEW_MODEL:
-				getClienteViewModel().clear();
-				return;
-			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__THE_CLIENTE_VIEW_MODEL:
-				getTheClienteViewModel().clear();
+			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__LISTA_CLIENTE:
+				getListaCliente().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -271,10 +234,8 @@ public class ContenedorMaestroClienteViewModelImpl extends EObjectImpl implement
 		switch (featureID) {
 			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__OWNED_BY_CONTENEDOR_CRUD_CLIENTE_VIEW_MODEL:
 				return getOwnedByContenedorCrudClienteViewModel() != null;
-			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__CLIENTE_VIEW_MODEL:
-				return clienteViewModel != null && !clienteViewModel.isEmpty();
-			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__THE_CLIENTE_VIEW_MODEL:
-				return theClienteViewModel != null && !theClienteViewModel.isEmpty();
+			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__LISTA_CLIENTE:
+				return listaCliente != null && !listaCliente.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

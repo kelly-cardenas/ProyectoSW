@@ -69,7 +69,7 @@ public class UsuarioImpl extends EObjectImpl implements Usuario {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ID_EDEFAULT = null;
+	protected static final String ID_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
@@ -89,7 +89,7 @@ public class UsuarioImpl extends EObjectImpl implements Usuario {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NUM_DI_EDEFAULT = null;
+	protected static final String NUM_DI_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getNumDI() <em>Num DI</em>}' attribute.
@@ -109,7 +109,7 @@ public class UsuarioImpl extends EObjectImpl implements Usuario {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NOMBRES_EDEFAULT = null;
+	protected static final String NOMBRES_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getNombres() <em>Nombres</em>}' attribute.
@@ -129,7 +129,7 @@ public class UsuarioImpl extends EObjectImpl implements Usuario {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String APELLIDOS_EDEFAULT = null;
+	protected static final String APELLIDOS_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getApellidos() <em>Apellidos</em>}' attribute.
@@ -149,7 +149,7 @@ public class UsuarioImpl extends EObjectImpl implements Usuario {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Integer EDAD_EDEFAULT = null;
+	protected static final Integer EDAD_EDEFAULT = new Integer(0);
 
 	/**
 	 * The cached value of the '{@link #getEdad() <em>Edad</em>}' attribute.
@@ -169,7 +169,7 @@ public class UsuarioImpl extends EObjectImpl implements Usuario {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String EMAIL_EDEFAULT = null;
+	protected static final String EMAIL_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getEmail() <em>Email</em>}' attribute.
@@ -189,7 +189,7 @@ public class UsuarioImpl extends EObjectImpl implements Usuario {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String USUARIO_EDEFAULT = null;
+	protected static final String USUARIO_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getUsuario() <em>Usuario</em>}' attribute.
@@ -209,7 +209,7 @@ public class UsuarioImpl extends EObjectImpl implements Usuario {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CONTRASENIA_EDEFAULT = null;
+	protected static final String CONTRASENIA_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getContrasenia() <em>Contrasenia</em>}' attribute.

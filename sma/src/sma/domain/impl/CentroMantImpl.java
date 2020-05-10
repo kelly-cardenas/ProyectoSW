@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import sma.domain.Automovil;
 import sma.domain.CentroMant;
 import sma.domain.Domain;
 import sma.domain.DomainPackage;
@@ -60,7 +61,7 @@ public class CentroMantImpl extends EObjectImpl implements CentroMant {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ID_EDEFAULT = null;
+	protected static final String ID_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
@@ -80,7 +81,7 @@ public class CentroMantImpl extends EObjectImpl implements CentroMant {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NOMBRE_EDEFAULT = null;
+	protected static final String NOMBRE_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
@@ -100,7 +101,7 @@ public class CentroMantImpl extends EObjectImpl implements CentroMant {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NOMBRE_REPRESENTANTE_EDEFAULT = null;
+	protected static final String NOMBRE_REPRESENTANTE_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getNombreRepresentante() <em>Nombre Representante</em>}' attribute.
@@ -120,7 +121,7 @@ public class CentroMantImpl extends EObjectImpl implements CentroMant {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DESCRIPCION_EDEFAULT = null;
+	protected static final String DESCRIPCION_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getDescripcion() <em>Descripcion</em>}' attribute.
@@ -140,7 +141,7 @@ public class CentroMantImpl extends EObjectImpl implements CentroMant {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String USUARIO_EDEFAULT = null;
+	protected static final String USUARIO_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getUsuario() <em>Usuario</em>}' attribute.
@@ -160,7 +161,7 @@ public class CentroMantImpl extends EObjectImpl implements CentroMant {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CONTRASENIA_EDEFAULT = null;
+	protected static final String CONTRASENIA_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getContrasenia() <em>Contrasenia</em>}' attribute.
@@ -193,7 +194,7 @@ public class CentroMantImpl extends EObjectImpl implements CentroMant {
 	protected EList<Reparacion> historialReparacion;
 
 	/**
-	 * The cached value of the '{@link #getUbicacion() <em>Ubicacion</em>}' reference.
+	 * The cached value of the '{@link #getUbicacion() <em>Ubicacion</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getUbicacion()
@@ -418,23 +419,6 @@ public class CentroMantImpl extends EObjectImpl implements CentroMant {
 	 * @generated
 	 */
 	public UbicacionCM getUbicacion() {
-		if (ubicacion != null && ubicacion.eIsProxy()) {
-			InternalEObject oldUbicacion = (InternalEObject)ubicacion;
-			ubicacion = (UbicacionCM)eResolveProxy(oldUbicacion);
-			if (ubicacion != oldUbicacion) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, DomainPackage.CENTRO_MANT__UBICACION, oldUbicacion, ubicacion));
-			}
-		}
-		return ubicacion;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public UbicacionCM basicGetUbicacion() {
 		return ubicacion;
 	}
 
@@ -477,6 +461,16 @@ public class CentroMantImpl extends EObjectImpl implements CentroMant {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public void procesarSolicitudVisita(final Automovil automovilReparacion) {
+		//TODO procesarSolicitudVisita
+		
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -491,7 +485,7 @@ public class CentroMantImpl extends EObjectImpl implements CentroMant {
 				return basicSetOwnedByDomain((Domain)otherEnd, msgs);
 			case DomainPackage.CENTRO_MANT__UBICACION:
 				if (ubicacion != null)
-					msgs = ((InternalEObject)ubicacion).eInverseRemove(this, DomainPackage.UBICACION_CM__OWNED_BY, UbicacionCM.class, msgs);
+					msgs = ((InternalEObject)ubicacion).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DomainPackage.CENTRO_MANT__UBICACION, null, msgs);
 				return basicSetUbicacion((UbicacionCM)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -558,8 +552,7 @@ public class CentroMantImpl extends EObjectImpl implements CentroMant {
 			case DomainPackage.CENTRO_MANT__OWNED_BY_DOMAIN:
 				return getOwnedByDomain();
 			case DomainPackage.CENTRO_MANT__UBICACION:
-				if (resolve) return getUbicacion();
-				return basicGetUbicacion();
+				return getUbicacion();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

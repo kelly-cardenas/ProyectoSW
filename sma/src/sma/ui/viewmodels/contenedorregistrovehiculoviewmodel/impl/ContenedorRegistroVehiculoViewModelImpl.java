@@ -254,6 +254,15 @@ public class ContenedorRegistroVehiculoViewModelImpl extends EObjectImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public void actualizarVentanaRegistroVehiculo() {
+		getOwnedByUI().actualizarVentanaRegistroVehiculo(this);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {

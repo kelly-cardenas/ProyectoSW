@@ -2,8 +2,12 @@
  */
 package sma.ui.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -11,7 +15,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 import sma.ModelFactory;
 
@@ -23,17 +29,29 @@ import sma.smaPackage;
 import sma.ui.UI;
 import sma.ui.UiPackage;
 
+import sma.ui.viewmodels.ViewModel;
+import sma.ui.viewmodels.ViewmodelsPackage;
+
+import sma.ui.viewmodels.contenedorcontactarcmviewmodel.ContenedorContactarCmViewModel;
+import sma.ui.viewmodels.contenedorcontactarcmviewmodel.ContenedorcontactarcmviewmodelPackage;
+
 import sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorCrudClienteViewModel;
 import sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelPackage;
 
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorCRUDCMViewModel;
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelPackage;
 
+import sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorEscaneoViewModel;
+import sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorescaneoviewmodelPackage;
+
 import sma.ui.viewmodels.contenedorloginviewmodel.ContenedorLoginViewModel;
 import sma.ui.viewmodels.contenedorloginviewmodel.ContenedorloginviewmodelPackage;
 
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorRegistroVehiculoViewModel;
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorregistrovehiculoviewmodelPackage;
+
+import sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.ContenedorSolicitudVisitaViewModel;
+import sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.ContenedorsolicitudvisitaviewmodelPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -51,6 +69,10 @@ import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.Contenedorregistrov
  *   <li>{@link sma.ui.impl.UIImpl#getTheContenedorCRUDCMViewModel <em>The Contenedor CRUDCM View Model</em>}</li>
  *   <li>{@link sma.ui.impl.UIImpl#getTheContenedorRegistroVehiculoViewModel <em>The Contenedor Registro Vehiculo View Model</em>}</li>
  *   <li>{@link sma.ui.impl.UIImpl#getTheContenedorLoginViewModel <em>The Contenedor Login View Model</em>}</li>
+ *   <li>{@link sma.ui.impl.UIImpl#getLstViewModels <em>Lst View Models</em>}</li>
+ *   <li>{@link sma.ui.impl.UIImpl#getTheContenedorEscaneoViewModel <em>The Contenedor Escaneo View Model</em>}</li>
+ *   <li>{@link sma.ui.impl.UIImpl#getTheContenedorContactarCmViewModel <em>The Contenedor Contactar Cm View Model</em>}</li>
+ *   <li>{@link sma.ui.impl.UIImpl#getTheContenedorSolicitudVisitaViewModel <em>The Contenedor Solicitud Visita View Model</em>}</li>
  * </ul>
  *
  * @generated
@@ -145,6 +167,46 @@ public class UIImpl extends EObjectImpl implements UI {
 	 * @ordered
 	 */
 	protected ContenedorLoginViewModel theContenedorLoginViewModel;
+
+	/**
+	 * The cached value of the '{@link #getLstViewModels() <em>Lst View Models</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLstViewModels()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ViewModel> lstViewModels;
+
+	/**
+	 * The cached value of the '{@link #getTheContenedorEscaneoViewModel() <em>The Contenedor Escaneo View Model</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTheContenedorEscaneoViewModel()
+	 * @generated
+	 * @ordered
+	 */
+	protected ContenedorEscaneoViewModel theContenedorEscaneoViewModel;
+
+	/**
+	 * The cached value of the '{@link #getTheContenedorContactarCmViewModel() <em>The Contenedor Contactar Cm View Model</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTheContenedorContactarCmViewModel()
+	 * @generated
+	 * @ordered
+	 */
+	protected ContenedorContactarCmViewModel theContenedorContactarCmViewModel;
+
+	/**
+	 * The cached value of the '{@link #getTheContenedorSolicitudVisitaViewModel() <em>The Contenedor Solicitud Visita View Model</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTheContenedorSolicitudVisitaViewModel()
+	 * @generated
+	 * @ordered
+	 */
+	protected ContenedorSolicitudVisitaViewModel theContenedorSolicitudVisitaViewModel;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -485,42 +547,210 @@ public class UIImpl extends EObjectImpl implements UI {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<ViewModel> getLstViewModels() {
+		if (lstViewModels == null) {
+			lstViewModels = new EObjectWithInverseResolvingEList<ViewModel>(ViewModel.class, this, UiPackage.UI__LST_VIEW_MODELS, ViewmodelsPackage.VIEW_MODEL__THE_UI);
+		}
+		return lstViewModels;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ContenedorEscaneoViewModel getTheContenedorEscaneoViewModel() {
+		return theContenedorEscaneoViewModel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTheContenedorEscaneoViewModel(ContenedorEscaneoViewModel newTheContenedorEscaneoViewModel, NotificationChain msgs) {
+		ContenedorEscaneoViewModel oldTheContenedorEscaneoViewModel = theContenedorEscaneoViewModel;
+		theContenedorEscaneoViewModel = newTheContenedorEscaneoViewModel;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, UiPackage.UI__THE_CONTENEDOR_ESCANEO_VIEW_MODEL, oldTheContenedorEscaneoViewModel, newTheContenedorEscaneoViewModel);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTheContenedorEscaneoViewModel(ContenedorEscaneoViewModel newTheContenedorEscaneoViewModel) {
+		if (newTheContenedorEscaneoViewModel != theContenedorEscaneoViewModel) {
+			NotificationChain msgs = null;
+			if (theContenedorEscaneoViewModel != null)
+				msgs = ((InternalEObject)theContenedorEscaneoViewModel).eInverseRemove(this, ContenedorescaneoviewmodelPackage.CONTENEDOR_ESCANEO_VIEW_MODEL__OWNED_BY_UI, ContenedorEscaneoViewModel.class, msgs);
+			if (newTheContenedorEscaneoViewModel != null)
+				msgs = ((InternalEObject)newTheContenedorEscaneoViewModel).eInverseAdd(this, ContenedorescaneoviewmodelPackage.CONTENEDOR_ESCANEO_VIEW_MODEL__OWNED_BY_UI, ContenedorEscaneoViewModel.class, msgs);
+			msgs = basicSetTheContenedorEscaneoViewModel(newTheContenedorEscaneoViewModel, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UiPackage.UI__THE_CONTENEDOR_ESCANEO_VIEW_MODEL, newTheContenedorEscaneoViewModel, newTheContenedorEscaneoViewModel));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ContenedorContactarCmViewModel getTheContenedorContactarCmViewModel() {
+		return theContenedorContactarCmViewModel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTheContenedorContactarCmViewModel(ContenedorContactarCmViewModel newTheContenedorContactarCmViewModel, NotificationChain msgs) {
+		ContenedorContactarCmViewModel oldTheContenedorContactarCmViewModel = theContenedorContactarCmViewModel;
+		theContenedorContactarCmViewModel = newTheContenedorContactarCmViewModel;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, UiPackage.UI__THE_CONTENEDOR_CONTACTAR_CM_VIEW_MODEL, oldTheContenedorContactarCmViewModel, newTheContenedorContactarCmViewModel);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTheContenedorContactarCmViewModel(ContenedorContactarCmViewModel newTheContenedorContactarCmViewModel) {
+		if (newTheContenedorContactarCmViewModel != theContenedorContactarCmViewModel) {
+			NotificationChain msgs = null;
+			if (theContenedorContactarCmViewModel != null)
+				msgs = ((InternalEObject)theContenedorContactarCmViewModel).eInverseRemove(this, ContenedorcontactarcmviewmodelPackage.CONTENEDOR_CONTACTAR_CM_VIEW_MODEL__OWNED_BY_UI, ContenedorContactarCmViewModel.class, msgs);
+			if (newTheContenedorContactarCmViewModel != null)
+				msgs = ((InternalEObject)newTheContenedorContactarCmViewModel).eInverseAdd(this, ContenedorcontactarcmviewmodelPackage.CONTENEDOR_CONTACTAR_CM_VIEW_MODEL__OWNED_BY_UI, ContenedorContactarCmViewModel.class, msgs);
+			msgs = basicSetTheContenedorContactarCmViewModel(newTheContenedorContactarCmViewModel, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UiPackage.UI__THE_CONTENEDOR_CONTACTAR_CM_VIEW_MODEL, newTheContenedorContactarCmViewModel, newTheContenedorContactarCmViewModel));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ContenedorSolicitudVisitaViewModel getTheContenedorSolicitudVisitaViewModel() {
+		return theContenedorSolicitudVisitaViewModel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTheContenedorSolicitudVisitaViewModel(ContenedorSolicitudVisitaViewModel newTheContenedorSolicitudVisitaViewModel, NotificationChain msgs) {
+		ContenedorSolicitudVisitaViewModel oldTheContenedorSolicitudVisitaViewModel = theContenedorSolicitudVisitaViewModel;
+		theContenedorSolicitudVisitaViewModel = newTheContenedorSolicitudVisitaViewModel;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, UiPackage.UI__THE_CONTENEDOR_SOLICITUD_VISITA_VIEW_MODEL, oldTheContenedorSolicitudVisitaViewModel, newTheContenedorSolicitudVisitaViewModel);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTheContenedorSolicitudVisitaViewModel(ContenedorSolicitudVisitaViewModel newTheContenedorSolicitudVisitaViewModel) {
+		if (newTheContenedorSolicitudVisitaViewModel != theContenedorSolicitudVisitaViewModel) {
+			NotificationChain msgs = null;
+			if (theContenedorSolicitudVisitaViewModel != null)
+				msgs = ((InternalEObject)theContenedorSolicitudVisitaViewModel).eInverseRemove(this, ContenedorsolicitudvisitaviewmodelPackage.CONTENEDOR_SOLICITUD_VISITA_VIEW_MODEL__OWNED_BY_UI, ContenedorSolicitudVisitaViewModel.class, msgs);
+			if (newTheContenedorSolicitudVisitaViewModel != null)
+				msgs = ((InternalEObject)newTheContenedorSolicitudVisitaViewModel).eInverseAdd(this, ContenedorsolicitudvisitaviewmodelPackage.CONTENEDOR_SOLICITUD_VISITA_VIEW_MODEL__OWNED_BY_UI, ContenedorSolicitudVisitaViewModel.class, msgs);
+			msgs = basicSetTheContenedorSolicitudVisitaViewModel(newTheContenedorSolicitudVisitaViewModel, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UiPackage.UI__THE_CONTENEDOR_SOLICITUD_VISITA_VIEW_MODEL, newTheContenedorSolicitudVisitaViewModel, newTheContenedorSolicitudVisitaViewModel));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void implementarModelo() {
 		
+		
+				ContenedorCrudClienteViewModel crudCLienteVM = getTheContenedorCrudClienteViewModel();
+				ContenedorCRUDCMViewModel crudCMVM = getTheContenedorCRUDCMViewModel();
+				ContenedorRegistroVehiculoViewModel registroVehiVM = getTheContenedorRegistroVehiculoViewModel();
+				ContenedorLoginViewModel loginVM = getTheContenedorLoginViewModel();
+				ContenedorEscaneoViewModel escaneoClienteVM = getTheContenedorEscaneoViewModel();
+				ContenedorContactarCmViewModel contactarCmVM = getTheContenedorContactarCmViewModel();
+				ContenedorSolicitudVisitaViewModel solicitudVisitaVM = getTheContenedorSolicitudVisitaViewModel();
+		
+				if (crudCLienteVM == null) {
+					crudCLienteVM = sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelFactory.eINSTANCE
+							.createContenedorCrudClienteViewModel();
+				}
+		
+				if (crudCMVM == null) {
+					crudCMVM = sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelFactory.eINSTANCE
+							.createContenedorCRUDCMViewModel();
+				}
+		
+				if (registroVehiVM == null) {
+					registroVehiVM = sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorregistrovehiculoviewmodelFactory.eINSTANCE
+							.createContenedorRegistroVehiculoViewModel();
+				}
+		
+				if (loginVM == null) {
+					loginVM = sma.ui.viewmodels.contenedorloginviewmodel.ContenedorloginviewmodelFactory.eINSTANCE
+							.createContenedorLoginViewModel();
+				}
+		
+				if (escaneoClienteVM == null) {
+					escaneoClienteVM = sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorescaneoviewmodelFactory.eINSTANCE
+							.createContenedorEscaneoViewModel();
+				}
+		
+				if (contactarCmVM == null) {
+					contactarCmVM = sma.ui.viewmodels.contenedorcontactarcmviewmodel.ContenedorcontactarcmviewmodelFactory.eINSTANCE
+							.createContenedorContactarCmViewModel();
+				}
+		
 				
-						
-								
-										
-										ContenedorCrudClienteViewModel crudCLienteVM		=getTheContenedorCrudClienteViewModel();
-										ContenedorCRUDCMViewModel crudCMVM  				=getTheContenedorCRUDCMViewModel();
-										ContenedorRegistroVehiculoViewModel registroVehiVM 	=getTheContenedorRegistroVehiculoViewModel();
-										
-										if(crudCLienteVM == null) {
-											crudCLienteVM 	= sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelFactory
-															.eINSTANCE.createContenedorCrudClienteViewModel();
-											
-										}
-										
-										if(crudCMVM == null) {
-											crudCMVM		= sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelFactory
-															.eINSTANCE.createContenedorCRUDCMViewModel();
-										}
-										
-										if( registroVehiVM == null ) {
-											registroVehiVM	= sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.
-															ContenedorregistrovehiculoviewmodelFactory.eINSTANCE.createContenedorRegistroVehiculoViewModel();
-										}
-										
-										setTheContenedorCrudClienteViewModel(crudCLienteVM);
-										setTheContenedorCRUDCMViewModel(crudCMVM);
-										setTheContenedorRegistroVehiculoViewModel(registroVehiVM);
-										
-										
-										
-											
-									
-							
-					
+				if (solicitudVisitaVM == null) {
+					solicitudVisitaVM = sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.ContenedorsolicitudvisitaviewmodelFactory.eINSTANCE
+							.createContenedorSolicitudVisitaViewModel();
+				}
+				
+				
+				setTheContenedorCrudClienteViewModel(crudCLienteVM);
+				setTheContenedorCRUDCMViewModel(crudCMVM);
+				setTheContenedorRegistroVehiculoViewModel(registroVehiVM);
+				setTheContenedorLoginViewModel(loginVM);
+				setTheContenedorEscaneoViewModel(escaneoClienteVM);
+				setTheContenedorContactarCmViewModel(contactarCmVM);
+				setTheContenedorSolicitudVisitaViewModel(solicitudVisitaVM);
+				
+				crudCLienteVM.implementarModelo();
+				crudCMVM.implementarModelo();
+				registroVehiVM.implementarModelo();
+				loginVM.implementarModelo();
+				escaneoClienteVM.implementarModelo();
+				contactarCmVM.implementarModelo();
+				solicitudVisitaVM.implementarModelo();
 			
 	}
 
@@ -531,11 +761,9 @@ public class UIImpl extends EObjectImpl implements UI {
 	 */
 	public void registrarCliente(final ContenedorCrudClienteViewModel formulario) {
 		
-				
-						
-						getTheDomain().registrarUsuario(formulario);
-						
-					
+		
+				getTheDomain().registrarUsuario(formulario);
+		
 			
 	}
 
@@ -546,10 +774,9 @@ public class UIImpl extends EObjectImpl implements UI {
 	 */
 	public void RegistrarCm(final ContenedorCRUDCMViewModel formulario) {
 		
-				
-						getTheDomain().registrarCm(formulario);
-						
-					
+		
+				getTheDomain().registrarCm(formulario);
+		
 			
 	}
 
@@ -560,10 +787,25 @@ public class UIImpl extends EObjectImpl implements UI {
 	 */
 	public void registrarVehiculo(final ContenedorRegistroVehiculoViewModel formulario) {
 		
-				
-						getTheDomain().registrarAutomovil(formulario, idLogueado);
-						
-					
+		
+				if (getTipoLogueado() != null) {
+					if (getTipoLogueado().equals("sin logueo")) {
+						System.out.println("no hay usuarios logueados");
+					} else {
+						if (getTipoLogueado().equals("cm")) {
+							System.out.println("el usuario logueado no tiene acceso a registrar vehiculos");
+						} else {
+							if (getTipoLogueado().equals("cliente")) {
+								getTheDomain().registrarAutomovil(formulario, getIdLogueado());
+							}
+		
+						}
+		
+					}
+				} else {
+					System.out.println("no hay usuarios logueados");
+				}
+		
 			
 	}
 
@@ -572,6 +814,114 @@ public class UIImpl extends EObjectImpl implements UI {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public void actualizarCrudCliente(final ContenedorCrudClienteViewModel formulario) {
+		
+		
+				getTheDomain().actualizarCrudCliente(formulario);
+		
+			
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void actualizarCrudCm(final ContenedorCRUDCMViewModel formulario) {
+		
+		
+				getTheDomain().actualizarCrudCm(formulario);
+		
+			
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void actualizarVentanaRegistroVehiculo(final ContenedorRegistroVehiculoViewModel formulario) {
+		
+		
+				getTheDomain().actualizarVentanaRegistroCliente(formulario);
+		
+			
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Boolean hacerLogin(final ContenedorLoginViewModel formulario) {
+		
+		
+				boolean login;
+				login = getTheDomain().hacerLogin(formulario);
+		
+				if (login) {
+					actualizarVentanaRegistroVehiculo(getTheContenedorRegistroVehiculoViewModel());
+				}
+				return login;
+		
+			
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void escanearVehiculo(final String placaVeh) {
+		
+		
+				getTheDomain().escanearVehiculo(placaVeh);
+		
+			
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void mostrarEstadoVehCliente(final ContenedorEscaneoViewModel formulario) {
+		
+		
+				getTheDomain().mostrarEstadoVehCliente(formulario);
+		
+			
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void mostrarCmsCercanos(final ContenedorContactarCmViewModel formulario) {
+		
+		
+				getTheDomain().mostrarCmsCercanos(formulario);
+		
+			
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void solicitarVisita(final ContenedorSolicitudVisitaViewModel formulario) {
+		//TODO solicitarVisita
+		
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -599,6 +949,20 @@ public class UIImpl extends EObjectImpl implements UI {
 				if (theContenedorLoginViewModel != null)
 					msgs = ((InternalEObject)theContenedorLoginViewModel).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - UiPackage.UI__THE_CONTENEDOR_LOGIN_VIEW_MODEL, null, msgs);
 				return basicSetTheContenedorLoginViewModel((ContenedorLoginViewModel)otherEnd, msgs);
+			case UiPackage.UI__LST_VIEW_MODELS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getLstViewModels()).basicAdd(otherEnd, msgs);
+			case UiPackage.UI__THE_CONTENEDOR_ESCANEO_VIEW_MODEL:
+				if (theContenedorEscaneoViewModel != null)
+					msgs = ((InternalEObject)theContenedorEscaneoViewModel).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - UiPackage.UI__THE_CONTENEDOR_ESCANEO_VIEW_MODEL, null, msgs);
+				return basicSetTheContenedorEscaneoViewModel((ContenedorEscaneoViewModel)otherEnd, msgs);
+			case UiPackage.UI__THE_CONTENEDOR_CONTACTAR_CM_VIEW_MODEL:
+				if (theContenedorContactarCmViewModel != null)
+					msgs = ((InternalEObject)theContenedorContactarCmViewModel).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - UiPackage.UI__THE_CONTENEDOR_CONTACTAR_CM_VIEW_MODEL, null, msgs);
+				return basicSetTheContenedorContactarCmViewModel((ContenedorContactarCmViewModel)otherEnd, msgs);
+			case UiPackage.UI__THE_CONTENEDOR_SOLICITUD_VISITA_VIEW_MODEL:
+				if (theContenedorSolicitudVisitaViewModel != null)
+					msgs = ((InternalEObject)theContenedorSolicitudVisitaViewModel).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - UiPackage.UI__THE_CONTENEDOR_SOLICITUD_VISITA_VIEW_MODEL, null, msgs);
+				return basicSetTheContenedorSolicitudVisitaViewModel((ContenedorSolicitudVisitaViewModel)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -623,6 +987,14 @@ public class UIImpl extends EObjectImpl implements UI {
 				return basicSetTheContenedorRegistroVehiculoViewModel(null, msgs);
 			case UiPackage.UI__THE_CONTENEDOR_LOGIN_VIEW_MODEL:
 				return basicSetTheContenedorLoginViewModel(null, msgs);
+			case UiPackage.UI__LST_VIEW_MODELS:
+				return ((InternalEList<?>)getLstViewModels()).basicRemove(otherEnd, msgs);
+			case UiPackage.UI__THE_CONTENEDOR_ESCANEO_VIEW_MODEL:
+				return basicSetTheContenedorEscaneoViewModel(null, msgs);
+			case UiPackage.UI__THE_CONTENEDOR_CONTACTAR_CM_VIEW_MODEL:
+				return basicSetTheContenedorContactarCmViewModel(null, msgs);
+			case UiPackage.UI__THE_CONTENEDOR_SOLICITUD_VISITA_VIEW_MODEL:
+				return basicSetTheContenedorSolicitudVisitaViewModel(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -666,6 +1038,14 @@ public class UIImpl extends EObjectImpl implements UI {
 				return getTheContenedorRegistroVehiculoViewModel();
 			case UiPackage.UI__THE_CONTENEDOR_LOGIN_VIEW_MODEL:
 				return getTheContenedorLoginViewModel();
+			case UiPackage.UI__LST_VIEW_MODELS:
+				return getLstViewModels();
+			case UiPackage.UI__THE_CONTENEDOR_ESCANEO_VIEW_MODEL:
+				return getTheContenedorEscaneoViewModel();
+			case UiPackage.UI__THE_CONTENEDOR_CONTACTAR_CM_VIEW_MODEL:
+				return getTheContenedorContactarCmViewModel();
+			case UiPackage.UI__THE_CONTENEDOR_SOLICITUD_VISITA_VIEW_MODEL:
+				return getTheContenedorSolicitudVisitaViewModel();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -675,6 +1055,7 @@ public class UIImpl extends EObjectImpl implements UI {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -701,6 +1082,19 @@ public class UIImpl extends EObjectImpl implements UI {
 				return;
 			case UiPackage.UI__THE_CONTENEDOR_LOGIN_VIEW_MODEL:
 				setTheContenedorLoginViewModel((ContenedorLoginViewModel)newValue);
+				return;
+			case UiPackage.UI__LST_VIEW_MODELS:
+				getLstViewModels().clear();
+				getLstViewModels().addAll((Collection<? extends ViewModel>)newValue);
+				return;
+			case UiPackage.UI__THE_CONTENEDOR_ESCANEO_VIEW_MODEL:
+				setTheContenedorEscaneoViewModel((ContenedorEscaneoViewModel)newValue);
+				return;
+			case UiPackage.UI__THE_CONTENEDOR_CONTACTAR_CM_VIEW_MODEL:
+				setTheContenedorContactarCmViewModel((ContenedorContactarCmViewModel)newValue);
+				return;
+			case UiPackage.UI__THE_CONTENEDOR_SOLICITUD_VISITA_VIEW_MODEL:
+				setTheContenedorSolicitudVisitaViewModel((ContenedorSolicitudVisitaViewModel)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -738,6 +1132,18 @@ public class UIImpl extends EObjectImpl implements UI {
 			case UiPackage.UI__THE_CONTENEDOR_LOGIN_VIEW_MODEL:
 				setTheContenedorLoginViewModel((ContenedorLoginViewModel)null);
 				return;
+			case UiPackage.UI__LST_VIEW_MODELS:
+				getLstViewModels().clear();
+				return;
+			case UiPackage.UI__THE_CONTENEDOR_ESCANEO_VIEW_MODEL:
+				setTheContenedorEscaneoViewModel((ContenedorEscaneoViewModel)null);
+				return;
+			case UiPackage.UI__THE_CONTENEDOR_CONTACTAR_CM_VIEW_MODEL:
+				setTheContenedorContactarCmViewModel((ContenedorContactarCmViewModel)null);
+				return;
+			case UiPackage.UI__THE_CONTENEDOR_SOLICITUD_VISITA_VIEW_MODEL:
+				setTheContenedorSolicitudVisitaViewModel((ContenedorSolicitudVisitaViewModel)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -766,6 +1172,14 @@ public class UIImpl extends EObjectImpl implements UI {
 				return theContenedorRegistroVehiculoViewModel != null;
 			case UiPackage.UI__THE_CONTENEDOR_LOGIN_VIEW_MODEL:
 				return theContenedorLoginViewModel != null;
+			case UiPackage.UI__LST_VIEW_MODELS:
+				return lstViewModels != null && !lstViewModels.isEmpty();
+			case UiPackage.UI__THE_CONTENEDOR_ESCANEO_VIEW_MODEL:
+				return theContenedorEscaneoViewModel != null;
+			case UiPackage.UI__THE_CONTENEDOR_CONTACTAR_CM_VIEW_MODEL:
+				return theContenedorContactarCmViewModel != null;
+			case UiPackage.UI__THE_CONTENEDOR_SOLICITUD_VISITA_VIEW_MODEL:
+				return theContenedorSolicitudVisitaViewModel != null;
 		}
 		return super.eIsSet(featureID);
 	}

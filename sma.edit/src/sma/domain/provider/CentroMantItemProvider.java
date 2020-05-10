@@ -25,6 +25,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import sma.domain.CentroMant;
+import sma.domain.DomainFactory;
 import sma.domain.DomainPackage;
 
 import sma.domain.reparacionvehiculo.ReparacionvehiculoFactory;
@@ -73,7 +74,6 @@ public class CentroMantItemProvider
 			addUsuarioPropertyDescriptor(object);
 			addContraseniaPropertyDescriptor(object);
 			addUsuariosAtendidosPropertyDescriptor(object);
-			addUbicacionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -233,28 +233,6 @@ public class CentroMantItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Ubicacion feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addUbicacionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CentroMant_ubicacion_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CentroMant_ubicacion_feature", "_UI_CentroMant_type"),
-				 DomainPackage.Literals.CENTRO_MANT__UBICACION,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -267,6 +245,7 @@ public class CentroMantItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(DomainPackage.Literals.CENTRO_MANT__HISTORIAL_REPARACION);
+			childrenFeatures.add(DomainPackage.Literals.CENTRO_MANT__UBICACION);
 		}
 		return childrenFeatures;
 	}
@@ -331,6 +310,7 @@ public class CentroMantItemProvider
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case DomainPackage.CENTRO_MANT__HISTORIAL_REPARACION:
+			case DomainPackage.CENTRO_MANT__UBICACION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -352,6 +332,11 @@ public class CentroMantItemProvider
 			(createChildParameter
 				(DomainPackage.Literals.CENTRO_MANT__HISTORIAL_REPARACION,
 				 ReparacionvehiculoFactory.eINSTANCE.createReparacion()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(DomainPackage.Literals.CENTRO_MANT__UBICACION,
+				 DomainFactory.eINSTANCE.createUbicacionCM()));
 	}
 
 	/**

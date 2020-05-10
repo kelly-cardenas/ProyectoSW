@@ -42,7 +42,7 @@ public class ContenedorInformacionCMViewModelImpl extends EObjectImpl implements
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NOMBRECM_EDEFAULT = null;
+	protected static final String NOMBRECM_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getNombrecm() <em>Nombrecm</em>}' attribute.
@@ -62,7 +62,7 @@ public class ContenedorInformacionCMViewModelImpl extends EObjectImpl implements
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NOMBREREPRESENTANTE_EDEFAULT = null;
+	protected static final String NOMBREREPRESENTANTE_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getNombrerepresentante() <em>Nombrerepresentante</em>}' attribute.
@@ -82,7 +82,7 @@ public class ContenedorInformacionCMViewModelImpl extends EObjectImpl implements
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DESCRIPCION_EDEFAULT = null;
+	protected static final String DESCRIPCION_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getDescripcion() <em>Descripcion</em>}' attribute.

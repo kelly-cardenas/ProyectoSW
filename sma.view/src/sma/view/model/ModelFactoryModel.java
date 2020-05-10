@@ -10,6 +10,9 @@ import sma.ui.viewmodels.contenedorcrudclienteviewmodel.*;
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.*;
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.*;
 import sma.ui.viewmodels.contenedorloginviewmodel.*;
+import sma.ui.viewmodels.contenedorescaneoviewmodel.*;
+import sma.ui.viewmodels.contenedorcontactarcmviewmodel.*;
+import sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.*;
 
 
 
@@ -36,6 +39,12 @@ public class ModelFactoryModel {
    RegistroVehiculoViewPart registroVehiculoViewPart = null;
 
    LoginViewPart loginViewPart = null;
+
+   EscaneoViewPart escaneoViewPart = null;
+
+   ContactarCmViewPart contactarCmViewPart = null;
+
+   SolicitudVisitaViewPart solicitudVisitaViewPart = null;
 
    public CrudClienteViewPart getCrudClienteViewPart(){
        return  crudClienteViewPart;
@@ -67,6 +76,30 @@ public class ModelFactoryModel {
 
   public void setLoginViewPart(LoginViewPart loginViewPart) {
       this.loginViewPart = loginViewPart ;
+   }
+
+   public EscaneoViewPart getEscaneoViewPart(){
+       return  escaneoViewPart;
+   }
+
+  public void setEscaneoViewPart(EscaneoViewPart escaneoViewPart) {
+      this.escaneoViewPart = escaneoViewPart ;
+   }
+
+   public ContactarCmViewPart getContactarCmViewPart(){
+       return  contactarCmViewPart;
+   }
+
+  public void setContactarCmViewPart(ContactarCmViewPart contactarCmViewPart) {
+      this.contactarCmViewPart = contactarCmViewPart ;
+   }
+
+   public SolicitudVisitaViewPart getSolicitudVisitaViewPart(){
+       return  solicitudVisitaViewPart;
+   }
+
+  public void setSolicitudVisitaViewPart(SolicitudVisitaViewPart solicitudVisitaViewPart) {
+      this.solicitudVisitaViewPart = solicitudVisitaViewPart ;
    }
 
    ModelFactory modelFactory = smaFactory.eINSTANCE.createModelFactory();
@@ -143,6 +176,33 @@ public class ModelFactoryModel {
    }
    public ContenedorDetalleLoginViewModel getTheContenedorDetalleLoginViewModel() {
      return getTheContenedorLoginViewModel().getTheContenedorDetalleLoginViewModel();
+   }
+   public ContenedorEscaneoViewModel getTheContenedorEscaneoViewModel() {
+     return getTheUI().getTheContenedorEscaneoViewModel();
+   }
+   public ContenedorSeleccionautoViewModel getTheContenedorSeleccionautoViewModel() {
+     return getTheContenedorEscaneoViewModel().getTheContenedorSeleccionautoViewModel();
+   }
+   public ContenedorFallasViewModel getTheContenedorFallasViewModel() {
+     return getTheContenedorEscaneoViewModel().getTheContenedorFallasViewModel();
+   }
+   public ContenedorContactarCmViewModel getTheContenedorContactarCmViewModel() {
+     return getTheUI().getTheContenedorContactarCmViewModel();
+   }
+   public ContenedorUbicacionactualViewModel getTheContenedorUbicacionactualViewModel() {
+     return getTheContenedorContactarCmViewModel().getTheContenedorUbicacionactualViewModel();
+   }
+   public ContenedorCmrecomendadosViewModel getTheContenedorCmrecomendadosViewModel() {
+     return getTheContenedorContactarCmViewModel().getTheContenedorCmrecomendadosViewModel();
+   }
+   public ContenedorSolicitudVisitaViewModel getTheContenedorSolicitudVisitaViewModel() {
+     return getTheUI().getTheContenedorSolicitudVisitaViewModel();
+   }
+   public ContenedorDatosCmViewModel getTheContenedorDatosCmViewModel() {
+     return getTheContenedorSolicitudVisitaViewModel().getTheContenedorDatosCmViewModel();
+   }
+   public ContenedorBusquedaViewModel getTheContenedorBusquedaViewModel() {
+     return getTheContenedorSolicitudVisitaViewModel().getTheContenedorBusquedaViewModel();
    }
 
 }

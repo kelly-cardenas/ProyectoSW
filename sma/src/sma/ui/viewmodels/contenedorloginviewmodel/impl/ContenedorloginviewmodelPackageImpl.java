@@ -30,6 +30,12 @@ import sma.ui.UiPackage;
 
 import sma.ui.impl.UiPackageImpl;
 
+import sma.ui.viewmodels.ViewmodelsPackage;
+
+import sma.ui.viewmodels.contenedorcontactarcmviewmodel.ContenedorcontactarcmviewmodelPackage;
+
+import sma.ui.viewmodels.contenedorcontactarcmviewmodel.impl.ContenedorcontactarcmviewmodelPackageImpl;
+
 import sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelPackage;
 
 import sma.ui.viewmodels.contenedorcrudclienteviewmodel.impl.ContenedorcrudclienteviewmodelPackageImpl;
@@ -37,6 +43,10 @@ import sma.ui.viewmodels.contenedorcrudclienteviewmodel.impl.Contenedorcrudclien
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelPackage;
 
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.impl.ContenedorcrudcmviewmodelPackageImpl;
+
+import sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorescaneoviewmodelPackage;
+
+import sma.ui.viewmodels.contenedorescaneoviewmodel.impl.ContenedorescaneoviewmodelPackageImpl;
 
 import sma.ui.viewmodels.contenedorloginviewmodel.ContenedorDetalleLoginViewModel;
 import sma.ui.viewmodels.contenedorloginviewmodel.ContenedorLoginViewModel;
@@ -46,6 +56,12 @@ import sma.ui.viewmodels.contenedorloginviewmodel.ContenedorloginviewmodelPackag
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorregistrovehiculoviewmodelPackage;
 
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.impl.ContenedorregistrovehiculoviewmodelPackageImpl;
+
+import sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.ContenedorsolicitudvisitaviewmodelPackage;
+
+import sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.impl.ContenedorsolicitudvisitaviewmodelPackageImpl;
+
+import sma.ui.viewmodels.impl.ViewmodelsPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -120,9 +136,13 @@ public class ContenedorloginviewmodelPackageImpl extends EPackageImpl implements
 		ReparacionvehiculoPackageImpl theReparacionvehiculoPackage = (ReparacionvehiculoPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ReparacionvehiculoPackage.eNS_URI) instanceof ReparacionvehiculoPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ReparacionvehiculoPackage.eNS_URI) : ReparacionvehiculoPackage.eINSTANCE);
 		AutomatizacionrevisionPackageImpl theAutomatizacionrevisionPackage = (AutomatizacionrevisionPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(AutomatizacionrevisionPackage.eNS_URI) instanceof AutomatizacionrevisionPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(AutomatizacionrevisionPackage.eNS_URI) : AutomatizacionrevisionPackage.eINSTANCE);
 		UiPackageImpl theUiPackage = (UiPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(UiPackage.eNS_URI) instanceof UiPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(UiPackage.eNS_URI) : UiPackage.eINSTANCE);
+		ViewmodelsPackageImpl theViewmodelsPackage = (ViewmodelsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ViewmodelsPackage.eNS_URI) instanceof ViewmodelsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ViewmodelsPackage.eNS_URI) : ViewmodelsPackage.eINSTANCE);
 		ContenedorcrudclienteviewmodelPackageImpl theContenedorcrudclienteviewmodelPackage = (ContenedorcrudclienteviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorcrudclienteviewmodelPackage.eNS_URI) instanceof ContenedorcrudclienteviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorcrudclienteviewmodelPackage.eNS_URI) : ContenedorcrudclienteviewmodelPackage.eINSTANCE);
 		ContenedorcrudcmviewmodelPackageImpl theContenedorcrudcmviewmodelPackage = (ContenedorcrudcmviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorcrudcmviewmodelPackage.eNS_URI) instanceof ContenedorcrudcmviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorcrudcmviewmodelPackage.eNS_URI) : ContenedorcrudcmviewmodelPackage.eINSTANCE);
 		ContenedorregistrovehiculoviewmodelPackageImpl theContenedorregistrovehiculoviewmodelPackage = (ContenedorregistrovehiculoviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorregistrovehiculoviewmodelPackage.eNS_URI) instanceof ContenedorregistrovehiculoviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorregistrovehiculoviewmodelPackage.eNS_URI) : ContenedorregistrovehiculoviewmodelPackage.eINSTANCE);
+		ContenedorescaneoviewmodelPackageImpl theContenedorescaneoviewmodelPackage = (ContenedorescaneoviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorescaneoviewmodelPackage.eNS_URI) instanceof ContenedorescaneoviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorescaneoviewmodelPackage.eNS_URI) : ContenedorescaneoviewmodelPackage.eINSTANCE);
+		ContenedorcontactarcmviewmodelPackageImpl theContenedorcontactarcmviewmodelPackage = (ContenedorcontactarcmviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorcontactarcmviewmodelPackage.eNS_URI) instanceof ContenedorcontactarcmviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorcontactarcmviewmodelPackage.eNS_URI) : ContenedorcontactarcmviewmodelPackage.eINSTANCE);
+		ContenedorsolicitudvisitaviewmodelPackageImpl theContenedorsolicitudvisitaviewmodelPackage = (ContenedorsolicitudvisitaviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorsolicitudvisitaviewmodelPackage.eNS_URI) instanceof ContenedorsolicitudvisitaviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorsolicitudvisitaviewmodelPackage.eNS_URI) : ContenedorsolicitudvisitaviewmodelPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theContenedorloginviewmodelPackage.createPackageContents();
@@ -131,9 +151,13 @@ public class ContenedorloginviewmodelPackageImpl extends EPackageImpl implements
 		theReparacionvehiculoPackage.createPackageContents();
 		theAutomatizacionrevisionPackage.createPackageContents();
 		theUiPackage.createPackageContents();
+		theViewmodelsPackage.createPackageContents();
 		theContenedorcrudclienteviewmodelPackage.createPackageContents();
 		theContenedorcrudcmviewmodelPackage.createPackageContents();
 		theContenedorregistrovehiculoviewmodelPackage.createPackageContents();
+		theContenedorescaneoviewmodelPackage.createPackageContents();
+		theContenedorcontactarcmviewmodelPackage.createPackageContents();
+		theContenedorsolicitudvisitaviewmodelPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theContenedorloginviewmodelPackage.initializePackageContents();
@@ -142,9 +166,13 @@ public class ContenedorloginviewmodelPackageImpl extends EPackageImpl implements
 		theReparacionvehiculoPackage.initializePackageContents();
 		theAutomatizacionrevisionPackage.initializePackageContents();
 		theUiPackage.initializePackageContents();
+		theViewmodelsPackage.initializePackageContents();
 		theContenedorcrudclienteviewmodelPackage.initializePackageContents();
 		theContenedorcrudcmviewmodelPackage.initializePackageContents();
 		theContenedorregistrovehiculoviewmodelPackage.initializePackageContents();
+		theContenedorescaneoviewmodelPackage.initializePackageContents();
+		theContenedorcontactarcmviewmodelPackage.initializePackageContents();
+		theContenedorsolicitudvisitaviewmodelPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theContenedorloginviewmodelPackage.freeze();
@@ -178,8 +206,17 @@ public class ContenedorloginviewmodelPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getContenedorDetalleLoginViewModel_Contrasenia() {
+		return (EAttribute)contenedorDetalleLoginViewModelEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getContenedorDetalleLoginViewModel_OwnedByContenedorLoginViewModel() {
-		return (EReference)contenedorDetalleLoginViewModelEClass.getEStructuralFeatures().get(1);
+		return (EReference)contenedorDetalleLoginViewModelEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -248,6 +285,7 @@ public class ContenedorloginviewmodelPackageImpl extends EPackageImpl implements
 		// Create classes and their features
 		contenedorDetalleLoginViewModelEClass = createEClass(CONTENEDOR_DETALLE_LOGIN_VIEW_MODEL);
 		createEAttribute(contenedorDetalleLoginViewModelEClass, CONTENEDOR_DETALLE_LOGIN_VIEW_MODEL__USUARIO);
+		createEAttribute(contenedorDetalleLoginViewModelEClass, CONTENEDOR_DETALLE_LOGIN_VIEW_MODEL__CONTRASENIA);
 		createEReference(contenedorDetalleLoginViewModelEClass, CONTENEDOR_DETALLE_LOGIN_VIEW_MODEL__OWNED_BY_CONTENEDOR_LOGIN_VIEW_MODEL);
 
 		contenedorLoginViewModelEClass = createEClass(CONTENEDOR_LOGIN_VIEW_MODEL);
@@ -291,18 +329,19 @@ public class ContenedorloginviewmodelPackageImpl extends EPackageImpl implements
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(contenedorDetalleLoginViewModelEClass, ContenedorDetalleLoginViewModel.class, "ContenedorDetalleLoginViewModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getContenedorDetalleLoginViewModel_Usuario(), thesmaPackage.getString(), "usuario", null, 0, 1, ContenedorDetalleLoginViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getContenedorDetalleLoginViewModel_Usuario(), thesmaPackage.getString(), "usuario", " ", 0, 1, ContenedorDetalleLoginViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getContenedorDetalleLoginViewModel_Contrasenia(), thesmaPackage.getString(), "contrasenia", " ", 0, 1, ContenedorDetalleLoginViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContenedorDetalleLoginViewModel_OwnedByContenedorLoginViewModel(), this.getContenedorLoginViewModel(), this.getContenedorLoginViewModel_TheContenedorDetalleLoginViewModel(), "ownedByContenedorLoginViewModel", null, 0, 1, ContenedorDetalleLoginViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(contenedorLoginViewModelEClass, ContenedorLoginViewModel.class, "ContenedorLoginViewModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getContenedorLoginViewModel_OwnedByUI(), theUiPackage.getUI(), theUiPackage.getUI_TheContenedorLoginViewModel(), "ownedByUI", null, 0, 1, ContenedorLoginViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getContenedorLoginViewModel_Usuario(), thesmaPackage.getString(), "usuario", null, 0, 1, ContenedorLoginViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getContenedorLoginViewModel_Usuario(), thesmaPackage.getString(), "usuario", " ", 0, 1, ContenedorLoginViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContenedorLoginViewModel_TheContenedorDetalleLoginViewModel(), this.getContenedorDetalleLoginViewModel(), this.getContenedorDetalleLoginViewModel_OwnedByContenedorLoginViewModel(), "theContenedorDetalleLoginViewModel", null, 0, 1, ContenedorLoginViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		EOperation op = addEOperation(contenedorLoginViewModelEClass, thesmaPackage.getString(), "upadateDialog", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, thesmaPackage.getString(), "evento", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		addEOperation(contenedorLoginViewModelEClass, null, "prueba", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEOperation(contenedorLoginViewModelEClass, thesmaPackage.getEBooleanObject(), "prueba", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		addEOperation(contenedorLoginViewModelEClass, null, "implementarModelo", 0, 1, IS_UNIQUE, IS_ORDERED);
 	}

@@ -35,6 +35,12 @@ import sma.ui.UiPackage;
 
 import sma.ui.impl.UiPackageImpl;
 
+import sma.ui.viewmodels.ViewmodelsPackage;
+
+import sma.ui.viewmodels.contenedorcontactarcmviewmodel.ContenedorcontactarcmviewmodelPackage;
+
+import sma.ui.viewmodels.contenedorcontactarcmviewmodel.impl.ContenedorcontactarcmviewmodelPackageImpl;
+
 import sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelPackage;
 
 import sma.ui.viewmodels.contenedorcrudclienteviewmodel.impl.ContenedorcrudclienteviewmodelPackageImpl;
@@ -43,6 +49,10 @@ import sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelPack
 
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.impl.ContenedorcrudcmviewmodelPackageImpl;
 
+import sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorescaneoviewmodelPackage;
+
+import sma.ui.viewmodels.contenedorescaneoviewmodel.impl.ContenedorescaneoviewmodelPackageImpl;
+
 import sma.ui.viewmodels.contenedorloginviewmodel.ContenedorloginviewmodelPackage;
 
 import sma.ui.viewmodels.contenedorloginviewmodel.impl.ContenedorloginviewmodelPackageImpl;
@@ -50,6 +60,12 @@ import sma.ui.viewmodels.contenedorloginviewmodel.impl.ContenedorloginviewmodelP
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorregistrovehiculoviewmodelPackage;
 
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.impl.ContenedorregistrovehiculoviewmodelPackageImpl;
+
+import sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.ContenedorsolicitudvisitaviewmodelPackage;
+
+import sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.impl.ContenedorsolicitudvisitaviewmodelPackageImpl;
+
+import sma.ui.viewmodels.impl.ViewmodelsPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -151,10 +167,14 @@ public class DomainPackageImpl extends EPackageImpl implements DomainPackage {
 		ReparacionvehiculoPackageImpl theReparacionvehiculoPackage = (ReparacionvehiculoPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ReparacionvehiculoPackage.eNS_URI) instanceof ReparacionvehiculoPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ReparacionvehiculoPackage.eNS_URI) : ReparacionvehiculoPackage.eINSTANCE);
 		AutomatizacionrevisionPackageImpl theAutomatizacionrevisionPackage = (AutomatizacionrevisionPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(AutomatizacionrevisionPackage.eNS_URI) instanceof AutomatizacionrevisionPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(AutomatizacionrevisionPackage.eNS_URI) : AutomatizacionrevisionPackage.eINSTANCE);
 		UiPackageImpl theUiPackage = (UiPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(UiPackage.eNS_URI) instanceof UiPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(UiPackage.eNS_URI) : UiPackage.eINSTANCE);
+		ViewmodelsPackageImpl theViewmodelsPackage = (ViewmodelsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ViewmodelsPackage.eNS_URI) instanceof ViewmodelsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ViewmodelsPackage.eNS_URI) : ViewmodelsPackage.eINSTANCE);
 		ContenedorcrudclienteviewmodelPackageImpl theContenedorcrudclienteviewmodelPackage = (ContenedorcrudclienteviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorcrudclienteviewmodelPackage.eNS_URI) instanceof ContenedorcrudclienteviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorcrudclienteviewmodelPackage.eNS_URI) : ContenedorcrudclienteviewmodelPackage.eINSTANCE);
 		ContenedorcrudcmviewmodelPackageImpl theContenedorcrudcmviewmodelPackage = (ContenedorcrudcmviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorcrudcmviewmodelPackage.eNS_URI) instanceof ContenedorcrudcmviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorcrudcmviewmodelPackage.eNS_URI) : ContenedorcrudcmviewmodelPackage.eINSTANCE);
 		ContenedorregistrovehiculoviewmodelPackageImpl theContenedorregistrovehiculoviewmodelPackage = (ContenedorregistrovehiculoviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorregistrovehiculoviewmodelPackage.eNS_URI) instanceof ContenedorregistrovehiculoviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorregistrovehiculoviewmodelPackage.eNS_URI) : ContenedorregistrovehiculoviewmodelPackage.eINSTANCE);
 		ContenedorloginviewmodelPackageImpl theContenedorloginviewmodelPackage = (ContenedorloginviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorloginviewmodelPackage.eNS_URI) instanceof ContenedorloginviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorloginviewmodelPackage.eNS_URI) : ContenedorloginviewmodelPackage.eINSTANCE);
+		ContenedorescaneoviewmodelPackageImpl theContenedorescaneoviewmodelPackage = (ContenedorescaneoviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorescaneoviewmodelPackage.eNS_URI) instanceof ContenedorescaneoviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorescaneoviewmodelPackage.eNS_URI) : ContenedorescaneoviewmodelPackage.eINSTANCE);
+		ContenedorcontactarcmviewmodelPackageImpl theContenedorcontactarcmviewmodelPackage = (ContenedorcontactarcmviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorcontactarcmviewmodelPackage.eNS_URI) instanceof ContenedorcontactarcmviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorcontactarcmviewmodelPackage.eNS_URI) : ContenedorcontactarcmviewmodelPackage.eINSTANCE);
+		ContenedorsolicitudvisitaviewmodelPackageImpl theContenedorsolicitudvisitaviewmodelPackage = (ContenedorsolicitudvisitaviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorsolicitudvisitaviewmodelPackage.eNS_URI) instanceof ContenedorsolicitudvisitaviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorsolicitudvisitaviewmodelPackage.eNS_URI) : ContenedorsolicitudvisitaviewmodelPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theDomainPackage.createPackageContents();
@@ -162,10 +182,14 @@ public class DomainPackageImpl extends EPackageImpl implements DomainPackage {
 		theReparacionvehiculoPackage.createPackageContents();
 		theAutomatizacionrevisionPackage.createPackageContents();
 		theUiPackage.createPackageContents();
+		theViewmodelsPackage.createPackageContents();
 		theContenedorcrudclienteviewmodelPackage.createPackageContents();
 		theContenedorcrudcmviewmodelPackage.createPackageContents();
 		theContenedorregistrovehiculoviewmodelPackage.createPackageContents();
 		theContenedorloginviewmodelPackage.createPackageContents();
+		theContenedorescaneoviewmodelPackage.createPackageContents();
+		theContenedorcontactarcmviewmodelPackage.createPackageContents();
+		theContenedorsolicitudvisitaviewmodelPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theDomainPackage.initializePackageContents();
@@ -173,10 +197,14 @@ public class DomainPackageImpl extends EPackageImpl implements DomainPackage {
 		theReparacionvehiculoPackage.initializePackageContents();
 		theAutomatizacionrevisionPackage.initializePackageContents();
 		theUiPackage.initializePackageContents();
+		theViewmodelsPackage.initializePackageContents();
 		theContenedorcrudclienteviewmodelPackage.initializePackageContents();
 		theContenedorcrudcmviewmodelPackage.initializePackageContents();
 		theContenedorregistrovehiculoviewmodelPackage.initializePackageContents();
 		theContenedorloginviewmodelPackage.initializePackageContents();
+		theContenedorescaneoviewmodelPackage.initializePackageContents();
+		theContenedorcontactarcmviewmodelPackage.initializePackageContents();
+		theContenedorsolicitudvisitaviewmodelPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theDomainPackage.freeze();
@@ -803,6 +831,10 @@ public class DomainPackageImpl extends EPackageImpl implements DomainPackage {
 		ContenedorcrudclienteviewmodelPackage theContenedorcrudclienteviewmodelPackage = (ContenedorcrudclienteviewmodelPackage)EPackage.Registry.INSTANCE.getEPackage(ContenedorcrudclienteviewmodelPackage.eNS_URI);
 		ContenedorcrudcmviewmodelPackage theContenedorcrudcmviewmodelPackage = (ContenedorcrudcmviewmodelPackage)EPackage.Registry.INSTANCE.getEPackage(ContenedorcrudcmviewmodelPackage.eNS_URI);
 		ContenedorregistrovehiculoviewmodelPackage theContenedorregistrovehiculoviewmodelPackage = (ContenedorregistrovehiculoviewmodelPackage)EPackage.Registry.INSTANCE.getEPackage(ContenedorregistrovehiculoviewmodelPackage.eNS_URI);
+		ContenedorloginviewmodelPackage theContenedorloginviewmodelPackage = (ContenedorloginviewmodelPackage)EPackage.Registry.INSTANCE.getEPackage(ContenedorloginviewmodelPackage.eNS_URI);
+		ContenedorescaneoviewmodelPackage theContenedorescaneoviewmodelPackage = (ContenedorescaneoviewmodelPackage)EPackage.Registry.INSTANCE.getEPackage(ContenedorescaneoviewmodelPackage.eNS_URI);
+		ContenedorcontactarcmviewmodelPackage theContenedorcontactarcmviewmodelPackage = (ContenedorcontactarcmviewmodelPackage)EPackage.Registry.INSTANCE.getEPackage(ContenedorcontactarcmviewmodelPackage.eNS_URI);
+		ContenedorsolicitudvisitaviewmodelPackage theContenedorsolicitudvisitaviewmodelPackage = (ContenedorsolicitudvisitaviewmodelPackage)EPackage.Registry.INSTANCE.getEPackage(ContenedorsolicitudvisitaviewmodelPackage.eNS_URI);
 
 		// Add subpackages
 		getESubpackages().add(theReparacionvehiculoPackage);
@@ -816,36 +848,39 @@ public class DomainPackageImpl extends EPackageImpl implements DomainPackage {
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(automovilEClass, Automovil.class, "Automovil", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAutomovil_Id(), thesmaPackage.getString(), "id", null, 0, 1, Automovil.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAutomovil_Placa(), thesmaPackage.getString(), "placa", null, 0, 1, Automovil.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAutomovil_Marca(), thesmaPackage.getString(), "marca", null, 0, 1, Automovil.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAutomovil_Modelo(), thesmaPackage.getEIntegerObject(), "modelo", null, 0, 1, Automovil.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAutomovil_Referencia(), thesmaPackage.getString(), "referencia", null, 0, 1, Automovil.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAutomovil_TipoUso(), thesmaPackage.getString(), "tipoUso", null, 0, 1, Automovil.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAutomovil_Id(), thesmaPackage.getString(), "id", " ", 0, 1, Automovil.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAutomovil_Placa(), thesmaPackage.getString(), "placa", " ", 0, 1, Automovil.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAutomovil_Marca(), thesmaPackage.getString(), "marca", " ", 0, 1, Automovil.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAutomovil_Modelo(), thesmaPackage.getEIntegerObject(), "modelo", "0", 0, 1, Automovil.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAutomovil_Referencia(), thesmaPackage.getString(), "referencia", " ", 0, 1, Automovil.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAutomovil_TipoUso(), thesmaPackage.getString(), "tipoUso", " ", 0, 1, Automovil.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAutomovil_ReparacionesHechas(), theReparacionvehiculoPackage.getReparacion(), theReparacionvehiculoPackage.getReparacion_TheAutomovil(), "reparacionesHechas", null, 0, -1, Automovil.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAutomovil_Sensor(), theAutomatizacionrevisionPackage.getsensor(), theAutomatizacionrevisionPackage.getsensor_OwnerBy(), "sensor", null, 0, 1, Automovil.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAutomovil_Propietario(), this.getUsuario(), this.getUsuario_Automoviles(), "propietario", null, 0, 1, Automovil.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAutomovil_ListaDeFallas(), theAutomatizacionrevisionPackage.getFallaMecanica(), theAutomatizacionrevisionPackage.getFallaMecanica_TheAutomovil(), "listaDeFallas", null, 0, -1, Automovil.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		addEOperation(automovilEClass, null, "asignarFallas", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEOperation(automovilEClass, null, "hacerEscaneo", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(centroMantEClass, CentroMant.class, "CentroMant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCentroMant_Id(), thesmaPackage.getString(), "id", null, 0, 1, CentroMant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCentroMant_Nombre(), thesmaPackage.getString(), "nombre", null, 0, 1, CentroMant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCentroMant_NombreRepresentante(), thesmaPackage.getString(), "nombreRepresentante", null, 0, 1, CentroMant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCentroMant_Descripcion(), thesmaPackage.getString(), "descripcion", null, 0, 1, CentroMant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCentroMant_Usuario(), thesmaPackage.getString(), "usuario", null, 0, 1, CentroMant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCentroMant_Contrasenia(), thesmaPackage.getString(), "contrasenia", null, 0, 1, CentroMant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCentroMant_Id(), thesmaPackage.getString(), "id", " ", 0, 1, CentroMant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCentroMant_Nombre(), thesmaPackage.getString(), "nombre", " ", 0, 1, CentroMant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCentroMant_NombreRepresentante(), thesmaPackage.getString(), "nombreRepresentante", " ", 0, 1, CentroMant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCentroMant_Descripcion(), thesmaPackage.getString(), "descripcion", " ", 0, 1, CentroMant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCentroMant_Usuario(), thesmaPackage.getString(), "usuario", " ", 0, 1, CentroMant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCentroMant_Contrasenia(), thesmaPackage.getString(), "contrasenia", " ", 0, 1, CentroMant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCentroMant_UsuariosAtendidos(), this.getUsuario(), this.getUsuario_CentroMant(), "usuariosAtendidos", null, 0, -1, CentroMant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCentroMant_HistorialReparacion(), theReparacionvehiculoPackage.getReparacion(), theReparacionvehiculoPackage.getReparacion_TheCentroMant(), "historialReparacion", null, 0, -1, CentroMant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCentroMant_OwnedByDomain(), this.getDomain(), this.getDomain_ListaDeCentMant(), "ownedByDomain", null, 0, 1, CentroMant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCentroMant_Ubicacion(), this.getUbicacionCM(), this.getUbicacionCM_OwnedBy(), "ubicacion", null, 0, 1, CentroMant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCentroMant_Ubicacion(), this.getUbicacionCM(), this.getUbicacionCM_OwnedBy(), "ubicacion", null, 0, 1, CentroMant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		EOperation op = addEOperation(centroMantEClass, null, "procesarSolicitudVisita", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAutomovil(), "automovilReparacion", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDomain_TheModelFactory(), thesmaPackage.getModelFactory(), thesmaPackage.getModelFactory_TheDomain(), "theModelFactory", null, 0, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDomain_IncrementalIdCliente(), thesmaPackage.getEIntegerObject(), "incrementalIdCliente", null, 0, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDomain_IncrementalIdCm(), thesmaPackage.getEIntegerObject(), "incrementalIdCm", null, 0, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDomain_IncrementalIdAuto(), thesmaPackage.getEIntegerObject(), "incrementalIdAuto", null, 0, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDomain_IncrementalIdCliente(), thesmaPackage.getEIntegerObject(), "incrementalIdCliente", "0", 0, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDomain_IncrementalIdCm(), thesmaPackage.getEIntegerObject(), "incrementalIdCm", "0", 0, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDomain_IncrementalIdAuto(), thesmaPackage.getEIntegerObject(), "incrementalIdAuto", "0", 0, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomain_ListaAutomoviles(), this.getAutomovil(), null, "listaAutomoviles", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomain_ListaDeCentMant(), this.getCentroMant(), this.getCentroMant_OwnedByDomain(), "listaDeCentMant", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomain_ListaUsuarios(), this.getUsuario(), this.getUsuario_OwnerByDomain(), "listaUsuarios", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -853,7 +888,7 @@ public class DomainPackageImpl extends EPackageImpl implements DomainPackage {
 
 		addEOperation(domainEClass, null, "implementarModelo", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		EOperation op = addEOperation(domainEClass, null, "registrarUsuario", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = addEOperation(domainEClass, null, "registrarUsuario", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theContenedorcrudclienteviewmodelPackage.getContenedorCrudClienteViewModel(), "formulario", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		op = addEOperation(domainEClass, null, "registrarCm", 0, 1, IS_UNIQUE, IS_ORDERED);
@@ -869,30 +904,54 @@ public class DomainPackageImpl extends EPackageImpl implements DomainPackage {
 
 		addEOperation(domainEClass, thesmaPackage.getEIntegerObject(), "incrementarIdAuto", 0, 1, IS_UNIQUE, IS_ORDERED);
 
+		op = addEOperation(domainEClass, null, "actualizarCrudCliente", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theContenedorcrudclienteviewmodelPackage.getContenedorCrudClienteViewModel(), "formulario", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = addEOperation(domainEClass, null, "actualizarCrudCm", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theContenedorcrudcmviewmodelPackage.getContenedorCRUDCMViewModel(), "formulario", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = addEOperation(domainEClass, null, "actualizarVentanaRegistroCliente", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theContenedorregistrovehiculoviewmodelPackage.getContenedorRegistroVehiculoViewModel(), "formulario", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = addEOperation(domainEClass, thesmaPackage.getEBooleanObject(), "hacerLogin", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theContenedorloginviewmodelPackage.getContenedorLoginViewModel(), "formulario", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = addEOperation(domainEClass, null, "escanearVehiculo", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, thesmaPackage.getString(), "placaVeh", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = addEOperation(domainEClass, null, "mostrarEstadoVehCliente", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theContenedorescaneoviewmodelPackage.getContenedorEscaneoViewModel(), "formulario", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = addEOperation(domainEClass, null, "mostrarCmsCercanos", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theContenedorcontactarcmviewmodelPackage.getContenedorContactarCmViewModel(), "formulario", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = addEOperation(domainEClass, null, "solicitarVisita", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theContenedorsolicitudvisitaviewmodelPackage.getContenedorSolicitudVisitaViewModel(), "formulario", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(ubicacionCMEClass, UbicacionCM.class, "UbicacionCM", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getUbicacionCM_Pais(), thesmaPackage.getString(), "pais", null, 0, 1, UbicacionCM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUbicacionCM_Departamento(), thesmaPackage.getString(), "departamento", null, 0, 1, UbicacionCM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUbicacionCM_Ciudad(), thesmaPackage.getString(), "ciudad", null, 0, 1, UbicacionCM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUbicacionCM_Direccion(), thesmaPackage.getString(), "direccion", null, 0, 1, UbicacionCM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getUbicacionCM_OwnedBy(), this.getCentroMant(), this.getCentroMant_Ubicacion(), "ownedBy", null, 0, 1, UbicacionCM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUbicacionCM_Pais(), thesmaPackage.getString(), "pais", " ", 0, 1, UbicacionCM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUbicacionCM_Departamento(), thesmaPackage.getString(), "departamento", " ", 0, 1, UbicacionCM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUbicacionCM_Ciudad(), thesmaPackage.getString(), "ciudad", " ", 0, 1, UbicacionCM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUbicacionCM_Direccion(), thesmaPackage.getString(), "direccion", " ", 0, 1, UbicacionCM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUbicacionCM_OwnedBy(), this.getCentroMant(), this.getCentroMant_Ubicacion(), "ownedBy", null, 0, 1, UbicacionCM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(ubicacionUsuEClass, UbicacionUsu.class, "UbicacionUsu", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getUbicacionUsu_Pais(), thesmaPackage.getString(), "pais", null, 0, 1, UbicacionUsu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUbicacionUsu_Departamento(), thesmaPackage.getString(), "departamento", null, 0, 1, UbicacionUsu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUbicacionUsu_Ciudad(), thesmaPackage.getString(), "ciudad", null, 0, 1, UbicacionUsu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUbicacionUsu_Pais(), thesmaPackage.getString(), "pais", " ", 0, 1, UbicacionUsu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUbicacionUsu_Departamento(), thesmaPackage.getString(), "departamento", " ", 0, 1, UbicacionUsu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUbicacionUsu_Ciudad(), thesmaPackage.getString(), "ciudad", " ", 0, 1, UbicacionUsu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUbicacionUsu_OwnerBy(), this.getUsuario(), this.getUsuario_Ubicacion(), "ownerBy", null, 0, 1, UbicacionUsu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(usuarioEClass, Usuario.class, "Usuario", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getUsuario_CentroMant(), this.getCentroMant(), this.getCentroMant_UsuariosAtendidos(), "CentroMant", null, 0, 1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUsuario_OwnerByDomain(), this.getDomain(), this.getDomain_ListaUsuarios(), "ownerByDomain", null, 0, 1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUsuario_Id(), thesmaPackage.getString(), "id", null, 0, 1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUsuario_NumDI(), thesmaPackage.getString(), "numDI", null, 0, 1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUsuario_Nombres(), thesmaPackage.getString(), "nombres", null, 0, 1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUsuario_Apellidos(), thesmaPackage.getString(), "apellidos", null, 0, 1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUsuario_Edad(), thesmaPackage.getEIntegerObject(), "edad", null, 0, 1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUsuario_Email(), thesmaPackage.getString(), "email", null, 0, 1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUsuario_Usuario(), thesmaPackage.getString(), "usuario", null, 0, 1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getUsuario_Contrasenia(), thesmaPackage.getString(), "contrasenia", null, 0, 1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUsuario_Id(), thesmaPackage.getString(), "id", " ", 0, 1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUsuario_NumDI(), thesmaPackage.getString(), "numDI", " ", 0, 1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUsuario_Nombres(), thesmaPackage.getString(), "nombres", " ", 0, 1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUsuario_Apellidos(), thesmaPackage.getString(), "apellidos", " ", 0, 1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUsuario_Edad(), thesmaPackage.getEIntegerObject(), "edad", "0", 0, 1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUsuario_Email(), thesmaPackage.getString(), "email", " ", 0, 1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUsuario_Usuario(), thesmaPackage.getString(), "usuario", " ", 0, 1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUsuario_Contrasenia(), thesmaPackage.getString(), "contrasenia", " ", 0, 1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUsuario_Automoviles(), this.getAutomovil(), this.getAutomovil_Propietario(), "automoviles", null, 0, -1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUsuario_Ubicacion(), this.getUbicacionUsu(), this.getUbicacionUsu_OwnerBy(), "ubicacion", null, 0, 1, Usuario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}

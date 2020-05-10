@@ -79,7 +79,7 @@ public class ContenedorMaestroCMViewModelItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ContenedorcrudcmviewmodelPackage.Literals.CONTENEDOR_MAESTRO_CM_VIEW_MODEL__CENTRO_MANT_VIEW_MODEL);
+			childrenFeatures.add(ContenedorcrudcmviewmodelPackage.Literals.CONTENEDOR_MAESTRO_CM_VIEW_MODEL__LISTA_CENTRO_MANT);
 		}
 		return childrenFeatures;
 	}
@@ -132,7 +132,7 @@ public class ContenedorMaestroCMViewModelItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ContenedorMaestroCMViewModel.class)) {
-			case ContenedorcrudcmviewmodelPackage.CONTENEDOR_MAESTRO_CM_VIEW_MODEL__CENTRO_MANT_VIEW_MODEL:
+			case ContenedorcrudcmviewmodelPackage.CONTENEDOR_MAESTRO_CM_VIEW_MODEL__LISTA_CENTRO_MANT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -152,7 +152,7 @@ public class ContenedorMaestroCMViewModelItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ContenedorcrudcmviewmodelPackage.Literals.CONTENEDOR_MAESTRO_CM_VIEW_MODEL__CENTRO_MANT_VIEW_MODEL,
+				(ContenedorcrudcmviewmodelPackage.Literals.CONTENEDOR_MAESTRO_CM_VIEW_MODEL__LISTA_CENTRO_MANT,
 				 ContenedorcrudcmviewmodelFactory.eINSTANCE.createCentroMantViewModel()));
 	}
 

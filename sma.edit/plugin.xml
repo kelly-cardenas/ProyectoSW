@@ -74,6 +74,19 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated sma -->
       <factory
+            uri="http:///sma/ui/viewmodels.ecore"
+            class="sma.ui.viewmodels.provider.ViewmodelsItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated sma -->
+      <factory
             uri="http:///sma/ui/viewmodels/contenedorcrudclienteviewmodel.ecore"
             class="sma.ui.viewmodels.contenedorcrudclienteviewmodel.provider.ContenedorcrudclienteviewmodelItemProviderAdapterFactory"
             supportedTypes=
@@ -115,6 +128,45 @@
       <factory
             uri="http:///sma/ui/viewmodels/contenedorloginviewmodel.ecore"
             class="sma.ui.viewmodels.contenedorloginviewmodel.provider.ContenedorloginviewmodelItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated sma -->
+      <factory
+            uri="http:///sma/ui/viewmodels/contenedorescaneoviewmodel.ecore"
+            class="sma.ui.viewmodels.contenedorescaneoviewmodel.provider.ContenedorescaneoviewmodelItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated sma -->
+      <factory
+            uri="http:///sma/ui/viewmodels/contenedorcontactarcmviewmodel.ecore"
+            class="sma.ui.viewmodels.contenedorcontactarcmviewmodel.provider.ContenedorcontactarcmviewmodelItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated sma -->
+      <factory
+            uri="http:///sma/ui/viewmodels/contenedorsolicitudvisitaviewmodel.ecore"
+            class="sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.provider.ContenedorsolicitudvisitaviewmodelItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

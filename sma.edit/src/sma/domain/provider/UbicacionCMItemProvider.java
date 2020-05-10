@@ -66,7 +66,6 @@ public class UbicacionCMItemProvider
 			addDepartamentoPropertyDescriptor(object);
 			addCiudadPropertyDescriptor(object);
 			addDireccionPropertyDescriptor(object);
-			addOwnedByPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -155,28 +154,6 @@ public class UbicacionCMItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Owned By feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addOwnedByPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_UbicacionCM_ownedBy_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UbicacionCM_ownedBy_feature", "_UI_UbicacionCM_type"),
-				 DomainPackage.Literals.UBICACION_CM__OWNED_BY,
-				 true,
-				 false,
-				 true,
-				 null,
 				 null,
 				 null));
 	}

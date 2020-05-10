@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link sma.ui.viewmodels.contenedorloginviewmodel.ContenedorDetalleLoginViewModel#getUsuario <em>Usuario</em>}</li>
+ *   <li>{@link sma.ui.viewmodels.contenedorloginviewmodel.ContenedorDetalleLoginViewModel#getContrasenia <em>Contrasenia</em>}</li>
  *   <li>{@link sma.ui.viewmodels.contenedorloginviewmodel.ContenedorDetalleLoginViewModel#getOwnedByContenedorLoginViewModel <em>Owned By Contenedor Login View Model</em>}</li>
  * </ul>
  *
@@ -24,6 +25,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface ContenedorDetalleLoginViewModel extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Usuario</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Usuario</em>' attribute isn't clear,
@@ -33,7 +35,7 @@ public interface ContenedorDetalleLoginViewModel extends EObject {
 	 * @return the value of the '<em>Usuario</em>' attribute.
 	 * @see #setUsuario(String)
 	 * @see sma.ui.viewmodels.contenedorloginviewmodel.ContenedorloginviewmodelPackage#getContenedorDetalleLoginViewModel_Usuario()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getUsuario();
@@ -47,6 +49,33 @@ public interface ContenedorDetalleLoginViewModel extends EObject {
 	 * @generated
 	 */
 	void setUsuario(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Contrasenia</b></em>' attribute.
+	 * The default value is <code>" "</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Contrasenia</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Contrasenia</em>' attribute.
+	 * @see #setContrasenia(String)
+	 * @see sma.ui.viewmodels.contenedorloginviewmodel.ContenedorloginviewmodelPackage#getContenedorDetalleLoginViewModel_Contrasenia()
+	 * @model default=" " dataType="sma.String"
+	 * @generated
+	 */
+	String getContrasenia();
+
+	/**
+	 * Sets the value of the '{@link sma.ui.viewmodels.contenedorloginviewmodel.ContenedorDetalleLoginViewModel#getContrasenia <em>Contrasenia</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Contrasenia</em>' attribute.
+	 * @see #getContrasenia()
+	 * @generated
+	 */
+	void setContrasenia(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Owned By Contenedor Login View Model</b></em>' container reference.

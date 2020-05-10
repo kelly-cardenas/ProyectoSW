@@ -36,6 +36,7 @@ import sma.domain.reparacionvehiculo.Reparacion;
 public interface CentroMant extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
@@ -45,7 +46,7 @@ public interface CentroMant extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(String)
 	 * @see sma.domain.DomainPackage#getCentroMant_Id()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getId();
@@ -62,6 +63,7 @@ public interface CentroMant extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Nombre</em>' attribute isn't clear,
@@ -71,7 +73,7 @@ public interface CentroMant extends EObject {
 	 * @return the value of the '<em>Nombre</em>' attribute.
 	 * @see #setNombre(String)
 	 * @see sma.domain.DomainPackage#getCentroMant_Nombre()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getNombre();
@@ -88,6 +90,7 @@ public interface CentroMant extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Nombre Representante</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Nombre Representante</em>' attribute isn't clear,
@@ -97,7 +100,7 @@ public interface CentroMant extends EObject {
 	 * @return the value of the '<em>Nombre Representante</em>' attribute.
 	 * @see #setNombreRepresentante(String)
 	 * @see sma.domain.DomainPackage#getCentroMant_NombreRepresentante()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getNombreRepresentante();
@@ -114,6 +117,7 @@ public interface CentroMant extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Descripcion</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Descripcion</em>' attribute isn't clear,
@@ -123,7 +127,7 @@ public interface CentroMant extends EObject {
 	 * @return the value of the '<em>Descripcion</em>' attribute.
 	 * @see #setDescripcion(String)
 	 * @see sma.domain.DomainPackage#getCentroMant_Descripcion()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getDescripcion();
@@ -140,6 +144,7 @@ public interface CentroMant extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Usuario</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Usuario</em>' attribute isn't clear,
@@ -149,7 +154,7 @@ public interface CentroMant extends EObject {
 	 * @return the value of the '<em>Usuario</em>' attribute.
 	 * @see #setUsuario(String)
 	 * @see sma.domain.DomainPackage#getCentroMant_Usuario()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getUsuario();
@@ -166,6 +171,7 @@ public interface CentroMant extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Contrasenia</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Contrasenia</em>' attribute isn't clear,
@@ -175,7 +181,7 @@ public interface CentroMant extends EObject {
 	 * @return the value of the '<em>Contrasenia</em>' attribute.
 	 * @see #setContrasenia(String)
 	 * @see sma.domain.DomainPackage#getCentroMant_Contrasenia()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getContrasenia();
@@ -255,31 +261,39 @@ public interface CentroMant extends EObject {
 	void setOwnedByDomain(Domain value);
 
 	/**
-	 * Returns the value of the '<em><b>Ubicacion</b></em>' reference.
+	 * Returns the value of the '<em><b>Ubicacion</b></em>' containment reference.
 	 * It is bidirectional and its opposite is '{@link sma.domain.UbicacionCM#getOwnedBy <em>Owned By</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Ubicacion</em>' reference isn't clear,
+	 * If the meaning of the '<em>Ubicacion</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ubicacion</em>' reference.
+	 * @return the value of the '<em>Ubicacion</em>' containment reference.
 	 * @see #setUbicacion(UbicacionCM)
 	 * @see sma.domain.DomainPackage#getCentroMant_Ubicacion()
 	 * @see sma.domain.UbicacionCM#getOwnedBy
-	 * @model opposite="ownedBy"
+	 * @model opposite="ownedBy" containment="true"
 	 * @generated
 	 */
 	UbicacionCM getUbicacion();
 
 	/**
-	 * Sets the value of the '{@link sma.domain.CentroMant#getUbicacion <em>Ubicacion</em>}' reference.
+	 * Sets the value of the '{@link sma.domain.CentroMant#getUbicacion <em>Ubicacion</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ubicacion</em>' reference.
+	 * @param value the new value of the '<em>Ubicacion</em>' containment reference.
 	 * @see #getUbicacion()
 	 * @generated
 	 */
 	void setUbicacion(UbicacionCM value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='//TODO procesarSolicitudVisita\n'"
+	 * @generated
+	 */
+	void procesarSolicitudVisita(Automovil automovilReparacion);
 
 } // CentroMant

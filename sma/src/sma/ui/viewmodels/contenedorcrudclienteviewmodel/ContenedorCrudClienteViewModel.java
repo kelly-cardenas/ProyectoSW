@@ -113,7 +113,7 @@ public interface ContenedorCrudClienteViewModel extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="sma.String" eventoDataType="sma.String"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\t\t\t\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\tString action = \"\";\r\n\t\t\t\t\t\t\t\t\t\treturn action;\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\r\n\t'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\t\t\t\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tString action = \"\";\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\treturn action;\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\r\n\t'"
 	 * @generated
 	 */
 	String upadateDialog(String evento);
@@ -121,7 +121,7 @@ public interface ContenedorCrudClienteViewModel extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\t\t\t\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t//--\t\r\n\t\t\t\t\t\t\t\tContenedorDetalleClienteViewModel detalleClienteVM = getTheContenedorDetalleClienteViewModel();\r\n\t\t\t\t\t\t\t\tContenedorMaestroClienteViewModel maestroClienteVM = getTheContenedorMaestroClienteViewModel();\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\tif ( detalleClienteVM == null ) {\r\n\t\t\t\t\t\t\t\t\t\tdetalleClienteVM = sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelFactory.\r\n\t\t\t\t\t\t\t\t\t\t\t\teINSTANCE.createContenedorDetalleClienteViewModel();\r\n\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\tif ( maestroClienteVM == null ) {\r\n\t\t\t\t\t\t\t\t\t\tmaestroClienteVM= sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelFactory.\r\n\t\t\t\t\t\t\t\t\t\teINSTANCE.createContenedorMaestroClienteViewModel();\r\n\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\tsetTheContenedorDetalleClienteViewModel(detalleClienteVM);\r\n\t\t\t\t\t\t\t\t\tsetTheContenedorMaestroClienteViewModel(maestroClienteVM);\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\r\n\t'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\t// --prueba\r\n\t\tContenedorDetalleClienteViewModel detalleClienteVM = getTheContenedorDetalleClienteViewModel();\r\n\t\tContenedorMaestroClienteViewModel maestroClienteVM = getTheContenedorMaestroClienteViewModel();\r\n\r\n\t\tif (detalleClienteVM == null) {\r\n\t\t\tdetalleClienteVM = sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelFactory.eINSTANCE\r\n\t\t\t\t\t.createContenedorDetalleClienteViewModel();\r\n\t\t}\r\n\r\n\t\tif (maestroClienteVM == null) {\r\n\t\t\tmaestroClienteVM = sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelFactory.eINSTANCE\r\n\t\t\t\t\t.createContenedorMaestroClienteViewModel();\r\n\t\t}\r\n\r\n\t\tsetTheContenedorDetalleClienteViewModel(detalleClienteVM);\r\n\t\tsetTheContenedorMaestroClienteViewModel(maestroClienteVM);\r\n\r\n\t\tdetalleClienteVM.implementarModelo();\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\r\n\t'"
 	 * @generated
 	 */
 	void implementarModelo();
@@ -129,9 +129,17 @@ public interface ContenedorCrudClienteViewModel extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\tgetOwnedByUI().registrarCliente(this);\r\n\t\t\r\n\t'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\t\t\t\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tgetOwnedByUI().registrarCliente(this);\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\r\n\t'"
 	 * @generated
 	 */
 	void registrarCliente();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\t\t\t\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\tgetOwnedByUI().actualizarCrudCliente(this);\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\r\n\t'"
+	 * @generated
+	 */
+	void actualizarCrudCliente();
 
 } // ContenedorCrudClienteViewModel

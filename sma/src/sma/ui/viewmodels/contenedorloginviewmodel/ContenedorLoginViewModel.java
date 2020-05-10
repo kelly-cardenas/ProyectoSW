@@ -55,6 +55,7 @@ public interface ContenedorLoginViewModel extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Usuario</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Usuario</em>' attribute isn't clear,
@@ -64,7 +65,7 @@ public interface ContenedorLoginViewModel extends EObject {
 	 * @return the value of the '<em>Usuario</em>' attribute.
 	 * @see #setUsuario(String)
 	 * @see sma.ui.viewmodels.contenedorloginviewmodel.ContenedorloginviewmodelPackage#getContenedorLoginViewModel_Usuario()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getUsuario();
@@ -119,15 +120,16 @@ public interface ContenedorLoginViewModel extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='//TODO prueba\n'"
+	 * @model dataType="sma.EBooleanObject"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='return getOwnedByUI().hacerLogin(this);'"
 	 * @generated
 	 */
-	void prueba();
+	Boolean prueba();
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='//TODO implementarModelo\n'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t ContenedorDetalleLoginViewModel detalleLoginVM = getTheContenedorDetalleLoginViewModel();\r\n\t\t\r\n\t\t if ( getTheContenedorDetalleLoginViewModel() == null ) {\r\n\t\t\t\r\n\t\t\t detalleLoginVM = sma.ui.viewmodels.contenedorloginviewmodel.ContenedorloginviewmodelFactory\r\n\t\t\t\t\t \t.eINSTANCE.createContenedorDetalleLoginViewModel();\r\n\t\t}\r\n\t\t \r\n\t\t setTheContenedorDetalleLoginViewModel(detalleLoginVM);'"
 	 * @generated
 	 */
 	void implementarModelo();

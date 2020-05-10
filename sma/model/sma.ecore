@@ -11,19 +11,19 @@
   <eClassifiers xsi:type="ecore:EClass" name="ModelFactory">
     <eOperations name="cargar" eType="#//ModelFactory">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="ModelFactory modelFactory = null;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI(&quot;platform:/resource/&quot;+ruta);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;org.eclipse.emf.ecore.resource.ResourceSet resourceSet= new org.eclipse.emf.ecore.resource.impl.ResourceSetImpl();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;org.eclipse.emf.ecore.resource.Resource resource = resourceSet.createResource(uri);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;try {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;resource.load(java.util.Collections.EMPTY_MAP);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;modelFactory = (ModelFactory) resource.getContents().get(0);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;} catch (java.io.IOException e) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;// TO-DO Auto-generated catch block&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;e.printStackTrace();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;return modelFactory;"/>
+        <details key="body" value="ModelFactory modelFactory = null;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI(&quot;platform:/resource/&quot;+ruta);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;org.eclipse.emf.ecore.resource.ResourceSet resourceSet= new org.eclipse.emf.ecore.resource.impl.ResourceSetImpl();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;org.eclipse.emf.ecore.resource.Resource resource = resourceSet.createResource(uri);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;try {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;resource.load(java.util.Collections.EMPTY_MAP);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;modelFactory = (ModelFactory) resource.getContents().get(0);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;} catch (java.io.IOException e) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;// TO-DO Auto-generated catch block&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;e.printStackTrace();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;return modelFactory;"/>
       </eAnnotations>
       <eParameters name="ruta" eType="#//String"/>
     </eOperations>
     <eOperations name="salvar">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="ModelFactory modelFactory = this;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI(&quot;platform:/resource/&quot;+ruta);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;org.eclipse.emf.ecore.resource.ResourceSet resourceSet= new org.eclipse.emf.ecore.resource.impl.ResourceSetImpl();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;org.eclipse.emf.ecore.resource.Resource resource = resourceSet.createResource(uri);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;resource.getContents().add(modelFactory);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;try {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;resource.save(java.util.Collections.EMPTY_MAP);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;} catch (java.io.IOException e) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;// TO-DO Auto-generated catch block&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;e.printStackTrace();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;return;"/>
+        <details key="body" value="ModelFactory modelFactory = this;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI(&quot;platform:/resource/&quot;+ruta);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;org.eclipse.emf.ecore.resource.ResourceSet resourceSet= new org.eclipse.emf.ecore.resource.impl.ResourceSetImpl();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;org.eclipse.emf.ecore.resource.Resource resource = resourceSet.createResource(uri);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;resource.getContents().add(modelFactory);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;try {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;resource.save(java.util.Collections.EMPTY_MAP);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;} catch (java.io.IOException e) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;// TO-DO Auto-generated catch block&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;e.printStackTrace();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;return;"/>
       </eAnnotations>
       <eParameters name="ruta" eType="#//String"/>
     </eOperations>
     <eOperations name="implementarModelo">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="UI ui&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;= getTheUI();&#xD;&#xA;&#x9;&#x9;Domain domain&#x9;&#x9;&#x9;&#x9;= getTheDomain();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;if(domain == null) {&#xD;&#xA;&#x9;&#x9;&#x9;domain&#x9;= sma.domain.DomainFactory.eINSTANCE.createDomain();&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;if(ui == null) {&#xD;&#xA;&#x9;&#x9;&#x9;ui &#x9;&#x9;= sma.ui.UiFactory.eINSTANCE.createUI();&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;setTheDomain(domain);&#xD;&#xA;&#x9;&#x9;setTheUI(ui);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ui.setTheDomain(domain);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;domain.setTheUI(ui);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;domain.implementarModelo();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ui.implementarModelo();"/>
+        <details key="body" value="UI ui = getTheUI();&#xD;&#xA;&#x9;&#x9;Domain domain = getTheDomain();&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;if (domain == null) {&#xD;&#xA;&#x9;&#x9;&#x9;domain = sma.domain.DomainFactory.eINSTANCE.createDomain();&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;if (ui == null) {&#xD;&#xA;&#x9;&#x9;&#x9;ui = sma.ui.UiFactory.eINSTANCE.createUI();&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;setTheDomain(domain);&#xD;&#xA;&#x9;&#x9;setTheUI(ui);&#xD;&#xA;&#x9;&#x9;ui.setTheDomain(domain);&#xD;&#xA;&#x9;&#x9;domain.setTheUI(ui);&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;domain.implementarModelo();&#xD;&#xA;&#x9;&#x9;ui.implementarModelo();"/>
       </eAnnotations>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="theUI" eType="#//ui/UI"
@@ -33,17 +33,23 @@
   </eClassifiers>
   <eSubpackages name="domain" nsURI="http:///sma/domain.ecore" nsPrefix="sma.domain">
     <eClassifiers xsi:type="ecore:EClass" name="Automovil">
-      <eOperations name="asignarFallas">
+      <eOperations name="hacerEscaneo">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="body" value="//TODO asignarFallas"/>
         </eAnnotations>
       </eOperations>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="placa" eType="#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="marca" eType="#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="modelo" eType="#//EIntegerObject"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="referencia" eType="#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipoUso" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="#//String"
+          defaultValueLiteral=" "/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="placa" eType="#//String"
+          defaultValueLiteral=" "/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="marca" eType="#//String"
+          defaultValueLiteral=" "/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="modelo" eType="#//EIntegerObject"
+          defaultValueLiteral="0"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="referencia" eType="#//String"
+          defaultValueLiteral=" "/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipoUso" eType="#//String"
+          defaultValueLiteral=" "/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="reparacionesHechas" upperBound="-1"
           eType="#//domain/reparacionvehiculo/Reparacion" eOpposite="#//domain/reparacionvehiculo/Reparacion/theAutomovil"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="sensor" eType="#//domain/automatizacionrevision/sensor"
@@ -55,13 +61,24 @@
           eOpposite="#//domain/automatizacionrevision/FallaMecanica/theAutomovil"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="CentroMant">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="#//String"/>
+      <eOperations name="procesarSolicitudVisita">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="//TODO procesarSolicitudVisita&#xA;"/>
+        </eAnnotations>
+        <eParameters name="automovilReparacion" eType="#//domain/Automovil"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="#//String"
+          defaultValueLiteral=" "/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="#//String"
+          defaultValueLiteral=" "/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombreRepresentante"
-          eType="#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="descripcion" eType="#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="usuario" eType="#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="contrasenia" eType="#//String"/>
+          eType="#//String" defaultValueLiteral=" "/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="descripcion" eType="#//String"
+          defaultValueLiteral=" "/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="usuario" eType="#//String"
+          defaultValueLiteral=" "/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="contrasenia" eType="#//String"
+          defaultValueLiteral=" "/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="usuariosAtendidos" upperBound="-1"
           eType="#//domain/Usuario" eOpposite="#//domain/Usuario/CentroMant"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="historialReparacion"
@@ -70,54 +87,104 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="ownedByDomain" eType="#//domain/Domain"
           eOpposite="#//domain/Domain/listaDeCentMant"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="ubicacion" eType="#//domain/UbicacionCM"
-          eOpposite="#//domain/UbicacionCM/ownedBy"/>
+          containment="true" eOpposite="#//domain/UbicacionCM/ownedBy"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Domain">
       <eOperations name="implementarModelo">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="body" value="//implementar modelo"/>
+          <details key="body" value="// implementar modelo"/>
         </eAnnotations>
       </eOperations>
       <eOperations name="registrarUsuario">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="body" value="Usuario usuario = &#x9;&#x9;&#x9;sma.domain.DomainFactory.eINSTANCE.createUsuario();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;sma.domain.UbicacionUsu ubicacionUsu = sma.domain.DomainFactory.eINSTANCE.createUbicacionUsu();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;//-------------------------------------------Asignacion el ID autoincremental al usuario-------------------------------------------------------&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;usuario.setId(String.valueOf(incrementarIdCliente()));&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;//-------------------------------------------Asignacion de atributos personales al usuario-------------------------------------------------------&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;usuario.setNombres(formulario.getTheContenedorDetalleClienteViewModel().getTheContenedorDatosPersonalesViewModel().getNombre());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;usuario.setApellidos(formulario.getTheContenedorDetalleClienteViewModel().getTheContenedorDatosPersonalesViewModel().getApellido());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;usuario.setNumDI(formulario.getTheContenedorDetalleClienteViewModel().getTheContenedorDatosPersonalesViewModel().getCedula());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;usuario.setEdad(Integer.parseInt(formulario.getTheContenedorDetalleClienteViewModel().getTheContenedorDatosPersonalesViewModel().getEdad()));&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;usuario.setEmail(formulario.getTheContenedorDetalleClienteViewModel().getTheContenedorDatosPersonalesViewModel().getCorreoelectronico());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;//-------------------------------------------Asignacion de atributos de la cuenta del usuario-------------------------------------------------------&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;usuario.setUsuario(formulario.getTheContenedorDetalleClienteViewModel().getTheContenedorDatosdelacuentaViewModel().getContraseña());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;usuario.setContrasenia(formulario.getTheContenedorDetalleClienteViewModel().getTheContenedorDatosdelacuentaViewModel().getContraseña());&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;//-------------------------------------------Asignacion de la ubicacion-------------------------------------------------------&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;usuario.setUbicacion(ubicacionUsu);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ubicacionUsu.setOwnerBy(usuario);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;listaUsuarios.add(usuario);"/>
+          <details key="body" value="Usuario usuario = sma.domain.DomainFactory.eINSTANCE.createUsuario();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;sma.domain.UbicacionUsu ubicacionUsu = sma.domain.DomainFactory.eINSTANCE.createUbicacionUsu();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;// -------------------------------------------Asignacion el ID autoincremental&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;// al usuario-------------------------------------------------------&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;usuario.setId(String.valueOf(incrementarIdCliente()));&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;// -------------------------------------------Asignacion de atributos personales&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;// al usuario-------------------------------------------------------&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;usuario.setNombres(formulario.getTheContenedorDetalleClienteViewModel()&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;.getTheContenedorDatosPersonalesViewModel().getNombre());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;usuario.setApellidos(formulario.getTheContenedorDetalleClienteViewModel()&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;.getTheContenedorDatosPersonalesViewModel().getApellido());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;usuario.setNumDI(formulario.getTheContenedorDetalleClienteViewModel().getTheContenedorDatosPersonalesViewModel()&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;.getCedula());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;usuario.setEdad(Integer.parseInt(formulario.getTheContenedorDetalleClienteViewModel()&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;.getTheContenedorDatosPersonalesViewModel().getEdad()));&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;usuario.setEmail(formulario.getTheContenedorDetalleClienteViewModel().getTheContenedorDatosPersonalesViewModel()&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;.getCorreoelectronico());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;// -------------------------------------------Asignacion de atributos de la&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;// cuenta del usuario-------------------------------------------------------&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;usuario.setUsuario(formulario.getTheContenedorDetalleClienteViewModel()&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;.getTheContenedorDatosdelacuentaViewModel().getUsuario());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;usuario.setContrasenia(formulario.getTheContenedorDetalleClienteViewModel()&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;.getTheContenedorDatosdelacuentaViewModel().getContrasenia());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;// -------------------------------------------Asignacion de la&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;// ubicacion-------------------------------------------------------&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;usuario.setUbicacion(ubicacionUsu);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ubicacionUsu.setOwnerBy(usuario);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;System.out.println(&quot;registrado usuario&quot; + usuario.getNombres());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;getListaUsuarios().add(usuario);"/>
         </eAnnotations>
         <eParameters name="formulario" eType="#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorCrudClienteViewModel"/>
       </eOperations>
       <eOperations name="registrarCm">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="body" value="CentroMant centroMantenimiento &#x9;= sma.domain.DomainFactory.eINSTANCE.createCentroMant();&#xD;&#xA;&#x9;&#x9;sma.domain.UbicacionCM ubicacionCM&#x9;&#x9;&#x9;= sma.domain.DomainFactory.eINSTANCE.createUbicacionCM();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;//-------------------------------------------Asignacion informacion de CM-------------------------------------------------------&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;centroMantenimiento.setId(String.valueOf(incrementalIdCm));&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;//-------------------------------------------Asignacion informacion de CM-------------------------------------------------------&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;centroMantenimiento.setNombre(formulario.getTheContenedorDetalleCMViewModel().getTheContenedorInformacionCMViewModel().getNombrecm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;centroMantenimiento.setNombreRepresentante(formulario.getTheContenedorDetalleCMViewModel().getTheContenedorInformacionCMViewModel().getNombrerepresentante());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;centroMantenimiento.setDescripcion(formulario.getTheContenedorDetalleCMViewModel().getTheContenedorInformacionCMViewModel().getDescripcion());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;//-------------------------------------------Asignacion de ubicacion de CM-------------------------------------------------------&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;ubicacionCM.setPais(formulario.getTheContenedorDetalleCMViewModel().getTheContenedorUbicacionViewModel().getPais());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;ubicacionCM.setDepartamento(formulario.getTheContenedorDetalleCMViewModel().getTheContenedorUbicacionViewModel().getDepartamento());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;ubicacionCM.setCiudad(formulario.getTheContenedorDetalleCMViewModel().getTheContenedorUbicacionViewModel().getCiudad());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;ubicacionCM.setDireccion(formulario.getTheContenedorDetalleCMViewModel().getTheContenedorUbicacionViewModel().getDireccion());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;centroMantenimiento.setUbicacion(ubicacionCM);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;ubicacionCM.setOwnedBy(centroMantenimiento);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;listaDeCentMant.add(centroMantenimiento);"/>
+          <details key="body" value="CentroMant centroMantenimiento = sma.domain.DomainFactory.eINSTANCE.createCentroMant();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;sma.domain.UbicacionCM ubicacionCM = sma.domain.DomainFactory.eINSTANCE.createUbicacionCM();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;// -------------------------------------------Asignacion informacion de&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;// CM-------------------------------------------------------&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;centroMantenimiento.setId(String.valueOf(incrementarIdCm()));&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;// -------------------------------------------Asignacion informacion de&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;// CM-------------------------------------------------------&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;centroMantenimiento.setNombre(&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;formulario.getTheContenedorDetalleCMViewModel().getTheContenedorInformacionCMViewModel().getNombrecm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;centroMantenimiento.setNombreRepresentante(formulario.getTheContenedorDetalleCMViewModel()&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;.getTheContenedorInformacionCMViewModel().getNombrerepresentante());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;centroMantenimiento.setDescripcion(formulario.getTheContenedorDetalleCMViewModel()&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;.getTheContenedorInformacionCMViewModel().getDescripcion());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;// -------------------------------------------Asignacion de ubicacion de&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;// CM-------------------------------------------------------&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ubicacionCM.setPais(&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;formulario.getTheContenedorDetalleCMViewModel().getTheContenedorUbicacionViewModel().getPais());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ubicacionCM.setDepartamento(&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;formulario.getTheContenedorDetalleCMViewModel().getTheContenedorUbicacionViewModel().getDepartamento());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ubicacionCM.setCiudad(&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;formulario.getTheContenedorDetalleCMViewModel().getTheContenedorUbicacionViewModel().getCiudad());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ubicacionCM.setDireccion(&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;formulario.getTheContenedorDetalleCMViewModel().getTheContenedorUbicacionViewModel().getDireccion());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;centroMantenimiento.setUbicacion(ubicacionCM);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ubicacionCM.setOwnedBy(centroMantenimiento);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;getListaDeCentMant().add(centroMantenimiento);"/>
         </eAnnotations>
         <eParameters name="formulario" eType="#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorCRUDCMViewModel"/>
       </eOperations>
       <eOperations name="registrarAutomovil">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="body" value="Automovil automovil = sma.domain.DomainFactory.eINSTANCE.createAutomovil();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;//Usuario usuario = sma.domain.DomainFactory.eINSTANCE.createUsuario();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;//-------------------------------Asignar id incremental al automovil-------------------------------------------------------&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;automovil.setId(String.valueOf(incrementalIdAuto));&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;//-------------------------------Asignar Propiedades al automovil--------------------------------------------------------------&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;automovil.setMarca(formulario.getTheContenedorDetalleVehiculoViewModel().getMarca());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;automovil.setModelo(Integer.parseInt(formulario.getTheContenedorDetalleVehiculoViewModel().getModelo()));&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;automovil.setPlaca(formulario.getTheContenedorDetalleVehiculoViewModel().getPlaca());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;automovil.setReferencia(formulario.getTheContenedorDetalleVehiculoViewModel().getReferencia());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;automovil.setTipoUso(formulario.getTheContenedorDetalleVehiculoViewModel().getTipovehiculo());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;//--------------------------------------------Agregar a la lista de Autos registrados del usuario-------------------------------------&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;for (Usuario usu : listaUsuarios) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;if ( usu.getId().equals( idPropietario ) ) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;automovil.setPropietario(usu);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;usu.getAutomoviles().add(automovil);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;}"/>
+          <details key="body" value="Automovil automovil = sma.domain.DomainFactory.eINSTANCE.createAutomovil();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;// Usuario usuario = sma.domain.DomainFactory.eINSTANCE.createUsuario();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;// -------------------------------Asignar id incremental al&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;// automovil-------------------------------------------------------&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;automovil.setId(String.valueOf(incrementarIdAuto()));&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;// -------------------------------Asignar Propiedades al&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;// automovil--------------------------------------------------------------&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;automovil.setMarca(formulario.getTheContenedorDetalleVehiculoViewModel().getMarca());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;automovil.setModelo(Integer.parseInt(formulario.getTheContenedorDetalleVehiculoViewModel().getModelo()));&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;automovil.setPlaca(formulario.getTheContenedorDetalleVehiculoViewModel().getPlaca());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;automovil.setReferencia(formulario.getTheContenedorDetalleVehiculoViewModel().getReferencia());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;automovil.setTipoUso(formulario.getTheContenedorDetalleVehiculoViewModel().getTipovehiculo());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;// --------------------------------------------Agregar a la lista de Autos&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;// registrados del usuario-------------------------------------&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;for (Usuario usu : listaUsuarios) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;if (usu.getId().equals(idPropietario)) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;automovil.setPropietario(usu);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;usu.getAutomoviles().add(automovil);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;getListaAutomoviles().add(automovil);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;System.out.println(&quot;auto registrado al propietario &quot; + usu.getNombres());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}"/>
         </eAnnotations>
         <eParameters name="formulario" eType="#//ui/viewmodels/contenedorregistrovehiculoviewmodel/ContenedorRegistroVehiculoViewModel"/>
         <eParameters name="idPropietario" eType="#//String"/>
       </eOperations>
       <eOperations name="incrementarIdCliente" eType="#//EIntegerObject">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="body" value="int retorno = incrementalIdCliente;&#xD;&#xA;&#x9;&#x9;incrementalIdCliente = incrementalIdCliente +1;&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;return retorno;"/>
+          <details key="body" value="if (incrementalIdCliente == null) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;incrementalIdCliente = 0;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;int retorno = incrementalIdCliente;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;incrementalIdCliente = incrementalIdCliente + 1;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;return retorno;"/>
         </eAnnotations>
       </eOperations>
       <eOperations name="incrementarIdCm" eType="#//EIntegerObject">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="body" value="int retorno = incrementalIdCm;&#xD;&#xA;&#x9;&#x9;incrementalIdCm = incrementalIdCm +1;&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;return retorno;"/>
+          <details key="body" value="if (incrementalIdCm == null) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;incrementalIdCm = 0;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;int retorno = incrementalIdCm;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;incrementalIdCm = incrementalIdCm + 1;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;return retorno;"/>
         </eAnnotations>
       </eOperations>
       <eOperations name="incrementarIdAuto" eType="#//EIntegerObject">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="body" value="int retorno = incrementalIdAuto;&#xD;&#xA;&#x9;&#x9;incrementalIdAuto = incrementalIdAuto +1;&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;return retorno;"/>
+          <details key="body" value="if (incrementalIdAuto == null) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;incrementalIdAuto = 0;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;int retorno = incrementalIdAuto;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;incrementalIdAuto = incrementalIdAuto + 1;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;return retorno;"/>
         </eAnnotations>
+      </eOperations>
+      <eOperations name="actualizarCrudCliente">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="formulario.getTheContenedorMaestroClienteViewModel().getListaCliente().clear();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;for (Usuario user : listaUsuarios) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;System.out.println(&quot;usuario en vm &quot; + user.getNombres());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;sma.ui.viewmodels.contenedorcrudclienteviewmodel.ClienteViewModel cliente = sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelFactory.eINSTANCE&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;.createClienteViewModel();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;cliente.setEdad(String.valueOf(user.getEdad()));&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;cliente.setEmail(user.getEmail());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;cliente.setIdentificacion(user.getNumDI());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;cliente.setNombre(user.getNombres());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;formulario.getTheContenedorMaestroClienteViewModel().getListaCliente().add(cliente);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;///Migueeeeeee"/>
+        </eAnnotations>
+        <eParameters name="formulario" eType="#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorCrudClienteViewModel"/>
+      </eOperations>
+      <eOperations name="actualizarCrudCm">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="formulario.getTheContenedorMaestroCMViewModel().getListaCentroMant().clear();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;for (CentroMant cm : listaDeCentMant) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;sma.ui.viewmodels.contenedorcrudcmviewmodel.CentroMantViewModel centroMantVm = sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelFactory.eINSTANCE&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;.createCentroMantViewModel();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;centroMantVm.setCiudad(cm.getUbicacion().getCiudad());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;centroMantVm.setNombrecm(cm.getNombre());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;centroMantVm.setNombrerepresentante(cm.getNombreRepresentante());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;formulario.getTheContenedorMaestroCMViewModel().getListaCentroMant().add(centroMantVm);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}"/>
+        </eAnnotations>
+        <eParameters name="formulario" eType="#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorCRUDCMViewModel"/>
+      </eOperations>
+      <eOperations name="actualizarVentanaRegistroCliente">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="formulario.getTheContenedorVehiculosRegistradosViewModel().getListaVehiculo().clear();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;for (Usuario user : listaUsuarios) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;if (user.getId().equals(getTheUI().getIdLogueado())) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;formulario.getTheContenedorDetalleVehiculoViewModel().setPropietario(user.getNombres());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;for (sma.domain.Automovil auto : user.getAutomoviles()) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.VehiculoViewModel vehiculoVM = sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorregistrovehiculoviewmodelFactory.eINSTANCE&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;.createVehiculoViewModel();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;vehiculoVM.setMarca(auto.getMarca());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;vehiculoVM.setPlaca(auto.getPlaca());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;vehiculoVM.setReferencia(auto.getReferencia());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;formulario.getTheContenedorVehiculosRegistradosViewModel().getListaVehiculo().add(vehiculoVM);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}"/>
+        </eAnnotations>
+        <eParameters name="formulario" eType="#//ui/viewmodels/contenedorregistrovehiculoviewmodel/ContenedorRegistroVehiculoViewModel"/>
+      </eOperations>
+      <eOperations name="hacerLogin" eType="#//EBooleanObject">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="if(getListaUsuarios() != null) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;for (Usuario user : getListaUsuarios()) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;if (user.getUsuario().equals(formulario.getTheContenedorDetalleLoginViewModel().getUsuario())) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;if (user.getContrasenia().equals(formulario.getTheContenedorDetalleLoginViewModel().getContrasenia())) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;getTheUI().setIdLogueado(user.getId());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;getTheUI().setTipoLogueado(&quot;cliente&quot;);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;return true;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;//&#x9;&#x9;&#x9;&#x9;for (CentroMant cm : getListaDeCentMant()) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;//&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;//&#x9;&#x9;&#x9;&#x9;&#x9;if (cm.getUsuario().equals(formulario.getTheContenedorDetalleLoginViewModel().getUsuario())) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;//&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;//&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;if (cm.getContrasenia().equals(formulario.getTheContenedorDetalleLoginViewModel().getContrasenia())) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;//&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;//&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;getTheUI().setIdLogueado(cm.getId());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;//&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;getTheUI().setTipoLogueado(&quot;cm&quot;);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;//&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;return true;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;//&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;//&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;//&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;//&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;//&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;//&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;return false;"/>
+        </eAnnotations>
+        <eParameters name="formulario" eType="#//ui/viewmodels/contenedorloginviewmodel/ContenedorLoginViewModel"/>
+      </eOperations>
+      <eOperations name="escanearVehiculo">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="for (Automovil auto : listaAutomoviles) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;if (auto.getPlaca().equals(placaVeh)) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;//auto.asignarFallas();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;}"/>
+        </eAnnotations>
+        <eParameters name="placaVeh" eType="#//String"/>
+      </eOperations>
+      <eOperations name="mostrarEstadoVehCliente">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="for (Automovil auto : listaAutomoviles) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;if (auto.getPlaca().equals(formulario.getTheContenedorSeleccionautoViewModel().getPlacavehiculo())) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;if (auto.getListaDeFallas() != null) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;for (sma.domain.automatizacionrevision.FallaMecanica falla : auto.getListaDeFallas()) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;sma.ui.viewmodels.contenedorescaneoviewmodel.ListaFallasViewModel fallaVM = sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorescaneoviewmodelFactory&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;.eINSTANCE.createListaFallasViewModel();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fallaVM.setGravedad(falla.getGravedad());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fallaVM.setOrigen(falla.getOrigen());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fallaVM.setGravedad(falla.getGravedad());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;fallaVM.setOrigen(falla.getOrigen());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;formulario.getTheContenedorFallasViewModel().getListaListaFallasViewModel().add(fallaVM);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;}"/>
+        </eAnnotations>
+        <eParameters name="formulario" eType="#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorEscaneoViewModel"/>
+      </eOperations>
+      <eOperations name="mostrarCmsCercanos">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="for (CentroMant centroMant : listaDeCentMant) {&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;if ( centroMant.getUbicacion().getPais().equals(formulario.getTheContenedorUbicacionactualViewModel().getPais())&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&amp;&amp; centroMant.getUbicacion().getDepartamento().equals(formulario.getTheContenedorUbicacionactualViewModel().getDepartamento()))&#xD;&#xA;&#x9;&#x9;&#x9;{&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;sma.ui.viewmodels.contenedorcontactarcmviewmodel.ListaCmViewModel cmVM = sma.ui.viewmodels.contenedorcontactarcmviewmodel.&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ContenedorcontactarcmviewmodelFactory.eINSTANCE.createListaCmViewModel();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;cmVM.setNombre(centroMant.getNombre());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;cmVM.setNombrerepresentante(centroMant.getNombreRepresentante());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;cmVM.setDireccion(centroMant.getUbicacion().getDireccion());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;formulario.getTheContenedorCmrecomendadosViewModel().getListaListaCmViewModel().add(cmVM);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;}"/>
+        </eAnnotations>
+        <eParameters name="formulario" eType="#//ui/viewmodels/contenedorcontactarcmviewmodel/ContenedorContactarCmViewModel"/>
+      </eOperations>
+      <eOperations name="solicitarVisita">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="//TODO solicitarVisita&#xA;"/>
+        </eAnnotations>
+        <eParameters name="formulario" eType="#//ui/viewmodels/contenedorsolicitudvisitaviewmodel/ContenedorSolicitudVisitaViewModel"/>
       </eOperations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="theModelFactory" eType="#//ModelFactory"
           eOpposite="#//ModelFactory/theDomain"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="incrementalIdCliente"
-          eType="#//EIntegerObject"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="incrementalIdCm" eType="#//EIntegerObject"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="incrementalIdAuto" eType="#//EIntegerObject"/>
+          eType="#//EIntegerObject" defaultValueLiteral="0"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="incrementalIdCm" eType="#//EIntegerObject"
+          defaultValueLiteral="0"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="incrementalIdAuto" eType="#//EIntegerObject"
+          defaultValueLiteral="0"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="listaAutomoviles" upperBound="-1"
           eType="#//domain/Automovil" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="listaDeCentMant" upperBound="-1"
@@ -128,17 +195,24 @@
           eOpposite="#//ui/UI/theDomain"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="UbicacionCM">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="pais" eType="#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="departamento" eType="#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ciudad" eType="#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="direccion" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="pais" eType="#//String"
+          defaultValueLiteral=" "/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="departamento" eType="#//String"
+          defaultValueLiteral=" "/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ciudad" eType="#//String"
+          defaultValueLiteral=" "/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="direccion" eType="#//String"
+          defaultValueLiteral=" "/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="ownedBy" eType="#//domain/CentroMant"
           eOpposite="#//domain/CentroMant/ubicacion"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="UbicacionUsu">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="pais" eType="#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="departamento" eType="#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ciudad" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="pais" eType="#//String"
+          defaultValueLiteral=" "/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="departamento" eType="#//String"
+          defaultValueLiteral=" "/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ciudad" eType="#//String"
+          defaultValueLiteral=" "/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="ownerBy" eType="#//domain/Usuario"
           eOpposite="#//domain/Usuario/ubicacion"/>
     </eClassifiers>
@@ -147,14 +221,22 @@
           eOpposite="#//domain/CentroMant/usuariosAtendidos"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="ownerByDomain" eType="#//domain/Domain"
           eOpposite="#//domain/Domain/listaUsuarios"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="numDI" eType="#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombres" eType="#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="apellidos" eType="#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="edad" eType="#//EIntegerObject"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" eType="#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="usuario" eType="#//String"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="contrasenia" eType="#//String"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="#//String"
+          defaultValueLiteral=" "/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="numDI" eType="#//String"
+          defaultValueLiteral=" "/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombres" eType="#//String"
+          defaultValueLiteral=" "/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="apellidos" eType="#//String"
+          defaultValueLiteral=" "/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="edad" eType="#//EIntegerObject"
+          defaultValueLiteral="0"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" eType="#//String"
+          defaultValueLiteral=" "/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="usuario" eType="#//String"
+          defaultValueLiteral=" "/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="contrasenia" eType="#//String"
+          defaultValueLiteral=" "/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="automoviles" upperBound="-1"
           eType="#//domain/Automovil" eOpposite="#//domain/Automovil/propietario"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="ubicacion" eType="#//domain/UbicacionUsu"
@@ -168,31 +250,40 @@
         <eStructuralFeatures xsi:type="ecore:EReference" name="theCentroMant" eType="#//domain/CentroMant"
             eOpposite="#//domain/CentroMant/historialReparacion"/>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombreResponsable"
-            eType="#//String"/>
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="estado" eType="#//String"/>
+            eType="#//String" defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="estado" eType="#//String"
+            defaultValueLiteral=" "/>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="numeroFallasPredecidas"
-            eType="#//EIntegerObject"/>
+            eType="#//EIntegerObject" defaultValueLiteral="0"/>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="numeroFallasAcertadas"
-            eType="#//EIntegerObject"/>
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="fecha" eType="#//String"/>
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="hora" eType="#//String"/>
+            eType="#//EIntegerObject" defaultValueLiteral="0"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="fecha" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="hora" eType="#//String"
+            defaultValueLiteral=" "/>
       </eClassifiers>
     </eSubpackages>
     <eSubpackages name="automatizacionrevision" nsURI="http:///sma/domain/automatizacionrevision.ecore"
         nsPrefix="sma.domain.automatizacionrevision">
       <eClassifiers xsi:type="ecore:EClass" name="FallaMecanica">
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="piesaAveriada" eType="#//String"/>
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="gravedad" eType="#//String"/>
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="origen" eType="#//String"/>
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="descripcion" eType="#//String"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="piesaAveriada" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="gravedad" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="origen" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="descripcion" eType="#//String"
+            defaultValueLiteral=" "/>
         <eStructuralFeatures xsi:type="ecore:EReference" name="theAutomovil" eType="#//domain/Automovil"
             eOpposite="#//domain/Automovil/listaDeFallas"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="sensor">
         <eStructuralFeatures xsi:type="ecore:EReference" name="ownerBy" eType="#//domain/Automovil"
             eOpposite="#//domain/Automovil/sensor"/>
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="#//String"/>
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="infoComp" eType="#//String"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="#//String"
+            defaultValueLiteral=" "/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="infoComp" eType="#//String"
+            defaultValueLiteral=" "/>
       </eClassifiers>
     </eSubpackages>
   </eSubpackages>
@@ -200,26 +291,74 @@
     <eClassifiers xsi:type="ecore:EClass" name="UI">
       <eOperations name="implementarModelo">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="body" value="&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ContenedorCrudClienteViewModel crudCLienteVM&#x9;&#x9;=getTheContenedorCrudClienteViewModel();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ContenedorCRUDCMViewModel crudCMVM  &#x9;&#x9;&#x9;&#x9;=getTheContenedorCRUDCMViewModel();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ContenedorRegistroVehiculoViewModel registroVehiVM &#x9;=getTheContenedorRegistroVehiculoViewModel();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;if(crudCLienteVM == null) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;crudCLienteVM &#x9;= sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelFactory&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;.eINSTANCE.createContenedorCrudClienteViewModel();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;if(crudCMVM == null) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;crudCMVM&#x9;&#x9;= sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelFactory&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;.eINSTANCE.createContenedorCRUDCMViewModel();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;if( registroVehiVM == null ) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;registroVehiVM&#x9;= sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ContenedorregistrovehiculoviewmodelFactory.eINSTANCE.createContenedorRegistroVehiculoViewModel();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;setTheContenedorCrudClienteViewModel(crudCLienteVM);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;setTheContenedorCRUDCMViewModel(crudCMVM);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;setTheContenedorRegistroVehiculoViewModel(registroVehiVM);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;"/>
+          <details key="body" value="&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;ContenedorCrudClienteViewModel crudCLienteVM = getTheContenedorCrudClienteViewModel();&#xD;&#xA;&#x9;&#x9;ContenedorCRUDCMViewModel crudCMVM = getTheContenedorCRUDCMViewModel();&#xD;&#xA;&#x9;&#x9;ContenedorRegistroVehiculoViewModel registroVehiVM = getTheContenedorRegistroVehiculoViewModel();&#xD;&#xA;&#x9;&#x9;ContenedorLoginViewModel loginVM = getTheContenedorLoginViewModel();&#xD;&#xA;&#x9;&#x9;ContenedorEscaneoViewModel escaneoClienteVM = getTheContenedorEscaneoViewModel();&#xD;&#xA;&#x9;&#x9;ContenedorContactarCmViewModel contactarCmVM = getTheContenedorContactarCmViewModel();&#xD;&#xA;&#x9;&#x9;ContenedorSolicitudVisitaViewModel solicitudVisitaVM = getTheContenedorSolicitudVisitaViewModel();&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;if (crudCLienteVM == null) {&#xD;&#xA;&#x9;&#x9;&#x9;crudCLienteVM = sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelFactory.eINSTANCE&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;.createContenedorCrudClienteViewModel();&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;if (crudCMVM == null) {&#xD;&#xA;&#x9;&#x9;&#x9;crudCMVM = sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelFactory.eINSTANCE&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;.createContenedorCRUDCMViewModel();&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;if (registroVehiVM == null) {&#xD;&#xA;&#x9;&#x9;&#x9;registroVehiVM = sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorregistrovehiculoviewmodelFactory.eINSTANCE&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;.createContenedorRegistroVehiculoViewModel();&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;if (loginVM == null) {&#xD;&#xA;&#x9;&#x9;&#x9;loginVM = sma.ui.viewmodels.contenedorloginviewmodel.ContenedorloginviewmodelFactory.eINSTANCE&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;.createContenedorLoginViewModel();&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;if (escaneoClienteVM == null) {&#xD;&#xA;&#x9;&#x9;&#x9;escaneoClienteVM = sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorescaneoviewmodelFactory.eINSTANCE&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;.createContenedorEscaneoViewModel();&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;if (contactarCmVM == null) {&#xD;&#xA;&#x9;&#x9;&#x9;contactarCmVM = sma.ui.viewmodels.contenedorcontactarcmviewmodel.ContenedorcontactarcmviewmodelFactory.eINSTANCE&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;.createContenedorContactarCmViewModel();&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;if (solicitudVisitaVM == null) {&#xD;&#xA;&#x9;&#x9;&#x9;solicitudVisitaVM = sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.ContenedorsolicitudvisitaviewmodelFactory.eINSTANCE&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;.createContenedorSolicitudVisitaViewModel();&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;setTheContenedorCrudClienteViewModel(crudCLienteVM);&#xD;&#xA;&#x9;&#x9;setTheContenedorCRUDCMViewModel(crudCMVM);&#xD;&#xA;&#x9;&#x9;setTheContenedorRegistroVehiculoViewModel(registroVehiVM);&#xD;&#xA;&#x9;&#x9;setTheContenedorLoginViewModel(loginVM);&#xD;&#xA;&#x9;&#x9;setTheContenedorEscaneoViewModel(escaneoClienteVM);&#xD;&#xA;&#x9;&#x9;setTheContenedorContactarCmViewModel(contactarCmVM);&#xD;&#xA;&#x9;&#x9;setTheContenedorSolicitudVisitaViewModel(solicitudVisitaVM);&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;crudCLienteVM.implementarModelo();&#xD;&#xA;&#x9;&#x9;crudCMVM.implementarModelo();&#xD;&#xA;&#x9;&#x9;registroVehiVM.implementarModelo();&#xD;&#xA;&#x9;&#x9;loginVM.implementarModelo();&#xD;&#xA;&#x9;&#x9;escaneoClienteVM.implementarModelo();&#xD;&#xA;&#x9;&#x9;contactarCmVM.implementarModelo();&#xD;&#xA;&#x9;&#x9;solicitudVisitaVM.implementarModelo();&#xD;&#xA;&#x9;"/>
         </eAnnotations>
       </eOperations>
       <eOperations name="registrarCliente">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="body" value="&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;getTheDomain().registrarUsuario(formulario);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;"/>
+          <details key="body" value="&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;getTheDomain().registrarUsuario(formulario);&#xD;&#xA;&#xD;&#xA;&#x9;"/>
         </eAnnotations>
         <eParameters name="formulario" eType="#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorCrudClienteViewModel"/>
       </eOperations>
       <eOperations name="RegistrarCm">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="body" value="&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;getTheDomain().registrarCm(formulario);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;"/>
+          <details key="body" value="&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;getTheDomain().registrarCm(formulario);&#xD;&#xA;&#xD;&#xA;&#x9;"/>
         </eAnnotations>
         <eParameters name="formulario" eType="#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorCRUDCMViewModel"/>
       </eOperations>
       <eOperations name="registrarVehiculo">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="body" value="&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;getTheDomain().registrarAutomovil(formulario, idLogueado);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;"/>
+          <details key="body" value="&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;if (getTipoLogueado() != null) {&#xD;&#xA;&#x9;&#x9;&#x9;if (getTipoLogueado().equals(&quot;sin logueo&quot;)) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;System.out.println(&quot;no hay usuarios logueados&quot;);&#xD;&#xA;&#x9;&#x9;&#x9;} else {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;if (getTipoLogueado().equals(&quot;cm&quot;)) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;System.out.println(&quot;el usuario logueado no tiene acceso a registrar vehiculos&quot;);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;} else {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;if (getTipoLogueado().equals(&quot;cliente&quot;)) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;getTheDomain().registrarAutomovil(formulario, getIdLogueado());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;} else {&#xD;&#xA;&#x9;&#x9;&#x9;System.out.println(&quot;no hay usuarios logueados&quot;);&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;"/>
         </eAnnotations>
         <eParameters name="formulario" eType="#//ui/viewmodels/contenedorregistrovehiculoviewmodel/ContenedorRegistroVehiculoViewModel"/>
+      </eOperations>
+      <eOperations name="actualizarCrudCliente">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;getTheDomain().actualizarCrudCliente(formulario);&#xD;&#xA;&#xD;&#xA;&#x9;"/>
+        </eAnnotations>
+        <eParameters name="formulario" eType="#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorCrudClienteViewModel"/>
+      </eOperations>
+      <eOperations name="actualizarCrudCm">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;getTheDomain().actualizarCrudCm(formulario);&#xD;&#xA;&#xD;&#xA;&#x9;"/>
+        </eAnnotations>
+        <eParameters name="formulario" eType="#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorCRUDCMViewModel"/>
+      </eOperations>
+      <eOperations name="actualizarVentanaRegistroVehiculo">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;getTheDomain().actualizarVentanaRegistroCliente(formulario);&#xD;&#xA;&#xD;&#xA;&#x9;"/>
+        </eAnnotations>
+        <eParameters name="formulario" eType="#//ui/viewmodels/contenedorregistrovehiculoviewmodel/ContenedorRegistroVehiculoViewModel"/>
+      </eOperations>
+      <eOperations name="hacerLogin" eType="#//EBooleanObject">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;boolean login;&#xD;&#xA;&#x9;&#x9;login = getTheDomain().hacerLogin(formulario);&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;if (login) {&#xD;&#xA;&#x9;&#x9;&#x9;actualizarVentanaRegistroVehiculo(getTheContenedorRegistroVehiculoViewModel());&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;return login;&#xD;&#xA;&#xD;&#xA;&#x9;"/>
+        </eAnnotations>
+        <eParameters name="formulario" eType="#//ui/viewmodels/contenedorloginviewmodel/ContenedorLoginViewModel"/>
+      </eOperations>
+      <eOperations name="escanearVehiculo">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;getTheDomain().escanearVehiculo(placaVeh);&#xD;&#xA;&#xD;&#xA;&#x9;"/>
+        </eAnnotations>
+        <eParameters name="placaVeh" eType="#//String"/>
+      </eOperations>
+      <eOperations name="mostrarEstadoVehCliente">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;getTheDomain().mostrarEstadoVehCliente(formulario);&#xD;&#xA;&#xD;&#xA;&#x9;"/>
+        </eAnnotations>
+        <eParameters name="formulario" eType="#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorEscaneoViewModel"/>
+      </eOperations>
+      <eOperations name="mostrarCmsCercanos">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;getTheDomain().mostrarCmsCercanos(formulario);&#xD;&#xA;&#xD;&#xA;&#x9;"/>
+        </eAnnotations>
+        <eParameters name="formulario" eType="#//ui/viewmodels/contenedorcontactarcmviewmodel/ContenedorContactarCmViewModel"/>
+      </eOperations>
+      <eOperations name="solicitarVisita">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="//TODO solicitarVisita&#xA;"/>
+        </eAnnotations>
+        <eParameters name="formulario" eType="#//ui/viewmodels/contenedorsolicitudvisitaviewmodel/ContenedorSolicitudVisitaViewModel"/>
       </eOperations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="theModelFactory" eType="#//ModelFactory"
           eOpposite="#//ModelFactory/theUI"/>
@@ -239,37 +378,58 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="theContenedorLoginViewModel"
           eType="#//ui/viewmodels/contenedorloginviewmodel/ContenedorLoginViewModel"
           containment="true" eOpposite="#//ui/viewmodels/contenedorloginviewmodel/ContenedorLoginViewModel/ownedByUI"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="lstViewModels" upperBound="-1"
+          eType="#//ui/viewmodels/ViewModel" eOpposite="#//ui/viewmodels/ViewModel/theUI"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="theContenedorEscaneoViewModel"
+          eType="#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorEscaneoViewModel"
+          containment="true" eOpposite="#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorEscaneoViewModel/ownedByUI"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="theContenedorContactarCmViewModel"
+          eType="#//ui/viewmodels/contenedorcontactarcmviewmodel/ContenedorContactarCmViewModel"
+          containment="true" eOpposite="#//ui/viewmodels/contenedorcontactarcmviewmodel/ContenedorContactarCmViewModel/ownedByUI"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="theContenedorSolicitudVisitaViewModel"
+          eType="#//ui/viewmodels/contenedorsolicitudvisitaviewmodel/ContenedorSolicitudVisitaViewModel"
+          containment="true" eOpposite="#//ui/viewmodels/contenedorsolicitudvisitaviewmodel/ContenedorSolicitudVisitaViewModel/ownedByUI"/>
     </eClassifiers>
     <eSubpackages name="viewmodels" nsURI="http:///sma/ui/viewmodels.ecore" nsPrefix="sma.ui.viewmodels">
+      <eClassifiers xsi:type="ecore:EClass" name="ViewModel" abstract="true">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="theUI" eType="#//ui/UI"
+            eOpposite="#//ui/UI/lstViewModels"/>
+      </eClassifiers>
       <eSubpackages name="contenedorcrudclienteviewmodel" nsURI="http:///sma/ui/viewmodels/contenedorcrudclienteviewmodel.ecore"
           nsPrefix="sma.ui.viewmodels.contenedorcrudclienteviewmodel">
         <eClassifiers xsi:type="ecore:EClass" name="ClienteViewModel">
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="identificacion" eType="#//String"/>
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="#//String"/>
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" eType="#//String"/>
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="edad" eType="#//String"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="identificacion" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="edad" eType="#//String"
+              defaultValueLiteral=" "/>
           <eStructuralFeatures xsi:type="ecore:EReference" name="the0ContenedorMaestroClienteViewModel"
               eType="#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorMaestroClienteViewModel"
-              eOpposite="#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorMaestroClienteViewModel/ClienteViewModel"/>
-          <eStructuralFeatures xsi:type="ecore:EReference" name="theContenedorMaestroClienteViewModel"
-              eType="#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorMaestroClienteViewModel"
-              eOpposite="#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorMaestroClienteViewModel/theClienteViewModel"/>
+              eOpposite="#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorMaestroClienteViewModel/listaCliente"/>
         </eClassifiers>
         <eClassifiers xsi:type="ecore:EClass" name="ContenedorCrudClienteViewModel">
           <eOperations name="upadateDialog" eType="#//String">
             <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-              <details key="body" value="&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;String action = &quot;&quot;;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;return action;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;"/>
+              <details key="body" value="&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;String action = &quot;&quot;;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;return action;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;"/>
             </eAnnotations>
             <eParameters name="evento" eType="#//String"/>
           </eOperations>
           <eOperations name="implementarModelo">
             <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-              <details key="body" value="&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;//--&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ContenedorDetalleClienteViewModel detalleClienteVM = getTheContenedorDetalleClienteViewModel();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ContenedorMaestroClienteViewModel maestroClienteVM = getTheContenedorMaestroClienteViewModel();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;if ( detalleClienteVM == null ) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;detalleClienteVM = sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelFactory.&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;eINSTANCE.createContenedorDetalleClienteViewModel();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;if ( maestroClienteVM == null ) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;maestroClienteVM= sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelFactory.&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;eINSTANCE.createContenedorMaestroClienteViewModel();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;setTheContenedorDetalleClienteViewModel(detalleClienteVM);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;setTheContenedorMaestroClienteViewModel(maestroClienteVM);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;"/>
+              <details key="body" value="&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;// --prueba&#xD;&#xA;&#x9;&#x9;ContenedorDetalleClienteViewModel detalleClienteVM = getTheContenedorDetalleClienteViewModel();&#xD;&#xA;&#x9;&#x9;ContenedorMaestroClienteViewModel maestroClienteVM = getTheContenedorMaestroClienteViewModel();&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;if (detalleClienteVM == null) {&#xD;&#xA;&#x9;&#x9;&#x9;detalleClienteVM = sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelFactory.eINSTANCE&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;.createContenedorDetalleClienteViewModel();&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;if (maestroClienteVM == null) {&#xD;&#xA;&#x9;&#x9;&#x9;maestroClienteVM = sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelFactory.eINSTANCE&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;.createContenedorMaestroClienteViewModel();&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;setTheContenedorDetalleClienteViewModel(detalleClienteVM);&#xD;&#xA;&#x9;&#x9;setTheContenedorMaestroClienteViewModel(maestroClienteVM);&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;detalleClienteVM.implementarModelo();&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;"/>
             </eAnnotations>
           </eOperations>
           <eOperations name="registrarCliente">
             <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-              <details key="body" value="&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;getOwnedByUI().registrarCliente(this);&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;"/>
+              <details key="body" value="&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;getOwnedByUI().registrarCliente(this);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;"/>
+            </eAnnotations>
+          </eOperations>
+          <eOperations name="actualizarCrudCliente">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="body" value="&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;getOwnedByUI().actualizarCrudCliente(this);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;"/>
             </eAnnotations>
           </eOperations>
           <eStructuralFeatures xsi:type="ecore:EReference" name="ownedByUI" eType="#//ui/UI"
@@ -282,19 +442,24 @@
               containment="true" eOpposite="#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorMaestroClienteViewModel/ownedByContenedorCrudClienteViewModel"/>
         </eClassifiers>
         <eClassifiers xsi:type="ecore:EClass" name="ContenedorDatosPersonalesViewModel">
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="cedula" eType="#//String"/>
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="#//String"/>
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="apellido" eType="#//String"/>
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="edad" eType="#//String"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="cedula" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="apellido" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="edad" eType="#//String"
+              defaultValueLiteral=" "/>
           <eStructuralFeatures xsi:type="ecore:EAttribute" name="correoelectronico"
-              eType="#//String"/>
+              eType="#//String" defaultValueLiteral=" "/>
           <eStructuralFeatures xsi:type="ecore:EReference" name="ownedByContenedorDetalleClienteViewModel"
               eType="#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorDetalleClienteViewModel"
               eOpposite="#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorDetalleClienteViewModel/theContenedorDatosPersonalesViewModel"/>
         </eClassifiers>
         <eClassifiers xsi:type="ecore:EClass" name="ContenedorDatosdelacuentaViewModel">
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="usuario" eType="#//String"/>
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="contraseña" eType="#//String"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="usuario" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="contrasenia" eType="#//String"/>
           <eStructuralFeatures xsi:type="ecore:EReference" name="ownedByContenedorDetalleClienteViewModel"
               eType="#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorDetalleClienteViewModel"
               eOpposite="#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorDetalleClienteViewModel/theContenedorDatosdelacuentaViewModel"/>
@@ -302,7 +467,7 @@
         <eClassifiers xsi:type="ecore:EClass" name="ContenedorDetalleClienteViewModel">
           <eOperations name="implementarModelo">
             <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-              <details key="body" value="&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;ContenedorDatosPersonalesViewModel datosPersonalesVM = getTheContenedorDatosPersonalesViewModel();&#xD;&#xA;&#x9;&#x9;ContenedorDatosdelacuentaViewModel datosCuentaCM&#x9; = getTheContenedorDatosdelacuentaViewModel();&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;if ( datosPersonalesVM == null ) {&#xD;&#xA;&#x9;&#x9;&#x9;datosPersonalesVM = sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelFactory&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;.eINSTANCE.createContenedorDatosPersonalesViewModel();&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;if ( datosCuentaCM == null ) {&#xD;&#xA;&#x9;&#x9;&#x9;datosCuentaCM &#x9;= sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelFactory&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;.eINSTANCE.createContenedorDatosdelacuentaViewModel();&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;setTheContenedorDatosdelacuentaViewModel(datosCuentaCM);&#xD;&#xA;&#x9;&#x9;setTheContenedorDatosPersonalesViewModel(datosPersonalesVM);&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;"/>
+              <details key="body" value="&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;ContenedorDatosPersonalesViewModel datosPersonalesVM = getTheContenedorDatosPersonalesViewModel();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;ContenedorDatosdelacuentaViewModel datosCuentaCM&#x9; = getTheContenedorDatosdelacuentaViewModel();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;if ( datosPersonalesVM == null ) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;datosPersonalesVM = sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelFactory&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;.eINSTANCE.createContenedorDatosPersonalesViewModel();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;if ( datosCuentaCM == null ) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;datosCuentaCM &#x9;= sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelFactory&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;.eINSTANCE.createContenedorDatosdelacuentaViewModel();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;setTheContenedorDatosdelacuentaViewModel(datosCuentaCM);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;setTheContenedorDatosPersonalesViewModel(datosPersonalesVM);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;"/>
             </eAnnotations>
           </eOperations>
           <eStructuralFeatures xsi:type="ecore:EReference" name="ownedByContenedorCrudClienteViewModel"
@@ -319,40 +484,44 @@
           <eStructuralFeatures xsi:type="ecore:EReference" name="ownedByContenedorCrudClienteViewModel"
               eType="#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorCrudClienteViewModel"
               eOpposite="#//ui/viewmodels/contenedorcrudclienteviewmodel/ContenedorCrudClienteViewModel/theContenedorMaestroClienteViewModel"/>
-          <eStructuralFeatures xsi:type="ecore:EReference" name="ClienteViewModel"
-              upperBound="-1" eType="#//ui/viewmodels/contenedorcrudclienteviewmodel/ClienteViewModel"
+          <eStructuralFeatures xsi:type="ecore:EReference" name="listaCliente" upperBound="-1"
+              eType="#//ui/viewmodels/contenedorcrudclienteviewmodel/ClienteViewModel"
               containment="true" eOpposite="#//ui/viewmodels/contenedorcrudclienteviewmodel/ClienteViewModel/the0ContenedorMaestroClienteViewModel"/>
-          <eStructuralFeatures xsi:type="ecore:EReference" name="theClienteViewModel"
-              upperBound="-1" eType="#//ui/viewmodels/contenedorcrudclienteviewmodel/ClienteViewModel"
-              eOpposite="#//ui/viewmodels/contenedorcrudclienteviewmodel/ClienteViewModel/theContenedorMaestroClienteViewModel"/>
         </eClassifiers>
       </eSubpackages>
       <eSubpackages name="contenedorcrudcmviewmodel" nsURI="http:///sma/ui/viewmodels/contenedorcrudcmviewmodel.ecore"
           nsPrefix="sma.ui.viewmodels.contenedorcrudcmviewmodel">
         <eClassifiers xsi:type="ecore:EClass" name="CentroMantViewModel">
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombrecm" eType="#//String"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombrecm" eType="#//String"
+              defaultValueLiteral=" "/>
           <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombrerepresentante"
-              eType="#//String"/>
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="ciudad" eType="#//String"/>
+              eType="#//String" defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="ciudad" eType="#//String"
+              defaultValueLiteral=" "/>
           <eStructuralFeatures xsi:type="ecore:EReference" name="the0ContenedorMaestroCMViewModel"
               eType="#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorMaestroCMViewModel"
-              eOpposite="#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorMaestroCMViewModel/CentroMantViewModel"/>
+              eOpposite="#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorMaestroCMViewModel/listaCentroMant"/>
         </eClassifiers>
         <eClassifiers xsi:type="ecore:EClass" name="ContenedorCRUDCMViewModel">
           <eOperations name="upadateDialog" eType="#//String">
             <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-              <details key="body" value="&#xA;&#x9;&#x9;String action = &quot;&quot;;&#xA;&#x9;&#x9;return action;&#xA;"/>
+              <details key="body" value="&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;String action = &quot;&quot;;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;return action;&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;"/>
             </eAnnotations>
             <eParameters name="evento" eType="#//String"/>
           </eOperations>
           <eOperations name="implementarModelo">
             <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-              <details key="body" value="&#x9;ContenedorDetalleCMViewModel detalleCMVM = getTheContenedorDetalleCMViewModel();&#xD;&#xA;&#x9;&#x9;ContenedorMaestroCMViewModel maestroCMVM = getTheContenedorMaestroCMViewModel();&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;if ( detalleCMVM == null ) {&#xD;&#xA;&#x9;&#x9;&#x9;detalleCMVM = sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelFactory&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;.eINSTANCE.createContenedorDetalleCMViewModel();&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;if ( maestroCMVM == null ) {&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;maestroCMVM = sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelFactory&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;.eINSTANCE.createContenedorMaestroCMViewModel();&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;setTheContenedorDetalleCMViewModel(detalleCMVM);&#xD;&#xA;&#x9;&#x9;setTheContenedorMaestroCMViewModel(maestroCMVM);"/>
+              <details key="body" value="&#xD;&#xA;&#x9;&#x9;&#x9;ContenedorDetalleCMViewModel detalleCMVM = getTheContenedorDetalleCMViewModel();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;ContenedorMaestroCMViewModel maestroCMVM = getTheContenedorMaestroCMViewModel();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;if ( detalleCMVM == null ) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;detalleCMVM = sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelFactory&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;.eINSTANCE.createContenedorDetalleCMViewModel();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;if ( maestroCMVM == null ) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;maestroCMVM = sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelFactory&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;.eINSTANCE.createContenedorMaestroCMViewModel();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;setTheContenedorDetalleCMViewModel(detalleCMVM);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;setTheContenedorMaestroCMViewModel(maestroCMVM);&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;detalleCMVM.implementarModelo();&#xD;&#xA;&#x9;"/>
             </eAnnotations>
           </eOperations>
           <eOperations name="registrarCm">
             <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-              <details key="body" value="getOwnedByUI().RegistrarCm(this);"/>
+              <details key="body" value="&#xD;&#xA;&#x9;&#x9;getOwnedByUI().RegistrarCm(this);&#xD;&#xA;&#x9;"/>
+            </eAnnotations>
+          </eOperations>
+          <eOperations name="actualizarCrudCm">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="body" value="&#xD;&#xA;&#x9;&#x9;getOwnedByUI().actualizarCrudCm(this);&#xD;&#xA;&#x9;"/>
             </eAnnotations>
           </eOperations>
           <eStructuralFeatures xsi:type="ecore:EReference" name="ownedByUI" eType="#//ui/UI"
@@ -384,16 +553,18 @@
           <eStructuralFeatures xsi:type="ecore:EReference" name="ownedByContenedorDetalleCMViewModel"
               eType="#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorDetalleCMViewModel"
               eOpposite="#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorDetalleCMViewModel/theContenedorInformacionCMViewModel"/>
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombrecm" eType="#//String"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombrecm" eType="#//String"
+              defaultValueLiteral=" "/>
           <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombrerepresentante"
-              eType="#//String"/>
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="descripcion" eType="#//String"/>
+              eType="#//String" defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="descripcion" eType="#//String"
+              defaultValueLiteral=" "/>
         </eClassifiers>
         <eClassifiers xsi:type="ecore:EClass" name="ContenedorMaestroCMViewModel">
           <eStructuralFeatures xsi:type="ecore:EReference" name="ownedByContenedorCRUDCMViewModel"
               eType="#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorCRUDCMViewModel"
               eOpposite="#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorCRUDCMViewModel/theContenedorMaestroCMViewModel"/>
-          <eStructuralFeatures xsi:type="ecore:EReference" name="CentroMantViewModel"
+          <eStructuralFeatures xsi:type="ecore:EReference" name="listaCentroMant"
               upperBound="-1" eType="#//ui/viewmodels/contenedorcrudcmviewmodel/CentroMantViewModel"
               containment="true" eOpposite="#//ui/viewmodels/contenedorcrudcmviewmodel/CentroMantViewModel/the0ContenedorMaestroCMViewModel"/>
         </eClassifiers>
@@ -401,21 +572,31 @@
           <eStructuralFeatures xsi:type="ecore:EReference" name="ownedByContenedorDetalleCMViewModel"
               eType="#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorDetalleCMViewModel"
               eOpposite="#//ui/viewmodels/contenedorcrudcmviewmodel/ContenedorDetalleCMViewModel/theContenedorUbicacionViewModel"/>
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="pais" eType="#//String"/>
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="departamento" eType="#//String"/>
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="ciudad" eType="#//String"/>
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="direccion" eType="#//String"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="pais" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="departamento" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="ciudad" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="direccion" eType="#//String"
+              defaultValueLiteral=" "/>
         </eClassifiers>
       </eSubpackages>
       <eSubpackages name="contenedorregistrovehiculoviewmodel" nsURI="http:///sma/ui/viewmodels/contenedorregistrovehiculoviewmodel.ecore"
           nsPrefix="sma.ui.viewmodels.contenedorregistrovehiculoviewmodel">
         <eClassifiers xsi:type="ecore:EClass" name="ContenedorDetalleVehiculoViewModel">
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="propietario" eType="#//String"/>
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="marca" eType="#//String"/>
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="referencia" eType="#//String"/>
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="modelo" eType="#//String"/>
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipovehiculo" eType="#//String"/>
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="placa" eType="#//String"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="propietario" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="marca" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="referencia" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="modelo" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipovehiculo" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="placa" eType="#//String"
+              defaultValueLiteral=" "/>
           <eStructuralFeatures xsi:type="ecore:EReference" name="ownedByContenedorRegistroVehiculoViewModel"
               eType="#//ui/viewmodels/contenedorregistrovehiculoviewmodel/ContenedorRegistroVehiculoViewModel"
               eOpposite="#//ui/viewmodels/contenedorregistrovehiculoviewmodel/ContenedorRegistroVehiculoViewModel/theContenedorDetalleVehiculoViewModel"/>
@@ -437,6 +618,11 @@
               <details key="body" value="&#x9;getOwnedByUI().registrarVehiculo(this);"/>
             </eAnnotations>
           </eOperations>
+          <eOperations name="actualizarVentanaRegistroVehiculo">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="body" value="getOwnedByUI().actualizarVentanaRegistroVehiculo(this);"/>
+            </eAnnotations>
+          </eOperations>
           <eStructuralFeatures xsi:type="ecore:EReference" name="ownedByUI" eType="#//ui/UI"
               eOpposite="#//ui/UI/theContenedorRegistroVehiculoViewModel"/>
           <eStructuralFeatures xsi:type="ecore:EReference" name="theContenedorDetalleVehiculoViewModel"
@@ -450,23 +636,29 @@
           <eStructuralFeatures xsi:type="ecore:EReference" name="ownedByContenedorRegistroVehiculoViewModel"
               eType="#//ui/viewmodels/contenedorregistrovehiculoviewmodel/ContenedorRegistroVehiculoViewModel"
               eOpposite="#//ui/viewmodels/contenedorregistrovehiculoviewmodel/ContenedorRegistroVehiculoViewModel/theContenedorVehiculosRegistradosViewModel"/>
-          <eStructuralFeatures xsi:type="ecore:EReference" name="VehiculoViewModel"
-              upperBound="-1" eType="#//ui/viewmodels/contenedorregistrovehiculoviewmodel/VehiculoViewModel"
+          <eStructuralFeatures xsi:type="ecore:EReference" name="listaVehiculo" upperBound="-1"
+              eType="#//ui/viewmodels/contenedorregistrovehiculoviewmodel/VehiculoViewModel"
               containment="true" eOpposite="#//ui/viewmodels/contenedorregistrovehiculoviewmodel/VehiculoViewModel/the0ContenedorVehiculosRegistradosViewModel"/>
         </eClassifiers>
         <eClassifiers xsi:type="ecore:EClass" name="VehiculoViewModel">
           <eStructuralFeatures xsi:type="ecore:EReference" name="the0ContenedorVehiculosRegistradosViewModel"
               eType="#//ui/viewmodels/contenedorregistrovehiculoviewmodel/ContenedorVehiculosRegistradosViewModel"
-              eOpposite="#//ui/viewmodels/contenedorregistrovehiculoviewmodel/ContenedorVehiculosRegistradosViewModel/VehiculoViewModel"/>
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="marca" eType="#//String"/>
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="referencia" eType="#//String"/>
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="placa" eType="#//String"/>
+              eOpposite="#//ui/viewmodels/contenedorregistrovehiculoviewmodel/ContenedorVehiculosRegistradosViewModel/listaVehiculo"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="marca" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="referencia" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="placa" eType="#//String"
+              defaultValueLiteral=" "/>
         </eClassifiers>
       </eSubpackages>
       <eSubpackages name="contenedorloginviewmodel" nsURI="http:///sma/ui/viewmodels/contenedorloginviewmodel.ecore"
           nsPrefix="sma.ui.viewmodels.contenedorloginviewmodel">
         <eClassifiers xsi:type="ecore:EClass" name="ContenedorDetalleLoginViewModel">
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="usuario" eType="#//String"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="usuario" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="contrasenia" eType="#//String"
+              defaultValueLiteral=" "/>
           <eStructuralFeatures xsi:type="ecore:EReference" name="ownedByContenedorLoginViewModel"
               eType="#//ui/viewmodels/contenedorloginviewmodel/ContenedorLoginViewModel"
               eOpposite="#//ui/viewmodels/contenedorloginviewmodel/ContenedorLoginViewModel/theContenedorDetalleLoginViewModel"/>
@@ -478,22 +670,202 @@
             </eAnnotations>
             <eParameters name="evento" eType="#//String"/>
           </eOperations>
-          <eOperations name="prueba">
+          <eOperations name="prueba" eType="#//EBooleanObject">
             <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-              <details key="body" value="//TODO prueba&#xA;"/>
+              <details key="body" value="return getOwnedByUI().hacerLogin(this);"/>
             </eAnnotations>
+          </eOperations>
+          <eOperations name="implementarModelo">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="body" value="&#xD;&#xA;&#x9;&#x9; ContenedorDetalleLoginViewModel detalleLoginVM = getTheContenedorDetalleLoginViewModel();&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9; if ( getTheContenedorDetalleLoginViewModel() == null ) {&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9; detalleLoginVM = sma.ui.viewmodels.contenedorloginviewmodel.ContenedorloginviewmodelFactory&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9; &#x9;.eINSTANCE.createContenedorDetalleLoginViewModel();&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9; &#xD;&#xA;&#x9;&#x9; setTheContenedorDetalleLoginViewModel(detalleLoginVM);"/>
+            </eAnnotations>
+          </eOperations>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="ownedByUI" eType="#//ui/UI"
+              eOpposite="#//ui/UI/theContenedorLoginViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="usuario" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="theContenedorDetalleLoginViewModel"
+              eType="#//ui/viewmodels/contenedorloginviewmodel/ContenedorDetalleLoginViewModel"
+              containment="true" eOpposite="#//ui/viewmodels/contenedorloginviewmodel/ContenedorDetalleLoginViewModel/ownedByContenedorLoginViewModel"/>
+        </eClassifiers>
+      </eSubpackages>
+      <eSubpackages name="contenedorescaneoviewmodel" nsURI="http:///sma/ui/viewmodels/contenedorescaneoviewmodel.ecore"
+          nsPrefix="sma.ui.viewmodels.contenedorescaneoviewmodel">
+        <eClassifiers xsi:type="ecore:EClass" name="ContenedorEscaneoViewModel" eSuperTypes="#//ui/viewmodels/ViewModel">
+          <eOperations name="upadateDialog" eType="#//String">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="body" value="&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;String action = &quot;&quot;;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;return action;&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;"/>
+            </eAnnotations>
+            <eParameters name="evento" eType="#//String"/>
+          </eOperations>
+          <eOperations name="escanearVehiculo" eType="#//EBooleanObject">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="body" value="&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;getTheUI().escanearVehiculo(getTheContenedorSeleccionautoViewModel().getPlacavehiculo());&#xD;&#xA;&#x9;&#x9;return true;&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;"/>
+            </eAnnotations>
+          </eOperations>
+          <eOperations name="implementarModelo">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="body" value="&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;ContenedorSeleccionautoViewModel seleccionAutoVM &#x9;= getTheContenedorSeleccionautoViewModel();&#xD;&#xA;&#x9;&#x9;ContenedorFallasViewModel fallasVM&#x9;&#x9;&#x9;&#x9;&#x9;= getTheContenedorFallasViewModel();&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;if (seleccionAutoVM == null) &#xD;&#xA;&#x9;&#x9;{&#xD;&#xA;&#x9;&#x9;&#x9;seleccionAutoVM&#x9;&#x9;= sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorescaneoviewmodelFactory&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;.eINSTANCE.createContenedorSeleccionautoViewModel();&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;if (fallasVM == null) {&#xD;&#xA;&#x9;&#x9;&#x9;fallasVM&#x9;&#x9;&#x9;= sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorescaneoviewmodelFactory&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;.eINSTANCE.createContenedorFallasViewModel();&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;setTheContenedorFallasViewModel(fallasVM);&#xD;&#xA;&#x9;&#x9;setTheContenedorSeleccionautoViewModel(seleccionAutoVM);&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;"/>
+            </eAnnotations>
+          </eOperations>
+          <eOperations name="mostrarEstadoVehiculo">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="body" value="&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;getTheUI().mostrarEstadoVehCliente(this);&#xD;&#xA;&#x9;"/>
+            </eAnnotations>
+          </eOperations>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="ownedByUI" eType="#//ui/UI"
+              eOpposite="#//ui/UI/theContenedorEscaneoViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="theContenedorSeleccionautoViewModel"
+              eType="#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorSeleccionautoViewModel"
+              containment="true" eOpposite="#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorSeleccionautoViewModel/ownedByContenedorEscaneoViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="theContenedorFallasViewModel"
+              eType="#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorFallasViewModel"
+              containment="true" eOpposite="#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorFallasViewModel/ownedByContenedorEscaneoViewModel"/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="ContenedorFallasViewModel" eSuperTypes="#//ui/viewmodels/ViewModel">
+          <eStructuralFeatures xsi:type="ecore:EReference" name="ownedByContenedorEscaneoViewModel"
+              eType="#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorEscaneoViewModel"
+              eOpposite="#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorEscaneoViewModel/theContenedorFallasViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="numeroerrores" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="estadoveh" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="listaListaFallasViewModel"
+              upperBound="-1" eType="#//ui/viewmodels/contenedorescaneoviewmodel/ListaFallasViewModel"
+              containment="true" eOpposite="#//ui/viewmodels/contenedorescaneoviewmodel/ListaFallasViewModel/ownedByContenedorFallasViewModel"/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="ContenedorSeleccionautoViewModel"
+            eSuperTypes="#//ui/viewmodels/ViewModel">
+          <eStructuralFeatures xsi:type="ecore:EReference" name="ownedByContenedorEscaneoViewModel"
+              eType="#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorEscaneoViewModel"
+              eOpposite="#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorEscaneoViewModel/theContenedorSeleccionautoViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="placavehiculo" eType="#//String"
+              defaultValueLiteral=" "/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="ListaFallasViewModel">
+          <eStructuralFeatures xsi:type="ecore:EReference" name="ownedByContenedorFallasViewModel"
+              eType="#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorFallasViewModel"
+              eOpposite="#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorFallasViewModel/listaListaFallasViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="gravedad" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="piesaaveriada" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="origen" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="descripcion" eType="#//String"
+              defaultValueLiteral=" "/>
+        </eClassifiers>
+      </eSubpackages>
+      <eSubpackages name="contenedorcontactarcmviewmodel" nsURI="http:///sma/ui/viewmodels/contenedorcontactarcmviewmodel.ecore"
+          nsPrefix="sma.ui.viewmodels.contenedorcontactarcmviewmodel">
+        <eClassifiers xsi:type="ecore:EClass" name="ContenedorCmrecomendadosViewModel"
+            eSuperTypes="#//ui/viewmodels/ViewModel">
+          <eStructuralFeatures xsi:type="ecore:EReference" name="listaListaCmViewModel"
+              upperBound="-1" eType="#//ui/viewmodels/contenedorcontactarcmviewmodel/ListaCmViewModel"
+              containment="true" eOpposite="#//ui/viewmodels/contenedorcontactarcmviewmodel/ListaCmViewModel/ownedByContenedorCmrecomendadosViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="ownedByContenedorContactarCmViewModel"
+              eType="#//ui/viewmodels/contenedorcontactarcmviewmodel/ContenedorContactarCmViewModel"
+              eOpposite="#//ui/viewmodels/contenedorcontactarcmviewmodel/ContenedorContactarCmViewModel/theContenedorCmrecomendadosViewModel"/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="ContenedorContactarCmViewModel"
+            eSuperTypes="#//ui/viewmodels/ViewModel">
+          <eOperations name="upadateDialog" eType="#//String">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="body" value="&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;String action = &quot;&quot;;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;return action;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;"/>
+            </eAnnotations>
+            <eParameters name="evento" eType="#//String"/>
+          </eOperations>
+          <eOperations name="mostrarCmsCercanos">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="body" value="&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;getTheUI().mostrarCmsCercanos(this);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;"/>
+            </eAnnotations>
+          </eOperations>
+          <eOperations name="implementarModelo">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="body" value="&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;ContenedorUbicacionactualViewModel ubicacionActualVM &#x9;= getTheContenedorUbicacionactualViewModel();&#xD;&#xA;&#x9;&#x9;ContenedorCmrecomendadosViewModel cmRecomendadosVM&#x9;&#x9;= getTheContenedorCmrecomendadosViewModel();&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;if ( ubicacionActualVM == null ) {&#xD;&#xA;&#x9;&#x9;&#x9;ubicacionActualVM = sma.ui.viewmodels.contenedorcontactarcmviewmodel.ContenedorcontactarcmviewmodelFactory&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;.eINSTANCE.createContenedorUbicacionactualViewModel();&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;if ( cmRecomendadosVM == null ) {&#xD;&#xA;&#x9;&#x9;&#x9;cmRecomendadosVM = sma.ui.viewmodels.contenedorcontactarcmviewmodel.ContenedorcontactarcmviewmodelFactory&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;.eINSTANCE.createContenedorCmrecomendadosViewModel();&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;setTheContenedorCmrecomendadosViewModel(cmRecomendadosVM);&#xD;&#xA;&#x9;&#x9;setTheContenedorUbicacionactualViewModel(ubicacionActualVM);&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;"/>
+            </eAnnotations>
+          </eOperations>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="ownedByUI" eType="#//ui/UI"
+              eOpposite="#//ui/UI/theContenedorContactarCmViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="theContenedorCmrecomendadosViewModel"
+              eType="#//ui/viewmodels/contenedorcontactarcmviewmodel/ContenedorCmrecomendadosViewModel"
+              containment="true" eOpposite="#//ui/viewmodels/contenedorcontactarcmviewmodel/ContenedorCmrecomendadosViewModel/ownedByContenedorContactarCmViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="theContenedorUbicacionactualViewModel"
+              eType="#//ui/viewmodels/contenedorcontactarcmviewmodel/ContenedorUbicacionactualViewModel"
+              containment="true" eOpposite="#//ui/viewmodels/contenedorcontactarcmviewmodel/ContenedorUbicacionactualViewModel/ownedByContenedorContactarCmViewModel"/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="ContenedorUbicacionactualViewModel"
+            eSuperTypes="#//ui/viewmodels/ViewModel">
+          <eStructuralFeatures xsi:type="ecore:EReference" name="ownedByContenedorContactarCmViewModel"
+              eType="#//ui/viewmodels/contenedorcontactarcmviewmodel/ContenedorContactarCmViewModel"
+              eOpposite="#//ui/viewmodels/contenedorcontactarcmviewmodel/ContenedorContactarCmViewModel/theContenedorUbicacionactualViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="pais" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="departamento" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="ciudad" eType="#//String"
+              defaultValueLiteral=" "/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="ListaCmViewModel">
+          <eStructuralFeatures xsi:type="ecore:EReference" name="ownedByContenedorCmrecomendadosViewModel"
+              eType="#//ui/viewmodels/contenedorcontactarcmviewmodel/ContenedorCmrecomendadosViewModel"
+              eOpposite="#//ui/viewmodels/contenedorcontactarcmviewmodel/ContenedorCmrecomendadosViewModel/listaListaCmViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombrerepresentante"
+              eType="#//String" defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="direccion" eType="#//String"
+              defaultValueLiteral=" "/>
+        </eClassifiers>
+      </eSubpackages>
+      <eSubpackages name="contenedorsolicitudvisitaviewmodel" nsURI="http:///sma/ui/viewmodels/contenedorsolicitudvisitaviewmodel.ecore"
+          nsPrefix="sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel">
+        <eClassifiers xsi:type="ecore:EClass" name="ContenedorBusquedaViewModel" eSuperTypes="#//ui/viewmodels/ViewModel">
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="idcm" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="placavehiculo" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="ownedByContenedorSolicitudVisitaViewModel"
+              eType="#//ui/viewmodels/contenedorsolicitudvisitaviewmodel/ContenedorSolicitudVisitaViewModel"
+              eOpposite="#//ui/viewmodels/contenedorsolicitudvisitaviewmodel/ContenedorSolicitudVisitaViewModel/theContenedorBusquedaViewModel"/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="ContenedorDatosCmViewModel" eSuperTypes="#//ui/viewmodels/ViewModel">
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombrecm" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombrerepresentante"
+              eType="#//String" defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="direccion" eType="#//String"
+              defaultValueLiteral=" "/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="ownedByContenedorSolicitudVisitaViewModel"
+              eType="#//ui/viewmodels/contenedorsolicitudvisitaviewmodel/ContenedorSolicitudVisitaViewModel"
+              eOpposite="#//ui/viewmodels/contenedorsolicitudvisitaviewmodel/ContenedorSolicitudVisitaViewModel/theContenedorDatosCmViewModel"/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="ContenedorSolicitudVisitaViewModel"
+            eSuperTypes="#//ui/viewmodels/ViewModel">
+          <eOperations name="upadateDialog" eType="#//String">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="body" value="&#xA;&#x9;&#x9;String action = &quot;&quot;;&#xA;&#x9;&#x9;return action;&#xA;"/>
+            </eAnnotations>
+            <eParameters name="evento" eType="#//String"/>
           </eOperations>
           <eOperations name="implementarModelo">
             <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
               <details key="body" value="//TODO implementarModelo&#xA;"/>
             </eAnnotations>
           </eOperations>
+          <eOperations name="solicitarVisita">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="body" value="//TODO solicitarVisita&#xA;"/>
+            </eAnnotations>
+          </eOperations>
           <eStructuralFeatures xsi:type="ecore:EReference" name="ownedByUI" eType="#//ui/UI"
-              eOpposite="#//ui/UI/theContenedorLoginViewModel"/>
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="usuario" eType="#//String"/>
-          <eStructuralFeatures xsi:type="ecore:EReference" name="theContenedorDetalleLoginViewModel"
-              eType="#//ui/viewmodels/contenedorloginviewmodel/ContenedorDetalleLoginViewModel"
-              containment="true" eOpposite="#//ui/viewmodels/contenedorloginviewmodel/ContenedorDetalleLoginViewModel/ownedByContenedorLoginViewModel"/>
+              eOpposite="#//ui/UI/theContenedorSolicitudVisitaViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="theContenedorBusquedaViewModel"
+              eType="#//ui/viewmodels/contenedorsolicitudvisitaviewmodel/ContenedorBusquedaViewModel"
+              containment="true" eOpposite="#//ui/viewmodels/contenedorsolicitudvisitaviewmodel/ContenedorBusquedaViewModel/ownedByContenedorSolicitudVisitaViewModel"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="theContenedorDatosCmViewModel"
+              eType="#//ui/viewmodels/contenedorsolicitudvisitaviewmodel/ContenedorDatosCmViewModel"
+              containment="true" eOpposite="#//ui/viewmodels/contenedorsolicitudvisitaviewmodel/ContenedorDatosCmViewModel/ownedByContenedorSolicitudVisitaViewModel"/>
         </eClassifiers>
       </eSubpackages>
     </eSubpackages>

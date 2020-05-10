@@ -8,7 +8,7 @@
       <listaAtributos xmi:type="tooldataform.pmoo:Atributo" xmi:id="_IfMDcH1jEeqT4__3zNoxqw" name="modelo" id="_IdIN8H1jEeqT4__3zNoxqw" type="Integer" namePresentation="modelo: Integer"/>
       <listaAtributos xmi:type="tooldataform.pmoo:Atributo" xmi:id="_T_dBoH1jEeqT4__3zNoxqw" name="referencia" id="_T9VhwH1jEeqT4__3zNoxqw" type="String" namePresentation="referencia: String"/>
       <listaAtributos xmi:type="tooldataform.pmoo:Atributo" xmi:id="_bKVT8H1jEeqT4__3zNoxqw" name="tipoUso" id="_bHlh8H1jEeqT4__3zNoxqw" type="String" namePresentation="tipoUso: String"/>
-      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_FrBTYHxKEeqzHeZVx9vFUQ" name="asignarFallas" id="_FpwvIHxKEeqzHeZVx9vFUQ" body="&#xD;&#xA;&#x9;&#x9;//TODO asignarFallas&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;"/>
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_FrBTYHxKEeqzHeZVx9vFUQ" name="hacerEscaneo" id="_FpwvIHxKEeqzHeZVx9vFUQ" documentation="" description="" body="//TODO asignarFallas"/>
     </listClase>
     <listClase xmi:type="tooldataform.pmoo:Clase" xmi:id="_O_eW0HuFEeqbaPY9Lz0hzw" name="Usuarios" id="_EQfv0Ht-EeqbaPY9Lz0hzw" nameSpace="(from: domain)" nameSpaceElement="(from: domain)">
       <listaAtributos xmi:type="tooldataform.pmoo:Atributo" xmi:id="_ACoBcH1QEeqloIGwD3GYOg" name="id" id="_ABYEQH1QEeqloIGwD3GYOg" type="String" namePresentation="id: String"/>
@@ -34,13 +34,16 @@
       <listaAtributos xmi:type="tooldataform.pmoo:Atributo" xmi:id="_uJiGYXxGEeqzHeZVx9vFUQ" name="origen" id="_hetzIHuiEeqbaPY9Lz0hzw" type="String" namePresentation="origen: String"/>
       <listaAtributos xmi:type="tooldataform.pmoo:Atributo" xmi:id="_uJiGYnxGEeqzHeZVx9vFUQ" name="descripcion" id="_IMC_kHujEeqbaPY9Lz0hzw" type="String" namePresentation="descripcion: String"/>
     </listClase>
-    <listClase xmi:type="tooldataform.pmoo:Clase" xmi:id="_yGOkIIAlEeqb86H6fnJvzQ" name="CentroMant" id="_Dp0zMIAlEeqb86H6fnJvzQ" nameSpace="(from: domain)" nameSpaceElement="(from: domain)">
+    <listClase xmi:type="tooldataform.pmoo:Clase" xmi:id="_yGOkIIAlEeqb86H6fnJvzQ" name="CentroMant" id="_Dp0zMIAlEeqb86H6fnJvzQ" type="System" description="" typeElement="Class" urlIcon="platform:/plugin/tooldataform.datosdiagram/icons/Clase.gif" nameSpace="domain">
       <listaAtributos xmi:type="tooldataform.pmoo:Atributo" xmi:id="_yH70UIAlEeqb86H6fnJvzQ" name="id" id="_jizW8YAlEeqb86H6fnJvzQ" type="String" namePresentation="id: String"/>
       <listaAtributos xmi:type="tooldataform.pmoo:Atributo" xmi:id="_yH70UYAlEeqb86H6fnJvzQ" name="nombre" id="_lGld4YAlEeqb86H6fnJvzQ" type="String" namePresentation="nombre: String"/>
       <listaAtributos xmi:type="tooldataform.pmoo:Atributo" xmi:id="_yH70UoAlEeqb86H6fnJvzQ" name="nombreRepresentante" id="_mbJdEIAlEeqb86H6fnJvzQ" type="String" namePresentation="nombreRepresentante: String"/>
       <listaAtributos xmi:type="tooldataform.pmoo:Atributo" xmi:id="_yH70U4AlEeqb86H6fnJvzQ" name="descripcion" id="_puQzoIAlEeqb86H6fnJvzQ" type="String" namePresentation="descripcion: String"/>
       <listaAtributos xmi:type="tooldataform.pmoo:Atributo" xmi:id="_yH70VIAlEeqb86H6fnJvzQ" name="usuario" id="_rH8jYIAlEeqb86H6fnJvzQ" type="String" namePresentation="usuario: String"/>
       <listaAtributos xmi:type="tooldataform.pmoo:Atributo" xmi:id="_yH70VYAlEeqb86H6fnJvzQ" name="contrasenia" id="_sqetIIAlEeqb86H6fnJvzQ" type="String" namePresentation="contrasenia: String"/>
+      <listaMetodos xmi:type="tooldataform.pmoo:Metodo" xmi:id="_MSCjgI_6Eeq17ejQSDANAQ" name="procesarSolicitudVisita" id="_MPnhoI_6Eeq17ejQSDANAQ" documentation="" description="" typeElement="Operation" body="void">
+        <listParametros xmi:type="tooldataform.pmoo:Atributo" xmi:id="_l731sJAAEeq17ejQSDANAQ" name="automovilReparacion" id="_lQ17sJAAEeq17ejQSDANAQ" type="Automovil" valueDefault="" namePresentation="automovilReparacion:Automovil"/>
+      </listaMetodos>
     </listClase>
     <listRelacion_Data xmi:type="tooldataform.pmoo:Relacion_Data" xmi:id="_x3ZzcHuPEeqbaPY9Lz0hzw" name="theReparacion(Reparacion)" id="_x3bBkHuPEeqbaPY9Lz0hzw" aRol="theAutomovil" bRol="reparacionesHechas" aMultiplicidad="_1" multiplicidadB="*" multiplicidadA="1" bAgregacion="si" source="_Oa0KkHuFEeqbaPY9Lz0hzw" target="_jGLFsHuNEeqbaPY9Lz0hzw"/>
     <listRelacion_Data xmi:type="tooldataform.pmoo:Relacion_Data" xmi:id="_LRC8QHuQEeqbaPY9Lz0hzw" name="theAutomovil(Automovil)" id="_LREKYHuQEeqbaPY9Lz0hzw" aRol="propietario" bRol="automoviles" aMultiplicidad="_1" multiplicidadB="*" multiplicidadA="1" source="_O_eW0HuFEeqbaPY9Lz0hzw" target="_Oa0KkHuFEeqbaPY9Lz0hzw"/>

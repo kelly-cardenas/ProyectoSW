@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface UbicacionUsu extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Pais</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Pais</em>' attribute isn't clear,
@@ -35,7 +36,7 @@ public interface UbicacionUsu extends EObject {
 	 * @return the value of the '<em>Pais</em>' attribute.
 	 * @see #setPais(String)
 	 * @see sma.domain.DomainPackage#getUbicacionUsu_Pais()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getPais();
@@ -52,6 +53,7 @@ public interface UbicacionUsu extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Departamento</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Departamento</em>' attribute isn't clear,
@@ -61,7 +63,7 @@ public interface UbicacionUsu extends EObject {
 	 * @return the value of the '<em>Departamento</em>' attribute.
 	 * @see #setDepartamento(String)
 	 * @see sma.domain.DomainPackage#getUbicacionUsu_Departamento()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getDepartamento();
@@ -78,6 +80,7 @@ public interface UbicacionUsu extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Ciudad</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Ciudad</em>' attribute isn't clear,
@@ -87,7 +90,7 @@ public interface UbicacionUsu extends EObject {
 	 * @return the value of the '<em>Ciudad</em>' attribute.
 	 * @see #setCiudad(String)
 	 * @see sma.domain.DomainPackage#getUbicacionUsu_Ciudad()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getCiudad();

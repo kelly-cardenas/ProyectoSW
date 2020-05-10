@@ -66,7 +66,6 @@ public class ClienteViewModelItemProvider
 			addNombrePropertyDescriptor(object);
 			addEmailPropertyDescriptor(object);
 			addEdadPropertyDescriptor(object);
-			addTheContenedorMaestroClienteViewModelPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -155,28 +154,6 @@ public class ClienteViewModelItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the The Contenedor Maestro Cliente View Model feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTheContenedorMaestroClienteViewModelPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ClienteViewModel_theContenedorMaestroClienteViewModel_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ClienteViewModel_theContenedorMaestroClienteViewModel_feature", "_UI_ClienteViewModel_type"),
-				 ContenedorcrudclienteviewmodelPackage.Literals.CLIENTE_VIEW_MODEL__THE_CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL,
-				 true,
-				 false,
-				 true,
-				 null,
 				 null,
 				 null));
 	}

@@ -39,6 +39,7 @@ import sma.domain.reparacionvehiculo.Reparacion;
 public interface Automovil extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
@@ -48,7 +49,7 @@ public interface Automovil extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(String)
 	 * @see sma.domain.DomainPackage#getAutomovil_Id()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getId();
@@ -65,6 +66,7 @@ public interface Automovil extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Placa</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Placa</em>' attribute isn't clear,
@@ -74,7 +76,7 @@ public interface Automovil extends EObject {
 	 * @return the value of the '<em>Placa</em>' attribute.
 	 * @see #setPlaca(String)
 	 * @see sma.domain.DomainPackage#getAutomovil_Placa()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getPlaca();
@@ -91,6 +93,7 @@ public interface Automovil extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Marca</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Marca</em>' attribute isn't clear,
@@ -100,7 +103,7 @@ public interface Automovil extends EObject {
 	 * @return the value of the '<em>Marca</em>' attribute.
 	 * @see #setMarca(String)
 	 * @see sma.domain.DomainPackage#getAutomovil_Marca()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getMarca();
@@ -117,6 +120,7 @@ public interface Automovil extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Modelo</b></em>' attribute.
+	 * The default value is <code>"0"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Modelo</em>' attribute isn't clear,
@@ -126,7 +130,7 @@ public interface Automovil extends EObject {
 	 * @return the value of the '<em>Modelo</em>' attribute.
 	 * @see #setModelo(Integer)
 	 * @see sma.domain.DomainPackage#getAutomovil_Modelo()
-	 * @model dataType="sma.EIntegerObject"
+	 * @model default="0" dataType="sma.EIntegerObject"
 	 * @generated
 	 */
 	Integer getModelo();
@@ -143,6 +147,7 @@ public interface Automovil extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Referencia</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Referencia</em>' attribute isn't clear,
@@ -152,7 +157,7 @@ public interface Automovil extends EObject {
 	 * @return the value of the '<em>Referencia</em>' attribute.
 	 * @see #setReferencia(String)
 	 * @see sma.domain.DomainPackage#getAutomovil_Referencia()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getReferencia();
@@ -169,6 +174,7 @@ public interface Automovil extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Tipo Uso</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Tipo Uso</em>' attribute isn't clear,
@@ -178,7 +184,7 @@ public interface Automovil extends EObject {
 	 * @return the value of the '<em>Tipo Uso</em>' attribute.
 	 * @see #setTipoUso(String)
 	 * @see sma.domain.DomainPackage#getAutomovil_TipoUso()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getTipoUso();
@@ -291,6 +297,6 @@ public interface Automovil extends EObject {
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='//TODO asignarFallas'"
 	 * @generated
 	 */
-	void asignarFallas();
+	void hacerEscaneo();
 
 } // Automovil

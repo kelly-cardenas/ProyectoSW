@@ -42,7 +42,7 @@ public class VehiculoViewModelImpl extends EObjectImpl implements VehiculoViewMo
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String MARCA_EDEFAULT = null;
+	protected static final String MARCA_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getMarca() <em>Marca</em>}' attribute.
@@ -62,7 +62,7 @@ public class VehiculoViewModelImpl extends EObjectImpl implements VehiculoViewMo
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String REFERENCIA_EDEFAULT = null;
+	protected static final String REFERENCIA_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getReferencia() <em>Referencia</em>}' attribute.
@@ -82,7 +82,7 @@ public class VehiculoViewModelImpl extends EObjectImpl implements VehiculoViewMo
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String PLACA_EDEFAULT = null;
+	protected static final String PLACA_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getPlaca() <em>Placa</em>}' attribute.
@@ -146,7 +146,7 @@ public class VehiculoViewModelImpl extends EObjectImpl implements VehiculoViewMo
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newThe0ContenedorVehiculosRegistradosViewModel != null)
-				msgs = ((InternalEObject)newThe0ContenedorVehiculosRegistradosViewModel).eInverseAdd(this, ContenedorregistrovehiculoviewmodelPackage.CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__VEHICULO_VIEW_MODEL, ContenedorVehiculosRegistradosViewModel.class, msgs);
+				msgs = ((InternalEObject)newThe0ContenedorVehiculosRegistradosViewModel).eInverseAdd(this, ContenedorregistrovehiculoviewmodelPackage.CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__LISTA_VEHICULO, ContenedorVehiculosRegistradosViewModel.class, msgs);
 			msgs = basicSetThe0ContenedorVehiculosRegistradosViewModel(newThe0ContenedorVehiculosRegistradosViewModel, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -256,7 +256,7 @@ public class VehiculoViewModelImpl extends EObjectImpl implements VehiculoViewMo
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
 			case ContenedorregistrovehiculoviewmodelPackage.VEHICULO_VIEW_MODEL__THE0_CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL:
-				return eInternalContainer().eInverseRemove(this, ContenedorregistrovehiculoviewmodelPackage.CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__VEHICULO_VIEW_MODEL, ContenedorVehiculosRegistradosViewModel.class, msgs);
+				return eInternalContainer().eInverseRemove(this, ContenedorregistrovehiculoviewmodelPackage.CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__LISTA_VEHICULO, ContenedorVehiculosRegistradosViewModel.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}

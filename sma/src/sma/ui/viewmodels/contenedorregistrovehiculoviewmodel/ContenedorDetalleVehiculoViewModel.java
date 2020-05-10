@@ -29,6 +29,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface ContenedorDetalleVehiculoViewModel extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Propietario</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Propietario</em>' attribute isn't clear,
@@ -38,7 +39,7 @@ public interface ContenedorDetalleVehiculoViewModel extends EObject {
 	 * @return the value of the '<em>Propietario</em>' attribute.
 	 * @see #setPropietario(String)
 	 * @see sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorregistrovehiculoviewmodelPackage#getContenedorDetalleVehiculoViewModel_Propietario()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getPropietario();
@@ -55,6 +56,7 @@ public interface ContenedorDetalleVehiculoViewModel extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Marca</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Marca</em>' attribute isn't clear,
@@ -64,7 +66,7 @@ public interface ContenedorDetalleVehiculoViewModel extends EObject {
 	 * @return the value of the '<em>Marca</em>' attribute.
 	 * @see #setMarca(String)
 	 * @see sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorregistrovehiculoviewmodelPackage#getContenedorDetalleVehiculoViewModel_Marca()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getMarca();
@@ -81,6 +83,7 @@ public interface ContenedorDetalleVehiculoViewModel extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Referencia</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Referencia</em>' attribute isn't clear,
@@ -90,7 +93,7 @@ public interface ContenedorDetalleVehiculoViewModel extends EObject {
 	 * @return the value of the '<em>Referencia</em>' attribute.
 	 * @see #setReferencia(String)
 	 * @see sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorregistrovehiculoviewmodelPackage#getContenedorDetalleVehiculoViewModel_Referencia()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getReferencia();
@@ -107,6 +110,7 @@ public interface ContenedorDetalleVehiculoViewModel extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Modelo</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Modelo</em>' attribute isn't clear,
@@ -116,7 +120,7 @@ public interface ContenedorDetalleVehiculoViewModel extends EObject {
 	 * @return the value of the '<em>Modelo</em>' attribute.
 	 * @see #setModelo(String)
 	 * @see sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorregistrovehiculoviewmodelPackage#getContenedorDetalleVehiculoViewModel_Modelo()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getModelo();
@@ -133,6 +137,7 @@ public interface ContenedorDetalleVehiculoViewModel extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Tipovehiculo</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Tipovehiculo</em>' attribute isn't clear,
@@ -142,7 +147,7 @@ public interface ContenedorDetalleVehiculoViewModel extends EObject {
 	 * @return the value of the '<em>Tipovehiculo</em>' attribute.
 	 * @see #setTipovehiculo(String)
 	 * @see sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorregistrovehiculoviewmodelPackage#getContenedorDetalleVehiculoViewModel_Tipovehiculo()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getTipovehiculo();
@@ -159,6 +164,7 @@ public interface ContenedorDetalleVehiculoViewModel extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Placa</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Placa</em>' attribute isn't clear,
@@ -168,7 +174,7 @@ public interface ContenedorDetalleVehiculoViewModel extends EObject {
 	 * @return the value of the '<em>Placa</em>' attribute.
 	 * @see #setPlaca(String)
 	 * @see sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorregistrovehiculoviewmodelPackage#getContenedorDetalleVehiculoViewModel_Placa()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getPlaca();

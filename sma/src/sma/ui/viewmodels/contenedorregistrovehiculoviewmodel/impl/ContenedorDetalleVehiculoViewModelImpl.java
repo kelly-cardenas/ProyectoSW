@@ -45,7 +45,7 @@ public class ContenedorDetalleVehiculoViewModelImpl extends EObjectImpl implemen
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String PROPIETARIO_EDEFAULT = null;
+	protected static final String PROPIETARIO_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getPropietario() <em>Propietario</em>}' attribute.
@@ -65,7 +65,7 @@ public class ContenedorDetalleVehiculoViewModelImpl extends EObjectImpl implemen
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String MARCA_EDEFAULT = null;
+	protected static final String MARCA_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getMarca() <em>Marca</em>}' attribute.
@@ -85,7 +85,7 @@ public class ContenedorDetalleVehiculoViewModelImpl extends EObjectImpl implemen
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String REFERENCIA_EDEFAULT = null;
+	protected static final String REFERENCIA_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getReferencia() <em>Referencia</em>}' attribute.
@@ -105,7 +105,7 @@ public class ContenedorDetalleVehiculoViewModelImpl extends EObjectImpl implemen
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String MODELO_EDEFAULT = null;
+	protected static final String MODELO_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getModelo() <em>Modelo</em>}' attribute.
@@ -125,7 +125,7 @@ public class ContenedorDetalleVehiculoViewModelImpl extends EObjectImpl implemen
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TIPOVEHICULO_EDEFAULT = null;
+	protected static final String TIPOVEHICULO_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getTipovehiculo() <em>Tipovehiculo</em>}' attribute.
@@ -145,7 +145,7 @@ public class ContenedorDetalleVehiculoViewModelImpl extends EObjectImpl implemen
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String PLACA_EDEFAULT = null;
+	protected static final String PLACA_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getPlaca() <em>Placa</em>}' attribute.

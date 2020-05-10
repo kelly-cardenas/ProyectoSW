@@ -42,7 +42,7 @@ public class CentroMantViewModelImpl extends EObjectImpl implements CentroMantVi
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NOMBRECM_EDEFAULT = null;
+	protected static final String NOMBRECM_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getNombrecm() <em>Nombrecm</em>}' attribute.
@@ -62,7 +62,7 @@ public class CentroMantViewModelImpl extends EObjectImpl implements CentroMantVi
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NOMBREREPRESENTANTE_EDEFAULT = null;
+	protected static final String NOMBREREPRESENTANTE_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getNombrerepresentante() <em>Nombrerepresentante</em>}' attribute.
@@ -82,7 +82,7 @@ public class CentroMantViewModelImpl extends EObjectImpl implements CentroMantVi
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CIUDAD_EDEFAULT = null;
+	protected static final String CIUDAD_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getCiudad() <em>Ciudad</em>}' attribute.
@@ -209,7 +209,7 @@ public class CentroMantViewModelImpl extends EObjectImpl implements CentroMantVi
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newThe0ContenedorMaestroCMViewModel != null)
-				msgs = ((InternalEObject)newThe0ContenedorMaestroCMViewModel).eInverseAdd(this, ContenedorcrudcmviewmodelPackage.CONTENEDOR_MAESTRO_CM_VIEW_MODEL__CENTRO_MANT_VIEW_MODEL, ContenedorMaestroCMViewModel.class, msgs);
+				msgs = ((InternalEObject)newThe0ContenedorMaestroCMViewModel).eInverseAdd(this, ContenedorcrudcmviewmodelPackage.CONTENEDOR_MAESTRO_CM_VIEW_MODEL__LISTA_CENTRO_MANT, ContenedorMaestroCMViewModel.class, msgs);
 			msgs = basicSetThe0ContenedorMaestroCMViewModel(newThe0ContenedorMaestroCMViewModel, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -256,7 +256,7 @@ public class CentroMantViewModelImpl extends EObjectImpl implements CentroMantVi
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
 			case ContenedorcrudcmviewmodelPackage.CENTRO_MANT_VIEW_MODEL__THE0_CONTENEDOR_MAESTRO_CM_VIEW_MODEL:
-				return eInternalContainer().eInverseRemove(this, ContenedorcrudcmviewmodelPackage.CONTENEDOR_MAESTRO_CM_VIEW_MODEL__CENTRO_MANT_VIEW_MODEL, ContenedorMaestroCMViewModel.class, msgs);
+				return eInternalContainer().eInverseRemove(this, ContenedorcrudcmviewmodelPackage.CONTENEDOR_MAESTRO_CM_VIEW_MODEL__LISTA_CENTRO_MANT, ContenedorMaestroCMViewModel.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}

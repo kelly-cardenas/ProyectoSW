@@ -43,7 +43,7 @@ public class sensorImpl extends EObjectImpl implements sensor {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ID_EDEFAULT = null;
+	protected static final String ID_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
@@ -63,7 +63,7 @@ public class sensorImpl extends EObjectImpl implements sensor {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String INFO_COMP_EDEFAULT = null;
+	protected static final String INFO_COMP_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getInfoComp() <em>Info Comp</em>}' attribute.

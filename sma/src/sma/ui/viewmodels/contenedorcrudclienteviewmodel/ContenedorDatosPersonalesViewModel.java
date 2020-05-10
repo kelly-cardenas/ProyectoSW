@@ -28,6 +28,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface ContenedorDatosPersonalesViewModel extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Cedula</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Cedula</em>' attribute isn't clear,
@@ -37,7 +38,7 @@ public interface ContenedorDatosPersonalesViewModel extends EObject {
 	 * @return the value of the '<em>Cedula</em>' attribute.
 	 * @see #setCedula(String)
 	 * @see sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelPackage#getContenedorDatosPersonalesViewModel_Cedula()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getCedula();
@@ -54,6 +55,7 @@ public interface ContenedorDatosPersonalesViewModel extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Nombre</em>' attribute isn't clear,
@@ -63,7 +65,7 @@ public interface ContenedorDatosPersonalesViewModel extends EObject {
 	 * @return the value of the '<em>Nombre</em>' attribute.
 	 * @see #setNombre(String)
 	 * @see sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelPackage#getContenedorDatosPersonalesViewModel_Nombre()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getNombre();
@@ -80,6 +82,7 @@ public interface ContenedorDatosPersonalesViewModel extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Apellido</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Apellido</em>' attribute isn't clear,
@@ -89,7 +92,7 @@ public interface ContenedorDatosPersonalesViewModel extends EObject {
 	 * @return the value of the '<em>Apellido</em>' attribute.
 	 * @see #setApellido(String)
 	 * @see sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelPackage#getContenedorDatosPersonalesViewModel_Apellido()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getApellido();
@@ -106,6 +109,7 @@ public interface ContenedorDatosPersonalesViewModel extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Edad</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Edad</em>' attribute isn't clear,
@@ -115,7 +119,7 @@ public interface ContenedorDatosPersonalesViewModel extends EObject {
 	 * @return the value of the '<em>Edad</em>' attribute.
 	 * @see #setEdad(String)
 	 * @see sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelPackage#getContenedorDatosPersonalesViewModel_Edad()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getEdad();
@@ -132,6 +136,7 @@ public interface ContenedorDatosPersonalesViewModel extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Correoelectronico</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Correoelectronico</em>' attribute isn't clear,
@@ -141,7 +146,7 @@ public interface ContenedorDatosPersonalesViewModel extends EObject {
 	 * @return the value of the '<em>Correoelectronico</em>' attribute.
 	 * @see #setCorreoelectronico(String)
 	 * @see sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelPackage#getContenedorDatosPersonalesViewModel_Correoelectronico()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getCorreoelectronico();

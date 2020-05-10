@@ -33,21 +33,21 @@ import sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelPack
  * </p>
  * <ul>
  *   <li>{@link sma.ui.viewmodels.contenedorcrudcmviewmodel.impl.ContenedorMaestroCMViewModelImpl#getOwnedByContenedorCRUDCMViewModel <em>Owned By Contenedor CRUDCM View Model</em>}</li>
- *   <li>{@link sma.ui.viewmodels.contenedorcrudcmviewmodel.impl.ContenedorMaestroCMViewModelImpl#getCentroMantViewModel <em>Centro Mant View Model</em>}</li>
+ *   <li>{@link sma.ui.viewmodels.contenedorcrudcmviewmodel.impl.ContenedorMaestroCMViewModelImpl#getListaCentroMant <em>Lista Centro Mant</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ContenedorMaestroCMViewModelImpl extends EObjectImpl implements ContenedorMaestroCMViewModel {
 	/**
-	 * The cached value of the '{@link #getCentroMantViewModel() <em>Centro Mant View Model</em>}' containment reference list.
+	 * The cached value of the '{@link #getListaCentroMant() <em>Lista Centro Mant</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCentroMantViewModel()
+	 * @see #getListaCentroMant()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<CentroMantViewModel> centroMantViewModel;
+	protected EList<CentroMantViewModel> listaCentroMant;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -114,11 +114,11 @@ public class ContenedorMaestroCMViewModelImpl extends EObjectImpl implements Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<CentroMantViewModel> getCentroMantViewModel() {
-		if (centroMantViewModel == null) {
-			centroMantViewModel = new EObjectContainmentWithInverseEList<CentroMantViewModel>(CentroMantViewModel.class, this, ContenedorcrudcmviewmodelPackage.CONTENEDOR_MAESTRO_CM_VIEW_MODEL__CENTRO_MANT_VIEW_MODEL, ContenedorcrudcmviewmodelPackage.CENTRO_MANT_VIEW_MODEL__THE0_CONTENEDOR_MAESTRO_CM_VIEW_MODEL);
+	public EList<CentroMantViewModel> getListaCentroMant() {
+		if (listaCentroMant == null) {
+			listaCentroMant = new EObjectContainmentWithInverseEList<CentroMantViewModel>(CentroMantViewModel.class, this, ContenedorcrudcmviewmodelPackage.CONTENEDOR_MAESTRO_CM_VIEW_MODEL__LISTA_CENTRO_MANT, ContenedorcrudcmviewmodelPackage.CENTRO_MANT_VIEW_MODEL__THE0_CONTENEDOR_MAESTRO_CM_VIEW_MODEL);
 		}
-		return centroMantViewModel;
+		return listaCentroMant;
 	}
 
 	/**
@@ -134,8 +134,8 @@ public class ContenedorMaestroCMViewModelImpl extends EObjectImpl implements Con
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetOwnedByContenedorCRUDCMViewModel((ContenedorCRUDCMViewModel)otherEnd, msgs);
-			case ContenedorcrudcmviewmodelPackage.CONTENEDOR_MAESTRO_CM_VIEW_MODEL__CENTRO_MANT_VIEW_MODEL:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getCentroMantViewModel()).basicAdd(otherEnd, msgs);
+			case ContenedorcrudcmviewmodelPackage.CONTENEDOR_MAESTRO_CM_VIEW_MODEL__LISTA_CENTRO_MANT:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getListaCentroMant()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -150,8 +150,8 @@ public class ContenedorMaestroCMViewModelImpl extends EObjectImpl implements Con
 		switch (featureID) {
 			case ContenedorcrudcmviewmodelPackage.CONTENEDOR_MAESTRO_CM_VIEW_MODEL__OWNED_BY_CONTENEDOR_CRUDCM_VIEW_MODEL:
 				return basicSetOwnedByContenedorCRUDCMViewModel(null, msgs);
-			case ContenedorcrudcmviewmodelPackage.CONTENEDOR_MAESTRO_CM_VIEW_MODEL__CENTRO_MANT_VIEW_MODEL:
-				return ((InternalEList<?>)getCentroMantViewModel()).basicRemove(otherEnd, msgs);
+			case ContenedorcrudcmviewmodelPackage.CONTENEDOR_MAESTRO_CM_VIEW_MODEL__LISTA_CENTRO_MANT:
+				return ((InternalEList<?>)getListaCentroMant()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -180,8 +180,8 @@ public class ContenedorMaestroCMViewModelImpl extends EObjectImpl implements Con
 		switch (featureID) {
 			case ContenedorcrudcmviewmodelPackage.CONTENEDOR_MAESTRO_CM_VIEW_MODEL__OWNED_BY_CONTENEDOR_CRUDCM_VIEW_MODEL:
 				return getOwnedByContenedorCRUDCMViewModel();
-			case ContenedorcrudcmviewmodelPackage.CONTENEDOR_MAESTRO_CM_VIEW_MODEL__CENTRO_MANT_VIEW_MODEL:
-				return getCentroMantViewModel();
+			case ContenedorcrudcmviewmodelPackage.CONTENEDOR_MAESTRO_CM_VIEW_MODEL__LISTA_CENTRO_MANT:
+				return getListaCentroMant();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -198,9 +198,9 @@ public class ContenedorMaestroCMViewModelImpl extends EObjectImpl implements Con
 			case ContenedorcrudcmviewmodelPackage.CONTENEDOR_MAESTRO_CM_VIEW_MODEL__OWNED_BY_CONTENEDOR_CRUDCM_VIEW_MODEL:
 				setOwnedByContenedorCRUDCMViewModel((ContenedorCRUDCMViewModel)newValue);
 				return;
-			case ContenedorcrudcmviewmodelPackage.CONTENEDOR_MAESTRO_CM_VIEW_MODEL__CENTRO_MANT_VIEW_MODEL:
-				getCentroMantViewModel().clear();
-				getCentroMantViewModel().addAll((Collection<? extends CentroMantViewModel>)newValue);
+			case ContenedorcrudcmviewmodelPackage.CONTENEDOR_MAESTRO_CM_VIEW_MODEL__LISTA_CENTRO_MANT:
+				getListaCentroMant().clear();
+				getListaCentroMant().addAll((Collection<? extends CentroMantViewModel>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -217,8 +217,8 @@ public class ContenedorMaestroCMViewModelImpl extends EObjectImpl implements Con
 			case ContenedorcrudcmviewmodelPackage.CONTENEDOR_MAESTRO_CM_VIEW_MODEL__OWNED_BY_CONTENEDOR_CRUDCM_VIEW_MODEL:
 				setOwnedByContenedorCRUDCMViewModel((ContenedorCRUDCMViewModel)null);
 				return;
-			case ContenedorcrudcmviewmodelPackage.CONTENEDOR_MAESTRO_CM_VIEW_MODEL__CENTRO_MANT_VIEW_MODEL:
-				getCentroMantViewModel().clear();
+			case ContenedorcrudcmviewmodelPackage.CONTENEDOR_MAESTRO_CM_VIEW_MODEL__LISTA_CENTRO_MANT:
+				getListaCentroMant().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -234,8 +234,8 @@ public class ContenedorMaestroCMViewModelImpl extends EObjectImpl implements Con
 		switch (featureID) {
 			case ContenedorcrudcmviewmodelPackage.CONTENEDOR_MAESTRO_CM_VIEW_MODEL__OWNED_BY_CONTENEDOR_CRUDCM_VIEW_MODEL:
 				return getOwnedByContenedorCRUDCMViewModel() != null;
-			case ContenedorcrudcmviewmodelPackage.CONTENEDOR_MAESTRO_CM_VIEW_MODEL__CENTRO_MANT_VIEW_MODEL:
-				return centroMantViewModel != null && !centroMantViewModel.isEmpty();
+			case ContenedorcrudcmviewmodelPackage.CONTENEDOR_MAESTRO_CM_VIEW_MODEL__LISTA_CENTRO_MANT:
+				return listaCentroMant != null && !listaCentroMant.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

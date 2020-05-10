@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface CentroMantViewModel extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Nombrecm</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Nombrecm</em>' attribute isn't clear,
@@ -35,7 +36,7 @@ public interface CentroMantViewModel extends EObject {
 	 * @return the value of the '<em>Nombrecm</em>' attribute.
 	 * @see #setNombrecm(String)
 	 * @see sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelPackage#getCentroMantViewModel_Nombrecm()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getNombrecm();
@@ -52,6 +53,7 @@ public interface CentroMantViewModel extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Nombrerepresentante</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Nombrerepresentante</em>' attribute isn't clear,
@@ -61,7 +63,7 @@ public interface CentroMantViewModel extends EObject {
 	 * @return the value of the '<em>Nombrerepresentante</em>' attribute.
 	 * @see #setNombrerepresentante(String)
 	 * @see sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelPackage#getCentroMantViewModel_Nombrerepresentante()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getNombrerepresentante();
@@ -78,6 +80,7 @@ public interface CentroMantViewModel extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Ciudad</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Ciudad</em>' attribute isn't clear,
@@ -87,7 +90,7 @@ public interface CentroMantViewModel extends EObject {
 	 * @return the value of the '<em>Ciudad</em>' attribute.
 	 * @see #setCiudad(String)
 	 * @see sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelPackage#getCentroMantViewModel_Ciudad()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getCiudad();
@@ -104,7 +107,7 @@ public interface CentroMantViewModel extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>The0 Contenedor Maestro CM View Model</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorMaestroCMViewModel#getCentroMantViewModel <em>Centro Mant View Model</em>}'.
+	 * It is bidirectional and its opposite is '{@link sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorMaestroCMViewModel#getListaCentroMant <em>Lista Centro Mant</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>The0 Contenedor Maestro CM View Model</em>' container reference isn't clear,
@@ -114,8 +117,8 @@ public interface CentroMantViewModel extends EObject {
 	 * @return the value of the '<em>The0 Contenedor Maestro CM View Model</em>' container reference.
 	 * @see #setThe0ContenedorMaestroCMViewModel(ContenedorMaestroCMViewModel)
 	 * @see sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelPackage#getCentroMantViewModel_The0ContenedorMaestroCMViewModel()
-	 * @see sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorMaestroCMViewModel#getCentroMantViewModel
-	 * @model opposite="CentroMantViewModel" transient="false"
+	 * @see sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorMaestroCMViewModel#getListaCentroMant
+	 * @model opposite="listaCentroMant" transient="false"
 	 * @generated
 	 */
 	ContenedorMaestroCMViewModel getThe0ContenedorMaestroCMViewModel();

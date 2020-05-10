@@ -13,10 +13,14 @@ Export-Package: sma.domain.automatizacionrevision.provider,
  sma.domain.reparacionvehiculo.provider,
  sma.provider,
  sma.ui.provider,
+ sma.ui.viewmodels.contenedorcontactarcmviewmodel.provider,
  sma.ui.viewmodels.contenedorcrudclienteviewmodel.provider,
  sma.ui.viewmodels.contenedorcrudcmviewmodel.provider,
+ sma.ui.viewmodels.contenedorescaneoviewmodel.provider,
  sma.ui.viewmodels.contenedorloginviewmodel.provider,
- sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.provider
+ sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.provider,
+ sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.provider,
+ sma.ui.viewmodels.provider
 Require-Bundle: org.eclipse.core.runtime,
  sma;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport

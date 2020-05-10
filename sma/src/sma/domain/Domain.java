@@ -10,11 +10,19 @@ import sma.ModelFactory;
 
 import sma.ui.UI;
 
+import sma.ui.viewmodels.contenedorcontactarcmviewmodel.ContenedorContactarCmViewModel;
+
 import sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorCrudClienteViewModel;
 
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorCRUDCMViewModel;
 
+import sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorEscaneoViewModel;
+
+import sma.ui.viewmodels.contenedorloginviewmodel.ContenedorLoginViewModel;
+
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorRegistroVehiculoViewModel;
+
+import sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.ContenedorSolicitudVisitaViewModel;
 
 /**
  * <!-- begin-user-doc -->
@@ -70,6 +78,7 @@ public interface Domain extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Incremental Id Cliente</b></em>' attribute.
+	 * The default value is <code>"0"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Incremental Id Cliente</em>' attribute isn't clear,
@@ -79,7 +88,7 @@ public interface Domain extends EObject {
 	 * @return the value of the '<em>Incremental Id Cliente</em>' attribute.
 	 * @see #setIncrementalIdCliente(Integer)
 	 * @see sma.domain.DomainPackage#getDomain_IncrementalIdCliente()
-	 * @model dataType="sma.EIntegerObject"
+	 * @model default="0" dataType="sma.EIntegerObject"
 	 * @generated
 	 */
 	Integer getIncrementalIdCliente();
@@ -96,6 +105,7 @@ public interface Domain extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Incremental Id Cm</b></em>' attribute.
+	 * The default value is <code>"0"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Incremental Id Cm</em>' attribute isn't clear,
@@ -105,7 +115,7 @@ public interface Domain extends EObject {
 	 * @return the value of the '<em>Incremental Id Cm</em>' attribute.
 	 * @see #setIncrementalIdCm(Integer)
 	 * @see sma.domain.DomainPackage#getDomain_IncrementalIdCm()
-	 * @model dataType="sma.EIntegerObject"
+	 * @model default="0" dataType="sma.EIntegerObject"
 	 * @generated
 	 */
 	Integer getIncrementalIdCm();
@@ -122,6 +132,7 @@ public interface Domain extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Incremental Id Auto</b></em>' attribute.
+	 * The default value is <code>"0"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Incremental Id Auto</em>' attribute isn't clear,
@@ -131,7 +142,7 @@ public interface Domain extends EObject {
 	 * @return the value of the '<em>Incremental Id Auto</em>' attribute.
 	 * @see #setIncrementalIdAuto(Integer)
 	 * @see sma.domain.DomainPackage#getDomain_IncrementalIdAuto()
-	 * @model dataType="sma.EIntegerObject"
+	 * @model default="0" dataType="sma.EIntegerObject"
 	 * @generated
 	 */
 	Integer getIncrementalIdAuto();
@@ -229,7 +240,7 @@ public interface Domain extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='//implementar modelo'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='// implementar modelo'"
 	 * @generated
 	 */
 	void implementarModelo();
@@ -237,7 +248,7 @@ public interface Domain extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='Usuario usuario = \t\t\tsma.domain.DomainFactory.eINSTANCE.createUsuario();\r\n\t\t\t\t\t\tsma.domain.UbicacionUsu ubicacionUsu = sma.domain.DomainFactory.eINSTANCE.createUbicacionUsu();\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t//-------------------------------------------Asignacion el ID autoincremental al usuario-------------------------------------------------------\r\n\t\t\t\t\t\tusuario.setId(String.valueOf(incrementarIdCliente()));\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t//-------------------------------------------Asignacion de atributos personales al usuario-------------------------------------------------------\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\tusuario.setNombres(formulario.getTheContenedorDetalleClienteViewModel().getTheContenedorDatosPersonalesViewModel().getNombre());\r\n\t\t\t\t\t\tusuario.setApellidos(formulario.getTheContenedorDetalleClienteViewModel().getTheContenedorDatosPersonalesViewModel().getApellido());\r\n\t\t\t\t\t\tusuario.setNumDI(formulario.getTheContenedorDetalleClienteViewModel().getTheContenedorDatosPersonalesViewModel().getCedula());\r\n\t\t\t\t\t\tusuario.setEdad(Integer.parseInt(formulario.getTheContenedorDetalleClienteViewModel().getTheContenedorDatosPersonalesViewModel().getEdad()));\r\n\t\t\t\t\t\tusuario.setEmail(formulario.getTheContenedorDetalleClienteViewModel().getTheContenedorDatosPersonalesViewModel().getCorreoelectronico());\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t//-------------------------------------------Asignacion de atributos de la cuenta del usuario-------------------------------------------------------\r\n\t\t\t\t\t\tusuario.setUsuario(formulario.getTheContenedorDetalleClienteViewModel().getTheContenedorDatosdelacuentaViewModel().getContrase\361a());\r\n\t\t\t\t\t\tusuario.setContrasenia(formulario.getTheContenedorDetalleClienteViewModel().getTheContenedorDatosdelacuentaViewModel().getContrase\361a());\r\n\t\t\t\r\n\t\t\t\t\t\t//-------------------------------------------Asignacion de la ubicacion-------------------------------------------------------\r\n\t\t\t\t\t\tusuario.setUbicacion(ubicacionUsu);\r\n\t\t\t\t\t\tubicacionUsu.setOwnerBy(usuario);\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\tlistaUsuarios.add(usuario);'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='Usuario usuario = sma.domain.DomainFactory.eINSTANCE.createUsuario();\r\n\t\t\t\t\t\t\t\t\t\tsma.domain.UbicacionUsu ubicacionUsu = sma.domain.DomainFactory.eINSTANCE.createUbicacionUsu();\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t// -------------------------------------------Asignacion el ID autoincremental\r\n\t\t\t\t\t\t\t\t\t\t// al usuario-------------------------------------------------------\r\n\t\t\t\t\t\t\t\t\t\tusuario.setId(String.valueOf(incrementarIdCliente()));\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t// -------------------------------------------Asignacion de atributos personales\r\n\t\t\t\t\t\t\t\t\t\t// al usuario-------------------------------------------------------\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\tusuario.setNombres(formulario.getTheContenedorDetalleClienteViewModel()\r\n\t\t\t\t\t\t\t\t\t\t\t\t.getTheContenedorDatosPersonalesViewModel().getNombre());\r\n\t\t\t\t\t\t\t\t\t\tusuario.setApellidos(formulario.getTheContenedorDetalleClienteViewModel()\r\n\t\t\t\t\t\t\t\t\t\t\t\t.getTheContenedorDatosPersonalesViewModel().getApellido());\r\n\t\t\t\t\t\t\t\t\t\tusuario.setNumDI(formulario.getTheContenedorDetalleClienteViewModel().getTheContenedorDatosPersonalesViewModel()\r\n\t\t\t\t\t\t\t\t\t\t\t\t.getCedula());\r\n\t\t\t\t\t\t\t\t\t\tusuario.setEdad(Integer.parseInt(formulario.getTheContenedorDetalleClienteViewModel()\r\n\t\t\t\t\t\t\t\t\t\t\t\t.getTheContenedorDatosPersonalesViewModel().getEdad()));\r\n\t\t\t\t\t\t\t\t\t\tusuario.setEmail(formulario.getTheContenedorDetalleClienteViewModel().getTheContenedorDatosPersonalesViewModel()\r\n\t\t\t\t\t\t\t\t\t\t\t\t.getCorreoelectronico());\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t// -------------------------------------------Asignacion de atributos de la\r\n\t\t\t\t\t\t\t\t\t\t// cuenta del usuario-------------------------------------------------------\r\n\t\t\t\t\t\t\t\t\t\tusuario.setUsuario(formulario.getTheContenedorDetalleClienteViewModel()\r\n\t\t\t\t\t\t\t\t\t\t\t\t.getTheContenedorDatosdelacuentaViewModel().getUsuario());\r\n\t\t\t\t\t\t\t\t\t\tusuario.setContrasenia(formulario.getTheContenedorDetalleClienteViewModel()\r\n\t\t\t\t\t\t\t\t\t\t\t\t.getTheContenedorDatosdelacuentaViewModel().getContrasenia());\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t// -------------------------------------------Asignacion de la\r\n\t\t\t\t\t\t\t\t\t\t// ubicacion-------------------------------------------------------\r\n\t\t\t\t\t\t\t\t\t\tusuario.setUbicacion(ubicacionUsu);\r\n\t\t\t\t\t\t\t\t\t\tubicacionUsu.setOwnerBy(usuario);\r\n\t\t\t\t\t\t\t\t\t\tSystem.out.println(\"registrado usuario\" + usuario.getNombres());\r\n\t\t\t\t\t\t\t\t\t\tgetListaUsuarios().add(usuario);'"
 	 * @generated
 	 */
 	void registrarUsuario(ContenedorCrudClienteViewModel formulario);
@@ -245,7 +256,7 @@ public interface Domain extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='CentroMant centroMantenimiento \t= sma.domain.DomainFactory.eINSTANCE.createCentroMant();\r\n\t\tsma.domain.UbicacionCM ubicacionCM\t\t\t= sma.domain.DomainFactory.eINSTANCE.createUbicacionCM();\r\n\t\t\t\t\t\r\n\t\t\t\t\t//-------------------------------------------Asignacion informacion de CM-------------------------------------------------------\r\n\t\t\t\t\tcentroMantenimiento.setId(String.valueOf(incrementalIdCm));\r\n\t\t\r\n\t\t\t\t\t//-------------------------------------------Asignacion informacion de CM-------------------------------------------------------\r\n\t\t\t\t\tcentroMantenimiento.setNombre(formulario.getTheContenedorDetalleCMViewModel().getTheContenedorInformacionCMViewModel().getNombrecm());\r\n\t\t\t\t\tcentroMantenimiento.setNombreRepresentante(formulario.getTheContenedorDetalleCMViewModel().getTheContenedorInformacionCMViewModel().getNombrerepresentante());\r\n\t\t\t\t\tcentroMantenimiento.setDescripcion(formulario.getTheContenedorDetalleCMViewModel().getTheContenedorInformacionCMViewModel().getDescripcion());\r\n\t\t\t\t\t\r\n\t\t\t\t\t//-------------------------------------------Asignacion de ubicacion de CM-------------------------------------------------------\r\n\t\t\t\t\tubicacionCM.setPais(formulario.getTheContenedorDetalleCMViewModel().getTheContenedorUbicacionViewModel().getPais());\r\n\t\t\t\t\tubicacionCM.setDepartamento(formulario.getTheContenedorDetalleCMViewModel().getTheContenedorUbicacionViewModel().getDepartamento());\r\n\t\t\t\t\tubicacionCM.setCiudad(formulario.getTheContenedorDetalleCMViewModel().getTheContenedorUbicacionViewModel().getCiudad());\r\n\t\t\t\t\tubicacionCM.setDireccion(formulario.getTheContenedorDetalleCMViewModel().getTheContenedorUbicacionViewModel().getDireccion());\r\n\t\t\t\t\t\r\n\t\t\t\t\tcentroMantenimiento.setUbicacion(ubicacionCM);\r\n\t\t\t\t\tubicacionCM.setOwnedBy(centroMantenimiento);\r\n\t\t\t\t\t\r\n\t\t\t\t\tlistaDeCentMant.add(centroMantenimiento);'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='CentroMant centroMantenimiento = sma.domain.DomainFactory.eINSTANCE.createCentroMant();\r\n\t\t\t\t\t\t\t\t\t\tsma.domain.UbicacionCM ubicacionCM = sma.domain.DomainFactory.eINSTANCE.createUbicacionCM();\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t// -------------------------------------------Asignacion informacion de\r\n\t\t\t\t\t\t\t\t\t\t// CM-------------------------------------------------------\r\n\t\t\t\t\t\t\t\t\t\tcentroMantenimiento.setId(String.valueOf(incrementarIdCm()));\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t// -------------------------------------------Asignacion informacion de\r\n\t\t\t\t\t\t\t\t\t\t// CM-------------------------------------------------------\r\n\t\t\t\t\t\t\t\t\t\tcentroMantenimiento.setNombre(\r\n\t\t\t\t\t\t\t\t\t\t\t\tformulario.getTheContenedorDetalleCMViewModel().getTheContenedorInformacionCMViewModel().getNombrecm());\r\n\t\t\t\t\t\t\t\t\t\tcentroMantenimiento.setNombreRepresentante(formulario.getTheContenedorDetalleCMViewModel()\r\n\t\t\t\t\t\t\t\t\t\t\t\t.getTheContenedorInformacionCMViewModel().getNombrerepresentante());\r\n\t\t\t\t\t\t\t\t\t\tcentroMantenimiento.setDescripcion(formulario.getTheContenedorDetalleCMViewModel()\r\n\t\t\t\t\t\t\t\t\t\t\t\t.getTheContenedorInformacionCMViewModel().getDescripcion());\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t// -------------------------------------------Asignacion de ubicacion de\r\n\t\t\t\t\t\t\t\t\t\t// CM-------------------------------------------------------\r\n\t\t\t\t\t\t\t\t\t\tubicacionCM.setPais(\r\n\t\t\t\t\t\t\t\t\t\t\t\tformulario.getTheContenedorDetalleCMViewModel().getTheContenedorUbicacionViewModel().getPais());\r\n\t\t\t\t\t\t\t\t\t\tubicacionCM.setDepartamento(\r\n\t\t\t\t\t\t\t\t\t\t\t\tformulario.getTheContenedorDetalleCMViewModel().getTheContenedorUbicacionViewModel().getDepartamento());\r\n\t\t\t\t\t\t\t\t\t\tubicacionCM.setCiudad(\r\n\t\t\t\t\t\t\t\t\t\t\t\tformulario.getTheContenedorDetalleCMViewModel().getTheContenedorUbicacionViewModel().getCiudad());\r\n\t\t\t\t\t\t\t\t\t\tubicacionCM.setDireccion(\r\n\t\t\t\t\t\t\t\t\t\t\t\tformulario.getTheContenedorDetalleCMViewModel().getTheContenedorUbicacionViewModel().getDireccion());\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\tcentroMantenimiento.setUbicacion(ubicacionCM);\r\n\t\t\t\t\t\t\t\t\t\tubicacionCM.setOwnedBy(centroMantenimiento);\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\tgetListaDeCentMant().add(centroMantenimiento);'"
 	 * @generated
 	 */
 	void registrarCm(ContenedorCRUDCMViewModel formulario);
@@ -254,7 +265,7 @@ public interface Domain extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model idPropietarioDataType="sma.String"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='Automovil automovil = sma.domain.DomainFactory.eINSTANCE.createAutomovil();\r\n\t\t\t\t//Usuario usuario = sma.domain.DomainFactory.eINSTANCE.createUsuario();\r\n\t\t\t\t\r\n\t\t\t\t//-------------------------------Asignar id incremental al automovil-------------------------------------------------------\r\n\t\t\t\tautomovil.setId(String.valueOf(incrementalIdAuto));\r\n\t\t\t\t\r\n\t\t\t\t//-------------------------------Asignar Propiedades al automovil--------------------------------------------------------------\r\n\t\t\t\tautomovil.setMarca(formulario.getTheContenedorDetalleVehiculoViewModel().getMarca());\r\n\t\t\t\tautomovil.setModelo(Integer.parseInt(formulario.getTheContenedorDetalleVehiculoViewModel().getModelo()));\r\n\t\t\t\tautomovil.setPlaca(formulario.getTheContenedorDetalleVehiculoViewModel().getPlaca());\r\n\t\t\t\tautomovil.setReferencia(formulario.getTheContenedorDetalleVehiculoViewModel().getReferencia());\r\n\t\t\t\tautomovil.setTipoUso(formulario.getTheContenedorDetalleVehiculoViewModel().getTipovehiculo());\r\n\t\t\t\t\r\n\t\t\t\t//--------------------------------------------Agregar a la lista de Autos registrados del usuario-------------------------------------\r\n\t\t\t\tfor (Usuario usu : listaUsuarios) {\r\n\t\t\t\t\tif ( usu.getId().equals( idPropietario ) ) {\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\tautomovil.setPropietario(usu);\r\n\t\t\t\t\t\tusu.getAutomoviles().add(automovil);\r\n\t\t\t\t\t\r\n\t\t\t\t\t}\r\n\t\t\t\t}'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='Automovil automovil = sma.domain.DomainFactory.eINSTANCE.createAutomovil();\r\n\t\t\t\t\t\t\t\t\t\t// Usuario usuario = sma.domain.DomainFactory.eINSTANCE.createUsuario();\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t// -------------------------------Asignar id incremental al\r\n\t\t\t\t\t\t\t\t\t\t// automovil-------------------------------------------------------\r\n\t\t\t\t\t\t\t\t\t\tautomovil.setId(String.valueOf(incrementarIdAuto()));\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t// -------------------------------Asignar Propiedades al\r\n\t\t\t\t\t\t\t\t\t\t// automovil--------------------------------------------------------------\r\n\t\t\t\t\t\t\t\t\t\tautomovil.setMarca(formulario.getTheContenedorDetalleVehiculoViewModel().getMarca());\r\n\t\t\t\t\t\t\t\t\t\tautomovil.setModelo(Integer.parseInt(formulario.getTheContenedorDetalleVehiculoViewModel().getModelo()));\r\n\t\t\t\t\t\t\t\t\t\tautomovil.setPlaca(formulario.getTheContenedorDetalleVehiculoViewModel().getPlaca());\r\n\t\t\t\t\t\t\t\t\t\tautomovil.setReferencia(formulario.getTheContenedorDetalleVehiculoViewModel().getReferencia());\r\n\t\t\t\t\t\t\t\t\t\tautomovil.setTipoUso(formulario.getTheContenedorDetalleVehiculoViewModel().getTipovehiculo());\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t// --------------------------------------------Agregar a la lista de Autos\r\n\t\t\t\t\t\t\t\t\t\t// registrados del usuario-------------------------------------\r\n\t\t\t\t\t\t\t\t\t\tfor (Usuario usu : listaUsuarios) {\r\n\t\t\t\t\t\t\t\t\t\t\tif (usu.getId().equals(idPropietario)) {\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\tautomovil.setPropietario(usu);\r\n\t\t\t\t\t\t\t\t\t\t\t\tusu.getAutomoviles().add(automovil);\r\n\t\t\t\t\t\t\t\t\t\t\t\tgetListaAutomoviles().add(automovil);\r\n\t\t\t\t\t\t\t\t\t\t\t\tSystem.out.println(\"auto registrado al propietario \" + usu.getNombres());\r\n\t\t\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t}'"
 	 * @generated
 	 */
 	void registrarAutomovil(ContenedorRegistroVehiculoViewModel formulario, String idPropietario);
@@ -263,7 +274,7 @@ public interface Domain extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="sma.EIntegerObject"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='int retorno = incrementalIdCliente;\r\n\t\tincrementalIdCliente = incrementalIdCliente +1;\r\n\t\t\r\n\t\treturn retorno;'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='if (incrementalIdCliente == null) {\r\n\t\t\t\t\t\t\t\t\t\t\tincrementalIdCliente = 0;\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\t\tint retorno = incrementalIdCliente;\r\n\t\t\t\t\t\t\t\t\t\tincrementalIdCliente = incrementalIdCliente + 1;\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\treturn retorno;'"
 	 * @generated
 	 */
 	Integer incrementarIdCliente();
@@ -272,7 +283,7 @@ public interface Domain extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="sma.EIntegerObject"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='int retorno = incrementalIdCm;\r\n\t\tincrementalIdCm = incrementalIdCm +1;\r\n\t\t\r\n\t\treturn retorno;'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='if (incrementalIdCm == null) {\r\n\t\t\t\t\t\t\t\t\t\t\tincrementalIdCm = 0;\r\n\t\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\tint retorno = incrementalIdCm;\r\n\t\t\t\t\t\t\t\t\t\tincrementalIdCm = incrementalIdCm + 1;\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\treturn retorno;'"
 	 * @generated
 	 */
 	Integer incrementarIdCm();
@@ -281,9 +292,75 @@ public interface Domain extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="sma.EIntegerObject"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='int retorno = incrementalIdAuto;\r\n\t\tincrementalIdAuto = incrementalIdAuto +1;\r\n\t\t\r\n\t\treturn retorno;'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='if (incrementalIdAuto == null) {\r\n\t\t\t\t\t\t\t\t\t\t\tincrementalIdAuto = 0;\r\n\t\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\t\tint retorno = incrementalIdAuto;\r\n\t\t\t\t\t\t\t\t\t\tincrementalIdAuto = incrementalIdAuto + 1;\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\treturn retorno;'"
 	 * @generated
 	 */
 	Integer incrementarIdAuto();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='formulario.getTheContenedorMaestroClienteViewModel().getListaCliente().clear();\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\tfor (Usuario user : listaUsuarios) {\r\n\t\t\t\t\t\t\t\t\t\t\tSystem.out.println(\"usuario en vm \" + user.getNombres());\r\n\t\t\t\t\t\t\t\t\t\t\tsma.ui.viewmodels.contenedorcrudclienteviewmodel.ClienteViewModel cliente = sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelFactory.eINSTANCE\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t.createClienteViewModel();\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\tcliente.setEdad(String.valueOf(user.getEdad()));\r\n\t\t\t\t\t\t\t\t\t\t\tcliente.setEmail(user.getEmail());\r\n\t\t\t\t\t\t\t\t\t\t\tcliente.setIdentificacion(user.getNumDI());\r\n\t\t\t\t\t\t\t\t\t\t\tcliente.setNombre(user.getNombres());\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\tformulario.getTheContenedorMaestroClienteViewModel().getListaCliente().add(cliente);\r\n\t\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t///Migueeeeeee'"
+	 * @generated
+	 */
+	void actualizarCrudCliente(ContenedorCrudClienteViewModel formulario);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='formulario.getTheContenedorMaestroCMViewModel().getListaCentroMant().clear();\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\tfor (CentroMant cm : listaDeCentMant) {\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\tsma.ui.viewmodels.contenedorcrudcmviewmodel.CentroMantViewModel centroMantVm = sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelFactory.eINSTANCE\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t.createCentroMantViewModel();\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\tcentroMantVm.setCiudad(cm.getUbicacion().getCiudad());\r\n\t\t\t\t\t\t\t\t\t\t\tcentroMantVm.setNombrecm(cm.getNombre());\r\n\t\t\t\t\t\t\t\t\t\t\tcentroMantVm.setNombrerepresentante(cm.getNombreRepresentante());\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\tformulario.getTheContenedorMaestroCMViewModel().getListaCentroMant().add(centroMantVm);\r\n\t\t\t\t\t\t\t\t\t\t}'"
+	 * @generated
+	 */
+	void actualizarCrudCm(ContenedorCRUDCMViewModel formulario);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='formulario.getTheContenedorVehiculosRegistradosViewModel().getListaVehiculo().clear();\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\tfor (Usuario user : listaUsuarios) {\r\n\t\t\t\t\t\t\t\t\t\t\tif (user.getId().equals(getTheUI().getIdLogueado())) {\r\n\t\t\t\t\t\t\t\t\t\t\tformulario.getTheContenedorDetalleVehiculoViewModel().setPropietario(user.getNombres());\r\n\t\t\t\t\t\t\t\t\t\t\t\tfor (sma.domain.Automovil auto : user.getAutomoviles()) {\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tsma.ui.viewmodels.contenedorregistrovehiculoviewmodel.VehiculoViewModel vehiculoVM = sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorregistrovehiculoviewmodelFactory.eINSTANCE\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t.createVehiculoViewModel();\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tvehiculoVM.setMarca(auto.getMarca());\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tvehiculoVM.setPlaca(auto.getPlaca());\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tvehiculoVM.setReferencia(auto.getReferencia());\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tformulario.getTheContenedorVehiculosRegistradosViewModel().getListaVehiculo().add(vehiculoVM);\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\tbreak;\r\n\t\t\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t}'"
+	 * @generated
+	 */
+	void actualizarVentanaRegistroCliente(ContenedorRegistroVehiculoViewModel formulario);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="sma.EBooleanObject"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='if(getListaUsuarios() != null) {\r\n\t\t\t\t\t\tfor (Usuario user : getListaUsuarios()) {\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\tif (user.getUsuario().equals(formulario.getTheContenedorDetalleLoginViewModel().getUsuario())) {\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\tif (user.getContrasenia().equals(formulario.getTheContenedorDetalleLoginViewModel().getContrasenia())) {\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tgetTheUI().setIdLogueado(user.getId());\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tgetTheUI().setTipoLogueado(\"cliente\");\r\n\t\t\t\t\t\t\t\t\t\t\t\t\treturn true;\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t//\t\t\t\tfor (CentroMant cm : getListaDeCentMant()) {\r\n\t\t\t\t\t\t//\t\t\r\n\t\t\t\t\t\t//\t\t\t\t\tif (cm.getUsuario().equals(formulario.getTheContenedorDetalleLoginViewModel().getUsuario())) {\r\n\t\t\t\t\t\t//\t\t\r\n\t\t\t\t\t\t//\t\t\t\t\t\tif (cm.getContrasenia().equals(formulario.getTheContenedorDetalleLoginViewModel().getContrasenia())) {\r\n\t\t\t\t\t\t//\t\t\r\n\t\t\t\t\t\t//\t\t\t\t\t\t\tgetTheUI().setIdLogueado(cm.getId());\r\n\t\t\t\t\t\t//\t\t\t\t\t\t\tgetTheUI().setTipoLogueado(\"cm\");\r\n\t\t\t\t\t\t//\t\t\t\t\t\t\treturn true;\r\n\t\t\t\t\t\t//\t\t\r\n\t\t\t\t\t\t//\t\t\t\t\t\t}\r\n\t\t\t\t\t\t//\t\t\r\n\t\t\t\t\t\t//\t\t\t\t\t}\r\n\t\t\t\t\t\t//\t\t\r\n\t\t\t\t\t\t//\t\t\t\t}\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\t\treturn false;'"
+	 * @generated
+	 */
+	Boolean hacerLogin(ContenedorLoginViewModel formulario);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model placaVehDataType="sma.String"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='for (Automovil auto : listaAutomoviles) {\r\n\t\t\t\t\t\r\n\t\t\t\t\tif (auto.getPlaca().equals(placaVeh)) {\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t//auto.asignarFallas();\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t}'"
+	 * @generated
+	 */
+	void escanearVehiculo(String placaVeh);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='for (Automovil auto : listaAutomoviles) {\r\n\t\t\t\t\t\r\n\t\t\t\t\tif (auto.getPlaca().equals(formulario.getTheContenedorSeleccionautoViewModel().getPlacavehiculo())) {\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\tif (auto.getListaDeFallas() != null) {\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\tfor (sma.domain.automatizacionrevision.FallaMecanica falla : auto.getListaDeFallas()) {\r\n\t\t\t\t\t\t\t\tsma.ui.viewmodels.contenedorescaneoviewmodel.ListaFallasViewModel fallaVM = sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorescaneoviewmodelFactory\r\n\t\t\t\t\t\t\t\t\t\t.eINSTANCE.createListaFallasViewModel();\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\tfallaVM.setGravedad(falla.getGravedad());\r\n\t\t\t\t\t\t\t\tfallaVM.setOrigen(falla.getOrigen());\r\n\t\t\t\t\t\t\t\tfallaVM.setGravedad(falla.getGravedad());\r\n\t\t\t\t\t\t\t\tfallaVM.setOrigen(falla.getOrigen());\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\tformulario.getTheContenedorFallasViewModel().getListaListaFallasViewModel().add(fallaVM);\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t}'"
+	 * @generated
+	 */
+	void mostrarEstadoVehCliente(ContenedorEscaneoViewModel formulario);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='for (CentroMant centroMant : listaDeCentMant) {\r\n\t\t\t\r\n\t\t\tif ( centroMant.getUbicacion().getPais().equals(formulario.getTheContenedorUbicacionactualViewModel().getPais())\r\n\t\t\t\t&amp;&amp; centroMant.getUbicacion().getDepartamento().equals(formulario.getTheContenedorUbicacionactualViewModel().getDepartamento()))\r\n\t\t\t{\t\r\n\t\t\t\r\n\t\t\t\tsma.ui.viewmodels.contenedorcontactarcmviewmodel.ListaCmViewModel cmVM = sma.ui.viewmodels.contenedorcontactarcmviewmodel.\r\n\t\t\t\t\t\tContenedorcontactarcmviewmodelFactory.eINSTANCE.createListaCmViewModel();\r\n\t\t\t\t\r\n\t\t\t\tcmVM.setNombre(centroMant.getNombre());\r\n\t\t\t\tcmVM.setNombrerepresentante(centroMant.getNombreRepresentante());\r\n\t\t\t\tcmVM.setDireccion(centroMant.getUbicacion().getDireccion());\r\n\t\t\t\t\r\n\t\t\t\tformulario.getTheContenedorCmrecomendadosViewModel().getListaListaCmViewModel().add(cmVM);\r\n\t\t\t\t\r\n\t\t\t}\r\n\t\t\t\r\n\t\t}'"
+	 * @generated
+	 */
+	void mostrarCmsCercanos(ContenedorContactarCmViewModel formulario);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='//TODO solicitarVisita\n'"
+	 * @generated
+	 */
+	void solicitarVisita(ContenedorSolicitudVisitaViewModel formulario);
 
 } // Domain

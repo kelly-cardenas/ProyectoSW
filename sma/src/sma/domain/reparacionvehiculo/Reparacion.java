@@ -89,6 +89,7 @@ public interface Reparacion extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Nombre Responsable</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Nombre Responsable</em>' attribute isn't clear,
@@ -98,7 +99,7 @@ public interface Reparacion extends EObject {
 	 * @return the value of the '<em>Nombre Responsable</em>' attribute.
 	 * @see #setNombreResponsable(String)
 	 * @see sma.domain.reparacionvehiculo.ReparacionvehiculoPackage#getReparacion_NombreResponsable()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getNombreResponsable();
@@ -115,6 +116,7 @@ public interface Reparacion extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Estado</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Estado</em>' attribute isn't clear,
@@ -124,7 +126,7 @@ public interface Reparacion extends EObject {
 	 * @return the value of the '<em>Estado</em>' attribute.
 	 * @see #setEstado(String)
 	 * @see sma.domain.reparacionvehiculo.ReparacionvehiculoPackage#getReparacion_Estado()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getEstado();
@@ -141,6 +143,7 @@ public interface Reparacion extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Numero Fallas Predecidas</b></em>' attribute.
+	 * The default value is <code>"0"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Numero Fallas Predecidas</em>' attribute isn't clear,
@@ -150,7 +153,7 @@ public interface Reparacion extends EObject {
 	 * @return the value of the '<em>Numero Fallas Predecidas</em>' attribute.
 	 * @see #setNumeroFallasPredecidas(Integer)
 	 * @see sma.domain.reparacionvehiculo.ReparacionvehiculoPackage#getReparacion_NumeroFallasPredecidas()
-	 * @model dataType="sma.EIntegerObject"
+	 * @model default="0" dataType="sma.EIntegerObject"
 	 * @generated
 	 */
 	Integer getNumeroFallasPredecidas();
@@ -167,6 +170,7 @@ public interface Reparacion extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Numero Fallas Acertadas</b></em>' attribute.
+	 * The default value is <code>"0"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Numero Fallas Acertadas</em>' attribute isn't clear,
@@ -176,7 +180,7 @@ public interface Reparacion extends EObject {
 	 * @return the value of the '<em>Numero Fallas Acertadas</em>' attribute.
 	 * @see #setNumeroFallasAcertadas(Integer)
 	 * @see sma.domain.reparacionvehiculo.ReparacionvehiculoPackage#getReparacion_NumeroFallasAcertadas()
-	 * @model dataType="sma.EIntegerObject"
+	 * @model default="0" dataType="sma.EIntegerObject"
 	 * @generated
 	 */
 	Integer getNumeroFallasAcertadas();
@@ -193,6 +197,7 @@ public interface Reparacion extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Fecha</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Fecha</em>' attribute isn't clear,
@@ -202,7 +207,7 @@ public interface Reparacion extends EObject {
 	 * @return the value of the '<em>Fecha</em>' attribute.
 	 * @see #setFecha(String)
 	 * @see sma.domain.reparacionvehiculo.ReparacionvehiculoPackage#getReparacion_Fecha()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getFecha();
@@ -219,6 +224,7 @@ public interface Reparacion extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Hora</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Hora</em>' attribute isn't clear,
@@ -228,7 +234,7 @@ public interface Reparacion extends EObject {
 	 * @return the value of the '<em>Hora</em>' attribute.
 	 * @see #setHora(String)
 	 * @see sma.domain.reparacionvehiculo.ReparacionvehiculoPackage#getReparacion_Hora()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getHora();

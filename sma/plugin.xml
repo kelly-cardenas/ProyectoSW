@@ -45,6 +45,14 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated sma -->
       <package
+            uri="http:///sma/ui/viewmodels.ecore"
+            class="sma.ui.viewmodels.ViewmodelsPackage"
+            genModel="model/sma.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated sma -->
+      <package
             uri="http:///sma/ui/viewmodels/contenedorcrudclienteviewmodel.ecore"
             class="sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelPackage"
             genModel="model/sma.genmodel"/>
@@ -71,6 +79,30 @@
       <package
             uri="http:///sma/ui/viewmodels/contenedorloginviewmodel.ecore"
             class="sma.ui.viewmodels.contenedorloginviewmodel.ContenedorloginviewmodelPackage"
+            genModel="model/sma.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated sma -->
+      <package
+            uri="http:///sma/ui/viewmodels/contenedorescaneoviewmodel.ecore"
+            class="sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorescaneoviewmodelPackage"
+            genModel="model/sma.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated sma -->
+      <package
+            uri="http:///sma/ui/viewmodels/contenedorsolicitudvisitaviewmodel.ecore"
+            class="sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.ContenedorsolicitudvisitaviewmodelPackage"
+            genModel="model/sma.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated sma -->
+      <package
+            uri="http:///sma/ui/viewmodels/contenedorcontactarcmviewmodel.ecore"
+            class="sma.ui.viewmodels.contenedorcontactarcmviewmodel.ContenedorcontactarcmviewmodelPackage"
             genModel="model/sma.genmodel"/>
    </extension>
 

@@ -203,13 +203,13 @@ public interface ContenedorregistrovehiculoviewmodelPackage extends EPackage {
 	int CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__OWNED_BY_CONTENEDOR_REGISTRO_VEHICULO_VIEW_MODEL = 0;
 
 	/**
-	 * The feature id for the '<em><b>Vehiculo View Model</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Lista Vehiculo</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__VEHICULO_VIEW_MODEL = 1;
+	int CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__LISTA_VEHICULO = 1;
 
 	/**
 	 * The number of structural features of the '<em>Contenedor Vehiculos Registrados View Model</em>' class.
@@ -428,15 +428,15 @@ public interface ContenedorregistrovehiculoviewmodelPackage extends EPackage {
 	EReference getContenedorVehiculosRegistradosViewModel_OwnedByContenedorRegistroVehiculoViewModel();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorVehiculosRegistradosViewModel#getVehiculoViewModel <em>Vehiculo View Model</em>}'.
+	 * Returns the meta object for the containment reference list '{@link sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorVehiculosRegistradosViewModel#getListaVehiculo <em>Lista Vehiculo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Vehiculo View Model</em>'.
-	 * @see sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorVehiculosRegistradosViewModel#getVehiculoViewModel()
+	 * @return the meta object for the containment reference list '<em>Lista Vehiculo</em>'.
+	 * @see sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorVehiculosRegistradosViewModel#getListaVehiculo()
 	 * @see #getContenedorVehiculosRegistradosViewModel()
 	 * @generated
 	 */
-	EReference getContenedorVehiculosRegistradosViewModel_VehiculoViewModel();
+	EReference getContenedorVehiculosRegistradosViewModel_ListaVehiculo();
 
 	/**
 	 * Returns the meta object for class '{@link sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.VehiculoViewModel <em>Vehiculo View Model</em>}'.
@@ -633,12 +633,12 @@ public interface ContenedorregistrovehiculoviewmodelPackage extends EPackage {
 		EReference CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__OWNED_BY_CONTENEDOR_REGISTRO_VEHICULO_VIEW_MODEL = eINSTANCE.getContenedorVehiculosRegistradosViewModel_OwnedByContenedorRegistroVehiculoViewModel();
 
 		/**
-		 * The meta object literal for the '<em><b>Vehiculo View Model</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Lista Vehiculo</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__VEHICULO_VIEW_MODEL = eINSTANCE.getContenedorVehiculosRegistradosViewModel_VehiculoViewModel();
+		EReference CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__LISTA_VEHICULO = eINSTANCE.getContenedorVehiculosRegistradosViewModel_ListaVehiculo();
 
 		/**
 		 * The meta object literal for the '{@link sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.impl.VehiculoViewModelImpl <em>Vehiculo View Model</em>}' class.

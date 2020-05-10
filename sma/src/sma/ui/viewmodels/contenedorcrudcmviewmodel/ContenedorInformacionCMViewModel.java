@@ -54,6 +54,7 @@ public interface ContenedorInformacionCMViewModel extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Nombrecm</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Nombrecm</em>' attribute isn't clear,
@@ -63,7 +64,7 @@ public interface ContenedorInformacionCMViewModel extends EObject {
 	 * @return the value of the '<em>Nombrecm</em>' attribute.
 	 * @see #setNombrecm(String)
 	 * @see sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelPackage#getContenedorInformacionCMViewModel_Nombrecm()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getNombrecm();
@@ -80,6 +81,7 @@ public interface ContenedorInformacionCMViewModel extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Nombrerepresentante</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Nombrerepresentante</em>' attribute isn't clear,
@@ -89,7 +91,7 @@ public interface ContenedorInformacionCMViewModel extends EObject {
 	 * @return the value of the '<em>Nombrerepresentante</em>' attribute.
 	 * @see #setNombrerepresentante(String)
 	 * @see sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelPackage#getContenedorInformacionCMViewModel_Nombrerepresentante()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getNombrerepresentante();
@@ -106,6 +108,7 @@ public interface ContenedorInformacionCMViewModel extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Descripcion</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Descripcion</em>' attribute isn't clear,
@@ -115,7 +118,7 @@ public interface ContenedorInformacionCMViewModel extends EObject {
 	 * @return the value of the '<em>Descripcion</em>' attribute.
 	 * @see #setDescripcion(String)
 	 * @see sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelPackage#getContenedorInformacionCMViewModel_Descripcion()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getDescripcion();

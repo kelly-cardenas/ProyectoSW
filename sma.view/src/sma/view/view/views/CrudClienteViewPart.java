@@ -11,6 +11,9 @@ import sma.ui.viewmodels.contenedorcrudclienteviewmodel.*;
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.*;
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.*;
 import sma.ui.viewmodels.contenedorloginviewmodel.*;
+import sma.ui.viewmodels.contenedorescaneoviewmodel.*;
+import sma.ui.viewmodels.contenedorcontactarcmviewmodel.*;
+import sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.*;
 
 import sma.view.model.ModelFactoryModel;
 import org.eclipse.wb.swt.SWTResourceManager;
@@ -215,7 +218,7 @@ public class CrudClienteViewPart  extends ViewPart {
 
 		textCedulaDatosPersonales = formToolkit.createText(groupDatosPersonales, "New Text", SWT.NONE);
 		textCedulaDatosPersonales.setText("");
-		textCedulaDatosPersonales.setBounds(239,19,183,21);
+		textCedulaDatosPersonales.setBounds(235,19,193,21);
 
 		textCedulaDatosPersonales.setFont(SWTResourceManager.getFont("Segoe UI",10,SWT.NORMAL));
 
@@ -298,25 +301,25 @@ public class CrudClienteViewPart  extends ViewPart {
 		         clienteViewModelSeleccionado  = (ClienteViewModel)e.item.getData();
 		  } 
           });
-		TableViewerColumn  tableViewerColumn10Identificacion = new TableViewerColumn(tableViewerCliente, SWT.NONE);
-		TableColumn tblclmn10Identificacion = tableViewerColumn10Identificacion.getColumn();
-		tblclmn10Identificacion.setWidth(100);
-		tblclmn10Identificacion .setText("identificacion");
+		TableViewerColumn  tableViewerColumn0Identificacion = new TableViewerColumn(tableViewerCliente, SWT.NONE);
+		TableColumn tblclmn0Identificacion = tableViewerColumn0Identificacion.getColumn();
+		tblclmn0Identificacion.setWidth(100);
+		tblclmn0Identificacion .setText("identificacion");
 
-		TableViewerColumn  tableViewerColumn11Nombre = new TableViewerColumn(tableViewerCliente, SWT.NONE);
-		TableColumn tblclmn11Nombre = tableViewerColumn11Nombre.getColumn();
-		tblclmn11Nombre.setWidth(100);
-		tblclmn11Nombre .setText("Nombre");
+		TableViewerColumn  tableViewerColumn1Nombre = new TableViewerColumn(tableViewerCliente, SWT.NONE);
+		TableColumn tblclmn1Nombre = tableViewerColumn1Nombre.getColumn();
+		tblclmn1Nombre.setWidth(100);
+		tblclmn1Nombre .setText("Nombre");
 
-		TableViewerColumn  tableViewerColumn12Email = new TableViewerColumn(tableViewerCliente, SWT.NONE);
-		TableColumn tblclmn12Email = tableViewerColumn12Email.getColumn();
-		tblclmn12Email.setWidth(100);
-		tblclmn12Email .setText("Email");
+		TableViewerColumn  tableViewerColumn2Email = new TableViewerColumn(tableViewerCliente, SWT.NONE);
+		TableColumn tblclmn2Email = tableViewerColumn2Email.getColumn();
+		tblclmn2Email.setWidth(100);
+		tblclmn2Email .setText("Email");
 
-		TableViewerColumn  tableViewerColumn13Edad = new TableViewerColumn(tableViewerCliente, SWT.NONE);
-		TableColumn tblclmn13Edad = tableViewerColumn13Edad.getColumn();
-		tblclmn13Edad.setWidth(100);
-		tblclmn13Edad .setText("Edad");
+		TableViewerColumn  tableViewerColumn3Edad = new TableViewerColumn(tableViewerCliente, SWT.NONE);
+		TableColumn tblclmn3Edad = tableViewerColumn3Edad.getColumn();
+		tblclmn3Edad.setWidth(100);
+		tblclmn3Edad .setText("Edad");
 
         try {
 	       initDataBindings();
@@ -357,16 +360,16 @@ public class CrudClienteViewPart  extends ViewPart {
         IObservableValue contenedordatosdelacuentaContraseñaDatosdelacuentaObserveValue = EMFObservables.observeValue(contenedordatosdelacuentaViewModel,ContenedorcrudclienteviewmodelPackage.Literals.CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__CONTRASEÑA);
         bindingContext.bindValue(observeTextContraseñaDatosdelacuentaObserveWidget,contenedordatosdelacuentaContraseñaDatosdelacuentaObserveValue, null, null);
         //
-        ObservableListContentProvider listContentProvider3 = new ObservableListContentProvider();
-        IObservableMap[] observeMaps3= EMFObservables.observeMaps(listContentProvider3.getKnownElements(),
-        new EStructuralFeature[]{ContenedorcrudclienteviewmodelPackage.Literals.CLIENTE_VIEW_MODEL__IDENTIFICACION,ContenedorcrudclienteviewmodelPackage.Literals.CLIENTE_VIEW_MODEL__NOMBRE,ContenedorcrudclienteviewmodelPackage.Literals.CLIENTE_VIEW_MODEL__EMAIL,ContenedorcrudclienteviewmodelPackage.Literals.CLIENTE_VIEW_MODEL__EDAD});
-        tableViewerCliente.setLabelProvider(new ObservableMapLabelProvider(observeMaps3));
-        tableViewerCliente.setContentProvider(listContentProvider3);
+        ObservableListContentProvider listContentProvider0 = new ObservableListContentProvider();
+        IObservableMap[] observeMaps0= EMFObservables.observeMaps(listContentProvider0.getKnownElements(),
+        new EStructuralFeature[]{ContenedorcrudclienteviewmodelPackage.Literals.CLIENTE_VIEW_MODEL__IDENTIFICACION,ContenedorcrudclienteviewmodelPackage.Literals.CLIENTE_VIEW_MODEL__NOMBRE                                                  ,ContenedorcrudclienteviewmodelPackage.Literals.CLIENTE_VIEW_MODEL__EMAIL                                                     ,ContenedorcrudclienteviewmodelPackage.Literals.CLIENTE_VIEW_MODEL__EDAD});
+        tableViewerCliente.setLabelProvider(new ObservableMapLabelProvider(observeMaps0));
+        tableViewerCliente.setContentProvider(listContentProvider0);
 
         //
-        IObservableList observeList3= EMFObservables.observeList(Realm.getDefault(),contenedormaestroClienteViewModel,
-        ContenedorcrudclienteviewmodelPackage.Literals.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__CLIENTE_VIEW_MODEL);
-        tableViewerCliente.setInput(observeList3);
+        IObservableList observeList0= EMFObservables.observeList(Realm.getDefault(),contenedormaestroClienteViewModel,
+        ContenedorcrudclienteviewmodelPackage.Literals.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__LISTA_CLIENTE_VIEW_MODEL);
+        tableViewerCliente.setInput(observeList0);
             //
 
          return bindingContext;
@@ -377,24 +380,61 @@ public class CrudClienteViewPart  extends ViewPart {
       }
 
       public void registrarAction ( String  event ){
-contenedordatosPersonalesViewModel.setCedula(textCedulaDatosPersonales.getText());
-    	  contenedordatosPersonalesViewModel.setNombre(textNombreDatosPersonales.getText());
-    	  contenedordatosPersonalesViewModel.setApellido(textApellidoDatosPersonales.getText());
-    	  contenedordatosPersonalesViewModel.setEdad(textEdadDatosPersonales.getText());
-    	  contenedordatosPersonalesViewModel.setCorreoelectronico(textCorreoElectronicoDatosPersonales.getText());
+String arreglo [][] = {{"1085445", "13565555", "1578665"},
+	 				  {"Andres", "Alberto", "pepito"},
+	 				  { "suarez" ,"soto", "perez" },
+	 				  { "19" , "28", "35" },
+	 				  { "mail", "mail", "mail" },
+	 				  { "andres", "alberto", "pepito" },
+	 				  { "password", "password", "password" }};
+
+    		 for (int i = 0; i < 3; i++) {
+    			 
+    			 contenedordatosPersonalesViewModel.setCedula(arreglo[0][i]);
+    	    	  contenedordatosPersonalesViewModel.setNombre(arreglo[1][i]);
+    	    	  contenedordatosPersonalesViewModel.setApellido(arreglo[2][i]);
+    	    	  contenedordatosPersonalesViewModel.setEdad(arreglo[3][i]);
+    	    	  contenedordatosPersonalesViewModel.setCorreoelectronico(arreglo[4][i]);
+    	    	  
+    	    	  contenedordatosdelacuentaViewModel.setUsuario(arreglo[5][i]);
+    	    	  contenedordatosdelacuentaViewModel.setContrasenia(arreglo[6][i]);
+    	    	  contenedorcrudClienteViewModel.registrarCliente();
+			}
+
     	  
-    	  contenedordatosdelacuentaViewModel.setUsuario(textUsuarioDatosdelacuenta.getText());
-    	  contenedordatosdelacuentaViewModel.setContraseña(textContraseñaDatosdelacuenta.getText());
+//    	  contenedordatosPersonalesViewModel.setCedula(textCedulaDatosPersonales.getText());
+//    	  contenedordatosPersonalesViewModel.setNombre(textNombreDatosPersonales.getText());
+//    	  contenedordatosPersonalesViewModel.setApellido(textApellidoDatosPersonales.getText());
+//    	  contenedordatosPersonalesViewModel.setEdad(textEdadDatosPersonales.getText());
+//    	  contenedordatosPersonalesViewModel.setCorreoelectronico(textCorreoElectronicoDatosPersonales.getText());
+//    	  
+//    	  contenedordatosdelacuentaViewModel.setUsuario(textUsuarioDatosdelacuenta.getText());
+//    	  contenedordatosdelacuentaViewModel.setContrasenia(textContraseñaDatosdelacuenta.getText());
     	  
-    	  contenedorcrudClienteViewModel.registrarCliente();
+    	 // contenedorcrudClienteViewModel.registrarCliente();
+    	  mfm.salvar();
+    	  contenedorcrudClienteViewModel.actualizarCrudCliente();
+    	  mfm.salvar();
+    	  System.out.println("se hace registro");
+    	  limpiarCampos();
       }
 
       public void constructorContenedorCrudClienteViewPart (){
-//semantics
+             //semantics
       }
 
       public void syncModel (){
-//semantics
+             //semantics
+      }
+
+      public void limpiarCampos (){
+             textCedulaDatosPersonales.setText("");
+    	  textNombreDatosPersonales.setText("");
+    	  textApellidoDatosPersonales.setText("");
+    	  textEdadDatosPersonales.setText("");
+    	  textCorreoElectronicoDatosPersonales.setText("");
+    	  textUsuarioDatosdelacuenta.setText("");
+    	  textContraseñaDatosdelacuenta.setText("");
       }
 
 }

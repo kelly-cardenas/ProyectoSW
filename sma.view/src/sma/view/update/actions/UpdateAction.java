@@ -38,6 +38,18 @@ public class UpdateAction implements IWorkbenchWindowActionDelegate {
 		           LoginViewPart loginViewPart = (LoginViewPart)iWorkbenchPage2;
 		            loginViewPart.updateData();
 					}
+					if(iWorkbenchPage2 instanceof EscaneoViewPart) {
+		           EscaneoViewPart escaneoViewPart = (EscaneoViewPart)iWorkbenchPage2;
+		            escaneoViewPart.updateData();
+					}
+					if(iWorkbenchPage2 instanceof ContactarCmViewPart) {
+		           ContactarCmViewPart contactarCmViewPart = (ContactarCmViewPart)iWorkbenchPage2;
+		            contactarCmViewPart.updateData();
+					}
+					if(iWorkbenchPage2 instanceof SolicitudVisitaViewPart) {
+		           SolicitudVisitaViewPart solicitudVisitaViewPart = (SolicitudVisitaViewPart)iWorkbenchPage2;
+		            solicitudVisitaViewPart.updateData();
+					}
 				}
 			}
 		}

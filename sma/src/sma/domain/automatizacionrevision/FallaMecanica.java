@@ -29,6 +29,7 @@ import sma.domain.Automovil;
 public interface FallaMecanica extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Piesa Averiada</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Piesa Averiada</em>' attribute isn't clear,
@@ -38,7 +39,7 @@ public interface FallaMecanica extends EObject {
 	 * @return the value of the '<em>Piesa Averiada</em>' attribute.
 	 * @see #setPiesaAveriada(String)
 	 * @see sma.domain.automatizacionrevision.AutomatizacionrevisionPackage#getFallaMecanica_PiesaAveriada()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getPiesaAveriada();
@@ -55,6 +56,7 @@ public interface FallaMecanica extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Gravedad</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Gravedad</em>' attribute isn't clear,
@@ -64,7 +66,7 @@ public interface FallaMecanica extends EObject {
 	 * @return the value of the '<em>Gravedad</em>' attribute.
 	 * @see #setGravedad(String)
 	 * @see sma.domain.automatizacionrevision.AutomatizacionrevisionPackage#getFallaMecanica_Gravedad()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getGravedad();
@@ -81,6 +83,7 @@ public interface FallaMecanica extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Origen</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Origen</em>' attribute isn't clear,
@@ -90,7 +93,7 @@ public interface FallaMecanica extends EObject {
 	 * @return the value of the '<em>Origen</em>' attribute.
 	 * @see #setOrigen(String)
 	 * @see sma.domain.automatizacionrevision.AutomatizacionrevisionPackage#getFallaMecanica_Origen()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getOrigen();
@@ -107,6 +110,7 @@ public interface FallaMecanica extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Descripcion</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Descripcion</em>' attribute isn't clear,
@@ -116,7 +120,7 @@ public interface FallaMecanica extends EObject {
 	 * @return the value of the '<em>Descripcion</em>' attribute.
 	 * @see #setDescripcion(String)
 	 * @see sma.domain.automatizacionrevision.AutomatizacionrevisionPackage#getFallaMecanica_Descripcion()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getDescripcion();

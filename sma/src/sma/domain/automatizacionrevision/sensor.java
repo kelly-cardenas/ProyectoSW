@@ -55,6 +55,7 @@ public interface sensor extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
@@ -64,7 +65,7 @@ public interface sensor extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(String)
 	 * @see sma.domain.automatizacionrevision.AutomatizacionrevisionPackage#getsensor_Id()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getId();
@@ -81,6 +82,7 @@ public interface sensor extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Info Comp</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Info Comp</em>' attribute isn't clear,
@@ -90,7 +92,7 @@ public interface sensor extends EObject {
 	 * @return the value of the '<em>Info Comp</em>' attribute.
 	 * @see #setInfoComp(String)
 	 * @see sma.domain.automatizacionrevision.AutomatizacionrevisionPackage#getsensor_InfoComp()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getInfoComp();

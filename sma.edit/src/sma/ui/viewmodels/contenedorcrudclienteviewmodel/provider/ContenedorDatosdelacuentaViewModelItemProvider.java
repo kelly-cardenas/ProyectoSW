@@ -63,7 +63,7 @@ public class ContenedorDatosdelacuentaViewModelItemProvider
 			super.getPropertyDescriptors(object);
 
 			addUsuarioPropertyDescriptor(object);
-			addContraseñaPropertyDescriptor(object);
+			addContraseniaPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -91,19 +91,19 @@ public class ContenedorDatosdelacuentaViewModelItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Contraseña feature.
+	 * This adds a property descriptor for the Contrasenia feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addContraseñaPropertyDescriptor(Object object) {
+	protected void addContraseniaPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ContenedorDatosdelacuentaViewModel_contraseña_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ContenedorDatosdelacuentaViewModel_contraseña_feature", "_UI_ContenedorDatosdelacuentaViewModel_type"),
-				 ContenedorcrudclienteviewmodelPackage.Literals.CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__CONTRASEÑA,
+				 getString("_UI_ContenedorDatosdelacuentaViewModel_contrasenia_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ContenedorDatosdelacuentaViewModel_contrasenia_feature", "_UI_ContenedorDatosdelacuentaViewModel_type"),
+				 ContenedorcrudclienteviewmodelPackage.Literals.CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__CONTRASENIA,
 				 true,
 				 false,
 				 false,
@@ -151,7 +151,7 @@ public class ContenedorDatosdelacuentaViewModelItemProvider
 
 		switch (notification.getFeatureID(ContenedorDatosdelacuentaViewModel.class)) {
 			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__USUARIO:
-			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__CONTRASEÑA:
+			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__CONTRASENIA:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

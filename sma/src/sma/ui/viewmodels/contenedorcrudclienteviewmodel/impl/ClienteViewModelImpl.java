@@ -30,7 +30,6 @@ import sma.ui.viewmodels.contenedorcrudclienteviewmodel.Contenedorcrudclientevie
  *   <li>{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.impl.ClienteViewModelImpl#getEmail <em>Email</em>}</li>
  *   <li>{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.impl.ClienteViewModelImpl#getEdad <em>Edad</em>}</li>
  *   <li>{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.impl.ClienteViewModelImpl#getThe0ContenedorMaestroClienteViewModel <em>The0 Contenedor Maestro Cliente View Model</em>}</li>
- *   <li>{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.impl.ClienteViewModelImpl#getTheContenedorMaestroClienteViewModel <em>The Contenedor Maestro Cliente View Model</em>}</li>
  * </ul>
  *
  * @generated
@@ -44,7 +43,7 @@ public class ClienteViewModelImpl extends EObjectImpl implements ClienteViewMode
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String IDENTIFICACION_EDEFAULT = null;
+	protected static final String IDENTIFICACION_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getIdentificacion() <em>Identificacion</em>}' attribute.
@@ -64,7 +63,7 @@ public class ClienteViewModelImpl extends EObjectImpl implements ClienteViewMode
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NOMBRE_EDEFAULT = null;
+	protected static final String NOMBRE_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
@@ -84,7 +83,7 @@ public class ClienteViewModelImpl extends EObjectImpl implements ClienteViewMode
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String EMAIL_EDEFAULT = null;
+	protected static final String EMAIL_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getEmail() <em>Email</em>}' attribute.
@@ -104,7 +103,7 @@ public class ClienteViewModelImpl extends EObjectImpl implements ClienteViewMode
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String EDAD_EDEFAULT = null;
+	protected static final String EDAD_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getEdad() <em>Edad</em>}' attribute.
@@ -115,16 +114,6 @@ public class ClienteViewModelImpl extends EObjectImpl implements ClienteViewMode
 	 * @ordered
 	 */
 	protected String edad = EDAD_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getTheContenedorMaestroClienteViewModel() <em>The Contenedor Maestro Cliente View Model</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTheContenedorMaestroClienteViewModel()
-	 * @generated
-	 * @ordered
-	 */
-	protected ContenedorMaestroClienteViewModel theContenedorMaestroClienteViewModel;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -262,72 +251,12 @@ public class ClienteViewModelImpl extends EObjectImpl implements ClienteViewMode
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newThe0ContenedorMaestroClienteViewModel != null)
-				msgs = ((InternalEObject)newThe0ContenedorMaestroClienteViewModel).eInverseAdd(this, ContenedorcrudclienteviewmodelPackage.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__CLIENTE_VIEW_MODEL, ContenedorMaestroClienteViewModel.class, msgs);
+				msgs = ((InternalEObject)newThe0ContenedorMaestroClienteViewModel).eInverseAdd(this, ContenedorcrudclienteviewmodelPackage.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__LISTA_CLIENTE, ContenedorMaestroClienteViewModel.class, msgs);
 			msgs = basicSetThe0ContenedorMaestroClienteViewModel(newThe0ContenedorMaestroClienteViewModel, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ContenedorcrudclienteviewmodelPackage.CLIENTE_VIEW_MODEL__THE0_CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL, newThe0ContenedorMaestroClienteViewModel, newThe0ContenedorMaestroClienteViewModel));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ContenedorMaestroClienteViewModel getTheContenedorMaestroClienteViewModel() {
-		if (theContenedorMaestroClienteViewModel != null && theContenedorMaestroClienteViewModel.eIsProxy()) {
-			InternalEObject oldTheContenedorMaestroClienteViewModel = (InternalEObject)theContenedorMaestroClienteViewModel;
-			theContenedorMaestroClienteViewModel = (ContenedorMaestroClienteViewModel)eResolveProxy(oldTheContenedorMaestroClienteViewModel);
-			if (theContenedorMaestroClienteViewModel != oldTheContenedorMaestroClienteViewModel) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ContenedorcrudclienteviewmodelPackage.CLIENTE_VIEW_MODEL__THE_CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL, oldTheContenedorMaestroClienteViewModel, theContenedorMaestroClienteViewModel));
-			}
-		}
-		return theContenedorMaestroClienteViewModel;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ContenedorMaestroClienteViewModel basicGetTheContenedorMaestroClienteViewModel() {
-		return theContenedorMaestroClienteViewModel;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetTheContenedorMaestroClienteViewModel(ContenedorMaestroClienteViewModel newTheContenedorMaestroClienteViewModel, NotificationChain msgs) {
-		ContenedorMaestroClienteViewModel oldTheContenedorMaestroClienteViewModel = theContenedorMaestroClienteViewModel;
-		theContenedorMaestroClienteViewModel = newTheContenedorMaestroClienteViewModel;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ContenedorcrudclienteviewmodelPackage.CLIENTE_VIEW_MODEL__THE_CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL, oldTheContenedorMaestroClienteViewModel, newTheContenedorMaestroClienteViewModel);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTheContenedorMaestroClienteViewModel(ContenedorMaestroClienteViewModel newTheContenedorMaestroClienteViewModel) {
-		if (newTheContenedorMaestroClienteViewModel != theContenedorMaestroClienteViewModel) {
-			NotificationChain msgs = null;
-			if (theContenedorMaestroClienteViewModel != null)
-				msgs = ((InternalEObject)theContenedorMaestroClienteViewModel).eInverseRemove(this, ContenedorcrudclienteviewmodelPackage.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__THE_CLIENTE_VIEW_MODEL, ContenedorMaestroClienteViewModel.class, msgs);
-			if (newTheContenedorMaestroClienteViewModel != null)
-				msgs = ((InternalEObject)newTheContenedorMaestroClienteViewModel).eInverseAdd(this, ContenedorcrudclienteviewmodelPackage.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__THE_CLIENTE_VIEW_MODEL, ContenedorMaestroClienteViewModel.class, msgs);
-			msgs = basicSetTheContenedorMaestroClienteViewModel(newTheContenedorMaestroClienteViewModel, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ContenedorcrudclienteviewmodelPackage.CLIENTE_VIEW_MODEL__THE_CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL, newTheContenedorMaestroClienteViewModel, newTheContenedorMaestroClienteViewModel));
 	}
 
 	/**
@@ -342,10 +271,6 @@ public class ClienteViewModelImpl extends EObjectImpl implements ClienteViewMode
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetThe0ContenedorMaestroClienteViewModel((ContenedorMaestroClienteViewModel)otherEnd, msgs);
-			case ContenedorcrudclienteviewmodelPackage.CLIENTE_VIEW_MODEL__THE_CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL:
-				if (theContenedorMaestroClienteViewModel != null)
-					msgs = ((InternalEObject)theContenedorMaestroClienteViewModel).eInverseRemove(this, ContenedorcrudclienteviewmodelPackage.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__THE_CLIENTE_VIEW_MODEL, ContenedorMaestroClienteViewModel.class, msgs);
-				return basicSetTheContenedorMaestroClienteViewModel((ContenedorMaestroClienteViewModel)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -360,8 +285,6 @@ public class ClienteViewModelImpl extends EObjectImpl implements ClienteViewMode
 		switch (featureID) {
 			case ContenedorcrudclienteviewmodelPackage.CLIENTE_VIEW_MODEL__THE0_CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL:
 				return basicSetThe0ContenedorMaestroClienteViewModel(null, msgs);
-			case ContenedorcrudclienteviewmodelPackage.CLIENTE_VIEW_MODEL__THE_CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL:
-				return basicSetTheContenedorMaestroClienteViewModel(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -375,7 +298,7 @@ public class ClienteViewModelImpl extends EObjectImpl implements ClienteViewMode
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
 			case ContenedorcrudclienteviewmodelPackage.CLIENTE_VIEW_MODEL__THE0_CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL:
-				return eInternalContainer().eInverseRemove(this, ContenedorcrudclienteviewmodelPackage.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__CLIENTE_VIEW_MODEL, ContenedorMaestroClienteViewModel.class, msgs);
+				return eInternalContainer().eInverseRemove(this, ContenedorcrudclienteviewmodelPackage.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__LISTA_CLIENTE, ContenedorMaestroClienteViewModel.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -398,9 +321,6 @@ public class ClienteViewModelImpl extends EObjectImpl implements ClienteViewMode
 				return getEdad();
 			case ContenedorcrudclienteviewmodelPackage.CLIENTE_VIEW_MODEL__THE0_CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL:
 				return getThe0ContenedorMaestroClienteViewModel();
-			case ContenedorcrudclienteviewmodelPackage.CLIENTE_VIEW_MODEL__THE_CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL:
-				if (resolve) return getTheContenedorMaestroClienteViewModel();
-				return basicGetTheContenedorMaestroClienteViewModel();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -427,9 +347,6 @@ public class ClienteViewModelImpl extends EObjectImpl implements ClienteViewMode
 				return;
 			case ContenedorcrudclienteviewmodelPackage.CLIENTE_VIEW_MODEL__THE0_CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL:
 				setThe0ContenedorMaestroClienteViewModel((ContenedorMaestroClienteViewModel)newValue);
-				return;
-			case ContenedorcrudclienteviewmodelPackage.CLIENTE_VIEW_MODEL__THE_CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL:
-				setTheContenedorMaestroClienteViewModel((ContenedorMaestroClienteViewModel)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -458,9 +375,6 @@ public class ClienteViewModelImpl extends EObjectImpl implements ClienteViewMode
 			case ContenedorcrudclienteviewmodelPackage.CLIENTE_VIEW_MODEL__THE0_CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL:
 				setThe0ContenedorMaestroClienteViewModel((ContenedorMaestroClienteViewModel)null);
 				return;
-			case ContenedorcrudclienteviewmodelPackage.CLIENTE_VIEW_MODEL__THE_CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL:
-				setTheContenedorMaestroClienteViewModel((ContenedorMaestroClienteViewModel)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -483,8 +397,6 @@ public class ClienteViewModelImpl extends EObjectImpl implements ClienteViewMode
 				return EDAD_EDEFAULT == null ? edad != null : !EDAD_EDEFAULT.equals(edad);
 			case ContenedorcrudclienteviewmodelPackage.CLIENTE_VIEW_MODEL__THE0_CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL:
 				return getThe0ContenedorMaestroClienteViewModel() != null;
-			case ContenedorcrudclienteviewmodelPackage.CLIENTE_VIEW_MODEL__THE_CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL:
-				return theContenedorMaestroClienteViewModel != null;
 		}
 		return super.eIsSet(featureID);
 	}

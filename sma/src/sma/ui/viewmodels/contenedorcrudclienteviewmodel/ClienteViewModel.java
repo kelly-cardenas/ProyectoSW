@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.ClienteViewModel#getEmail <em>Email</em>}</li>
  *   <li>{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.ClienteViewModel#getEdad <em>Edad</em>}</li>
  *   <li>{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.ClienteViewModel#getThe0ContenedorMaestroClienteViewModel <em>The0 Contenedor Maestro Cliente View Model</em>}</li>
- *   <li>{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.ClienteViewModel#getTheContenedorMaestroClienteViewModel <em>The Contenedor Maestro Cliente View Model</em>}</li>
  * </ul>
  *
  * @see sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelPackage#getClienteViewModel()
@@ -28,6 +27,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface ClienteViewModel extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Identificacion</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Identificacion</em>' attribute isn't clear,
@@ -37,7 +37,7 @@ public interface ClienteViewModel extends EObject {
 	 * @return the value of the '<em>Identificacion</em>' attribute.
 	 * @see #setIdentificacion(String)
 	 * @see sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelPackage#getClienteViewModel_Identificacion()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getIdentificacion();
@@ -54,6 +54,7 @@ public interface ClienteViewModel extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Nombre</em>' attribute isn't clear,
@@ -63,7 +64,7 @@ public interface ClienteViewModel extends EObject {
 	 * @return the value of the '<em>Nombre</em>' attribute.
 	 * @see #setNombre(String)
 	 * @see sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelPackage#getClienteViewModel_Nombre()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getNombre();
@@ -80,6 +81,7 @@ public interface ClienteViewModel extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Email</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Email</em>' attribute isn't clear,
@@ -89,7 +91,7 @@ public interface ClienteViewModel extends EObject {
 	 * @return the value of the '<em>Email</em>' attribute.
 	 * @see #setEmail(String)
 	 * @see sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelPackage#getClienteViewModel_Email()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getEmail();
@@ -106,6 +108,7 @@ public interface ClienteViewModel extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Edad</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Edad</em>' attribute isn't clear,
@@ -115,7 +118,7 @@ public interface ClienteViewModel extends EObject {
 	 * @return the value of the '<em>Edad</em>' attribute.
 	 * @see #setEdad(String)
 	 * @see sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelPackage#getClienteViewModel_Edad()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getEdad();
@@ -132,7 +135,7 @@ public interface ClienteViewModel extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>The0 Contenedor Maestro Cliente View Model</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorMaestroClienteViewModel#getClienteViewModel <em>Cliente View Model</em>}'.
+	 * It is bidirectional and its opposite is '{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorMaestroClienteViewModel#getListaCliente <em>Lista Cliente</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>The0 Contenedor Maestro Cliente View Model</em>' container reference isn't clear,
@@ -142,8 +145,8 @@ public interface ClienteViewModel extends EObject {
 	 * @return the value of the '<em>The0 Contenedor Maestro Cliente View Model</em>' container reference.
 	 * @see #setThe0ContenedorMaestroClienteViewModel(ContenedorMaestroClienteViewModel)
 	 * @see sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelPackage#getClienteViewModel_The0ContenedorMaestroClienteViewModel()
-	 * @see sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorMaestroClienteViewModel#getClienteViewModel
-	 * @model opposite="ClienteViewModel" transient="false"
+	 * @see sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorMaestroClienteViewModel#getListaCliente
+	 * @model opposite="listaCliente" transient="false"
 	 * @generated
 	 */
 	ContenedorMaestroClienteViewModel getThe0ContenedorMaestroClienteViewModel();
@@ -157,33 +160,5 @@ public interface ClienteViewModel extends EObject {
 	 * @generated
 	 */
 	void setThe0ContenedorMaestroClienteViewModel(ContenedorMaestroClienteViewModel value);
-
-	/**
-	 * Returns the value of the '<em><b>The Contenedor Maestro Cliente View Model</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorMaestroClienteViewModel#getTheClienteViewModel <em>The Cliente View Model</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>The Contenedor Maestro Cliente View Model</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>The Contenedor Maestro Cliente View Model</em>' reference.
-	 * @see #setTheContenedorMaestroClienteViewModel(ContenedorMaestroClienteViewModel)
-	 * @see sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelPackage#getClienteViewModel_TheContenedorMaestroClienteViewModel()
-	 * @see sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorMaestroClienteViewModel#getTheClienteViewModel
-	 * @model opposite="theClienteViewModel"
-	 * @generated
-	 */
-	ContenedorMaestroClienteViewModel getTheContenedorMaestroClienteViewModel();
-
-	/**
-	 * Sets the value of the '{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.ClienteViewModel#getTheContenedorMaestroClienteViewModel <em>The Contenedor Maestro Cliente View Model</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>The Contenedor Maestro Cliente View Model</em>' reference.
-	 * @see #getTheContenedorMaestroClienteViewModel()
-	 * @generated
-	 */
-	void setTheContenedorMaestroClienteViewModel(ContenedorMaestroClienteViewModel value);
 
 } // ClienteViewModel

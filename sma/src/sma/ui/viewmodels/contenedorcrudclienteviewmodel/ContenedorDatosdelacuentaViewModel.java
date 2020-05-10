@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorDatosdelacuentaViewModel#getUsuario <em>Usuario</em>}</li>
- *   <li>{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorDatosdelacuentaViewModel#getContraseña <em>Contraseña</em>}</li>
+ *   <li>{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorDatosdelacuentaViewModel#getContrasenia <em>Contrasenia</em>}</li>
  *   <li>{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorDatosdelacuentaViewModel#getOwnedByContenedorDetalleClienteViewModel <em>Owned By Contenedor Detalle Cliente View Model</em>}</li>
  * </ul>
  *
@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface ContenedorDatosdelacuentaViewModel extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Usuario</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Usuario</em>' attribute isn't clear,
@@ -34,7 +35,7 @@ public interface ContenedorDatosdelacuentaViewModel extends EObject {
 	 * @return the value of the '<em>Usuario</em>' attribute.
 	 * @see #setUsuario(String)
 	 * @see sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelPackage#getContenedorDatosdelacuentaViewModel_Usuario()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getUsuario();
@@ -50,30 +51,30 @@ public interface ContenedorDatosdelacuentaViewModel extends EObject {
 	void setUsuario(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Contraseña</b></em>' attribute.
+	 * Returns the value of the '<em><b>Contrasenia</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Contraseña</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Contrasenia</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Contraseña</em>' attribute.
-	 * @see #setContraseña(String)
-	 * @see sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelPackage#getContenedorDatosdelacuentaViewModel_Contraseña()
+	 * @return the value of the '<em>Contrasenia</em>' attribute.
+	 * @see #setContrasenia(String)
+	 * @see sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelPackage#getContenedorDatosdelacuentaViewModel_Contrasenia()
 	 * @model dataType="sma.String"
 	 * @generated
 	 */
-	String getContraseña();
+	String getContrasenia();
 
 	/**
-	 * Sets the value of the '{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorDatosdelacuentaViewModel#getContraseña <em>Contraseña</em>}' attribute.
+	 * Sets the value of the '{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorDatosdelacuentaViewModel#getContrasenia <em>Contrasenia</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Contraseña</em>' attribute.
-	 * @see #getContraseña()
+	 * @param value the new value of the '<em>Contrasenia</em>' attribute.
+	 * @see #getContrasenia()
 	 * @generated
 	 */
-	void setContraseña(String value);
+	void setContrasenia(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Owned By Contenedor Detalle Cliente View Model</b></em>' container reference.

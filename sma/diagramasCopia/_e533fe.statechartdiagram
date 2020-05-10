@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:tooldataform.statemachine.abstract="http:///tooldataform/statemachine/abstract.ecore" xsi:schemaLocation="http:///tooldataform/statemachine/abstract.ecore http:///tooldataform.ecore#//abstract">
+  <tooldataform.statemachine.abstract:StateChartDiagram xmi:id="__5jVII__Eeq17ejQSDANAQ" name="updateDialog"/>
+  <notation:Diagram xmi:id="__6ABEI__Eeq17ejQSDANAQ" type="MetamodelodataformStateChartDiagram" element="__5jVII__Eeq17ejQSDANAQ" name="updateDialog" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="__6ABEY__Eeq17ejQSDANAQ"/>
+  </notation:Diagram>
+</xmi:XMI>

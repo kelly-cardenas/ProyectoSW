@@ -63,6 +63,7 @@ public class ContenedorDetalleLoginViewModelItemProvider
 			super.getPropertyDescriptors(object);
 
 			addUsuarioPropertyDescriptor(object);
+			addContraseniaPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -81,6 +82,28 @@ public class ContenedorDetalleLoginViewModelItemProvider
 				 getString("_UI_ContenedorDetalleLoginViewModel_usuario_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ContenedorDetalleLoginViewModel_usuario_feature", "_UI_ContenedorDetalleLoginViewModel_type"),
 				 ContenedorloginviewmodelPackage.Literals.CONTENEDOR_DETALLE_LOGIN_VIEW_MODEL__USUARIO,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Contrasenia feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addContraseniaPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ContenedorDetalleLoginViewModel_contrasenia_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ContenedorDetalleLoginViewModel_contrasenia_feature", "_UI_ContenedorDetalleLoginViewModel_type"),
+				 ContenedorloginviewmodelPackage.Literals.CONTENEDOR_DETALLE_LOGIN_VIEW_MODEL__CONTRASENIA,
 				 true,
 				 false,
 				 false,
@@ -128,6 +151,7 @@ public class ContenedorDetalleLoginViewModelItemProvider
 
 		switch (notification.getFeatureID(ContenedorDetalleLoginViewModel.class)) {
 			case ContenedorloginviewmodelPackage.CONTENEDOR_DETALLE_LOGIN_VIEW_MODEL__USUARIO:
+			case ContenedorloginviewmodelPackage.CONTENEDOR_DETALLE_LOGIN_VIEW_MODEL__CONTRASENIA:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

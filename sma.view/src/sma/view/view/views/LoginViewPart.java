@@ -11,6 +11,9 @@ import sma.ui.viewmodels.contenedorcrudclienteviewmodel.*;
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.*;
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.*;
 import sma.ui.viewmodels.contenedorloginviewmodel.*;
+import sma.ui.viewmodels.contenedorescaneoviewmodel.*;
+import sma.ui.viewmodels.contenedorcontactarcmviewmodel.*;
+import sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.*;
 
 import sma.view.model.ModelFactoryModel;
 import org.eclipse.wb.swt.SWTResourceManager;
@@ -76,7 +79,10 @@ public class LoginViewPart  extends ViewPart {
 		ContenedorDetalleLoginViewModel   contenedordetalleLoginViewModel;
 		public Label lblUsuarioDetalleLogin; 
 		public Text textUsuarioDetalleLogin; 
-		private final FormToolkit formToolkit = new FormToolkit(Display.getDefault());
+		public Label lblContraseniaDetalleLogin; 
+		public Text textContraseniaDetalleLogin; 
+		public Button btnINGRESARDetalleLogin;
+ 		private final FormToolkit formToolkit = new FormToolkit(Display.getDefault());
 
 		public LoginViewPart() {
 		  try {
@@ -110,28 +116,54 @@ public class LoginViewPart  extends ViewPart {
 		sc.setContent(container);
 		sc.setExpandHorizontal(true);
 		sc.setExpandVertical(true);
-		sc.setMinSize(container.computeSize(409, 373));
+		sc.setMinSize(container.computeSize(517, 253));
 		formToolkit.paintBordersFor(container);
 
 		groupDetalleLogin = new Group(container, SWT.NONE);
-		groupDetalleLogin.setBounds(54,19,289,301);
+		groupDetalleLogin.setBounds(54,43,397,193);
 		groupDetalleLogin.setText("Detalle Login");
 		groupDetalleLogin.setFont(SWTResourceManager.getFont("Segoe UI",10,SWT.NORMAL));
 
 		formToolkit.adapt(groupDetalleLogin);
 		formToolkit.paintBordersFor(groupDetalleLogin);
 
-        lblUsuarioDetalleLogin = formToolkit.createLabel(groupDetalleLogin,"usuario",SWT.NONE);
+        lblUsuarioDetalleLogin = formToolkit.createLabel(groupDetalleLogin,"Usuario",SWT.NONE);
         lblUsuarioDetalleLogin.setForeground(SWTResourceManager.getColor(0, 0, 139)) ;
-        lblUsuarioDetalleLogin.setBounds(45,40,56,21);
+        lblUsuarioDetalleLogin.setBounds(43,41,56,21);
 
         lblUsuarioDetalleLogin.setFont(SWTResourceManager.getFont("Segoe UI",10,SWT.NORMAL));
 
 		textUsuarioDetalleLogin = formToolkit.createText(groupDetalleLogin, "New Text", SWT.NONE);
 		textUsuarioDetalleLogin.setText("");
-		textUsuarioDetalleLogin.setBounds(131,42,56,21);
+		textUsuarioDetalleLogin.setBounds(151,42,193,21);
 
 		textUsuarioDetalleLogin.setFont(SWTResourceManager.getFont("Segoe UI",10,SWT.NORMAL));
+
+        lblContraseniaDetalleLogin = formToolkit.createLabel(groupDetalleLogin,"Contrasenia",SWT.NONE);
+        lblContraseniaDetalleLogin.setForeground(SWTResourceManager.getColor(0, 0, 139)) ;
+        lblContraseniaDetalleLogin.setBounds(43,77,88,21);
+
+        lblContraseniaDetalleLogin.setFont(SWTResourceManager.getFont("Segoe UI",10,SWT.NORMAL));
+
+		textContraseniaDetalleLogin = formToolkit.createText(groupDetalleLogin, "New Text", SWT.NONE);
+		textContraseniaDetalleLogin.setText("");
+		textContraseniaDetalleLogin.setBounds(151,78,193,21);
+
+		textContraseniaDetalleLogin.setFont(SWTResourceManager.getFont("Segoe UI",10,SWT.NORMAL));
+
+		btnINGRESARDetalleLogin = formToolkit.createButton(groupDetalleLogin,"INGRESAR",SWT.NONE);
+		btnINGRESARDetalleLogin.addSelectionListener(new SelectionAdapter() {
+
+		public void widgetSelected(SelectionEvent e) {
+				//TODO Action ButtonINGRESARde la view Login
+				        
+      ingresarAction ( "event" );
+
+		 }
+		});
+		btnINGRESARDetalleLogin.setBounds(151,126,64,21);
+
+		btnINGRESARDetalleLogin.setFont(SWTResourceManager.getFont("Segoe UI",10,SWT.NORMAL));
 
         try {
 	       initDataBindings();
@@ -148,18 +180,40 @@ public class LoginViewPart  extends ViewPart {
         IObservableValue contenedordetalleLoginUsuarioDetalleLoginObserveValue = EMFObservables.observeValue(contenedordetalleLoginViewModel,ContenedorloginviewmodelPackage.Literals.CONTENEDOR_DETALLE_LOGIN_VIEW_MODEL__USUARIO);
         bindingContext.bindValue(observeTextUsuarioDetalleLoginObserveWidget,contenedordetalleLoginUsuarioDetalleLoginObserveValue, null, null);
         //
+        IObservableValue observeTextContraseniaDetalleLoginObserveWidget = WidgetProperties.text(SWT.Modify).observe(textContraseniaDetalleLogin);
+        IObservableValue contenedordetalleLoginContraseniaDetalleLoginObserveValue = EMFObservables.observeValue(contenedordetalleLoginViewModel,ContenedorloginviewmodelPackage.Literals.CONTENEDOR_DETALLE_LOGIN_VIEW_MODEL__CONTRASENIA);
+        bindingContext.bindValue(observeTextContraseniaDetalleLoginObserveWidget,contenedordetalleLoginContraseniaDetalleLoginObserveValue, null, null);
+        //
 
          return bindingContext;
 //
       }
-      public void constructorContenedorLoginViewPart (){
-        //semantics
+      public void ingresarAction ( String  event ){
+contenedordetalleLoginViewModel.setUsuario(textUsuarioDetalleLogin.getText());
+    	  contenedordetalleLoginViewModel.setContrasenia(textContraseniaDetalleLogin.getText());
+    	  
+    	  if (contenedorloginViewModel.prueba()) {
+			System.out.println("Usuario "+mfm.getTheUI().getIdLogueado()+ " logueado");
+		}
+    	  else
+    	  {
+    		  System.out.println("No hay registros con ese usuario o contraseña");
+    	  }
+    	  mfm.salvar();
+    	  limpiarCampos();
+      }
 
+      public void constructorContenedorLoginViewPart (){
+             //semantics
       }
 
       public void syncModel (){
-        //semantics
+             //semantics
+      }
 
+      public void limpiarCampos (){
+             textUsuarioDetalleLogin.setText("");
+    	  textContraseniaDetalleLogin.setText("");
       }
 
 }

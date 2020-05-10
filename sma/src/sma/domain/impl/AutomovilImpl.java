@@ -61,7 +61,7 @@ public class AutomovilImpl extends EObjectImpl implements Automovil {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ID_EDEFAULT = null;
+	protected static final String ID_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
@@ -81,7 +81,7 @@ public class AutomovilImpl extends EObjectImpl implements Automovil {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String PLACA_EDEFAULT = null;
+	protected static final String PLACA_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getPlaca() <em>Placa</em>}' attribute.
@@ -101,7 +101,7 @@ public class AutomovilImpl extends EObjectImpl implements Automovil {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String MARCA_EDEFAULT = null;
+	protected static final String MARCA_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getMarca() <em>Marca</em>}' attribute.
@@ -121,7 +121,7 @@ public class AutomovilImpl extends EObjectImpl implements Automovil {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Integer MODELO_EDEFAULT = null;
+	protected static final Integer MODELO_EDEFAULT = new Integer(0);
 
 	/**
 	 * The cached value of the '{@link #getModelo() <em>Modelo</em>}' attribute.
@@ -141,7 +141,7 @@ public class AutomovilImpl extends EObjectImpl implements Automovil {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String REFERENCIA_EDEFAULT = null;
+	protected static final String REFERENCIA_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getReferencia() <em>Referencia</em>}' attribute.
@@ -161,7 +161,7 @@ public class AutomovilImpl extends EObjectImpl implements Automovil {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TIPO_USO_EDEFAULT = null;
+	protected static final String TIPO_USO_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getTipoUso() <em>Tipo Uso</em>}' attribute.
@@ -490,7 +490,7 @@ public class AutomovilImpl extends EObjectImpl implements Automovil {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void asignarFallas() {
+	public void hacerEscaneo() {
 		//TODO asignarFallas
 	}
 

@@ -277,13 +277,13 @@ public interface ContenedorcrudcmviewmodelPackage extends EPackage {
 	int CONTENEDOR_MAESTRO_CM_VIEW_MODEL__OWNED_BY_CONTENEDOR_CRUDCM_VIEW_MODEL = 0;
 
 	/**
-	 * The feature id for the '<em><b>Centro Mant View Model</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Lista Centro Mant</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENEDOR_MAESTRO_CM_VIEW_MODEL__CENTRO_MANT_VIEW_MODEL = 1;
+	int CONTENEDOR_MAESTRO_CM_VIEW_MODEL__LISTA_CENTRO_MANT = 1;
 
 	/**
 	 * The number of structural features of the '<em>Contenedor Maestro CM View Model</em>' class.
@@ -575,15 +575,15 @@ public interface ContenedorcrudcmviewmodelPackage extends EPackage {
 	EReference getContenedorMaestroCMViewModel_OwnedByContenedorCRUDCMViewModel();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorMaestroCMViewModel#getCentroMantViewModel <em>Centro Mant View Model</em>}'.
+	 * Returns the meta object for the containment reference list '{@link sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorMaestroCMViewModel#getListaCentroMant <em>Lista Centro Mant</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Centro Mant View Model</em>'.
-	 * @see sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorMaestroCMViewModel#getCentroMantViewModel()
+	 * @return the meta object for the containment reference list '<em>Lista Centro Mant</em>'.
+	 * @see sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorMaestroCMViewModel#getListaCentroMant()
 	 * @see #getContenedorMaestroCMViewModel()
 	 * @generated
 	 */
-	EReference getContenedorMaestroCMViewModel_CentroMantViewModel();
+	EReference getContenedorMaestroCMViewModel_ListaCentroMant();
 
 	/**
 	 * Returns the meta object for class '{@link sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorUbicacionViewModel <em>Contenedor Ubicacion View Model</em>}'.
@@ -843,12 +843,12 @@ public interface ContenedorcrudcmviewmodelPackage extends EPackage {
 		EReference CONTENEDOR_MAESTRO_CM_VIEW_MODEL__OWNED_BY_CONTENEDOR_CRUDCM_VIEW_MODEL = eINSTANCE.getContenedorMaestroCMViewModel_OwnedByContenedorCRUDCMViewModel();
 
 		/**
-		 * The meta object literal for the '<em><b>Centro Mant View Model</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Lista Centro Mant</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONTENEDOR_MAESTRO_CM_VIEW_MODEL__CENTRO_MANT_VIEW_MODEL = eINSTANCE.getContenedorMaestroCMViewModel_CentroMantViewModel();
+		EReference CONTENEDOR_MAESTRO_CM_VIEW_MODEL__LISTA_CENTRO_MANT = eINSTANCE.getContenedorMaestroCMViewModel_ListaCentroMant();
 
 		/**
 		 * The meta object literal for the '{@link sma.ui.viewmodels.contenedorcrudcmviewmodel.impl.ContenedorUbicacionViewModelImpl <em>Contenedor Ubicacion View Model</em>}' class.

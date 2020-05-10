@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorVehiculosRegistradosViewModel#getOwnedByContenedorRegistroVehiculoViewModel <em>Owned By Contenedor Registro Vehiculo View Model</em>}</li>
- *   <li>{@link sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorVehiculosRegistradosViewModel#getVehiculoViewModel <em>Vehiculo View Model</em>}</li>
+ *   <li>{@link sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorVehiculosRegistradosViewModel#getListaVehiculo <em>Lista Vehiculo</em>}</li>
  * </ul>
  *
  * @see sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorregistrovehiculoviewmodelPackage#getContenedorVehiculosRegistradosViewModel()
@@ -53,21 +53,21 @@ public interface ContenedorVehiculosRegistradosViewModel extends EObject {
 	void setOwnedByContenedorRegistroVehiculoViewModel(ContenedorRegistroVehiculoViewModel value);
 
 	/**
-	 * Returns the value of the '<em><b>Vehiculo View Model</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Lista Vehiculo</b></em>' containment reference list.
 	 * The list contents are of type {@link sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.VehiculoViewModel}.
 	 * It is bidirectional and its opposite is '{@link sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.VehiculoViewModel#getThe0ContenedorVehiculosRegistradosViewModel <em>The0 Contenedor Vehiculos Registrados View Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Vehiculo View Model</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Lista Vehiculo</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Vehiculo View Model</em>' containment reference list.
-	 * @see sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorregistrovehiculoviewmodelPackage#getContenedorVehiculosRegistradosViewModel_VehiculoViewModel()
+	 * @return the value of the '<em>Lista Vehiculo</em>' containment reference list.
+	 * @see sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorregistrovehiculoviewmodelPackage#getContenedorVehiculosRegistradosViewModel_ListaVehiculo()
 	 * @see sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.VehiculoViewModel#getThe0ContenedorVehiculosRegistradosViewModel
 	 * @model opposite="the0ContenedorVehiculosRegistradosViewModel" containment="true"
 	 * @generated
 	 */
-	EList<VehiculoViewModel> getVehiculoViewModel();
+	EList<VehiculoViewModel> getListaVehiculo();
 
 } // ContenedorVehiculosRegistradosViewModel

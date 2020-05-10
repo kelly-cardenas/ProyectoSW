@@ -33,21 +33,21 @@ import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.VehiculoViewModel;
  * </p>
  * <ul>
  *   <li>{@link sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.impl.ContenedorVehiculosRegistradosViewModelImpl#getOwnedByContenedorRegistroVehiculoViewModel <em>Owned By Contenedor Registro Vehiculo View Model</em>}</li>
- *   <li>{@link sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.impl.ContenedorVehiculosRegistradosViewModelImpl#getVehiculoViewModel <em>Vehiculo View Model</em>}</li>
+ *   <li>{@link sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.impl.ContenedorVehiculosRegistradosViewModelImpl#getListaVehiculo <em>Lista Vehiculo</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ContenedorVehiculosRegistradosViewModelImpl extends EObjectImpl implements ContenedorVehiculosRegistradosViewModel {
 	/**
-	 * The cached value of the '{@link #getVehiculoViewModel() <em>Vehiculo View Model</em>}' containment reference list.
+	 * The cached value of the '{@link #getListaVehiculo() <em>Lista Vehiculo</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVehiculoViewModel()
+	 * @see #getListaVehiculo()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VehiculoViewModel> vehiculoViewModel;
+	protected EList<VehiculoViewModel> listaVehiculo;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -114,11 +114,11 @@ public class ContenedorVehiculosRegistradosViewModelImpl extends EObjectImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VehiculoViewModel> getVehiculoViewModel() {
-		if (vehiculoViewModel == null) {
-			vehiculoViewModel = new EObjectContainmentWithInverseEList<VehiculoViewModel>(VehiculoViewModel.class, this, ContenedorregistrovehiculoviewmodelPackage.CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__VEHICULO_VIEW_MODEL, ContenedorregistrovehiculoviewmodelPackage.VEHICULO_VIEW_MODEL__THE0_CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL);
+	public EList<VehiculoViewModel> getListaVehiculo() {
+		if (listaVehiculo == null) {
+			listaVehiculo = new EObjectContainmentWithInverseEList<VehiculoViewModel>(VehiculoViewModel.class, this, ContenedorregistrovehiculoviewmodelPackage.CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__LISTA_VEHICULO, ContenedorregistrovehiculoviewmodelPackage.VEHICULO_VIEW_MODEL__THE0_CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL);
 		}
-		return vehiculoViewModel;
+		return listaVehiculo;
 	}
 
 	/**
@@ -134,8 +134,8 @@ public class ContenedorVehiculosRegistradosViewModelImpl extends EObjectImpl imp
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetOwnedByContenedorRegistroVehiculoViewModel((ContenedorRegistroVehiculoViewModel)otherEnd, msgs);
-			case ContenedorregistrovehiculoviewmodelPackage.CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__VEHICULO_VIEW_MODEL:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getVehiculoViewModel()).basicAdd(otherEnd, msgs);
+			case ContenedorregistrovehiculoviewmodelPackage.CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__LISTA_VEHICULO:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getListaVehiculo()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -150,8 +150,8 @@ public class ContenedorVehiculosRegistradosViewModelImpl extends EObjectImpl imp
 		switch (featureID) {
 			case ContenedorregistrovehiculoviewmodelPackage.CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__OWNED_BY_CONTENEDOR_REGISTRO_VEHICULO_VIEW_MODEL:
 				return basicSetOwnedByContenedorRegistroVehiculoViewModel(null, msgs);
-			case ContenedorregistrovehiculoviewmodelPackage.CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__VEHICULO_VIEW_MODEL:
-				return ((InternalEList<?>)getVehiculoViewModel()).basicRemove(otherEnd, msgs);
+			case ContenedorregistrovehiculoviewmodelPackage.CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__LISTA_VEHICULO:
+				return ((InternalEList<?>)getListaVehiculo()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -180,8 +180,8 @@ public class ContenedorVehiculosRegistradosViewModelImpl extends EObjectImpl imp
 		switch (featureID) {
 			case ContenedorregistrovehiculoviewmodelPackage.CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__OWNED_BY_CONTENEDOR_REGISTRO_VEHICULO_VIEW_MODEL:
 				return getOwnedByContenedorRegistroVehiculoViewModel();
-			case ContenedorregistrovehiculoviewmodelPackage.CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__VEHICULO_VIEW_MODEL:
-				return getVehiculoViewModel();
+			case ContenedorregistrovehiculoviewmodelPackage.CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__LISTA_VEHICULO:
+				return getListaVehiculo();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -198,9 +198,9 @@ public class ContenedorVehiculosRegistradosViewModelImpl extends EObjectImpl imp
 			case ContenedorregistrovehiculoviewmodelPackage.CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__OWNED_BY_CONTENEDOR_REGISTRO_VEHICULO_VIEW_MODEL:
 				setOwnedByContenedorRegistroVehiculoViewModel((ContenedorRegistroVehiculoViewModel)newValue);
 				return;
-			case ContenedorregistrovehiculoviewmodelPackage.CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__VEHICULO_VIEW_MODEL:
-				getVehiculoViewModel().clear();
-				getVehiculoViewModel().addAll((Collection<? extends VehiculoViewModel>)newValue);
+			case ContenedorregistrovehiculoviewmodelPackage.CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__LISTA_VEHICULO:
+				getListaVehiculo().clear();
+				getListaVehiculo().addAll((Collection<? extends VehiculoViewModel>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -217,8 +217,8 @@ public class ContenedorVehiculosRegistradosViewModelImpl extends EObjectImpl imp
 			case ContenedorregistrovehiculoviewmodelPackage.CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__OWNED_BY_CONTENEDOR_REGISTRO_VEHICULO_VIEW_MODEL:
 				setOwnedByContenedorRegistroVehiculoViewModel((ContenedorRegistroVehiculoViewModel)null);
 				return;
-			case ContenedorregistrovehiculoviewmodelPackage.CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__VEHICULO_VIEW_MODEL:
-				getVehiculoViewModel().clear();
+			case ContenedorregistrovehiculoviewmodelPackage.CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__LISTA_VEHICULO:
+				getListaVehiculo().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -234,8 +234,8 @@ public class ContenedorVehiculosRegistradosViewModelImpl extends EObjectImpl imp
 		switch (featureID) {
 			case ContenedorregistrovehiculoviewmodelPackage.CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__OWNED_BY_CONTENEDOR_REGISTRO_VEHICULO_VIEW_MODEL:
 				return getOwnedByContenedorRegistroVehiculoViewModel() != null;
-			case ContenedorregistrovehiculoviewmodelPackage.CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__VEHICULO_VIEW_MODEL:
-				return vehiculoViewModel != null && !vehiculoViewModel.isEmpty();
+			case ContenedorregistrovehiculoviewmodelPackage.CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__LISTA_VEHICULO:
+				return listaVehiculo != null && !listaVehiculo.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

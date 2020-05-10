@@ -30,6 +30,12 @@ import sma.ui.UiPackage;
 
 import sma.ui.impl.UiPackageImpl;
 
+import sma.ui.viewmodels.ViewmodelsPackage;
+
+import sma.ui.viewmodels.contenedorcontactarcmviewmodel.ContenedorcontactarcmviewmodelPackage;
+
+import sma.ui.viewmodels.contenedorcontactarcmviewmodel.impl.ContenedorcontactarcmviewmodelPackageImpl;
+
 import sma.ui.viewmodels.contenedorcrudclienteviewmodel.ClienteViewModel;
 import sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorCrudClienteViewModel;
 import sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorDatosPersonalesViewModel;
@@ -43,6 +49,10 @@ import sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelPack
 
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.impl.ContenedorcrudcmviewmodelPackageImpl;
 
+import sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorescaneoviewmodelPackage;
+
+import sma.ui.viewmodels.contenedorescaneoviewmodel.impl.ContenedorescaneoviewmodelPackageImpl;
+
 import sma.ui.viewmodels.contenedorloginviewmodel.ContenedorloginviewmodelPackage;
 
 import sma.ui.viewmodels.contenedorloginviewmodel.impl.ContenedorloginviewmodelPackageImpl;
@@ -50,6 +60,12 @@ import sma.ui.viewmodels.contenedorloginviewmodel.impl.ContenedorloginviewmodelP
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorregistrovehiculoviewmodelPackage;
 
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.impl.ContenedorregistrovehiculoviewmodelPackageImpl;
+
+import sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.ContenedorsolicitudvisitaviewmodelPackage;
+
+import sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.impl.ContenedorsolicitudvisitaviewmodelPackageImpl;
+
+import sma.ui.viewmodels.impl.ViewmodelsPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -152,9 +168,13 @@ public class ContenedorcrudclienteviewmodelPackageImpl extends EPackageImpl impl
 		ReparacionvehiculoPackageImpl theReparacionvehiculoPackage = (ReparacionvehiculoPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ReparacionvehiculoPackage.eNS_URI) instanceof ReparacionvehiculoPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ReparacionvehiculoPackage.eNS_URI) : ReparacionvehiculoPackage.eINSTANCE);
 		AutomatizacionrevisionPackageImpl theAutomatizacionrevisionPackage = (AutomatizacionrevisionPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(AutomatizacionrevisionPackage.eNS_URI) instanceof AutomatizacionrevisionPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(AutomatizacionrevisionPackage.eNS_URI) : AutomatizacionrevisionPackage.eINSTANCE);
 		UiPackageImpl theUiPackage = (UiPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(UiPackage.eNS_URI) instanceof UiPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(UiPackage.eNS_URI) : UiPackage.eINSTANCE);
+		ViewmodelsPackageImpl theViewmodelsPackage = (ViewmodelsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ViewmodelsPackage.eNS_URI) instanceof ViewmodelsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ViewmodelsPackage.eNS_URI) : ViewmodelsPackage.eINSTANCE);
 		ContenedorcrudcmviewmodelPackageImpl theContenedorcrudcmviewmodelPackage = (ContenedorcrudcmviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorcrudcmviewmodelPackage.eNS_URI) instanceof ContenedorcrudcmviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorcrudcmviewmodelPackage.eNS_URI) : ContenedorcrudcmviewmodelPackage.eINSTANCE);
 		ContenedorregistrovehiculoviewmodelPackageImpl theContenedorregistrovehiculoviewmodelPackage = (ContenedorregistrovehiculoviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorregistrovehiculoviewmodelPackage.eNS_URI) instanceof ContenedorregistrovehiculoviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorregistrovehiculoviewmodelPackage.eNS_URI) : ContenedorregistrovehiculoviewmodelPackage.eINSTANCE);
 		ContenedorloginviewmodelPackageImpl theContenedorloginviewmodelPackage = (ContenedorloginviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorloginviewmodelPackage.eNS_URI) instanceof ContenedorloginviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorloginviewmodelPackage.eNS_URI) : ContenedorloginviewmodelPackage.eINSTANCE);
+		ContenedorescaneoviewmodelPackageImpl theContenedorescaneoviewmodelPackage = (ContenedorescaneoviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorescaneoviewmodelPackage.eNS_URI) instanceof ContenedorescaneoviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorescaneoviewmodelPackage.eNS_URI) : ContenedorescaneoviewmodelPackage.eINSTANCE);
+		ContenedorcontactarcmviewmodelPackageImpl theContenedorcontactarcmviewmodelPackage = (ContenedorcontactarcmviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorcontactarcmviewmodelPackage.eNS_URI) instanceof ContenedorcontactarcmviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorcontactarcmviewmodelPackage.eNS_URI) : ContenedorcontactarcmviewmodelPackage.eINSTANCE);
+		ContenedorsolicitudvisitaviewmodelPackageImpl theContenedorsolicitudvisitaviewmodelPackage = (ContenedorsolicitudvisitaviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorsolicitudvisitaviewmodelPackage.eNS_URI) instanceof ContenedorsolicitudvisitaviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorsolicitudvisitaviewmodelPackage.eNS_URI) : ContenedorsolicitudvisitaviewmodelPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theContenedorcrudclienteviewmodelPackage.createPackageContents();
@@ -163,9 +183,13 @@ public class ContenedorcrudclienteviewmodelPackageImpl extends EPackageImpl impl
 		theReparacionvehiculoPackage.createPackageContents();
 		theAutomatizacionrevisionPackage.createPackageContents();
 		theUiPackage.createPackageContents();
+		theViewmodelsPackage.createPackageContents();
 		theContenedorcrudcmviewmodelPackage.createPackageContents();
 		theContenedorregistrovehiculoviewmodelPackage.createPackageContents();
 		theContenedorloginviewmodelPackage.createPackageContents();
+		theContenedorescaneoviewmodelPackage.createPackageContents();
+		theContenedorcontactarcmviewmodelPackage.createPackageContents();
+		theContenedorsolicitudvisitaviewmodelPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theContenedorcrudclienteviewmodelPackage.initializePackageContents();
@@ -174,9 +198,13 @@ public class ContenedorcrudclienteviewmodelPackageImpl extends EPackageImpl impl
 		theReparacionvehiculoPackage.initializePackageContents();
 		theAutomatizacionrevisionPackage.initializePackageContents();
 		theUiPackage.initializePackageContents();
+		theViewmodelsPackage.initializePackageContents();
 		theContenedorcrudcmviewmodelPackage.initializePackageContents();
 		theContenedorregistrovehiculoviewmodelPackage.initializePackageContents();
 		theContenedorloginviewmodelPackage.initializePackageContents();
+		theContenedorescaneoviewmodelPackage.initializePackageContents();
+		theContenedorcontactarcmviewmodelPackage.initializePackageContents();
+		theContenedorsolicitudvisitaviewmodelPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theContenedorcrudclienteviewmodelPackage.freeze();
@@ -239,15 +267,6 @@ public class ContenedorcrudclienteviewmodelPackageImpl extends EPackageImpl impl
 	 */
 	public EReference getClienteViewModel_The0ContenedorMaestroClienteViewModel() {
 		return (EReference)clienteViewModelEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getClienteViewModel_TheContenedorMaestroClienteViewModel() {
-		return (EReference)clienteViewModelEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -372,7 +391,7 @@ public class ContenedorcrudclienteviewmodelPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getContenedorDatosdelacuentaViewModel_Contraseña() {
+	public EAttribute getContenedorDatosdelacuentaViewModel_Contrasenia() {
 		return (EAttribute)contenedorDatosdelacuentaViewModelEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -444,17 +463,8 @@ public class ContenedorcrudclienteviewmodelPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getContenedorMaestroClienteViewModel_ClienteViewModel() {
+	public EReference getContenedorMaestroClienteViewModel_ListaCliente() {
 		return (EReference)contenedorMaestroClienteViewModelEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getContenedorMaestroClienteViewModel_TheClienteViewModel() {
-		return (EReference)contenedorMaestroClienteViewModelEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -491,7 +501,6 @@ public class ContenedorcrudclienteviewmodelPackageImpl extends EPackageImpl impl
 		createEAttribute(clienteViewModelEClass, CLIENTE_VIEW_MODEL__EMAIL);
 		createEAttribute(clienteViewModelEClass, CLIENTE_VIEW_MODEL__EDAD);
 		createEReference(clienteViewModelEClass, CLIENTE_VIEW_MODEL__THE0_CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL);
-		createEReference(clienteViewModelEClass, CLIENTE_VIEW_MODEL__THE_CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL);
 
 		contenedorCrudClienteViewModelEClass = createEClass(CONTENEDOR_CRUD_CLIENTE_VIEW_MODEL);
 		createEReference(contenedorCrudClienteViewModelEClass, CONTENEDOR_CRUD_CLIENTE_VIEW_MODEL__OWNED_BY_UI);
@@ -508,7 +517,7 @@ public class ContenedorcrudclienteviewmodelPackageImpl extends EPackageImpl impl
 
 		contenedorDatosdelacuentaViewModelEClass = createEClass(CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL);
 		createEAttribute(contenedorDatosdelacuentaViewModelEClass, CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__USUARIO);
-		createEAttribute(contenedorDatosdelacuentaViewModelEClass, CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__CONTRASEÑA);
+		createEAttribute(contenedorDatosdelacuentaViewModelEClass, CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__CONTRASENIA);
 		createEReference(contenedorDatosdelacuentaViewModelEClass, CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__OWNED_BY_CONTENEDOR_DETALLE_CLIENTE_VIEW_MODEL);
 
 		contenedorDetalleClienteViewModelEClass = createEClass(CONTENEDOR_DETALLE_CLIENTE_VIEW_MODEL);
@@ -518,8 +527,7 @@ public class ContenedorcrudclienteviewmodelPackageImpl extends EPackageImpl impl
 
 		contenedorMaestroClienteViewModelEClass = createEClass(CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL);
 		createEReference(contenedorMaestroClienteViewModelEClass, CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__OWNED_BY_CONTENEDOR_CRUD_CLIENTE_VIEW_MODEL);
-		createEReference(contenedorMaestroClienteViewModelEClass, CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__CLIENTE_VIEW_MODEL);
-		createEReference(contenedorMaestroClienteViewModelEClass, CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__THE_CLIENTE_VIEW_MODEL);
+		createEReference(contenedorMaestroClienteViewModelEClass, CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__LISTA_CLIENTE);
 	}
 
 	/**
@@ -557,12 +565,11 @@ public class ContenedorcrudclienteviewmodelPackageImpl extends EPackageImpl impl
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(clienteViewModelEClass, ClienteViewModel.class, "ClienteViewModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getClienteViewModel_Identificacion(), thesmaPackage.getString(), "identificacion", null, 0, 1, ClienteViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getClienteViewModel_Nombre(), thesmaPackage.getString(), "nombre", null, 0, 1, ClienteViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getClienteViewModel_Email(), thesmaPackage.getString(), "email", null, 0, 1, ClienteViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getClienteViewModel_Edad(), thesmaPackage.getString(), "edad", null, 0, 1, ClienteViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getClienteViewModel_The0ContenedorMaestroClienteViewModel(), this.getContenedorMaestroClienteViewModel(), this.getContenedorMaestroClienteViewModel_ClienteViewModel(), "the0ContenedorMaestroClienteViewModel", null, 0, 1, ClienteViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getClienteViewModel_TheContenedorMaestroClienteViewModel(), this.getContenedorMaestroClienteViewModel(), this.getContenedorMaestroClienteViewModel_TheClienteViewModel(), "theContenedorMaestroClienteViewModel", null, 0, 1, ClienteViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClienteViewModel_Identificacion(), thesmaPackage.getString(), "identificacion", " ", 0, 1, ClienteViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClienteViewModel_Nombre(), thesmaPackage.getString(), "nombre", " ", 0, 1, ClienteViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClienteViewModel_Email(), thesmaPackage.getString(), "email", " ", 0, 1, ClienteViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClienteViewModel_Edad(), thesmaPackage.getString(), "edad", " ", 0, 1, ClienteViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getClienteViewModel_The0ContenedorMaestroClienteViewModel(), this.getContenedorMaestroClienteViewModel(), this.getContenedorMaestroClienteViewModel_ListaCliente(), "the0ContenedorMaestroClienteViewModel", null, 0, 1, ClienteViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(contenedorCrudClienteViewModelEClass, ContenedorCrudClienteViewModel.class, "ContenedorCrudClienteViewModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getContenedorCrudClienteViewModel_OwnedByUI(), theUiPackage.getUI(), theUiPackage.getUI_TheContenedorCrudClienteViewModel(), "ownedByUI", null, 0, 1, ContenedorCrudClienteViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -576,17 +583,19 @@ public class ContenedorcrudclienteviewmodelPackageImpl extends EPackageImpl impl
 
 		addEOperation(contenedorCrudClienteViewModelEClass, null, "registrarCliente", 0, 1, IS_UNIQUE, IS_ORDERED);
 
+		addEOperation(contenedorCrudClienteViewModelEClass, null, "actualizarCrudCliente", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(contenedorDatosPersonalesViewModelEClass, ContenedorDatosPersonalesViewModel.class, "ContenedorDatosPersonalesViewModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getContenedorDatosPersonalesViewModel_Cedula(), thesmaPackage.getString(), "cedula", null, 0, 1, ContenedorDatosPersonalesViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getContenedorDatosPersonalesViewModel_Nombre(), thesmaPackage.getString(), "nombre", null, 0, 1, ContenedorDatosPersonalesViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getContenedorDatosPersonalesViewModel_Apellido(), thesmaPackage.getString(), "apellido", null, 0, 1, ContenedorDatosPersonalesViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getContenedorDatosPersonalesViewModel_Edad(), thesmaPackage.getString(), "edad", null, 0, 1, ContenedorDatosPersonalesViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getContenedorDatosPersonalesViewModel_Correoelectronico(), thesmaPackage.getString(), "correoelectronico", null, 0, 1, ContenedorDatosPersonalesViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getContenedorDatosPersonalesViewModel_Cedula(), thesmaPackage.getString(), "cedula", " ", 0, 1, ContenedorDatosPersonalesViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getContenedorDatosPersonalesViewModel_Nombre(), thesmaPackage.getString(), "nombre", " ", 0, 1, ContenedorDatosPersonalesViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getContenedorDatosPersonalesViewModel_Apellido(), thesmaPackage.getString(), "apellido", " ", 0, 1, ContenedorDatosPersonalesViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getContenedorDatosPersonalesViewModel_Edad(), thesmaPackage.getString(), "edad", " ", 0, 1, ContenedorDatosPersonalesViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getContenedorDatosPersonalesViewModel_Correoelectronico(), thesmaPackage.getString(), "correoelectronico", " ", 0, 1, ContenedorDatosPersonalesViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContenedorDatosPersonalesViewModel_OwnedByContenedorDetalleClienteViewModel(), this.getContenedorDetalleClienteViewModel(), this.getContenedorDetalleClienteViewModel_TheContenedorDatosPersonalesViewModel(), "ownedByContenedorDetalleClienteViewModel", null, 0, 1, ContenedorDatosPersonalesViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(contenedorDatosdelacuentaViewModelEClass, ContenedorDatosdelacuentaViewModel.class, "ContenedorDatosdelacuentaViewModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getContenedorDatosdelacuentaViewModel_Usuario(), thesmaPackage.getString(), "usuario", null, 0, 1, ContenedorDatosdelacuentaViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getContenedorDatosdelacuentaViewModel_Contraseña(), thesmaPackage.getString(), "contraseña", null, 0, 1, ContenedorDatosdelacuentaViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getContenedorDatosdelacuentaViewModel_Usuario(), thesmaPackage.getString(), "usuario", " ", 0, 1, ContenedorDatosdelacuentaViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getContenedorDatosdelacuentaViewModel_Contrasenia(), thesmaPackage.getString(), "contrasenia", null, 0, 1, ContenedorDatosdelacuentaViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContenedorDatosdelacuentaViewModel_OwnedByContenedorDetalleClienteViewModel(), this.getContenedorDetalleClienteViewModel(), this.getContenedorDetalleClienteViewModel_TheContenedorDatosdelacuentaViewModel(), "ownedByContenedorDetalleClienteViewModel", null, 0, 1, ContenedorDatosdelacuentaViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(contenedorDetalleClienteViewModelEClass, ContenedorDetalleClienteViewModel.class, "ContenedorDetalleClienteViewModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -598,8 +607,7 @@ public class ContenedorcrudclienteviewmodelPackageImpl extends EPackageImpl impl
 
 		initEClass(contenedorMaestroClienteViewModelEClass, ContenedorMaestroClienteViewModel.class, "ContenedorMaestroClienteViewModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getContenedorMaestroClienteViewModel_OwnedByContenedorCrudClienteViewModel(), this.getContenedorCrudClienteViewModel(), this.getContenedorCrudClienteViewModel_TheContenedorMaestroClienteViewModel(), "ownedByContenedorCrudClienteViewModel", null, 0, 1, ContenedorMaestroClienteViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getContenedorMaestroClienteViewModel_ClienteViewModel(), this.getClienteViewModel(), this.getClienteViewModel_The0ContenedorMaestroClienteViewModel(), "ClienteViewModel", null, 0, -1, ContenedorMaestroClienteViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getContenedorMaestroClienteViewModel_TheClienteViewModel(), this.getClienteViewModel(), this.getClienteViewModel_TheContenedorMaestroClienteViewModel(), "theClienteViewModel", null, 0, -1, ContenedorMaestroClienteViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getContenedorMaestroClienteViewModel_ListaCliente(), this.getClienteViewModel(), this.getClienteViewModel_The0ContenedorMaestroClienteViewModel(), "listaCliente", null, 0, -1, ContenedorMaestroClienteViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //ContenedorcrudclienteviewmodelPackageImpl

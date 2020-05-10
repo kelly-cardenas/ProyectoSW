@@ -16,8 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorMaestroClienteViewModel#getOwnedByContenedorCrudClienteViewModel <em>Owned By Contenedor Crud Cliente View Model</em>}</li>
- *   <li>{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorMaestroClienteViewModel#getClienteViewModel <em>Cliente View Model</em>}</li>
- *   <li>{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorMaestroClienteViewModel#getTheClienteViewModel <em>The Cliente View Model</em>}</li>
+ *   <li>{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorMaestroClienteViewModel#getListaCliente <em>Lista Cliente</em>}</li>
  * </ul>
  *
  * @see sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelPackage#getContenedorMaestroClienteViewModel()
@@ -54,39 +53,21 @@ public interface ContenedorMaestroClienteViewModel extends EObject {
 	void setOwnedByContenedorCrudClienteViewModel(ContenedorCrudClienteViewModel value);
 
 	/**
-	 * Returns the value of the '<em><b>Cliente View Model</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Lista Cliente</b></em>' containment reference list.
 	 * The list contents are of type {@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.ClienteViewModel}.
 	 * It is bidirectional and its opposite is '{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.ClienteViewModel#getThe0ContenedorMaestroClienteViewModel <em>The0 Contenedor Maestro Cliente View Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Cliente View Model</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Lista Cliente</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Cliente View Model</em>' containment reference list.
-	 * @see sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelPackage#getContenedorMaestroClienteViewModel_ClienteViewModel()
+	 * @return the value of the '<em>Lista Cliente</em>' containment reference list.
+	 * @see sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelPackage#getContenedorMaestroClienteViewModel_ListaCliente()
 	 * @see sma.ui.viewmodels.contenedorcrudclienteviewmodel.ClienteViewModel#getThe0ContenedorMaestroClienteViewModel
 	 * @model opposite="the0ContenedorMaestroClienteViewModel" containment="true"
 	 * @generated
 	 */
-	EList<ClienteViewModel> getClienteViewModel();
-
-	/**
-	 * Returns the value of the '<em><b>The Cliente View Model</b></em>' reference list.
-	 * The list contents are of type {@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.ClienteViewModel}.
-	 * It is bidirectional and its opposite is '{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.ClienteViewModel#getTheContenedorMaestroClienteViewModel <em>The Contenedor Maestro Cliente View Model</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>The Cliente View Model</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>The Cliente View Model</em>' reference list.
-	 * @see sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelPackage#getContenedorMaestroClienteViewModel_TheClienteViewModel()
-	 * @see sma.ui.viewmodels.contenedorcrudclienteviewmodel.ClienteViewModel#getTheContenedorMaestroClienteViewModel
-	 * @model opposite="theContenedorMaestroClienteViewModel"
-	 * @generated
-	 */
-	EList<ClienteViewModel> getTheClienteViewModel();
+	EList<ClienteViewModel> getListaCliente();
 
 } // ContenedorMaestroClienteViewModel

@@ -26,7 +26,7 @@ import sma.ui.viewmodels.contenedorcrudclienteviewmodel.Contenedorcrudclientevie
  * </p>
  * <ul>
  *   <li>{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.impl.ContenedorDatosdelacuentaViewModelImpl#getUsuario <em>Usuario</em>}</li>
- *   <li>{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.impl.ContenedorDatosdelacuentaViewModelImpl#getContraseña <em>Contraseña</em>}</li>
+ *   <li>{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.impl.ContenedorDatosdelacuentaViewModelImpl#getContrasenia <em>Contrasenia</em>}</li>
  *   <li>{@link sma.ui.viewmodels.contenedorcrudclienteviewmodel.impl.ContenedorDatosdelacuentaViewModelImpl#getOwnedByContenedorDetalleClienteViewModel <em>Owned By Contenedor Detalle Cliente View Model</em>}</li>
  * </ul>
  *
@@ -41,7 +41,7 @@ public class ContenedorDatosdelacuentaViewModelImpl extends EObjectImpl implemen
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String USUARIO_EDEFAULT = null;
+	protected static final String USUARIO_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getUsuario() <em>Usuario</em>}' attribute.
@@ -54,24 +54,24 @@ public class ContenedorDatosdelacuentaViewModelImpl extends EObjectImpl implemen
 	protected String usuario = USUARIO_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getContraseña() <em>Contraseña</em>}' attribute.
+	 * The default value of the '{@link #getContrasenia() <em>Contrasenia</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getContraseña()
+	 * @see #getContrasenia()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CONTRASEÑA_EDEFAULT = null;
+	protected static final String CONTRASENIA_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getContraseña() <em>Contraseña</em>}' attribute.
+	 * The cached value of the '{@link #getContrasenia() <em>Contrasenia</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getContraseña()
+	 * @see #getContrasenia()
 	 * @generated
 	 * @ordered
 	 */
-	protected String contraseña = CONTRASEÑA_EDEFAULT;
+	protected String contrasenia = CONTRASENIA_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -118,8 +118,8 @@ public class ContenedorDatosdelacuentaViewModelImpl extends EObjectImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getContraseña() {
-		return contraseña;
+	public String getContrasenia() {
+		return contrasenia;
 	}
 
 	/**
@@ -127,11 +127,11 @@ public class ContenedorDatosdelacuentaViewModelImpl extends EObjectImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setContraseña(String newContraseña) {
-		String oldContraseña = contraseña;
-		contraseña = newContraseña;
+	public void setContrasenia(String newContrasenia) {
+		String oldContrasenia = contrasenia;
+		contrasenia = newContrasenia;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ContenedorcrudclienteviewmodelPackage.CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__CONTRASEÑA, oldContraseña, contraseña));
+			eNotify(new ENotificationImpl(this, Notification.SET, ContenedorcrudclienteviewmodelPackage.CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__CONTRASENIA, oldContrasenia, contrasenia));
 	}
 
 	/**
@@ -229,8 +229,8 @@ public class ContenedorDatosdelacuentaViewModelImpl extends EObjectImpl implemen
 		switch (featureID) {
 			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__USUARIO:
 				return getUsuario();
-			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__CONTRASEÑA:
-				return getContraseña();
+			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__CONTRASENIA:
+				return getContrasenia();
 			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__OWNED_BY_CONTENEDOR_DETALLE_CLIENTE_VIEW_MODEL:
 				return getOwnedByContenedorDetalleClienteViewModel();
 		}
@@ -248,8 +248,8 @@ public class ContenedorDatosdelacuentaViewModelImpl extends EObjectImpl implemen
 			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__USUARIO:
 				setUsuario((String)newValue);
 				return;
-			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__CONTRASEÑA:
-				setContraseña((String)newValue);
+			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__CONTRASENIA:
+				setContrasenia((String)newValue);
 				return;
 			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__OWNED_BY_CONTENEDOR_DETALLE_CLIENTE_VIEW_MODEL:
 				setOwnedByContenedorDetalleClienteViewModel((ContenedorDetalleClienteViewModel)newValue);
@@ -269,8 +269,8 @@ public class ContenedorDatosdelacuentaViewModelImpl extends EObjectImpl implemen
 			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__USUARIO:
 				setUsuario(USUARIO_EDEFAULT);
 				return;
-			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__CONTRASEÑA:
-				setContraseña(CONTRASEÑA_EDEFAULT);
+			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__CONTRASENIA:
+				setContrasenia(CONTRASENIA_EDEFAULT);
 				return;
 			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__OWNED_BY_CONTENEDOR_DETALLE_CLIENTE_VIEW_MODEL:
 				setOwnedByContenedorDetalleClienteViewModel((ContenedorDetalleClienteViewModel)null);
@@ -289,8 +289,8 @@ public class ContenedorDatosdelacuentaViewModelImpl extends EObjectImpl implemen
 		switch (featureID) {
 			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__USUARIO:
 				return USUARIO_EDEFAULT == null ? usuario != null : !USUARIO_EDEFAULT.equals(usuario);
-			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__CONTRASEÑA:
-				return CONTRASEÑA_EDEFAULT == null ? contraseña != null : !CONTRASEÑA_EDEFAULT.equals(contraseña);
+			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__CONTRASENIA:
+				return CONTRASENIA_EDEFAULT == null ? contrasenia != null : !CONTRASENIA_EDEFAULT.equals(contrasenia);
 			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__OWNED_BY_CONTENEDOR_DETALLE_CLIENTE_VIEW_MODEL:
 				return getOwnedByContenedorDetalleClienteViewModel() != null;
 		}
@@ -309,8 +309,8 @@ public class ContenedorDatosdelacuentaViewModelImpl extends EObjectImpl implemen
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (usuario: ");
 		result.append(usuario);
-		result.append(", contraseña: ");
-		result.append(contraseña);
+		result.append(", contrasenia: ");
+		result.append(contrasenia);
 		result.append(')');
 		return result.toString();
 	}

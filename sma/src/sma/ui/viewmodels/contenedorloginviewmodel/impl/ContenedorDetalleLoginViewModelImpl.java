@@ -26,6 +26,7 @@ import sma.ui.viewmodels.contenedorloginviewmodel.ContenedorloginviewmodelPackag
  * </p>
  * <ul>
  *   <li>{@link sma.ui.viewmodels.contenedorloginviewmodel.impl.ContenedorDetalleLoginViewModelImpl#getUsuario <em>Usuario</em>}</li>
+ *   <li>{@link sma.ui.viewmodels.contenedorloginviewmodel.impl.ContenedorDetalleLoginViewModelImpl#getContrasenia <em>Contrasenia</em>}</li>
  *   <li>{@link sma.ui.viewmodels.contenedorloginviewmodel.impl.ContenedorDetalleLoginViewModelImpl#getOwnedByContenedorLoginViewModel <em>Owned By Contenedor Login View Model</em>}</li>
  * </ul>
  *
@@ -40,7 +41,7 @@ public class ContenedorDetalleLoginViewModelImpl extends EObjectImpl implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String USUARIO_EDEFAULT = null;
+	protected static final String USUARIO_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getUsuario() <em>Usuario</em>}' attribute.
@@ -51,6 +52,26 @@ public class ContenedorDetalleLoginViewModelImpl extends EObjectImpl implements 
 	 * @ordered
 	 */
 	protected String usuario = USUARIO_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getContrasenia() <em>Contrasenia</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getContrasenia()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CONTRASENIA_EDEFAULT = " ";
+
+	/**
+	 * The cached value of the '{@link #getContrasenia() <em>Contrasenia</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getContrasenia()
+	 * @generated
+	 * @ordered
+	 */
+	protected String contrasenia = CONTRASENIA_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -90,6 +111,27 @@ public class ContenedorDetalleLoginViewModelImpl extends EObjectImpl implements 
 		usuario = newUsuario;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ContenedorloginviewmodelPackage.CONTENEDOR_DETALLE_LOGIN_VIEW_MODEL__USUARIO, oldUsuario, usuario));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getContrasenia() {
+		return contrasenia;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setContrasenia(String newContrasenia) {
+		String oldContrasenia = contrasenia;
+		contrasenia = newContrasenia;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ContenedorloginviewmodelPackage.CONTENEDOR_DETALLE_LOGIN_VIEW_MODEL__CONTRASENIA, oldContrasenia, contrasenia));
 	}
 
 	/**
@@ -187,6 +229,8 @@ public class ContenedorDetalleLoginViewModelImpl extends EObjectImpl implements 
 		switch (featureID) {
 			case ContenedorloginviewmodelPackage.CONTENEDOR_DETALLE_LOGIN_VIEW_MODEL__USUARIO:
 				return getUsuario();
+			case ContenedorloginviewmodelPackage.CONTENEDOR_DETALLE_LOGIN_VIEW_MODEL__CONTRASENIA:
+				return getContrasenia();
 			case ContenedorloginviewmodelPackage.CONTENEDOR_DETALLE_LOGIN_VIEW_MODEL__OWNED_BY_CONTENEDOR_LOGIN_VIEW_MODEL:
 				return getOwnedByContenedorLoginViewModel();
 		}
@@ -203,6 +247,9 @@ public class ContenedorDetalleLoginViewModelImpl extends EObjectImpl implements 
 		switch (featureID) {
 			case ContenedorloginviewmodelPackage.CONTENEDOR_DETALLE_LOGIN_VIEW_MODEL__USUARIO:
 				setUsuario((String)newValue);
+				return;
+			case ContenedorloginviewmodelPackage.CONTENEDOR_DETALLE_LOGIN_VIEW_MODEL__CONTRASENIA:
+				setContrasenia((String)newValue);
 				return;
 			case ContenedorloginviewmodelPackage.CONTENEDOR_DETALLE_LOGIN_VIEW_MODEL__OWNED_BY_CONTENEDOR_LOGIN_VIEW_MODEL:
 				setOwnedByContenedorLoginViewModel((ContenedorLoginViewModel)newValue);
@@ -222,6 +269,9 @@ public class ContenedorDetalleLoginViewModelImpl extends EObjectImpl implements 
 			case ContenedorloginviewmodelPackage.CONTENEDOR_DETALLE_LOGIN_VIEW_MODEL__USUARIO:
 				setUsuario(USUARIO_EDEFAULT);
 				return;
+			case ContenedorloginviewmodelPackage.CONTENEDOR_DETALLE_LOGIN_VIEW_MODEL__CONTRASENIA:
+				setContrasenia(CONTRASENIA_EDEFAULT);
+				return;
 			case ContenedorloginviewmodelPackage.CONTENEDOR_DETALLE_LOGIN_VIEW_MODEL__OWNED_BY_CONTENEDOR_LOGIN_VIEW_MODEL:
 				setOwnedByContenedorLoginViewModel((ContenedorLoginViewModel)null);
 				return;
@@ -239,6 +289,8 @@ public class ContenedorDetalleLoginViewModelImpl extends EObjectImpl implements 
 		switch (featureID) {
 			case ContenedorloginviewmodelPackage.CONTENEDOR_DETALLE_LOGIN_VIEW_MODEL__USUARIO:
 				return USUARIO_EDEFAULT == null ? usuario != null : !USUARIO_EDEFAULT.equals(usuario);
+			case ContenedorloginviewmodelPackage.CONTENEDOR_DETALLE_LOGIN_VIEW_MODEL__CONTRASENIA:
+				return CONTRASENIA_EDEFAULT == null ? contrasenia != null : !CONTRASENIA_EDEFAULT.equals(contrasenia);
 			case ContenedorloginviewmodelPackage.CONTENEDOR_DETALLE_LOGIN_VIEW_MODEL__OWNED_BY_CONTENEDOR_LOGIN_VIEW_MODEL:
 				return getOwnedByContenedorLoginViewModel() != null;
 		}
@@ -257,6 +309,8 @@ public class ContenedorDetalleLoginViewModelImpl extends EObjectImpl implements 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (usuario: ");
 		result.append(usuario);
+		result.append(", contrasenia: ");
+		result.append(contrasenia);
 		result.append(')');
 		return result.toString();
 	}

@@ -27,6 +27,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface UbicacionCM extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Pais</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Pais</em>' attribute isn't clear,
@@ -36,7 +37,7 @@ public interface UbicacionCM extends EObject {
 	 * @return the value of the '<em>Pais</em>' attribute.
 	 * @see #setPais(String)
 	 * @see sma.domain.DomainPackage#getUbicacionCM_Pais()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getPais();
@@ -53,6 +54,7 @@ public interface UbicacionCM extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Departamento</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Departamento</em>' attribute isn't clear,
@@ -62,7 +64,7 @@ public interface UbicacionCM extends EObject {
 	 * @return the value of the '<em>Departamento</em>' attribute.
 	 * @see #setDepartamento(String)
 	 * @see sma.domain.DomainPackage#getUbicacionCM_Departamento()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getDepartamento();
@@ -79,6 +81,7 @@ public interface UbicacionCM extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Ciudad</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Ciudad</em>' attribute isn't clear,
@@ -88,7 +91,7 @@ public interface UbicacionCM extends EObject {
 	 * @return the value of the '<em>Ciudad</em>' attribute.
 	 * @see #setCiudad(String)
 	 * @see sma.domain.DomainPackage#getUbicacionCM_Ciudad()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getCiudad();
@@ -105,6 +108,7 @@ public interface UbicacionCM extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Direccion</b></em>' attribute.
+	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Direccion</em>' attribute isn't clear,
@@ -114,7 +118,7 @@ public interface UbicacionCM extends EObject {
 	 * @return the value of the '<em>Direccion</em>' attribute.
 	 * @see #setDireccion(String)
 	 * @see sma.domain.DomainPackage#getUbicacionCM_Direccion()
-	 * @model dataType="sma.String"
+	 * @model default=" " dataType="sma.String"
 	 * @generated
 	 */
 	String getDireccion();
@@ -130,28 +134,28 @@ public interface UbicacionCM extends EObject {
 	void setDireccion(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Owned By</b></em>' reference.
+	 * Returns the value of the '<em><b>Owned By</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link sma.domain.CentroMant#getUbicacion <em>Ubicacion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Owned By</em>' reference isn't clear,
+	 * If the meaning of the '<em>Owned By</em>' container reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Owned By</em>' reference.
+	 * @return the value of the '<em>Owned By</em>' container reference.
 	 * @see #setOwnedBy(CentroMant)
 	 * @see sma.domain.DomainPackage#getUbicacionCM_OwnedBy()
 	 * @see sma.domain.CentroMant#getUbicacion
-	 * @model opposite="ubicacion"
+	 * @model opposite="ubicacion" transient="false"
 	 * @generated
 	 */
 	CentroMant getOwnedBy();
 
 	/**
-	 * Sets the value of the '{@link sma.domain.UbicacionCM#getOwnedBy <em>Owned By</em>}' reference.
+	 * Sets the value of the '{@link sma.domain.UbicacionCM#getOwnedBy <em>Owned By</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Owned By</em>' reference.
+	 * @param value the new value of the '<em>Owned By</em>' container reference.
 	 * @see #getOwnedBy()
 	 * @generated
 	 */

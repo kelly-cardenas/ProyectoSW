@@ -29,13 +29,19 @@ import sma.provider.ModelEditPlugin;
 import sma.ui.UI;
 import sma.ui.UiPackage;
 
+import sma.ui.viewmodels.contenedorcontactarcmviewmodel.ContenedorcontactarcmviewmodelFactory;
+
 import sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelFactory;
 
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelFactory;
 
+import sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorescaneoviewmodelFactory;
+
 import sma.ui.viewmodels.contenedorloginviewmodel.ContenedorloginviewmodelFactory;
 
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorregistrovehiculoviewmodelFactory;
+
+import sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.ContenedorsolicitudvisitaviewmodelFactory;
 
 /**
  * This is the item provider adapter for a {@link sma.ui.UI} object.
@@ -75,6 +81,7 @@ public class UIItemProvider
 			addIdLogueadoPropertyDescriptor(object);
 			addTipoLogueadoPropertyDescriptor(object);
 			addTheDomainPropertyDescriptor(object);
+			addLstViewModelsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -146,6 +153,28 @@ public class UIItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Lst View Models feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLstViewModelsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_UI_lstViewModels_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_UI_lstViewModels_feature", "_UI_UI_type"),
+				 UiPackage.Literals.UI__LST_VIEW_MODELS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -161,6 +190,9 @@ public class UIItemProvider
 			childrenFeatures.add(UiPackage.Literals.UI__THE_CONTENEDOR_CRUDCM_VIEW_MODEL);
 			childrenFeatures.add(UiPackage.Literals.UI__THE_CONTENEDOR_REGISTRO_VEHICULO_VIEW_MODEL);
 			childrenFeatures.add(UiPackage.Literals.UI__THE_CONTENEDOR_LOGIN_VIEW_MODEL);
+			childrenFeatures.add(UiPackage.Literals.UI__THE_CONTENEDOR_ESCANEO_VIEW_MODEL);
+			childrenFeatures.add(UiPackage.Literals.UI__THE_CONTENEDOR_CONTACTAR_CM_VIEW_MODEL);
+			childrenFeatures.add(UiPackage.Literals.UI__THE_CONTENEDOR_SOLICITUD_VISITA_VIEW_MODEL);
 		}
 		return childrenFeatures;
 	}
@@ -224,6 +256,9 @@ public class UIItemProvider
 			case UiPackage.UI__THE_CONTENEDOR_CRUDCM_VIEW_MODEL:
 			case UiPackage.UI__THE_CONTENEDOR_REGISTRO_VEHICULO_VIEW_MODEL:
 			case UiPackage.UI__THE_CONTENEDOR_LOGIN_VIEW_MODEL:
+			case UiPackage.UI__THE_CONTENEDOR_ESCANEO_VIEW_MODEL:
+			case UiPackage.UI__THE_CONTENEDOR_CONTACTAR_CM_VIEW_MODEL:
+			case UiPackage.UI__THE_CONTENEDOR_SOLICITUD_VISITA_VIEW_MODEL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -260,6 +295,21 @@ public class UIItemProvider
 			(createChildParameter
 				(UiPackage.Literals.UI__THE_CONTENEDOR_LOGIN_VIEW_MODEL,
 				 ContenedorloginviewmodelFactory.eINSTANCE.createContenedorLoginViewModel()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(UiPackage.Literals.UI__THE_CONTENEDOR_ESCANEO_VIEW_MODEL,
+				 ContenedorescaneoviewmodelFactory.eINSTANCE.createContenedorEscaneoViewModel()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(UiPackage.Literals.UI__THE_CONTENEDOR_CONTACTAR_CM_VIEW_MODEL,
+				 ContenedorcontactarcmviewmodelFactory.eINSTANCE.createContenedorContactarCmViewModel()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(UiPackage.Literals.UI__THE_CONTENEDOR_SOLICITUD_VISITA_VIEW_MODEL,
+				 ContenedorsolicitudvisitaviewmodelFactory.eINSTANCE.createContenedorSolicitudVisitaViewModel()));
 	}
 
 	/**

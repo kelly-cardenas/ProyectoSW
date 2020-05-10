@@ -13,7 +13,6 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -64,31 +63,8 @@ public class ContenedorMaestroClienteViewModelItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addTheClienteViewModelPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the The Cliente View Model feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTheClienteViewModelPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ContenedorMaestroClienteViewModel_theClienteViewModel_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ContenedorMaestroClienteViewModel_theClienteViewModel_feature", "_UI_ContenedorMaestroClienteViewModel_type"),
-				 ContenedorcrudclienteviewmodelPackage.Literals.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__THE_CLIENTE_VIEW_MODEL,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**
@@ -103,7 +79,7 @@ public class ContenedorMaestroClienteViewModelItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ContenedorcrudclienteviewmodelPackage.Literals.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__CLIENTE_VIEW_MODEL);
+			childrenFeatures.add(ContenedorcrudclienteviewmodelPackage.Literals.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__LISTA_CLIENTE);
 		}
 		return childrenFeatures;
 	}
@@ -156,7 +132,7 @@ public class ContenedorMaestroClienteViewModelItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ContenedorMaestroClienteViewModel.class)) {
-			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__CLIENTE_VIEW_MODEL:
+			case ContenedorcrudclienteviewmodelPackage.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__LISTA_CLIENTE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -176,7 +152,7 @@ public class ContenedorMaestroClienteViewModelItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ContenedorcrudclienteviewmodelPackage.Literals.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__CLIENTE_VIEW_MODEL,
+				(ContenedorcrudclienteviewmodelPackage.Literals.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__LISTA_CLIENTE,
 				 ContenedorcrudclienteviewmodelFactory.eINSTANCE.createClienteViewModel()));
 	}
 

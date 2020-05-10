@@ -24,6 +24,21 @@
     id="sma.view.view.views.Login" 
    name="Login">
  </view>
+<view
+  category="sma.view.category1"    class="sma.view.view.views.EscaneoViewPart"
+    id="sma.view.view.views.Escaneo" 
+   name="Escaneo">
+ </view>
+<view
+  category="sma.view.category1"    class="sma.view.view.views.ContactarCmViewPart"
+    id="sma.view.view.views.ContactarCm" 
+   name="ContactarCm">
+ </view>
+<view
+  category="sma.view.category1"    class="sma.view.view.views.SolicitudVisitaViewPart"
+    id="sma.view.view.views.SolicitudVisita" 
+   name="SolicitudVisita">
+ </view>
 <category
    id="sma.view.category1"
     name="ViewsDF">

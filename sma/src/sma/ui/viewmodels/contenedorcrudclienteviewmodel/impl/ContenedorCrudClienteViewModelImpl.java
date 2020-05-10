@@ -214,9 +214,23 @@ public class ContenedorCrudClienteViewModelImpl extends EObjectImpl implements C
 						
 								
 										
-												String action = "";
-												return action;
-										
+												
+														
+																
+																		
+																				
+																						
+																								
+																										String action = "";
+																										return action;
+																								
+																							
+																					
+																			
+																	
+															
+													
+											
 									
 							
 					
@@ -231,25 +245,24 @@ public class ContenedorCrudClienteViewModelImpl extends EObjectImpl implements C
 	public void implementarModelo() {
 		
 				
-						
-								
-							//--prueba	
-										ContenedorDetalleClienteViewModel detalleClienteVM = getTheContenedorDetalleClienteViewModel();
-										ContenedorMaestroClienteViewModel maestroClienteVM = getTheContenedorMaestroClienteViewModel();
-											
-											if ( detalleClienteVM == null ) {
-												detalleClienteVM = sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelFactory.
-														eINSTANCE.createContenedorDetalleClienteViewModel();
-											}
-									
-											if ( maestroClienteVM == null ) {
-												maestroClienteVM= sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelFactory.
-												eINSTANCE.createContenedorMaestroClienteViewModel();
-											}
-											
-											setTheContenedorDetalleClienteViewModel(detalleClienteVM);
-											setTheContenedorMaestroClienteViewModel(maestroClienteVM);
-									
+				// --prueba
+				ContenedorDetalleClienteViewModel detalleClienteVM = getTheContenedorDetalleClienteViewModel();
+				ContenedorMaestroClienteViewModel maestroClienteVM = getTheContenedorMaestroClienteViewModel();
+		
+				if (detalleClienteVM == null) {
+					detalleClienteVM = sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelFactory.eINSTANCE
+							.createContenedorDetalleClienteViewModel();
+				}
+		
+				if (maestroClienteVM == null) {
+					maestroClienteVM = sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelFactory.eINSTANCE
+							.createContenedorMaestroClienteViewModel();
+				}
+		
+				setTheContenedorDetalleClienteViewModel(detalleClienteVM);
+				setTheContenedorMaestroClienteViewModel(maestroClienteVM);
+		
+				detalleClienteVM.implementarModelo();														
 							
 					
 			
@@ -263,8 +276,44 @@ public class ContenedorCrudClienteViewModelImpl extends EObjectImpl implements C
 	public void registrarCliente() {
 		
 				
-				getOwnedByUI().registrarCliente(this);
+						
+								
+										
+												
+														
+																
+																		
+																		getOwnedByUI().registrarCliente(this);
+																		
+																	
+															
+													
+											
+									
+							
+					
+			
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void actualizarCrudCliente() {
+		
 				
+						
+								
+										
+												
+														getOwnedByUI().actualizarCrudCliente(this);
+														
+													
+											
+									
+							
+					
 			
 	}
 

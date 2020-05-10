@@ -11,6 +11,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
+import org.eclipse.emf.ecore.util.EcoreUtil;
+
 import sma.domain.CentroMant;
 import sma.domain.DomainPackage;
 import sma.domain.UbicacionCM;
@@ -41,7 +43,7 @@ public class UbicacionCMImpl extends EObjectImpl implements UbicacionCM {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String PAIS_EDEFAULT = null;
+	protected static final String PAIS_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getPais() <em>Pais</em>}' attribute.
@@ -61,7 +63,7 @@ public class UbicacionCMImpl extends EObjectImpl implements UbicacionCM {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DEPARTAMENTO_EDEFAULT = null;
+	protected static final String DEPARTAMENTO_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getDepartamento() <em>Departamento</em>}' attribute.
@@ -81,7 +83,7 @@ public class UbicacionCMImpl extends EObjectImpl implements UbicacionCM {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CIUDAD_EDEFAULT = null;
+	protected static final String CIUDAD_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getCiudad() <em>Ciudad</em>}' attribute.
@@ -101,7 +103,7 @@ public class UbicacionCMImpl extends EObjectImpl implements UbicacionCM {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DIRECCION_EDEFAULT = null;
+	protected static final String DIRECCION_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getDireccion() <em>Direccion</em>}' attribute.
@@ -112,16 +114,6 @@ public class UbicacionCMImpl extends EObjectImpl implements UbicacionCM {
 	 * @ordered
 	 */
 	protected String direccion = DIRECCION_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getOwnedBy() <em>Owned By</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOwnedBy()
-	 * @generated
-	 * @ordered
-	 */
-	protected CentroMant ownedBy;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -232,24 +224,8 @@ public class UbicacionCMImpl extends EObjectImpl implements UbicacionCM {
 	 * @generated
 	 */
 	public CentroMant getOwnedBy() {
-		if (ownedBy != null && ownedBy.eIsProxy()) {
-			InternalEObject oldOwnedBy = (InternalEObject)ownedBy;
-			ownedBy = (CentroMant)eResolveProxy(oldOwnedBy);
-			if (ownedBy != oldOwnedBy) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, DomainPackage.UBICACION_CM__OWNED_BY, oldOwnedBy, ownedBy));
-			}
-		}
-		return ownedBy;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CentroMant basicGetOwnedBy() {
-		return ownedBy;
+		if (eContainerFeatureID() != DomainPackage.UBICACION_CM__OWNED_BY) return null;
+		return (CentroMant)eInternalContainer();
 	}
 
 	/**
@@ -258,12 +234,7 @@ public class UbicacionCMImpl extends EObjectImpl implements UbicacionCM {
 	 * @generated
 	 */
 	public NotificationChain basicSetOwnedBy(CentroMant newOwnedBy, NotificationChain msgs) {
-		CentroMant oldOwnedBy = ownedBy;
-		ownedBy = newOwnedBy;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DomainPackage.UBICACION_CM__OWNED_BY, oldOwnedBy, newOwnedBy);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
+		msgs = eBasicSetContainer((InternalEObject)newOwnedBy, DomainPackage.UBICACION_CM__OWNED_BY, msgs);
 		return msgs;
 	}
 
@@ -273,10 +244,12 @@ public class UbicacionCMImpl extends EObjectImpl implements UbicacionCM {
 	 * @generated
 	 */
 	public void setOwnedBy(CentroMant newOwnedBy) {
-		if (newOwnedBy != ownedBy) {
+		if (newOwnedBy != eInternalContainer() || (eContainerFeatureID() != DomainPackage.UBICACION_CM__OWNED_BY && newOwnedBy != null)) {
+			if (EcoreUtil.isAncestor(this, newOwnedBy))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
-			if (ownedBy != null)
-				msgs = ((InternalEObject)ownedBy).eInverseRemove(this, DomainPackage.CENTRO_MANT__UBICACION, CentroMant.class, msgs);
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
 			if (newOwnedBy != null)
 				msgs = ((InternalEObject)newOwnedBy).eInverseAdd(this, DomainPackage.CENTRO_MANT__UBICACION, CentroMant.class, msgs);
 			msgs = basicSetOwnedBy(newOwnedBy, msgs);
@@ -295,8 +268,8 @@ public class UbicacionCMImpl extends EObjectImpl implements UbicacionCM {
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case DomainPackage.UBICACION_CM__OWNED_BY:
-				if (ownedBy != null)
-					msgs = ((InternalEObject)ownedBy).eInverseRemove(this, DomainPackage.CENTRO_MANT__UBICACION, CentroMant.class, msgs);
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetOwnedBy((CentroMant)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -322,6 +295,20 @@ public class UbicacionCMImpl extends EObjectImpl implements UbicacionCM {
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case DomainPackage.UBICACION_CM__OWNED_BY:
+				return eInternalContainer().eInverseRemove(this, DomainPackage.CENTRO_MANT__UBICACION, CentroMant.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case DomainPackage.UBICACION_CM__PAIS:
@@ -333,8 +320,7 @@ public class UbicacionCMImpl extends EObjectImpl implements UbicacionCM {
 			case DomainPackage.UBICACION_CM__DIRECCION:
 				return getDireccion();
 			case DomainPackage.UBICACION_CM__OWNED_BY:
-				if (resolve) return getOwnedBy();
-				return basicGetOwnedBy();
+				return getOwnedBy();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -410,7 +396,7 @@ public class UbicacionCMImpl extends EObjectImpl implements UbicacionCM {
 			case DomainPackage.UBICACION_CM__DIRECCION:
 				return DIRECCION_EDEFAULT == null ? direccion != null : !DIRECCION_EDEFAULT.equals(direccion);
 			case DomainPackage.UBICACION_CM__OWNED_BY:
-				return ownedBy != null;
+				return getOwnedBy() != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -33,11 +33,19 @@ import sma.smaPackage;
 import sma.ui.UI;
 import sma.ui.UiPackage;
 
+import sma.ui.viewmodels.contenedorcontactarcmviewmodel.ContenedorContactarCmViewModel;
+
 import sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorCrudClienteViewModel;
 
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorCRUDCMViewModel;
 
+import sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorEscaneoViewModel;
+
+import sma.ui.viewmodels.contenedorloginviewmodel.ContenedorLoginViewModel;
+
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorRegistroVehiculoViewModel;
+
+import sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.ContenedorSolicitudVisitaViewModel;
 
 /**
  * <!-- begin-user-doc -->
@@ -68,7 +76,7 @@ public class DomainImpl extends EObjectImpl implements Domain {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Integer INCREMENTAL_ID_CLIENTE_EDEFAULT = null;
+	protected static final Integer INCREMENTAL_ID_CLIENTE_EDEFAULT = new Integer(0);
 
 	/**
 	 * The cached value of the '{@link #getIncrementalIdCliente() <em>Incremental Id Cliente</em>}' attribute.
@@ -88,7 +96,7 @@ public class DomainImpl extends EObjectImpl implements Domain {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Integer INCREMENTAL_ID_CM_EDEFAULT = null;
+	protected static final Integer INCREMENTAL_ID_CM_EDEFAULT = new Integer(0);
 
 	/**
 	 * The cached value of the '{@link #getIncrementalIdCm() <em>Incremental Id Cm</em>}' attribute.
@@ -108,7 +116,7 @@ public class DomainImpl extends EObjectImpl implements Domain {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Integer INCREMENTAL_ID_AUTO_EDEFAULT = null;
+	protected static final Integer INCREMENTAL_ID_AUTO_EDEFAULT = new Integer(0);
 
 	/**
 	 * The cached value of the '{@link #getIncrementalIdAuto() <em>Incremental Id Auto</em>}' attribute.
@@ -385,7 +393,7 @@ public class DomainImpl extends EObjectImpl implements Domain {
 	 * @generated
 	 */
 	public void implementarModelo() {
-		//implementar modelo
+		// implementar modelo
 	}
 
 	/**
@@ -394,30 +402,40 @@ public class DomainImpl extends EObjectImpl implements Domain {
 	 * @generated
 	 */
 	public void registrarUsuario(final ContenedorCrudClienteViewModel formulario) {
-		Usuario usuario = 			sma.domain.DomainFactory.eINSTANCE.createUsuario();
-								sma.domain.UbicacionUsu ubicacionUsu = sma.domain.DomainFactory.eINSTANCE.createUbicacionUsu();
-								
-								
-								//-------------------------------------------Asignacion el ID autoincremental al usuario-------------------------------------------------------
-								usuario.setId(String.valueOf(incrementarIdCliente()));
-								
-								//-------------------------------------------Asignacion de atributos personales al usuario-------------------------------------------------------
-								
-								usuario.setNombres(formulario.getTheContenedorDetalleClienteViewModel().getTheContenedorDatosPersonalesViewModel().getNombre());
-								usuario.setApellidos(formulario.getTheContenedorDetalleClienteViewModel().getTheContenedorDatosPersonalesViewModel().getApellido());
-								usuario.setNumDI(formulario.getTheContenedorDetalleClienteViewModel().getTheContenedorDatosPersonalesViewModel().getCedula());
-								usuario.setEdad(Integer.parseInt(formulario.getTheContenedorDetalleClienteViewModel().getTheContenedorDatosPersonalesViewModel().getEdad()));
-								usuario.setEmail(formulario.getTheContenedorDetalleClienteViewModel().getTheContenedorDatosPersonalesViewModel().getCorreoelectronico());
-								
-								//-------------------------------------------Asignacion de atributos de la cuenta del usuario-------------------------------------------------------
-								usuario.setUsuario(formulario.getTheContenedorDetalleClienteViewModel().getTheContenedorDatosdelacuentaViewModel().getContraseña());
-								usuario.setContrasenia(formulario.getTheContenedorDetalleClienteViewModel().getTheContenedorDatosdelacuentaViewModel().getContraseña());
-					
-								//-------------------------------------------Asignacion de la ubicacion-------------------------------------------------------
-								usuario.setUbicacion(ubicacionUsu);
-								ubicacionUsu.setOwnerBy(usuario);
-								
-								listaUsuarios.add(usuario);
+		Usuario usuario = sma.domain.DomainFactory.eINSTANCE.createUsuario();
+												sma.domain.UbicacionUsu ubicacionUsu = sma.domain.DomainFactory.eINSTANCE.createUbicacionUsu();
+										
+												// -------------------------------------------Asignacion el ID autoincremental
+												// al usuario-------------------------------------------------------
+												usuario.setId(String.valueOf(incrementarIdCliente()));
+										
+												// -------------------------------------------Asignacion de atributos personales
+												// al usuario-------------------------------------------------------
+										
+												usuario.setNombres(formulario.getTheContenedorDetalleClienteViewModel()
+														.getTheContenedorDatosPersonalesViewModel().getNombre());
+												usuario.setApellidos(formulario.getTheContenedorDetalleClienteViewModel()
+														.getTheContenedorDatosPersonalesViewModel().getApellido());
+												usuario.setNumDI(formulario.getTheContenedorDetalleClienteViewModel().getTheContenedorDatosPersonalesViewModel()
+														.getCedula());
+												usuario.setEdad(Integer.parseInt(formulario.getTheContenedorDetalleClienteViewModel()
+														.getTheContenedorDatosPersonalesViewModel().getEdad()));
+												usuario.setEmail(formulario.getTheContenedorDetalleClienteViewModel().getTheContenedorDatosPersonalesViewModel()
+														.getCorreoelectronico());
+										
+												// -------------------------------------------Asignacion de atributos de la
+												// cuenta del usuario-------------------------------------------------------
+												usuario.setUsuario(formulario.getTheContenedorDetalleClienteViewModel()
+														.getTheContenedorDatosdelacuentaViewModel().getUsuario());
+												usuario.setContrasenia(formulario.getTheContenedorDetalleClienteViewModel()
+														.getTheContenedorDatosdelacuentaViewModel().getContrasenia());
+										
+												// -------------------------------------------Asignacion de la
+												// ubicacion-------------------------------------------------------
+												usuario.setUbicacion(ubicacionUsu);
+												ubicacionUsu.setOwnerBy(usuario);
+												System.out.println("registrado usuario" + usuario.getNombres());
+												getListaUsuarios().add(usuario);
 	}
 
 	/**
@@ -426,27 +444,37 @@ public class DomainImpl extends EObjectImpl implements Domain {
 	 * @generated
 	 */
 	public void registrarCm(final ContenedorCRUDCMViewModel formulario) {
-		CentroMant centroMantenimiento 	= sma.domain.DomainFactory.eINSTANCE.createCentroMant();
-				sma.domain.UbicacionCM ubicacionCM			= sma.domain.DomainFactory.eINSTANCE.createUbicacionCM();
-							
-							//-------------------------------------------Asignacion informacion de CM-------------------------------------------------------
-							centroMantenimiento.setId(String.valueOf(incrementalIdCm));
-				
-							//-------------------------------------------Asignacion informacion de CM-------------------------------------------------------
-							centroMantenimiento.setNombre(formulario.getTheContenedorDetalleCMViewModel().getTheContenedorInformacionCMViewModel().getNombrecm());
-							centroMantenimiento.setNombreRepresentante(formulario.getTheContenedorDetalleCMViewModel().getTheContenedorInformacionCMViewModel().getNombrerepresentante());
-							centroMantenimiento.setDescripcion(formulario.getTheContenedorDetalleCMViewModel().getTheContenedorInformacionCMViewModel().getDescripcion());
-							
-							//-------------------------------------------Asignacion de ubicacion de CM-------------------------------------------------------
-							ubicacionCM.setPais(formulario.getTheContenedorDetalleCMViewModel().getTheContenedorUbicacionViewModel().getPais());
-							ubicacionCM.setDepartamento(formulario.getTheContenedorDetalleCMViewModel().getTheContenedorUbicacionViewModel().getDepartamento());
-							ubicacionCM.setCiudad(formulario.getTheContenedorDetalleCMViewModel().getTheContenedorUbicacionViewModel().getCiudad());
-							ubicacionCM.setDireccion(formulario.getTheContenedorDetalleCMViewModel().getTheContenedorUbicacionViewModel().getDireccion());
-							
-							centroMantenimiento.setUbicacion(ubicacionCM);
-							ubicacionCM.setOwnedBy(centroMantenimiento);
-							
-							listaDeCentMant.add(centroMantenimiento);
+		CentroMant centroMantenimiento = sma.domain.DomainFactory.eINSTANCE.createCentroMant();
+												sma.domain.UbicacionCM ubicacionCM = sma.domain.DomainFactory.eINSTANCE.createUbicacionCM();
+										
+												// -------------------------------------------Asignacion informacion de
+												// CM-------------------------------------------------------
+												centroMantenimiento.setId(String.valueOf(incrementarIdCm()));
+										
+												// -------------------------------------------Asignacion informacion de
+												// CM-------------------------------------------------------
+												centroMantenimiento.setNombre(
+														formulario.getTheContenedorDetalleCMViewModel().getTheContenedorInformacionCMViewModel().getNombrecm());
+												centroMantenimiento.setNombreRepresentante(formulario.getTheContenedorDetalleCMViewModel()
+														.getTheContenedorInformacionCMViewModel().getNombrerepresentante());
+												centroMantenimiento.setDescripcion(formulario.getTheContenedorDetalleCMViewModel()
+														.getTheContenedorInformacionCMViewModel().getDescripcion());
+										
+												// -------------------------------------------Asignacion de ubicacion de
+												// CM-------------------------------------------------------
+												ubicacionCM.setPais(
+														formulario.getTheContenedorDetalleCMViewModel().getTheContenedorUbicacionViewModel().getPais());
+												ubicacionCM.setDepartamento(
+														formulario.getTheContenedorDetalleCMViewModel().getTheContenedorUbicacionViewModel().getDepartamento());
+												ubicacionCM.setCiudad(
+														formulario.getTheContenedorDetalleCMViewModel().getTheContenedorUbicacionViewModel().getCiudad());
+												ubicacionCM.setDireccion(
+														formulario.getTheContenedorDetalleCMViewModel().getTheContenedorUbicacionViewModel().getDireccion());
+										
+												centroMantenimiento.setUbicacion(ubicacionCM);
+												ubicacionCM.setOwnedBy(centroMantenimiento);
+										
+												getListaDeCentMant().add(centroMantenimiento);
 	}
 
 	/**
@@ -456,27 +484,32 @@ public class DomainImpl extends EObjectImpl implements Domain {
 	 */
 	public void registrarAutomovil(final ContenedorRegistroVehiculoViewModel formulario, final String idPropietario) {
 		Automovil automovil = sma.domain.DomainFactory.eINSTANCE.createAutomovil();
-						//Usuario usuario = sma.domain.DomainFactory.eINSTANCE.createUsuario();
-						
-						//-------------------------------Asignar id incremental al automovil-------------------------------------------------------
-						automovil.setId(String.valueOf(incrementalIdAuto));
-						
-						//-------------------------------Asignar Propiedades al automovil--------------------------------------------------------------
-						automovil.setMarca(formulario.getTheContenedorDetalleVehiculoViewModel().getMarca());
-						automovil.setModelo(Integer.parseInt(formulario.getTheContenedorDetalleVehiculoViewModel().getModelo()));
-						automovil.setPlaca(formulario.getTheContenedorDetalleVehiculoViewModel().getPlaca());
-						automovil.setReferencia(formulario.getTheContenedorDetalleVehiculoViewModel().getReferencia());
-						automovil.setTipoUso(formulario.getTheContenedorDetalleVehiculoViewModel().getTipovehiculo());
-						
-						//--------------------------------------------Agregar a la lista de Autos registrados del usuario-------------------------------------
-						for (Usuario usu : listaUsuarios) {
-							if ( usu.getId().equals( idPropietario ) ) {
-								
-								automovil.setPropietario(usu);
-								usu.getAutomoviles().add(automovil);
-							
-							}
-						}
+												// Usuario usuario = sma.domain.DomainFactory.eINSTANCE.createUsuario();
+										
+												// -------------------------------Asignar id incremental al
+												// automovil-------------------------------------------------------
+												automovil.setId(String.valueOf(incrementarIdAuto()));
+										
+												// -------------------------------Asignar Propiedades al
+												// automovil--------------------------------------------------------------
+												automovil.setMarca(formulario.getTheContenedorDetalleVehiculoViewModel().getMarca());
+												automovil.setModelo(Integer.parseInt(formulario.getTheContenedorDetalleVehiculoViewModel().getModelo()));
+												automovil.setPlaca(formulario.getTheContenedorDetalleVehiculoViewModel().getPlaca());
+												automovil.setReferencia(formulario.getTheContenedorDetalleVehiculoViewModel().getReferencia());
+												automovil.setTipoUso(formulario.getTheContenedorDetalleVehiculoViewModel().getTipovehiculo());
+										
+												// --------------------------------------------Agregar a la lista de Autos
+												// registrados del usuario-------------------------------------
+												for (Usuario usu : listaUsuarios) {
+													if (usu.getId().equals(idPropietario)) {
+										
+														automovil.setPropietario(usu);
+														usu.getAutomoviles().add(automovil);
+														getListaAutomoviles().add(automovil);
+														System.out.println("auto registrado al propietario " + usu.getNombres());
+													}
+										
+												}
 	}
 
 	/**
@@ -485,10 +518,14 @@ public class DomainImpl extends EObjectImpl implements Domain {
 	 * @generated
 	 */
 	public Integer incrementarIdCliente() {
-		int retorno = incrementalIdCliente;
-				incrementalIdCliente = incrementalIdCliente +1;
-				
-				return retorno;
+		if (incrementalIdCliente == null) {
+													incrementalIdCliente = 0;
+										
+												}
+												int retorno = incrementalIdCliente;
+												incrementalIdCliente = incrementalIdCliente + 1;
+										
+												return retorno;
 	}
 
 	/**
@@ -497,10 +534,14 @@ public class DomainImpl extends EObjectImpl implements Domain {
 	 * @generated
 	 */
 	public Integer incrementarIdCm() {
-		int retorno = incrementalIdCm;
-				incrementalIdCm = incrementalIdCm +1;
-				
-				return retorno;
+		if (incrementalIdCm == null) {
+													incrementalIdCm = 0;
+												}
+										
+												int retorno = incrementalIdCm;
+												incrementalIdCm = incrementalIdCm + 1;
+										
+												return retorno;
 	}
 
 	/**
@@ -509,10 +550,214 @@ public class DomainImpl extends EObjectImpl implements Domain {
 	 * @generated
 	 */
 	public Integer incrementarIdAuto() {
-		int retorno = incrementalIdAuto;
-				incrementalIdAuto = incrementalIdAuto +1;
-				
-				return retorno;
+		if (incrementalIdAuto == null) {
+													incrementalIdAuto = 0;
+												}
+												int retorno = incrementalIdAuto;
+												incrementalIdAuto = incrementalIdAuto + 1;
+										
+												return retorno;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void actualizarCrudCliente(final ContenedorCrudClienteViewModel formulario) {
+		formulario.getTheContenedorMaestroClienteViewModel().getListaCliente().clear();
+										
+												for (Usuario user : listaUsuarios) {
+													System.out.println("usuario en vm " + user.getNombres());
+													sma.ui.viewmodels.contenedorcrudclienteviewmodel.ClienteViewModel cliente = sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelFactory.eINSTANCE
+															.createClienteViewModel();
+										
+													cliente.setEdad(String.valueOf(user.getEdad()));
+													cliente.setEmail(user.getEmail());
+													cliente.setIdentificacion(user.getNumDI());
+													cliente.setNombre(user.getNombres());
+										
+													formulario.getTheContenedorMaestroClienteViewModel().getListaCliente().add(cliente);
+												}
+												
+												///Migueeeeeee
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void actualizarCrudCm(final ContenedorCRUDCMViewModel formulario) {
+		formulario.getTheContenedorMaestroCMViewModel().getListaCentroMant().clear();
+										
+												for (CentroMant cm : listaDeCentMant) {
+										
+													sma.ui.viewmodels.contenedorcrudcmviewmodel.CentroMantViewModel centroMantVm = sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelFactory.eINSTANCE
+															.createCentroMantViewModel();
+										
+													centroMantVm.setCiudad(cm.getUbicacion().getCiudad());
+													centroMantVm.setNombrecm(cm.getNombre());
+													centroMantVm.setNombrerepresentante(cm.getNombreRepresentante());
+										
+													formulario.getTheContenedorMaestroCMViewModel().getListaCentroMant().add(centroMantVm);
+												}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void actualizarVentanaRegistroCliente(final ContenedorRegistroVehiculoViewModel formulario) {
+		formulario.getTheContenedorVehiculosRegistradosViewModel().getListaVehiculo().clear();
+										
+												for (Usuario user : listaUsuarios) {
+													if (user.getId().equals(getTheUI().getIdLogueado())) {
+													formulario.getTheContenedorDetalleVehiculoViewModel().setPropietario(user.getNombres());
+														for (sma.domain.Automovil auto : user.getAutomoviles()) {
+										
+															sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.VehiculoViewModel vehiculoVM = sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorregistrovehiculoviewmodelFactory.eINSTANCE
+																	.createVehiculoViewModel();
+										
+															vehiculoVM.setMarca(auto.getMarca());
+															vehiculoVM.setPlaca(auto.getPlaca());
+															vehiculoVM.setReferencia(auto.getReferencia());
+										
+															formulario.getTheContenedorVehiculosRegistradosViewModel().getListaVehiculo().add(vehiculoVM);
+										
+														}
+														
+														break;
+													}
+										
+												}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Boolean hacerLogin(final ContenedorLoginViewModel formulario) {
+		if(getListaUsuarios() != null) {
+								for (Usuario user : getListaUsuarios()) {
+										
+													if (user.getUsuario().equals(formulario.getTheContenedorDetalleLoginViewModel().getUsuario())) {
+										
+														if (user.getContrasenia().equals(formulario.getTheContenedorDetalleLoginViewModel().getContrasenia())) {
+										
+															getTheUI().setIdLogueado(user.getId());
+															getTheUI().setTipoLogueado("cliente");
+															return true;
+										
+														}
+										
+													}
+										
+												}
+										
+								//				for (CentroMant cm : getListaDeCentMant()) {
+								//		
+								//					if (cm.getUsuario().equals(formulario.getTheContenedorDetalleLoginViewModel().getUsuario())) {
+								//		
+								//						if (cm.getContrasenia().equals(formulario.getTheContenedorDetalleLoginViewModel().getContrasenia())) {
+								//		
+								//							getTheUI().setIdLogueado(cm.getId());
+								//							getTheUI().setTipoLogueado("cm");
+								//							return true;
+								//		
+								//						}
+								//		
+								//					}
+								//		
+								//				}
+								}
+												return false;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void escanearVehiculo(final String placaVeh) {
+		for (Automovil auto : listaAutomoviles) {
+							
+							if (auto.getPlaca().equals(placaVeh)) {
+								
+								//auto.asignarFallas();
+								
+							}
+							
+						}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void mostrarEstadoVehCliente(final ContenedorEscaneoViewModel formulario) {
+		for (Automovil auto : listaAutomoviles) {
+							
+							if (auto.getPlaca().equals(formulario.getTheContenedorSeleccionautoViewModel().getPlacavehiculo())) {
+								
+								if (auto.getListaDeFallas() != null) {
+									
+									for (sma.domain.automatizacionrevision.FallaMecanica falla : auto.getListaDeFallas()) {
+										sma.ui.viewmodels.contenedorescaneoviewmodel.ListaFallasViewModel fallaVM = sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorescaneoviewmodelFactory
+												.eINSTANCE.createListaFallasViewModel();
+								
+										fallaVM.setGravedad(falla.getGravedad());
+										fallaVM.setOrigen(falla.getOrigen());
+										fallaVM.setGravedad(falla.getGravedad());
+										fallaVM.setOrigen(falla.getOrigen());
+										
+										formulario.getTheContenedorFallasViewModel().getListaListaFallasViewModel().add(fallaVM);
+									
+									}
+									
+								}
+								
+							}
+							
+						}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void mostrarCmsCercanos(final ContenedorContactarCmViewModel formulario) {
+		for (CentroMant centroMant : listaDeCentMant) {
+					
+					if ( centroMant.getUbicacion().getPais().equals(formulario.getTheContenedorUbicacionactualViewModel().getPais())
+						&& centroMant.getUbicacion().getDepartamento().equals(formulario.getTheContenedorUbicacionactualViewModel().getDepartamento())) {
+					
+						sma.ui.viewmodels.contenedorcontactarcmviewmodel.ListaCmViewModel cmVM = sma.ui.viewmodels.contenedorcontactarcmviewmodel.
+								ContenedorcontactarcmviewmodelFactory.eINSTANCE.createListaCmViewModel();
+						
+						cmVM.setNombre(centroMant.getNombre());
+						cmVM.setNombrerepresentante(centroMant.getNombreRepresentante());
+						cmVM.setDireccion(centroMant.getUbicacion().getDireccion());
+						
+						formulario.getTheContenedorCmrecomendadosViewModel().getListaListaCmViewModel().add(cmVM);
+						
+					}
+					
+				}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void solicitarVisita(final ContenedorSolicitudVisitaViewModel formulario) {
+		//TODO solicitarVisita
+		
 	}
 
 	/**

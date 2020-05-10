@@ -43,7 +43,7 @@ public class ContenedorUbicacionViewModelImpl extends EObjectImpl implements Con
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String PAIS_EDEFAULT = null;
+	protected static final String PAIS_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getPais() <em>Pais</em>}' attribute.
@@ -63,7 +63,7 @@ public class ContenedorUbicacionViewModelImpl extends EObjectImpl implements Con
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DEPARTAMENTO_EDEFAULT = null;
+	protected static final String DEPARTAMENTO_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getDepartamento() <em>Departamento</em>}' attribute.
@@ -83,7 +83,7 @@ public class ContenedorUbicacionViewModelImpl extends EObjectImpl implements Con
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CIUDAD_EDEFAULT = null;
+	protected static final String CIUDAD_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getCiudad() <em>Ciudad</em>}' attribute.
@@ -103,7 +103,7 @@ public class ContenedorUbicacionViewModelImpl extends EObjectImpl implements Con
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DIRECCION_EDEFAULT = null;
+	protected static final String DIRECCION_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getDireccion() <em>Direccion</em>}' attribute.

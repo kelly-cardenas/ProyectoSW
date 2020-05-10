@@ -45,7 +45,7 @@ public class FallaMecanicaImpl extends EObjectImpl implements FallaMecanica {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String PIESA_AVERIADA_EDEFAULT = null;
+	protected static final String PIESA_AVERIADA_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getPiesaAveriada() <em>Piesa Averiada</em>}' attribute.
@@ -65,7 +65,7 @@ public class FallaMecanicaImpl extends EObjectImpl implements FallaMecanica {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String GRAVEDAD_EDEFAULT = null;
+	protected static final String GRAVEDAD_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getGravedad() <em>Gravedad</em>}' attribute.
@@ -85,7 +85,7 @@ public class FallaMecanicaImpl extends EObjectImpl implements FallaMecanica {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ORIGEN_EDEFAULT = null;
+	protected static final String ORIGEN_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getOrigen() <em>Origen</em>}' attribute.
@@ -105,7 +105,7 @@ public class FallaMecanicaImpl extends EObjectImpl implements FallaMecanica {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DESCRIPCION_EDEFAULT = null;
+	protected static final String DESCRIPCION_EDEFAULT = " ";
 
 	/**
 	 * The cached value of the '{@link #getDescripcion() <em>Descripcion</em>}' attribute.

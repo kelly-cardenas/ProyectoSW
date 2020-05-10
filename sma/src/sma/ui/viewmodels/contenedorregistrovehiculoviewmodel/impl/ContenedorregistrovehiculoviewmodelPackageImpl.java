@@ -30,6 +30,12 @@ import sma.ui.UiPackage;
 
 import sma.ui.impl.UiPackageImpl;
 
+import sma.ui.viewmodels.ViewmodelsPackage;
+
+import sma.ui.viewmodels.contenedorcontactarcmviewmodel.ContenedorcontactarcmviewmodelPackage;
+
+import sma.ui.viewmodels.contenedorcontactarcmviewmodel.impl.ContenedorcontactarcmviewmodelPackageImpl;
+
 import sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelPackage;
 
 import sma.ui.viewmodels.contenedorcrudclienteviewmodel.impl.ContenedorcrudclienteviewmodelPackageImpl;
@@ -37,6 +43,10 @@ import sma.ui.viewmodels.contenedorcrudclienteviewmodel.impl.Contenedorcrudclien
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelPackage;
 
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.impl.ContenedorcrudcmviewmodelPackageImpl;
+
+import sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorescaneoviewmodelPackage;
+
+import sma.ui.viewmodels.contenedorescaneoviewmodel.impl.ContenedorescaneoviewmodelPackageImpl;
 
 import sma.ui.viewmodels.contenedorloginviewmodel.ContenedorloginviewmodelPackage;
 
@@ -48,6 +58,12 @@ import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorVehiculos
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorregistrovehiculoviewmodelFactory;
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorregistrovehiculoviewmodelPackage;
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.VehiculoViewModel;
+
+import sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.ContenedorsolicitudvisitaviewmodelPackage;
+
+import sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.impl.ContenedorsolicitudvisitaviewmodelPackageImpl;
+
+import sma.ui.viewmodels.impl.ViewmodelsPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -136,9 +152,13 @@ public class ContenedorregistrovehiculoviewmodelPackageImpl extends EPackageImpl
 		ReparacionvehiculoPackageImpl theReparacionvehiculoPackage = (ReparacionvehiculoPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ReparacionvehiculoPackage.eNS_URI) instanceof ReparacionvehiculoPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ReparacionvehiculoPackage.eNS_URI) : ReparacionvehiculoPackage.eINSTANCE);
 		AutomatizacionrevisionPackageImpl theAutomatizacionrevisionPackage = (AutomatizacionrevisionPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(AutomatizacionrevisionPackage.eNS_URI) instanceof AutomatizacionrevisionPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(AutomatizacionrevisionPackage.eNS_URI) : AutomatizacionrevisionPackage.eINSTANCE);
 		UiPackageImpl theUiPackage = (UiPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(UiPackage.eNS_URI) instanceof UiPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(UiPackage.eNS_URI) : UiPackage.eINSTANCE);
+		ViewmodelsPackageImpl theViewmodelsPackage = (ViewmodelsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ViewmodelsPackage.eNS_URI) instanceof ViewmodelsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ViewmodelsPackage.eNS_URI) : ViewmodelsPackage.eINSTANCE);
 		ContenedorcrudclienteviewmodelPackageImpl theContenedorcrudclienteviewmodelPackage = (ContenedorcrudclienteviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorcrudclienteviewmodelPackage.eNS_URI) instanceof ContenedorcrudclienteviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorcrudclienteviewmodelPackage.eNS_URI) : ContenedorcrudclienteviewmodelPackage.eINSTANCE);
 		ContenedorcrudcmviewmodelPackageImpl theContenedorcrudcmviewmodelPackage = (ContenedorcrudcmviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorcrudcmviewmodelPackage.eNS_URI) instanceof ContenedorcrudcmviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorcrudcmviewmodelPackage.eNS_URI) : ContenedorcrudcmviewmodelPackage.eINSTANCE);
 		ContenedorloginviewmodelPackageImpl theContenedorloginviewmodelPackage = (ContenedorloginviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorloginviewmodelPackage.eNS_URI) instanceof ContenedorloginviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorloginviewmodelPackage.eNS_URI) : ContenedorloginviewmodelPackage.eINSTANCE);
+		ContenedorescaneoviewmodelPackageImpl theContenedorescaneoviewmodelPackage = (ContenedorescaneoviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorescaneoviewmodelPackage.eNS_URI) instanceof ContenedorescaneoviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorescaneoviewmodelPackage.eNS_URI) : ContenedorescaneoviewmodelPackage.eINSTANCE);
+		ContenedorcontactarcmviewmodelPackageImpl theContenedorcontactarcmviewmodelPackage = (ContenedorcontactarcmviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorcontactarcmviewmodelPackage.eNS_URI) instanceof ContenedorcontactarcmviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorcontactarcmviewmodelPackage.eNS_URI) : ContenedorcontactarcmviewmodelPackage.eINSTANCE);
+		ContenedorsolicitudvisitaviewmodelPackageImpl theContenedorsolicitudvisitaviewmodelPackage = (ContenedorsolicitudvisitaviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorsolicitudvisitaviewmodelPackage.eNS_URI) instanceof ContenedorsolicitudvisitaviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorsolicitudvisitaviewmodelPackage.eNS_URI) : ContenedorsolicitudvisitaviewmodelPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theContenedorregistrovehiculoviewmodelPackage.createPackageContents();
@@ -147,9 +167,13 @@ public class ContenedorregistrovehiculoviewmodelPackageImpl extends EPackageImpl
 		theReparacionvehiculoPackage.createPackageContents();
 		theAutomatizacionrevisionPackage.createPackageContents();
 		theUiPackage.createPackageContents();
+		theViewmodelsPackage.createPackageContents();
 		theContenedorcrudclienteviewmodelPackage.createPackageContents();
 		theContenedorcrudcmviewmodelPackage.createPackageContents();
 		theContenedorloginviewmodelPackage.createPackageContents();
+		theContenedorescaneoviewmodelPackage.createPackageContents();
+		theContenedorcontactarcmviewmodelPackage.createPackageContents();
+		theContenedorsolicitudvisitaviewmodelPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theContenedorregistrovehiculoviewmodelPackage.initializePackageContents();
@@ -158,9 +182,13 @@ public class ContenedorregistrovehiculoviewmodelPackageImpl extends EPackageImpl
 		theReparacionvehiculoPackage.initializePackageContents();
 		theAutomatizacionrevisionPackage.initializePackageContents();
 		theUiPackage.initializePackageContents();
+		theViewmodelsPackage.initializePackageContents();
 		theContenedorcrudclienteviewmodelPackage.initializePackageContents();
 		theContenedorcrudcmviewmodelPackage.initializePackageContents();
 		theContenedorloginviewmodelPackage.initializePackageContents();
+		theContenedorescaneoviewmodelPackage.initializePackageContents();
+		theContenedorcontactarcmviewmodelPackage.initializePackageContents();
+		theContenedorsolicitudvisitaviewmodelPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theContenedorregistrovehiculoviewmodelPackage.freeze();
@@ -302,7 +330,7 @@ public class ContenedorregistrovehiculoviewmodelPackageImpl extends EPackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getContenedorVehiculosRegistradosViewModel_VehiculoViewModel() {
+	public EReference getContenedorVehiculosRegistradosViewModel_ListaVehiculo() {
 		return (EReference)contenedorVehiculosRegistradosViewModelEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -395,7 +423,7 @@ public class ContenedorregistrovehiculoviewmodelPackageImpl extends EPackageImpl
 
 		contenedorVehiculosRegistradosViewModelEClass = createEClass(CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL);
 		createEReference(contenedorVehiculosRegistradosViewModelEClass, CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__OWNED_BY_CONTENEDOR_REGISTRO_VEHICULO_VIEW_MODEL);
-		createEReference(contenedorVehiculosRegistradosViewModelEClass, CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__VEHICULO_VIEW_MODEL);
+		createEReference(contenedorVehiculosRegistradosViewModelEClass, CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__LISTA_VEHICULO);
 
 		vehiculoViewModelEClass = createEClass(VEHICULO_VIEW_MODEL);
 		createEReference(vehiculoViewModelEClass, VEHICULO_VIEW_MODEL__THE0_CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL);
@@ -439,12 +467,12 @@ public class ContenedorregistrovehiculoviewmodelPackageImpl extends EPackageImpl
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(contenedorDetalleVehiculoViewModelEClass, ContenedorDetalleVehiculoViewModel.class, "ContenedorDetalleVehiculoViewModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getContenedorDetalleVehiculoViewModel_Propietario(), thesmaPackage.getString(), "propietario", null, 0, 1, ContenedorDetalleVehiculoViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getContenedorDetalleVehiculoViewModel_Marca(), thesmaPackage.getString(), "marca", null, 0, 1, ContenedorDetalleVehiculoViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getContenedorDetalleVehiculoViewModel_Referencia(), thesmaPackage.getString(), "referencia", null, 0, 1, ContenedorDetalleVehiculoViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getContenedorDetalleVehiculoViewModel_Modelo(), thesmaPackage.getString(), "modelo", null, 0, 1, ContenedorDetalleVehiculoViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getContenedorDetalleVehiculoViewModel_Tipovehiculo(), thesmaPackage.getString(), "tipovehiculo", null, 0, 1, ContenedorDetalleVehiculoViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getContenedorDetalleVehiculoViewModel_Placa(), thesmaPackage.getString(), "placa", null, 0, 1, ContenedorDetalleVehiculoViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getContenedorDetalleVehiculoViewModel_Propietario(), thesmaPackage.getString(), "propietario", " ", 0, 1, ContenedorDetalleVehiculoViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getContenedorDetalleVehiculoViewModel_Marca(), thesmaPackage.getString(), "marca", " ", 0, 1, ContenedorDetalleVehiculoViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getContenedorDetalleVehiculoViewModel_Referencia(), thesmaPackage.getString(), "referencia", " ", 0, 1, ContenedorDetalleVehiculoViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getContenedorDetalleVehiculoViewModel_Modelo(), thesmaPackage.getString(), "modelo", " ", 0, 1, ContenedorDetalleVehiculoViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getContenedorDetalleVehiculoViewModel_Tipovehiculo(), thesmaPackage.getString(), "tipovehiculo", " ", 0, 1, ContenedorDetalleVehiculoViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getContenedorDetalleVehiculoViewModel_Placa(), thesmaPackage.getString(), "placa", " ", 0, 1, ContenedorDetalleVehiculoViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContenedorDetalleVehiculoViewModel_OwnedByContenedorRegistroVehiculoViewModel(), this.getContenedorRegistroVehiculoViewModel(), this.getContenedorRegistroVehiculoViewModel_TheContenedorDetalleVehiculoViewModel(), "ownedByContenedorRegistroVehiculoViewModel", null, 0, 1, ContenedorDetalleVehiculoViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(contenedorRegistroVehiculoViewModelEClass, ContenedorRegistroVehiculoViewModel.class, "ContenedorRegistroVehiculoViewModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -459,15 +487,17 @@ public class ContenedorregistrovehiculoviewmodelPackageImpl extends EPackageImpl
 
 		addEOperation(contenedorRegistroVehiculoViewModelEClass, null, "registrarVehiculo", 0, 1, IS_UNIQUE, IS_ORDERED);
 
+		addEOperation(contenedorRegistroVehiculoViewModelEClass, null, "actualizarVentanaRegistroVehiculo", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(contenedorVehiculosRegistradosViewModelEClass, ContenedorVehiculosRegistradosViewModel.class, "ContenedorVehiculosRegistradosViewModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getContenedorVehiculosRegistradosViewModel_OwnedByContenedorRegistroVehiculoViewModel(), this.getContenedorRegistroVehiculoViewModel(), this.getContenedorRegistroVehiculoViewModel_TheContenedorVehiculosRegistradosViewModel(), "ownedByContenedorRegistroVehiculoViewModel", null, 0, 1, ContenedorVehiculosRegistradosViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getContenedorVehiculosRegistradosViewModel_VehiculoViewModel(), this.getVehiculoViewModel(), this.getVehiculoViewModel_The0ContenedorVehiculosRegistradosViewModel(), "VehiculoViewModel", null, 0, -1, ContenedorVehiculosRegistradosViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getContenedorVehiculosRegistradosViewModel_ListaVehiculo(), this.getVehiculoViewModel(), this.getVehiculoViewModel_The0ContenedorVehiculosRegistradosViewModel(), "listaVehiculo", null, 0, -1, ContenedorVehiculosRegistradosViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vehiculoViewModelEClass, VehiculoViewModel.class, "VehiculoViewModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVehiculoViewModel_The0ContenedorVehiculosRegistradosViewModel(), this.getContenedorVehiculosRegistradosViewModel(), this.getContenedorVehiculosRegistradosViewModel_VehiculoViewModel(), "the0ContenedorVehiculosRegistradosViewModel", null, 0, 1, VehiculoViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVehiculoViewModel_Marca(), thesmaPackage.getString(), "marca", null, 0, 1, VehiculoViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVehiculoViewModel_Referencia(), thesmaPackage.getString(), "referencia", null, 0, 1, VehiculoViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVehiculoViewModel_Placa(), thesmaPackage.getString(), "placa", null, 0, 1, VehiculoViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVehiculoViewModel_The0ContenedorVehiculosRegistradosViewModel(), this.getContenedorVehiculosRegistradosViewModel(), this.getContenedorVehiculosRegistradosViewModel_ListaVehiculo(), "the0ContenedorVehiculosRegistradosViewModel", null, 0, 1, VehiculoViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVehiculoViewModel_Marca(), thesmaPackage.getString(), "marca", " ", 0, 1, VehiculoViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVehiculoViewModel_Referencia(), thesmaPackage.getString(), "referencia", " ", 0, 1, VehiculoViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVehiculoViewModel_Placa(), thesmaPackage.getString(), "placa", " ", 0, 1, VehiculoViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //ContenedorregistrovehiculoviewmodelPackageImpl

@@ -168,13 +168,21 @@ import sma.provider.smaItemProviderAdapterFactory;
 
 import sma.ui.provider.UiItemProviderAdapterFactory;
 
+import sma.ui.viewmodels.contenedorcontactarcmviewmodel.provider.ContenedorcontactarcmviewmodelItemProviderAdapterFactory;
+
 import sma.ui.viewmodels.contenedorcrudclienteviewmodel.provider.ContenedorcrudclienteviewmodelItemProviderAdapterFactory;
 
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.provider.ContenedorcrudcmviewmodelItemProviderAdapterFactory;
 
+import sma.ui.viewmodels.contenedorescaneoviewmodel.provider.ContenedorescaneoviewmodelItemProviderAdapterFactory;
+
 import sma.ui.viewmodels.contenedorloginviewmodel.provider.ContenedorloginviewmodelItemProviderAdapterFactory;
 
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.provider.ContenedorregistrovehiculoviewmodelItemProviderAdapterFactory;
+
+import sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.provider.ContenedorsolicitudvisitaviewmodelItemProviderAdapterFactory;
+
+import sma.ui.viewmodels.provider.ViewmodelsItemProviderAdapterFactory;
 
 
 /**
@@ -721,10 +729,14 @@ public class AutomatizacionrevisionEditor
 		adapterFactory.addAdapterFactory(new ReparacionvehiculoItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new AutomatizacionrevisionItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new UiItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new ViewmodelsItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ContenedorcrudclienteviewmodelItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ContenedorcrudcmviewmodelItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ContenedorregistrovehiculoviewmodelItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ContenedorloginviewmodelItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new ContenedorescaneoviewmodelItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new ContenedorcontactarcmviewmodelItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new ContenedorsolicitudvisitaviewmodelItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.

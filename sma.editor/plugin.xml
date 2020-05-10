@@ -258,4 +258,88 @@
       </editor>
    </extension>
 
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated sma -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="sma.ui.viewmodels.contenedorescaneoviewmodel.presentation.ContenedorescaneoviewmodelModelWizardID"
+            name="%_UI_ContenedorescaneoviewmodelModelWizard_label"
+            class="sma.ui.viewmodels.contenedorescaneoviewmodel.presentation.ContenedorescaneoviewmodelModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ContenedorescaneoviewmodelModelFile.gif">
+         <description>%_UI_ContenedorescaneoviewmodelModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated sma -->
+      <editor
+            id="sma.ui.viewmodels.contenedorescaneoviewmodel.presentation.ContenedorescaneoviewmodelEditorID"
+            name="%_UI_ContenedorescaneoviewmodelEditor_label"
+            icon="icons/full/obj16/ContenedorescaneoviewmodelModelFile.gif"
+            extensions="contenedorescaneoviewmodel"
+            class="sma.ui.viewmodels.contenedorescaneoviewmodel.presentation.ContenedorescaneoviewmodelEditor"
+            contributorClass="sma.ui.viewmodels.contenedorescaneoviewmodel.presentation.ContenedorescaneoviewmodelActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated sma -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="sma.ui.viewmodels.contenedorcontactarcmviewmodel.presentation.ContenedorcontactarcmviewmodelModelWizardID"
+            name="%_UI_ContenedorcontactarcmviewmodelModelWizard_label"
+            class="sma.ui.viewmodels.contenedorcontactarcmviewmodel.presentation.ContenedorcontactarcmviewmodelModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ContenedorcontactarcmviewmodelModelFile.gif">
+         <description>%_UI_ContenedorcontactarcmviewmodelModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated sma -->
+      <editor
+            id="sma.ui.viewmodels.contenedorcontactarcmviewmodel.presentation.ContenedorcontactarcmviewmodelEditorID"
+            name="%_UI_ContenedorcontactarcmviewmodelEditor_label"
+            icon="icons/full/obj16/ContenedorcontactarcmviewmodelModelFile.gif"
+            extensions="contenedorcontactarcmviewmodel"
+            class="sma.ui.viewmodels.contenedorcontactarcmviewmodel.presentation.ContenedorcontactarcmviewmodelEditor"
+            contributorClass="sma.ui.viewmodels.contenedorcontactarcmviewmodel.presentation.ContenedorcontactarcmviewmodelActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated sma -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.presentation.ContenedorsolicitudvisitaviewmodelModelWizardID"
+            name="%_UI_ContenedorsolicitudvisitaviewmodelModelWizard_label"
+            class="sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.presentation.ContenedorsolicitudvisitaviewmodelModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ContenedorsolicitudvisitaviewmodelModelFile.gif">
+         <description>%_UI_ContenedorsolicitudvisitaviewmodelModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated sma -->
+      <editor
+            id="sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.presentation.ContenedorsolicitudvisitaviewmodelEditorID"
+            name="%_UI_ContenedorsolicitudvisitaviewmodelEditor_label"
+            icon="icons/full/obj16/ContenedorsolicitudvisitaviewmodelModelFile.gif"
+            extensions="contenedorsolicitudvisitaviewmodel"
+            class="sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.presentation.ContenedorsolicitudvisitaviewmodelEditor"
+            contributorClass="sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.presentation.ContenedorsolicitudvisitaviewmodelActionBarContributor">
+      </editor>
+   </extension>
+
 </plugin>

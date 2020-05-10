@@ -209,23 +209,25 @@ public class ContenedorDetalleClienteViewModelImpl extends EObjectImpl implement
 	public void implementarModelo() {
 		
 				
-				ContenedorDatosPersonalesViewModel datosPersonalesVM = getTheContenedorDatosPersonalesViewModel();
-				ContenedorDatosdelacuentaViewModel datosCuentaCM	 = getTheContenedorDatosdelacuentaViewModel();
-				
-				if ( datosPersonalesVM == null ) {
-					datosPersonalesVM = sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelFactory
-										.eINSTANCE.createContenedorDatosPersonalesViewModel();
-				}
-				
-				if ( datosCuentaCM == null ) {
-					datosCuentaCM 	= sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelFactory
-									.eINSTANCE.createContenedorDatosdelacuentaViewModel();
-				}
-				
-				setTheContenedorDatosdelacuentaViewModel(datosCuentaCM);
-				setTheContenedorDatosPersonalesViewModel(datosPersonalesVM);
-				
-				
+						
+						ContenedorDatosPersonalesViewModel datosPersonalesVM = getTheContenedorDatosPersonalesViewModel();
+						ContenedorDatosdelacuentaViewModel datosCuentaCM	 = getTheContenedorDatosdelacuentaViewModel();
+						
+						if ( datosPersonalesVM == null ) {
+							datosPersonalesVM = sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelFactory
+												.eINSTANCE.createContenedorDatosPersonalesViewModel();
+						}
+						
+						if ( datosCuentaCM == null ) {
+							datosCuentaCM 	= sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelFactory
+											.eINSTANCE.createContenedorDatosdelacuentaViewModel();
+						}
+						
+						setTheContenedorDatosdelacuentaViewModel(datosCuentaCM);
+						setTheContenedorDatosPersonalesViewModel(datosPersonalesVM);
+						
+						
+					
 			
 	}
 
