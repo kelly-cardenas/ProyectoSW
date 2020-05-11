@@ -208,20 +208,20 @@ public class ContactarCmViewPart  extends ViewPart {
 		         listaCmViewModelSeleccionado  = (ListaCmViewModel)e.item.getData();
 		  } 
           });
-		TableViewerColumn  tableViewerColumn14Nombre = new TableViewerColumn(tableViewerListaCm, SWT.NONE);
-		TableColumn tblclmn14Nombre = tableViewerColumn14Nombre.getColumn();
-		tblclmn14Nombre.setWidth(100);
-		tblclmn14Nombre .setText("nombre");
+		TableViewerColumn  tableViewerColumn31Nombre = new TableViewerColumn(tableViewerListaCm, SWT.NONE);
+		TableColumn tblclmn31Nombre = tableViewerColumn31Nombre.getColumn();
+		tblclmn31Nombre.setWidth(100);
+		tblclmn31Nombre .setText("nombre");
 
-		TableViewerColumn  tableViewerColumn15Nombrerepresentante = new TableViewerColumn(tableViewerListaCm, SWT.NONE);
-		TableColumn tblclmn15Nombrerepresentante = tableViewerColumn15Nombrerepresentante.getColumn();
-		tblclmn15Nombrerepresentante.setWidth(100);
-		tblclmn15Nombrerepresentante .setText("nombrerepresentante");
+		TableViewerColumn  tableViewerColumn32Nombrerepresentante = new TableViewerColumn(tableViewerListaCm, SWT.NONE);
+		TableColumn tblclmn32Nombrerepresentante = tableViewerColumn32Nombrerepresentante.getColumn();
+		tblclmn32Nombrerepresentante.setWidth(100);
+		tblclmn32Nombrerepresentante .setText("nombrerepresentante");
 
-		TableViewerColumn  tableViewerColumn16Direccion = new TableViewerColumn(tableViewerListaCm, SWT.NONE);
-		TableColumn tblclmn16Direccion = tableViewerColumn16Direccion.getColumn();
-		tblclmn16Direccion.setWidth(100);
-		tblclmn16Direccion .setText("direccion");
+		TableViewerColumn  tableViewerColumn33Direccion = new TableViewerColumn(tableViewerListaCm, SWT.NONE);
+		TableColumn tblclmn33Direccion = tableViewerColumn33Direccion.getColumn();
+		tblclmn33Direccion.setWidth(100);
+		tblclmn33Direccion .setText("direccion");
 
         try {
 	       initDataBindings();
@@ -246,23 +246,23 @@ public class ContactarCmViewPart  extends ViewPart {
         IObservableValue contenedorubicacionactualCiudadUbicacionactualObserveValue = EMFObservables.observeValue(contenedorubicacionactualViewModel,ContenedorcontactarcmviewmodelPackage.Literals.CONTENEDOR_UBICACIONACTUAL_VIEW_MODEL__CIUDAD);
         bindingContext.bindValue(observeTextCiudadUbicacionactualObserveWidget,contenedorubicacionactualCiudadUbicacionactualObserveValue, null, null);
         //
-        ObservableListContentProvider listContentProvider4 = new ObservableListContentProvider();
-        IObservableMap[] observeMaps4= EMFObservables.observeMaps(listContentProvider4.getKnownElements(),
-        new EStructuralFeature[]{ContenedorcontactarcmviewmodelPackage.Literals.LISTA_CM_VIEW_MODEL__NOMBRE,ContenedorcontactarcmviewmodelPackage.Literals.LISTA_CM_VIEW_MODEL__NOMBREREPRESENTANTE,ContenedorcontactarcmviewmodelPackage.Literals.LISTA_CM_VIEW_MODEL__DIRECCION});
-        tableViewerListaCm.setLabelProvider(new ObservableMapLabelProvider(observeMaps4));
-        tableViewerListaCm.setContentProvider(listContentProvider4);
+        ObservableListContentProvider listContentProvider9 = new ObservableListContentProvider();
+        IObservableMap[] observeMaps9= EMFObservables.observeMaps(listContentProvider9.getKnownElements(),
+        new EStructuralFeature[]{ContenedorcontactarcmviewmodelPackage.Literals.LISTA_CM_VIEW_MODEL__NOMBRE,ContenedorcontactarcmviewmodelPackage.Literals.LISTA_CM_VIEW_MODEL__NOMBRE REPRESENTANTE,ContenedorcontactarcmviewmodelPackage.Literals.LISTA_CM_VIEW_MODEL__DIRECCION});
+        tableViewerListaCm.setLabelProvider(new ObservableMapLabelProvider(observeMaps9));
+        tableViewerListaCm.setContentProvider(listContentProvider9);
 
         //
-        IObservableList observeList4= EMFObservables.observeList(Realm.getDefault(),contenedorcmrecomendadosViewModel,
+        IObservableList observeList9= EMFObservables.observeList(Realm.getDefault(),contenedorcmrecomendadosViewModel,
         ContenedorcontactarcmviewmodelPackage.Literals.CONTENEDOR_CMRECOMENDADOS_VIEW_MODEL__LISTA_LISTA_CM_VIEW_MODEL);
-        tableViewerListaCm.setInput(observeList4);
+        tableViewerListaCm.setInput(observeList9);
             //
 
          return bindingContext;
 //
       }
       public void aceptarAction ( String  event ){
-    	  System.out.println("viewpart - "+textDepartamentoUbicacionactual.getText());
+System.out.println("viewpart - "+textDepartamentoUbicacionactual.getText());
     	  contenedorubicacionactualViewModel.setPais(textPaisUbicacionactual.getText());
     	  contenedorubicacionactualViewModel.setDepartamento(textDepartamentoUbicacionactual.getText());
     	  contenedorubicacionactualViewModel.setCiudad(textCiudadUbicacionactual.getText());
@@ -273,8 +273,7 @@ public class ContactarCmViewPart  extends ViewPart {
       }
 
       public void constructorContenedorContactarCmViewPart (){
-    	
-    	  limpiarCampos();
+             limpiarCampos();
     	  contenedorcmrecomendadosViewModel.getListaListaCmViewModel().clear();
       }
 
@@ -283,15 +282,13 @@ public class ContactarCmViewPart  extends ViewPart {
       }
 
       public void limpiarCampos (){
-         
-    	  textPaisUbicacionactual.setText("");
+             textPaisUbicacionactual.setText("");
     	  textDepartamentoUbicacionactual.setText("");
     	  textCiudadUbicacionactual.setText("");
     	  
     	  contenedorubicacionactualViewModel.setCiudad("");
     	  contenedorubicacionactualViewModel.setDepartamento("");
     	  contenedorubicacionactualViewModel.setPais("");
-    	  
       }
 
 }

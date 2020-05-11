@@ -287,7 +287,7 @@ contenedorbusquedaViewModel.setPlacavehiculo(textPlacaVehiculoBusqueda.getText()
       }
 
       public void cancelarAction ( String  event ){
-    	  textDireccionDatosCm.setText("");
+textDireccionDatosCm.setText("");
     	  textIdCmBusqueda.setText("");
     	  textNombreCmDatosCm.setText("");
     	  textNombreRepresentanteDatosCm.setText("");
@@ -308,7 +308,7 @@ contenedorbusquedaViewModel.setIdcm(textIdCmBusqueda.getText());
       }
 
       public void constructorContenedorSolicitudVisitaViewPart (){
-            limpiarCampos();
+             limpiarCampos();
       }
 
       public void syncModel (){
@@ -316,8 +316,7 @@ contenedorbusquedaViewModel.setIdcm(textIdCmBusqueda.getText());
       }
 
       public void limpiarCampos (){
-    	  
-    	  textDireccionDatosCm.setText("");
+             textDireccionDatosCm.setText("");
     	  textIdCmBusqueda.setText("");
     	  textNombreCmDatosCm.setText("");
     	  textNombreRepresentanteDatosCm.setText("");

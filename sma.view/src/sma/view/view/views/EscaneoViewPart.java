@@ -208,25 +208,25 @@ public class EscaneoViewPart  extends ViewPart {
 		         listaFallasViewModelSeleccionado  = (ListaFallasViewModel)e.item.getData();
 		  } 
           });
-		TableViewerColumn  tableViewerColumn10Gravedad = new TableViewerColumn(tableViewerListaFallas, SWT.NONE);
-		TableColumn tblclmn10Gravedad = tableViewerColumn10Gravedad.getColumn();
-		tblclmn10Gravedad.setWidth(100);
-		tblclmn10Gravedad .setText("gravedad");
+		TableViewerColumn  tableViewerColumn27Gravedad = new TableViewerColumn(tableViewerListaFallas, SWT.NONE);
+		TableColumn tblclmn27Gravedad = tableViewerColumn27Gravedad.getColumn();
+		tblclmn27Gravedad.setWidth(100);
+		tblclmn27Gravedad .setText("gravedad");
 
-		TableViewerColumn  tableViewerColumn11PiesaAveriada = new TableViewerColumn(tableViewerListaFallas, SWT.NONE);
-		TableColumn tblclmn11PiesaAveriada = tableViewerColumn11PiesaAveriada.getColumn();
-		tblclmn11PiesaAveriada.setWidth(100);
-		tblclmn11PiesaAveriada .setText("piesaAveriada");
+		TableViewerColumn  tableViewerColumn28PiesaAveriada = new TableViewerColumn(tableViewerListaFallas, SWT.NONE);
+		TableColumn tblclmn28PiesaAveriada = tableViewerColumn28PiesaAveriada.getColumn();
+		tblclmn28PiesaAveriada.setWidth(100);
+		tblclmn28PiesaAveriada .setText("piesaAveriada");
 
-		TableViewerColumn  tableViewerColumn12Origen = new TableViewerColumn(tableViewerListaFallas, SWT.NONE);
-		TableColumn tblclmn12Origen = tableViewerColumn12Origen.getColumn();
-		tblclmn12Origen.setWidth(100);
-		tblclmn12Origen .setText("origen");
+		TableViewerColumn  tableViewerColumn29Origen = new TableViewerColumn(tableViewerListaFallas, SWT.NONE);
+		TableColumn tblclmn29Origen = tableViewerColumn29Origen.getColumn();
+		tblclmn29Origen.setWidth(100);
+		tblclmn29Origen .setText("origen");
 
-		TableViewerColumn  tableViewerColumn13Descripcion = new TableViewerColumn(tableViewerListaFallas, SWT.NONE);
-		TableColumn tblclmn13Descripcion = tableViewerColumn13Descripcion.getColumn();
-		tblclmn13Descripcion.setWidth(100);
-		tblclmn13Descripcion .setText("descripcion");
+		TableViewerColumn  tableViewerColumn30Descripcion = new TableViewerColumn(tableViewerListaFallas, SWT.NONE);
+		TableColumn tblclmn30Descripcion = tableViewerColumn30Descripcion.getColumn();
+		tblclmn30Descripcion.setWidth(100);
+		tblclmn30Descripcion .setText("descripcion");
 
         try {
 	       initDataBindings();
@@ -251,16 +251,16 @@ public class EscaneoViewPart  extends ViewPart {
         IObservableValue contenedorfallasEstadoVehFallasObserveValue = EMFObservables.observeValue(contenedorfallasViewModel,ContenedorescaneoviewmodelPackage.Literals.CONTENEDOR_FALLAS_VIEW_MODEL__ESTADOVEH);
         bindingContext.bindValue(observeTextEstadoVehFallasObserveWidget,contenedorfallasEstadoVehFallasObserveValue, null, null);
         //
-        ObservableListContentProvider listContentProvider3 = new ObservableListContentProvider();
-        IObservableMap[] observeMaps3= EMFObservables.observeMaps(listContentProvider3.getKnownElements(),
+        ObservableListContentProvider listContentProvider8 = new ObservableListContentProvider();
+        IObservableMap[] observeMaps8= EMFObservables.observeMaps(listContentProvider8.getKnownElements(),
         new EStructuralFeature[]{ContenedorescaneoviewmodelPackage.Literals.LISTA_FALLAS_VIEW_MODEL__GRAVEDAD,ContenedorescaneoviewmodelPackage.Literals.LISTA_FALLAS_VIEW_MODEL__PIESAAVERIADA,ContenedorescaneoviewmodelPackage.Literals.LISTA_FALLAS_VIEW_MODEL__ORIGEN,ContenedorescaneoviewmodelPackage.Literals.LISTA_FALLAS_VIEW_MODEL__DESCRIPCION});
-        tableViewerListaFallas.setLabelProvider(new ObservableMapLabelProvider(observeMaps3));
-        tableViewerListaFallas.setContentProvider(listContentProvider3);
+        tableViewerListaFallas.setLabelProvider(new ObservableMapLabelProvider(observeMaps8));
+        tableViewerListaFallas.setContentProvider(listContentProvider8);
 
         //
-        IObservableList observeList3= EMFObservables.observeList(Realm.getDefault(),contenedorfallasViewModel,
+        IObservableList observeList8= EMFObservables.observeList(Realm.getDefault(),contenedorfallasViewModel,
         ContenedorescaneoviewmodelPackage.Literals.CONTENEDOR_FALLAS_VIEW_MODEL__LISTA_LISTA_FALLAS_VIEW_MODEL);
-        tableViewerListaFallas.setInput(observeList3);
+        tableViewerListaFallas.setInput(observeList8);
             //
 
          return bindingContext;

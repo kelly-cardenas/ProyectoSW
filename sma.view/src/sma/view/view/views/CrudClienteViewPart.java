@@ -301,25 +301,25 @@ public class CrudClienteViewPart  extends ViewPart {
 		         clienteViewModelSeleccionado  = (ClienteViewModel)e.item.getData();
 		  } 
           });
-		TableViewerColumn  tableViewerColumn0Identificacion = new TableViewerColumn(tableViewerCliente, SWT.NONE);
-		TableColumn tblclmn0Identificacion = tableViewerColumn0Identificacion.getColumn();
-		tblclmn0Identificacion.setWidth(100);
-		tblclmn0Identificacion .setText("identificacion");
+		TableViewerColumn  tableViewerColumn17Identificacion = new TableViewerColumn(tableViewerCliente, SWT.NONE);
+		TableColumn tblclmn17Identificacion = tableViewerColumn17Identificacion.getColumn();
+		tblclmn17Identificacion.setWidth(100);
+		tblclmn17Identificacion .setText("identificacion");
 
-		TableViewerColumn  tableViewerColumn1Nombre = new TableViewerColumn(tableViewerCliente, SWT.NONE);
-		TableColumn tblclmn1Nombre = tableViewerColumn1Nombre.getColumn();
-		tblclmn1Nombre.setWidth(100);
-		tblclmn1Nombre .setText("Nombre");
+		TableViewerColumn  tableViewerColumn18Nombre = new TableViewerColumn(tableViewerCliente, SWT.NONE);
+		TableColumn tblclmn18Nombre = tableViewerColumn18Nombre.getColumn();
+		tblclmn18Nombre.setWidth(100);
+		tblclmn18Nombre .setText("Nombre");
 
-		TableViewerColumn  tableViewerColumn2Email = new TableViewerColumn(tableViewerCliente, SWT.NONE);
-		TableColumn tblclmn2Email = tableViewerColumn2Email.getColumn();
-		tblclmn2Email.setWidth(100);
-		tblclmn2Email .setText("Email");
+		TableViewerColumn  tableViewerColumn19Email = new TableViewerColumn(tableViewerCliente, SWT.NONE);
+		TableColumn tblclmn19Email = tableViewerColumn19Email.getColumn();
+		tblclmn19Email.setWidth(100);
+		tblclmn19Email .setText("Email");
 
-		TableViewerColumn  tableViewerColumn3Edad = new TableViewerColumn(tableViewerCliente, SWT.NONE);
-		TableColumn tblclmn3Edad = tableViewerColumn3Edad.getColumn();
-		tblclmn3Edad.setWidth(100);
-		tblclmn3Edad .setText("Edad");
+		TableViewerColumn  tableViewerColumn20Edad = new TableViewerColumn(tableViewerCliente, SWT.NONE);
+		TableColumn tblclmn20Edad = tableViewerColumn20Edad.getColumn();
+		tblclmn20Edad.setWidth(100);
+		tblclmn20Edad .setText("Edad");
 
         try {
 	       initDataBindings();
@@ -357,19 +357,19 @@ public class CrudClienteViewPart  extends ViewPart {
         bindingContext.bindValue(observeTextUsuarioDatosdelacuentaObserveWidget,contenedordatosdelacuentaUsuarioDatosdelacuentaObserveValue, null, null);
         //
         IObservableValue observeTextContraseñaDatosdelacuentaObserveWidget = WidgetProperties.text(SWT.Modify).observe(textContraseñaDatosdelacuenta);
-        IObservableValue contenedordatosdelacuentaContraseñaDatosdelacuentaObserveValue = EMFObservables.observeValue(contenedordatosdelacuentaViewModel,ContenedorcrudclienteviewmodelPackage.Literals.CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__CONTRASENIA);
+        IObservableValue contenedordatosdelacuentaContraseñaDatosdelacuentaObserveValue = EMFObservables.observeValue(contenedordatosdelacuentaViewModel,ContenedorcrudclienteviewmodelPackage.Literals.CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__CONTRASEÑA);
         bindingContext.bindValue(observeTextContraseñaDatosdelacuentaObserveWidget,contenedordatosdelacuentaContraseñaDatosdelacuentaObserveValue, null, null);
         //
-        ObservableListContentProvider listContentProvider0 = new ObservableListContentProvider();
-        IObservableMap[] observeMaps0= EMFObservables.observeMaps(listContentProvider0.getKnownElements(),
+        ObservableListContentProvider listContentProvider5 = new ObservableListContentProvider();
+        IObservableMap[] observeMaps5= EMFObservables.observeMaps(listContentProvider5.getKnownElements(),
         new EStructuralFeature[]{ContenedorcrudclienteviewmodelPackage.Literals.CLIENTE_VIEW_MODEL__IDENTIFICACION,ContenedorcrudclienteviewmodelPackage.Literals.CLIENTE_VIEW_MODEL__NOMBRE                                                  ,ContenedorcrudclienteviewmodelPackage.Literals.CLIENTE_VIEW_MODEL__EMAIL                                                     ,ContenedorcrudclienteviewmodelPackage.Literals.CLIENTE_VIEW_MODEL__EDAD});
-        tableViewerCliente.setLabelProvider(new ObservableMapLabelProvider(observeMaps0));
-        tableViewerCliente.setContentProvider(listContentProvider0);
+        tableViewerCliente.setLabelProvider(new ObservableMapLabelProvider(observeMaps5));
+        tableViewerCliente.setContentProvider(listContentProvider5);
 
         //
-        IObservableList observeList0= EMFObservables.observeList(Realm.getDefault(),contenedormaestroClienteViewModel,
-        ContenedorcrudclienteviewmodelPackage.Literals.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__LISTA_CLIENTE);
-        tableViewerCliente.setInput(observeList0);
+        IObservableList observeList5= EMFObservables.observeList(Realm.getDefault(),contenedormaestroClienteViewModel,
+        ContenedorcrudclienteviewmodelPackage.Literals.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__LISTA_CLIENTE_VIEW_MODEL);
+        tableViewerCliente.setInput(observeList5);
             //
 
          return bindingContext;

@@ -301,20 +301,20 @@ public class CRUDCMViewPart  extends ViewPart {
 		         centroMantViewModelSeleccionado  = (CentroMantViewModel)e.item.getData();
 		  } 
           });
-		TableViewerColumn  tableViewerColumn4NombreCM = new TableViewerColumn(tableViewerCentroMant, SWT.NONE);
-		TableColumn tblclmn4NombreCM = tableViewerColumn4NombreCM.getColumn();
-		tblclmn4NombreCM.setWidth(100);
-		tblclmn4NombreCM .setText("nombreCM");
+		TableViewerColumn  tableViewerColumn21NombreCM = new TableViewerColumn(tableViewerCentroMant, SWT.NONE);
+		TableColumn tblclmn21NombreCM = tableViewerColumn21NombreCM.getColumn();
+		tblclmn21NombreCM.setWidth(100);
+		tblclmn21NombreCM .setText("nombreCM");
 
-		TableViewerColumn  tableViewerColumn5NombreRepresentante = new TableViewerColumn(tableViewerCentroMant, SWT.NONE);
-		TableColumn tblclmn5NombreRepresentante = tableViewerColumn5NombreRepresentante.getColumn();
-		tblclmn5NombreRepresentante.setWidth(100);
-		tblclmn5NombreRepresentante .setText("nombreRepresentante");
+		TableViewerColumn  tableViewerColumn22NombreRepresentante = new TableViewerColumn(tableViewerCentroMant, SWT.NONE);
+		TableColumn tblclmn22NombreRepresentante = tableViewerColumn22NombreRepresentante.getColumn();
+		tblclmn22NombreRepresentante.setWidth(100);
+		tblclmn22NombreRepresentante .setText("nombreRepresentante");
 
-		TableViewerColumn  tableViewerColumn6Ciudad = new TableViewerColumn(tableViewerCentroMant, SWT.NONE);
-		TableColumn tblclmn6Ciudad = tableViewerColumn6Ciudad.getColumn();
-		tblclmn6Ciudad.setWidth(100);
-		tblclmn6Ciudad .setText("ciudad");
+		TableViewerColumn  tableViewerColumn23Ciudad = new TableViewerColumn(tableViewerCentroMant, SWT.NONE);
+		TableColumn tblclmn23Ciudad = tableViewerColumn23Ciudad.getColumn();
+		tblclmn23Ciudad.setWidth(100);
+		tblclmn23Ciudad .setText("ciudad");
 
         try {
 	       initDataBindings();
@@ -328,15 +328,15 @@ public class CRUDCMViewPart  extends ViewPart {
 //
         DataBindingContext bindingContext = new DataBindingContext();
         IObservableValue observeTextNombreCMInformacionCMObserveWidget = WidgetProperties.text(SWT.Modify).observe(textNombreCMInformacionCM);
-        IObservableValue contenedorinformacionCMNombreCMInformacionCMObserveValue = EMFObservables.observeValue(contenedorinformacionCMViewModel,ContenedorcrudcmviewmodelPackage.Literals.CONTENEDOR_INFORMACION_CM_VIEW_MODEL__NOMBRECM);
+        IObservableValue contenedorinformacionCMNombreCMInformacionCMObserveValue = EMFObservables.observeValue(contenedorinformacionCMViewModel,ContenedorcrudcmviewmodelPackage.Literals.CONTENEDOR_INFORMACION_CM__VIEW_MODEL__NOMBRECM);
         bindingContext.bindValue(observeTextNombreCMInformacionCMObserveWidget,contenedorinformacionCMNombreCMInformacionCMObserveValue, null, null);
         //
         IObservableValue observeTextNombreRepresentanteInformacionCMObserveWidget = WidgetProperties.text(SWT.Modify).observe(textNombreRepresentanteInformacionCM);
-        IObservableValue contenedorinformacionCMNombreRepresentanteInformacionCMObserveValue = EMFObservables.observeValue(contenedorinformacionCMViewModel,ContenedorcrudcmviewmodelPackage.Literals.CONTENEDOR_INFORMACION_CM_VIEW_MODEL__NOMBREREPRESENTANTE);
+        IObservableValue contenedorinformacionCMNombreRepresentanteInformacionCMObserveValue = EMFObservables.observeValue(contenedorinformacionCMViewModel,ContenedorcrudcmviewmodelPackage.Literals.CONTENEDOR_INFORMACION_CM__VIEW_MODEL__NOMBREREPRESENTANTE);
         bindingContext.bindValue(observeTextNombreRepresentanteInformacionCMObserveWidget,contenedorinformacionCMNombreRepresentanteInformacionCMObserveValue, null, null);
         //
         IObservableValue observeTextDescripcionInformacionCMObserveWidget = WidgetProperties.text(SWT.Modify).observe(textDescripcionInformacionCM);
-        IObservableValue contenedorinformacionCMDescripcionInformacionCMObserveValue = EMFObservables.observeValue(contenedorinformacionCMViewModel,ContenedorcrudcmviewmodelPackage.Literals.CONTENEDOR_INFORMACION_CM_VIEW_MODEL__DESCRIPCION);
+        IObservableValue contenedorinformacionCMDescripcionInformacionCMObserveValue = EMFObservables.observeValue(contenedorinformacionCMViewModel,ContenedorcrudcmviewmodelPackage.Literals.CONTENEDOR_INFORMACION_CM__VIEW_MODEL__DESCRIPCION);
         bindingContext.bindValue(observeTextDescripcionInformacionCMObserveWidget,contenedorinformacionCMDescripcionInformacionCMObserveValue, null, null);
         //
         IObservableValue observeTextPaisUbicacionObserveWidget = WidgetProperties.text(SWT.Modify).observe(textPaisUbicacion);
@@ -355,16 +355,16 @@ public class CRUDCMViewPart  extends ViewPart {
         IObservableValue contenedorubicacionDireccionUbicacionObserveValue = EMFObservables.observeValue(contenedorubicacionViewModel,ContenedorcrudcmviewmodelPackage.Literals.CONTENEDOR_UBICACION_VIEW_MODEL__DIRECCION);
         bindingContext.bindValue(observeTextDireccionUbicacionObserveWidget,contenedorubicacionDireccionUbicacionObserveValue, null, null);
         //
-        ObservableListContentProvider listContentProvider1 = new ObservableListContentProvider();
-        IObservableMap[] observeMaps1= EMFObservables.observeMaps(listContentProvider1.getKnownElements(),
+        ObservableListContentProvider listContentProvider6 = new ObservableListContentProvider();
+        IObservableMap[] observeMaps6= EMFObservables.observeMaps(listContentProvider6.getKnownElements(),
         new EStructuralFeature[]{ContenedorcrudcmviewmodelPackage.Literals.CENTRO_MANT_VIEW_MODEL__NOMBRECM                                     ,ContenedorcrudcmviewmodelPackage.Literals.CENTRO_MANT_VIEW_MODEL__NOMBREREPRESENTANTE                                                                          ,ContenedorcrudcmviewmodelPackage.Literals.CENTRO_MANT_VIEW_MODEL__CIUDAD                                  });
-        tableViewerCentroMant.setLabelProvider(new ObservableMapLabelProvider(observeMaps1));
-        tableViewerCentroMant.setContentProvider(listContentProvider1);
+        tableViewerCentroMant.setLabelProvider(new ObservableMapLabelProvider(observeMaps6));
+        tableViewerCentroMant.setContentProvider(listContentProvider6);
 
         //
-        IObservableList observeList1= EMFObservables.observeList(Realm.getDefault(),contenedormaestroCMViewModel,
-        ContenedorcrudcmviewmodelPackage.Literals.CONTENEDOR_MAESTRO_CM_VIEW_MODEL__LISTA_CENTRO_MANT);
-        tableViewerCentroMant.setInput(observeList1);
+        IObservableList observeList6= EMFObservables.observeList(Realm.getDefault(),contenedormaestroCMViewModel,
+        ContenedorcrudcmviewmodelPackage.Literals.CONTENEDOR_MAESTRO_CM__VIEW_MODEL__LISTA_CENTRO_MANT_VIEW_MODEL);
+        tableViewerCentroMant.setInput(observeList6);
             //
 
          return bindingContext;

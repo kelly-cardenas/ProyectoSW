@@ -422,7 +422,7 @@ public class DomainImpl extends EObjectImpl implements Domain {
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
-	 * @author suaza
+	 * @generated
 	 */
 	public void registrarUsuario(final ContenedorCrudClienteViewModel formulario) {
 		Usuario usuario = sma.domain.DomainFactory.eINSTANCE.createUsuario();
@@ -523,7 +523,7 @@ public class DomainImpl extends EObjectImpl implements Domain {
 
 		// --------------------------------------------Agregar a la lista de Autos
 		// registrados del usuario-------------------------------------
-		for (Usuario usu : listaUsuarios) {
+		for (Usuario usu : getListaUsuarios()) {
 			if (usu.getId().equals(idPropietario)) {
 
 				automovil.setPropietario(usu);
@@ -798,6 +798,7 @@ public class DomainImpl extends EObjectImpl implements Domain {
 						if (auto.getPropietario().getId().equals(getTheUI().getIdLogueado())) {
 							centroMant.procesarSolicitudVisita(auto);
 							break;
+							
 						} else {
 							System.out.println("El usuario logueado no tiene el vehiculo registrado");
 						}
@@ -805,7 +806,7 @@ public class DomainImpl extends EObjectImpl implements Domain {
 					}
 
 				}
-				System.out.println("auto no registrado");
+				break;
 
 			}
 
