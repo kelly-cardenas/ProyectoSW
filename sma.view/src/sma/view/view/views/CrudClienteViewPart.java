@@ -157,7 +157,7 @@ public class CrudClienteViewPart  extends ViewPart {
 				//TODO Action ButtonCANCELARde la view CrudCliente
 				        
       cancelarAction ( "event" );
-
+      System.out.println("Detalle");
 		 }
 		});
 		btnCANCELARDetalleCliente.setBounds(134,314,90,21);
