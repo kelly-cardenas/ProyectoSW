@@ -11,9 +11,9 @@ import sma.ui.viewmodels.contenedorcrudclienteviewmodel.*;
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.*;
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.*;
 import sma.ui.viewmodels.contenedorloginviewmodel.*;
-import sma.ui.viewmodels.contenedorescaneoviewmodel.*;
 import sma.ui.viewmodels.contenedorcontactarcmviewmodel.*;
 import sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.*;
+import sma.ui.viewmodels.contenedorescaneoviewmodel.*;
 
 import sma.view.model.ModelFactoryModel;
 import org.eclipse.wb.swt.SWTResourceManager;
@@ -113,12 +113,14 @@ public class RegistroVehiculoViewPart  extends ViewPart {
          public void cargarContenedores(){
             mfm 								= ModelFactoryModel.getInstance(); 
             contenedorregistroVehiculoViewModel = mfm.getTheContenedorRegistroVehiculoViewModel();
-            contenedordetalleVehiculoViewModel = mfm.getTheContenedorDetalleVehiculoViewModel();
-            contenedorvehiculosRegistradosViewModel = mfm.getTheContenedorVehiculosRegistradosViewModel();
+            contenedordetalleVehiculoViewModel = mfm.getTheRegistroVehiculogetTheContenedorDetalleVehiculoViewModel();
+            contenedorvehiculosRegistradosViewModel = mfm.getTheRegistroVehiculogetTheContenedorVehiculosRegistradosViewModel();
       
-}
+         }
       public void updateData(){
-           mfm.cargar();
+           if(!mfm.getEstado().equals("ACTUALIZADO")) {
+               mfm.cargar();
+           };
            cargarContenedores();
            try {
                 initDataBindings();
@@ -220,7 +222,7 @@ public class RegistroVehiculoViewPart  extends ViewPart {
 		public void widgetSelected(SelectionEvent e) {
 				//TODO Action ButtonREGISTRARde la view RegistroVehiculo
 				        
-      registrarAction ( "event" );
+	      registrarAction ( "event" );
 
 		 }
 		});
@@ -234,7 +236,7 @@ public class RegistroVehiculoViewPart  extends ViewPart {
 		public void widgetSelected(SelectionEvent e) {
 				//TODO Action ButtonCANCELARde la view RegistroVehiculo
 				        
-      cancelarAction ( "event" );
+	      cancelarAction ( "event" );
 
 		 }
 		});
@@ -265,29 +267,30 @@ public class RegistroVehiculoViewPart  extends ViewPart {
 		         vehiculoViewModelSeleccionado  = (VehiculoViewModel)e.item.getData();
 		  } 
           });
-		TableViewerColumn  tableViewerColumn24Marca = new TableViewerColumn(tableViewerVehiculo, SWT.NONE);
-		TableColumn tblclmn24Marca = tableViewerColumn24Marca.getColumn();
-		tblclmn24Marca.setWidth(100);
-		tblclmn24Marca .setText("marca");
+		TableViewerColumn  tableViewerColumn7Marca = new TableViewerColumn(tableViewerVehiculo, SWT.NONE);
+		TableColumn tblclmn7Marca = tableViewerColumn7Marca.getColumn();
+		tblclmn7Marca.setWidth(100);
+		tblclmn7Marca .setText("marca                            ");
 
-		TableViewerColumn  tableViewerColumn25Referencia = new TableViewerColumn(tableViewerVehiculo, SWT.NONE);
-		TableColumn tblclmn25Referencia = tableViewerColumn25Referencia.getColumn();
-		tblclmn25Referencia.setWidth(100);
-		tblclmn25Referencia .setText("referencia");
+		TableViewerColumn  tableViewerColumn8Referencia = new TableViewerColumn(tableViewerVehiculo, SWT.NONE);
+		TableColumn tblclmn8Referencia = tableViewerColumn8Referencia.getColumn();
+		tblclmn8Referencia.setWidth(100);
+		tblclmn8Referencia .setText("referencia                                              ");
 
-		TableViewerColumn  tableViewerColumn26Placa = new TableViewerColumn(tableViewerVehiculo, SWT.NONE);
-		TableColumn tblclmn26Placa = tableViewerColumn26Placa.getColumn();
-		tblclmn26Placa.setWidth(100);
-		tblclmn26Placa .setText("placa");
+		TableViewerColumn  tableViewerColumn9Placa = new TableViewerColumn(tableViewerVehiculo, SWT.NONE);
+		TableColumn tblclmn9Placa = tableViewerColumn9Placa.getColumn();
+		tblclmn9Placa.setWidth(100);
+		tblclmn9Placa .setText("placa                                                 ");
 
         try {
 	       initDataBindings();
-            }catch (Exception e) {
+          }catch (Exception e) {
         }
 
-   }      public void setFocus() {
-         // Set the focus
-    }
+      }
+     public void setFocus() {
+           // Set the focus
+     }
       protected DataBindingContext initDataBindings() {
 //
         DataBindingContext bindingContext = new DataBindingContext();
@@ -315,16 +318,16 @@ public class RegistroVehiculoViewPart  extends ViewPart {
         IObservableValue contenedordetalleVehiculoPlacaDetalleVehiculoObserveValue = EMFObservables.observeValue(contenedordetalleVehiculoViewModel,ContenedorregistrovehiculoviewmodelPackage.Literals.CONTENEDOR_DETALLE_VEHICULO_VIEW_MODEL__PLACA);
         bindingContext.bindValue(observeTextPlacaDetalleVehiculoObserveWidget,contenedordetalleVehiculoPlacaDetalleVehiculoObserveValue, null, null);
         //
-        ObservableListContentProvider listContentProvider7 = new ObservableListContentProvider();
-        IObservableMap[] observeMaps7= EMFObservables.observeMaps(listContentProvider7.getKnownElements(),
-        new EStructuralFeature[]{ContenedorregistrovehiculoviewmodelPackage.Literals.VEHICULO_VIEW_MODEL__MARCA                            ,ContenedorregistrovehiculoviewmodelPackage.Literals.VEHICULO_VIEW_MODEL__REFERENCIA                                              ,ContenedorregistrovehiculoviewmodelPackage.Literals.VEHICULO_VIEW_MODEL__PLACA                                                 });
-        tableViewerVehiculo.setLabelProvider(new ObservableMapLabelProvider(observeMaps7));
-        tableViewerVehiculo.setContentProvider(listContentProvider7);
+        ObservableListContentProvider listContentProvider2 = new ObservableListContentProvider();
+        IObservableMap[] observeMaps2= EMFObservables.observeMaps(listContentProvider2.getKnownElements(),
+        new EStructuralFeature[]{ContenedorregistrovehiculoviewmodelPackage.Literals.VEHICULO_VIEW_MODEL__MARCA,ContenedorregistrovehiculoviewmodelPackage.Literals.VEHICULO_VIEW_MODEL__REFERENCIA,ContenedorregistrovehiculoviewmodelPackage.Literals.VEHICULO_VIEW_MODEL__PLACA});
+        tableViewerVehiculo.setLabelProvider(new ObservableMapLabelProvider(observeMaps2));
+        tableViewerVehiculo.setContentProvider(listContentProvider2);
 
         //
-        IObservableList observeList7= EMFObservables.observeList(Realm.getDefault(),contenedorvehiculosRegistradosViewModel,
-        ContenedorregistrovehiculoviewmodelPackage.Literals.CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__LISTA_VEHICULO_VIEW_MODEL);
-        tableViewerVehiculo.setInput(observeList7);
+        IObservableList observeList2= EMFObservables.observeList(Realm.getDefault(),contenedorvehiculosRegistradosViewModel,
+        ContenedorregistrovehiculoviewmodelPackage.Literals.CONTENEDOR_VEHICULOS_REGISTRADOS_VIEW_MODEL__LISTA_VEHICULO);
+        tableViewerVehiculo.setInput(observeList2);
             //
 
          return bindingContext;

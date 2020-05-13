@@ -25,7 +25,6 @@ public class RegistroVehiculoTest {
 		ContenedorRegistroVehiculoViewModel registroVehiculoVM = modelFactory.getTheUI().getTheContenedorRegistroVehiculoViewModel();
 		
 		
-		
 		registroVehiculoVM.getTheContenedorDetalleVehiculoViewModel().setMarca("chevrolet");
 		registroVehiculoVM.getTheContenedorDetalleVehiculoViewModel().setModelo("2012");
 		registroVehiculoVM.getTheContenedorDetalleVehiculoViewModel().setPlaca("crk23c");

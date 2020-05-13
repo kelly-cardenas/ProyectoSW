@@ -84,22 +84,31 @@ public interface AutomatizacionrevisionPackage extends EPackage {
 	int FALLA_MECANICA__GRAVEDAD = 1;
 
 	/**
-	 * The feature id for the '<em><b>Origen</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FALLA_MECANICA__ORIGEN = 2;
-
-	/**
 	 * The feature id for the '<em><b>Descripcion</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FALLA_MECANICA__DESCRIPCION = 3;
+	int FALLA_MECANICA__DESCRIPCION = 2;
+
+	/**
+	 * The feature id for the '<em><b>Gases Nocivos</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FALLA_MECANICA__GASES_NOCIVOS = 3;
+
+	/**
+	 * The feature id for the '<em><b>Gases Ofensivos</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FALLA_MECANICA__GASES_OFENSIVOS = 4;
 
 	/**
 	 * The feature id for the '<em><b>The Automovil</b></em>' container reference.
@@ -108,7 +117,7 @@ public interface AutomatizacionrevisionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FALLA_MECANICA__THE_AUTOMOVIL = 4;
+	int FALLA_MECANICA__THE_AUTOMOVIL = 5;
 
 	/**
 	 * The number of structural features of the '<em>Falla Mecanica</em>' class.
@@ -117,7 +126,7 @@ public interface AutomatizacionrevisionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FALLA_MECANICA_FEATURE_COUNT = 5;
+	int FALLA_MECANICA_FEATURE_COUNT = 6;
 
 	/**
 	 * The meta object id for the '{@link sma.domain.automatizacionrevision.impl.sensorImpl <em>sensor</em>}' class.
@@ -157,13 +166,49 @@ public interface AutomatizacionrevisionPackage extends EPackage {
 	int SENSOR__INFO_COMP = 2;
 
 	/**
+	 * The feature id for the '<em><b>Indice Emision Gases</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSOR__INDICE_EMISION_GASES = 3;
+
+	/**
+	 * The feature id for the '<em><b>Impacto</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSOR__IMPACTO = 4;
+
+	/**
+	 * The feature id for the '<em><b>Indice Gases Ofensivos</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSOR__INDICE_GASES_OFENSIVOS = 5;
+
+	/**
+	 * The feature id for the '<em><b>Indice Gases Nocivos</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSOR__INDICE_GASES_NOCIVOS = 6;
+
+	/**
 	 * The number of structural features of the '<em>sensor</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SENSOR_FEATURE_COUNT = 3;
+	int SENSOR_FEATURE_COUNT = 7;
 
 
 	/**
@@ -199,17 +244,6 @@ public interface AutomatizacionrevisionPackage extends EPackage {
 	EAttribute getFallaMecanica_Gravedad();
 
 	/**
-	 * Returns the meta object for the attribute '{@link sma.domain.automatizacionrevision.FallaMecanica#getOrigen <em>Origen</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Origen</em>'.
-	 * @see sma.domain.automatizacionrevision.FallaMecanica#getOrigen()
-	 * @see #getFallaMecanica()
-	 * @generated
-	 */
-	EAttribute getFallaMecanica_Origen();
-
-	/**
 	 * Returns the meta object for the attribute '{@link sma.domain.automatizacionrevision.FallaMecanica#getDescripcion <em>Descripcion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -219,6 +253,28 @@ public interface AutomatizacionrevisionPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getFallaMecanica_Descripcion();
+
+	/**
+	 * Returns the meta object for the attribute '{@link sma.domain.automatizacionrevision.FallaMecanica#getGasesNocivos <em>Gases Nocivos</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Gases Nocivos</em>'.
+	 * @see sma.domain.automatizacionrevision.FallaMecanica#getGasesNocivos()
+	 * @see #getFallaMecanica()
+	 * @generated
+	 */
+	EAttribute getFallaMecanica_GasesNocivos();
+
+	/**
+	 * Returns the meta object for the attribute '{@link sma.domain.automatizacionrevision.FallaMecanica#getGasesOfensivos <em>Gases Ofensivos</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Gases Ofensivos</em>'.
+	 * @see sma.domain.automatizacionrevision.FallaMecanica#getGasesOfensivos()
+	 * @see #getFallaMecanica()
+	 * @generated
+	 */
+	EAttribute getFallaMecanica_GasesOfensivos();
 
 	/**
 	 * Returns the meta object for the container reference '{@link sma.domain.automatizacionrevision.FallaMecanica#getTheAutomovil <em>The Automovil</em>}'.
@@ -275,6 +331,50 @@ public interface AutomatizacionrevisionPackage extends EPackage {
 	EAttribute getsensor_InfoComp();
 
 	/**
+	 * Returns the meta object for the attribute '{@link sma.domain.automatizacionrevision.sensor#getIndiceEmisionGases <em>Indice Emision Gases</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Indice Emision Gases</em>'.
+	 * @see sma.domain.automatizacionrevision.sensor#getIndiceEmisionGases()
+	 * @see #getsensor()
+	 * @generated
+	 */
+	EAttribute getsensor_IndiceEmisionGases();
+
+	/**
+	 * Returns the meta object for the attribute '{@link sma.domain.automatizacionrevision.sensor#getImpacto <em>Impacto</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Impacto</em>'.
+	 * @see sma.domain.automatizacionrevision.sensor#getImpacto()
+	 * @see #getsensor()
+	 * @generated
+	 */
+	EAttribute getsensor_Impacto();
+
+	/**
+	 * Returns the meta object for the attribute '{@link sma.domain.automatizacionrevision.sensor#getIndiceGasesOfensivos <em>Indice Gases Ofensivos</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Indice Gases Ofensivos</em>'.
+	 * @see sma.domain.automatizacionrevision.sensor#getIndiceGasesOfensivos()
+	 * @see #getsensor()
+	 * @generated
+	 */
+	EAttribute getsensor_IndiceGasesOfensivos();
+
+	/**
+	 * Returns the meta object for the attribute '{@link sma.domain.automatizacionrevision.sensor#getIndiceGasesNocivos <em>Indice Gases Nocivos</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Indice Gases Nocivos</em>'.
+	 * @see sma.domain.automatizacionrevision.sensor#getIndiceGasesNocivos()
+	 * @see #getsensor()
+	 * @generated
+	 */
+	EAttribute getsensor_IndiceGasesNocivos();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -323,20 +423,28 @@ public interface AutomatizacionrevisionPackage extends EPackage {
 		EAttribute FALLA_MECANICA__GRAVEDAD = eINSTANCE.getFallaMecanica_Gravedad();
 
 		/**
-		 * The meta object literal for the '<em><b>Origen</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FALLA_MECANICA__ORIGEN = eINSTANCE.getFallaMecanica_Origen();
-
-		/**
 		 * The meta object literal for the '<em><b>Descripcion</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute FALLA_MECANICA__DESCRIPCION = eINSTANCE.getFallaMecanica_Descripcion();
+
+		/**
+		 * The meta object literal for the '<em><b>Gases Nocivos</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FALLA_MECANICA__GASES_NOCIVOS = eINSTANCE.getFallaMecanica_GasesNocivos();
+
+		/**
+		 * The meta object literal for the '<em><b>Gases Ofensivos</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FALLA_MECANICA__GASES_OFENSIVOS = eINSTANCE.getFallaMecanica_GasesOfensivos();
 
 		/**
 		 * The meta object literal for the '<em><b>The Automovil</b></em>' container reference feature.
@@ -379,6 +487,38 @@ public interface AutomatizacionrevisionPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute SENSOR__INFO_COMP = eINSTANCE.getsensor_InfoComp();
+
+		/**
+		 * The meta object literal for the '<em><b>Indice Emision Gases</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SENSOR__INDICE_EMISION_GASES = eINSTANCE.getsensor_IndiceEmisionGases();
+
+		/**
+		 * The meta object literal for the '<em><b>Impacto</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SENSOR__IMPACTO = eINSTANCE.getsensor_Impacto();
+
+		/**
+		 * The meta object literal for the '<em><b>Indice Gases Ofensivos</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SENSOR__INDICE_GASES_OFENSIVOS = eINSTANCE.getsensor_IndiceGasesOfensivos();
+
+		/**
+		 * The meta object literal for the '<em><b>Indice Gases Nocivos</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SENSOR__INDICE_GASES_NOCIVOS = eINSTANCE.getsensor_IndiceGasesNocivos();
 
 	}
 

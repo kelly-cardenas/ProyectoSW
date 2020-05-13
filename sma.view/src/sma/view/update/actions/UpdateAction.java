@@ -10,6 +10,8 @@ import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.IWorkbenchPart;
 import sma.view.view.views.*;
 
+import sma.view.model.*;
+
 public class UpdateAction implements IWorkbenchWindowActionDelegate {
 
 	private IWorkbenchWindow window;
@@ -19,36 +21,44 @@ public class UpdateAction implements IWorkbenchWindowActionDelegate {
 
 	public void run(IAction action) {
 		try {
+			ModelFactoryModel.getInstance().actualizarEstado("iniciar");
 			IWorkbenchPage[] pages = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getPages();
 			for (IWorkbenchPage iWorkbenchPage : pages) {
 			  for (IViewPart iWorkbenchPage2 : iWorkbenchPage.getViews()) {
 					if(iWorkbenchPage2 instanceof CrudClienteViewPart) {
-		           CrudClienteViewPart crudClienteViewPart = (CrudClienteViewPart)iWorkbenchPage2;
+		            CrudClienteViewPart crudClienteViewPart = (CrudClienteViewPart)iWorkbenchPage2;
 		            crudClienteViewPart.updateData();
+		             ModelFactoryModel.getInstance().actualizarEstado("actualizar");
 					}
 					if(iWorkbenchPage2 instanceof CRUDCMViewPart) {
-		           CRUDCMViewPart cRUDCMViewPart = (CRUDCMViewPart)iWorkbenchPage2;
+		            CRUDCMViewPart cRUDCMViewPart = (CRUDCMViewPart)iWorkbenchPage2;
 		            cRUDCMViewPart.updateData();
+		             ModelFactoryModel.getInstance().actualizarEstado("actualizar");
 					}
 					if(iWorkbenchPage2 instanceof RegistroVehiculoViewPart) {
-		           RegistroVehiculoViewPart registroVehiculoViewPart = (RegistroVehiculoViewPart)iWorkbenchPage2;
+		            RegistroVehiculoViewPart registroVehiculoViewPart = (RegistroVehiculoViewPart)iWorkbenchPage2;
 		            registroVehiculoViewPart.updateData();
+		             ModelFactoryModel.getInstance().actualizarEstado("actualizar");
 					}
 					if(iWorkbenchPage2 instanceof LoginViewPart) {
-		           LoginViewPart loginViewPart = (LoginViewPart)iWorkbenchPage2;
+		            LoginViewPart loginViewPart = (LoginViewPart)iWorkbenchPage2;
 		            loginViewPart.updateData();
+		             ModelFactoryModel.getInstance().actualizarEstado("actualizar");
 					}
 					if(iWorkbenchPage2 instanceof EscaneoViewPart) {
-		           EscaneoViewPart escaneoViewPart = (EscaneoViewPart)iWorkbenchPage2;
+		            EscaneoViewPart escaneoViewPart = (EscaneoViewPart)iWorkbenchPage2;
 		            escaneoViewPart.updateData();
+		             ModelFactoryModel.getInstance().actualizarEstado("actualizar");
 					}
 					if(iWorkbenchPage2 instanceof ContactarCmViewPart) {
-		           ContactarCmViewPart contactarCmViewPart = (ContactarCmViewPart)iWorkbenchPage2;
+		            ContactarCmViewPart contactarCmViewPart = (ContactarCmViewPart)iWorkbenchPage2;
 		            contactarCmViewPart.updateData();
+		             ModelFactoryModel.getInstance().actualizarEstado("actualizar");
 					}
 					if(iWorkbenchPage2 instanceof SolicitudVisitaViewPart) {
-		           SolicitudVisitaViewPart solicitudVisitaViewPart = (SolicitudVisitaViewPart)iWorkbenchPage2;
+		            SolicitudVisitaViewPart solicitudVisitaViewPart = (SolicitudVisitaViewPart)iWorkbenchPage2;
 		            solicitudVisitaViewPart.updateData();
+		             ModelFactoryModel.getInstance().actualizarEstado("actualizar");
 					}
 				}
 			}
@@ -58,12 +68,13 @@ public class UpdateAction implements IWorkbenchWindowActionDelegate {
 		}
 	}
    public void selectionChanged(IAction action, ISelection selection) {
-  }
+   }
 
    public void dispose()  {
-}
-  public void init(IWorkbenchWindow window) {
-   this.window = window;
+   }
+
+   public void init(IWorkbenchWindow window) {
+     this.window = window;
   }
-}
+   }
 

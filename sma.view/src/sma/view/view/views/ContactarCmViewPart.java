@@ -11,9 +11,9 @@ import sma.ui.viewmodels.contenedorcrudclienteviewmodel.*;
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.*;
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.*;
 import sma.ui.viewmodels.contenedorloginviewmodel.*;
-import sma.ui.viewmodels.contenedorescaneoviewmodel.*;
 import sma.ui.viewmodels.contenedorcontactarcmviewmodel.*;
 import sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.*;
+import sma.ui.viewmodels.contenedorescaneoviewmodel.*;
 
 import sma.view.model.ModelFactoryModel;
 import org.eclipse.wb.swt.SWTResourceManager;
@@ -106,12 +106,14 @@ public class ContactarCmViewPart  extends ViewPart {
          public void cargarContenedores(){
             mfm 								= ModelFactoryModel.getInstance(); 
             contenedorcontactarCmViewModel = mfm.getTheContenedorContactarCmViewModel();
-            contenedorubicacionactualViewModel = mfm.getTheContenedorUbicacionactualViewModel();
-            contenedorcmrecomendadosViewModel = mfm.getTheContenedorCmrecomendadosViewModel();
+            contenedorubicacionactualViewModel = mfm.getTheContactarCmgetTheContenedorUbicacionactualViewModel();
+            contenedorcmrecomendadosViewModel = mfm.getTheContactarCmgetTheContenedorCmrecomendadosViewModel();
       
-}
+         }
       public void updateData(){
-           mfm.cargar();
+           if(!mfm.getEstado().equals("ACTUALIZADO")) {
+               mfm.cargar();
+           };
            cargarContenedores();
            try {
                 initDataBindings();
@@ -141,7 +143,7 @@ public class ContactarCmViewPart  extends ViewPart {
 		public void widgetSelected(SelectionEvent e) {
 				//TODO Action ButtonAceptarde la view ContactarCm
 				        
-      aceptarAction ( "event" );
+	      aceptarAction ( "event" );
 
 		 }
 		});
@@ -208,29 +210,30 @@ public class ContactarCmViewPart  extends ViewPart {
 		         listaCmViewModelSeleccionado  = (ListaCmViewModel)e.item.getData();
 		  } 
           });
-		TableViewerColumn  tableViewerColumn31Nombre = new TableViewerColumn(tableViewerListaCm, SWT.NONE);
-		TableColumn tblclmn31Nombre = tableViewerColumn31Nombre.getColumn();
-		tblclmn31Nombre.setWidth(100);
-		tblclmn31Nombre .setText("nombre");
+		TableViewerColumn  tableViewerColumn10Nombre = new TableViewerColumn(tableViewerListaCm, SWT.NONE);
+		TableColumn tblclmn10Nombre = tableViewerColumn10Nombre.getColumn();
+		tblclmn10Nombre.setWidth(100);
+		tblclmn10Nombre .setText("nombre");
 
-		TableViewerColumn  tableViewerColumn32Nombrerepresentante = new TableViewerColumn(tableViewerListaCm, SWT.NONE);
-		TableColumn tblclmn32Nombrerepresentante = tableViewerColumn32Nombrerepresentante.getColumn();
-		tblclmn32Nombrerepresentante.setWidth(100);
-		tblclmn32Nombrerepresentante .setText("nombrerepresentante");
+		TableViewerColumn  tableViewerColumn11Nombrerepresentante = new TableViewerColumn(tableViewerListaCm, SWT.NONE);
+		TableColumn tblclmn11Nombrerepresentante = tableViewerColumn11Nombrerepresentante.getColumn();
+		tblclmn11Nombrerepresentante.setWidth(100);
+		tblclmn11Nombrerepresentante .setText("nombre representante");
 
-		TableViewerColumn  tableViewerColumn33Direccion = new TableViewerColumn(tableViewerListaCm, SWT.NONE);
-		TableColumn tblclmn33Direccion = tableViewerColumn33Direccion.getColumn();
-		tblclmn33Direccion.setWidth(100);
-		tblclmn33Direccion .setText("direccion");
+		TableViewerColumn  tableViewerColumn12Direccion = new TableViewerColumn(tableViewerListaCm, SWT.NONE);
+		TableColumn tblclmn12Direccion = tableViewerColumn12Direccion.getColumn();
+		tblclmn12Direccion.setWidth(100);
+		tblclmn12Direccion .setText("direccion");
 
         try {
 	       initDataBindings();
-            }catch (Exception e) {
+          }catch (Exception e) {
         }
 
-   }      public void setFocus() {
-         // Set the focus
-    }
+      }
+     public void setFocus() {
+           // Set the focus
+     }
       protected DataBindingContext initDataBindings() {
 //
         DataBindingContext bindingContext = new DataBindingContext();
@@ -246,16 +249,16 @@ public class ContactarCmViewPart  extends ViewPart {
         IObservableValue contenedorubicacionactualCiudadUbicacionactualObserveValue = EMFObservables.observeValue(contenedorubicacionactualViewModel,ContenedorcontactarcmviewmodelPackage.Literals.CONTENEDOR_UBICACIONACTUAL_VIEW_MODEL__CIUDAD);
         bindingContext.bindValue(observeTextCiudadUbicacionactualObserveWidget,contenedorubicacionactualCiudadUbicacionactualObserveValue, null, null);
         //
-        ObservableListContentProvider listContentProvider9 = new ObservableListContentProvider();
-        IObservableMap[] observeMaps9= EMFObservables.observeMaps(listContentProvider9.getKnownElements(),
-        new EStructuralFeature[]{ContenedorcontactarcmviewmodelPackage.Literals.LISTA_CM_VIEW_MODEL__NOMBRE,ContenedorcontactarcmviewmodelPackage.Literals.LISTA_CM_VIEW_MODEL__NOMBRE REPRESENTANTE,ContenedorcontactarcmviewmodelPackage.Literals.LISTA_CM_VIEW_MODEL__DIRECCION});
-        tableViewerListaCm.setLabelProvider(new ObservableMapLabelProvider(observeMaps9));
-        tableViewerListaCm.setContentProvider(listContentProvider9);
+        ObservableListContentProvider listContentProvider3 = new ObservableListContentProvider();
+        IObservableMap[] observeMaps3= EMFObservables.observeMaps(listContentProvider3.getKnownElements(),
+        new EStructuralFeature[]{ContenedorcontactarcmviewmodelPackage.Literals.LISTA_CM_VIEW_MODEL__NOMBRE,ContenedorcontactarcmviewmodelPackage.Literals.LISTA_CM_VIEW_MODEL__NOMBREREPRESENTANTE,ContenedorcontactarcmviewmodelPackage.Literals.LISTA_CM_VIEW_MODEL__DIRECCION});
+        tableViewerListaCm.setLabelProvider(new ObservableMapLabelProvider(observeMaps3));
+        tableViewerListaCm.setContentProvider(listContentProvider3);
 
         //
-        IObservableList observeList9= EMFObservables.observeList(Realm.getDefault(),contenedorcmrecomendadosViewModel,
+        IObservableList observeList3= EMFObservables.observeList(Realm.getDefault(),contenedorcmrecomendadosViewModel,
         ContenedorcontactarcmviewmodelPackage.Literals.CONTENEDOR_CMRECOMENDADOS_VIEW_MODEL__LISTA_LISTA_CM_VIEW_MODEL);
-        tableViewerListaCm.setInput(observeList9);
+        tableViewerListaCm.setInput(observeList3);
             //
 
          return bindingContext;

@@ -17,7 +17,7 @@ import sma.ui.viewmodels.ViewModel;
  * <ul>
  *   <li>{@link sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorEscaneoViewModel#getOwnedByUI <em>Owned By UI</em>}</li>
  *   <li>{@link sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorEscaneoViewModel#getTheContenedorSeleccionautoViewModel <em>The Contenedor Seleccionauto View Model</em>}</li>
- *   <li>{@link sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorEscaneoViewModel#getTheContenedorFallasViewModel <em>The Contenedor Fallas View Model</em>}</li>
+ *   <li>{@link sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorEscaneoViewModel#getTheContenedorInformacionEmisionGasesViewModel <em>The Contenedor Informacion Emision Gases View Model</em>}</li>
  * </ul>
  *
  * @see sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorescaneoviewmodelPackage#getContenedorEscaneoViewModel()
@@ -82,38 +82,38 @@ public interface ContenedorEscaneoViewModel extends ViewModel {
 	void setTheContenedorSeleccionautoViewModel(ContenedorSeleccionautoViewModel value);
 
 	/**
-	 * Returns the value of the '<em><b>The Contenedor Fallas View Model</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorFallasViewModel#getOwnedByContenedorEscaneoViewModel <em>Owned By Contenedor Escaneo View Model</em>}'.
+	 * Returns the value of the '<em><b>The Contenedor Informacion Emision Gases View Model</b></em>' containment reference.
+	 * It is bidirectional and its opposite is '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorInformacionEmisionGasesViewModel#getOwnedByContenedorEscaneoViewModel <em>Owned By Contenedor Escaneo View Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>The Contenedor Fallas View Model</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>The Contenedor Informacion Emision Gases View Model</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>The Contenedor Fallas View Model</em>' containment reference.
-	 * @see #setTheContenedorFallasViewModel(ContenedorFallasViewModel)
-	 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorescaneoviewmodelPackage#getContenedorEscaneoViewModel_TheContenedorFallasViewModel()
-	 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorFallasViewModel#getOwnedByContenedorEscaneoViewModel
+	 * @return the value of the '<em>The Contenedor Informacion Emision Gases View Model</em>' containment reference.
+	 * @see #setTheContenedorInformacionEmisionGasesViewModel(ContenedorInformacionEmisionGasesViewModel)
+	 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorescaneoviewmodelPackage#getContenedorEscaneoViewModel_TheContenedorInformacionEmisionGasesViewModel()
+	 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorInformacionEmisionGasesViewModel#getOwnedByContenedorEscaneoViewModel
 	 * @model opposite="ownedByContenedorEscaneoViewModel" containment="true"
 	 * @generated
 	 */
-	ContenedorFallasViewModel getTheContenedorFallasViewModel();
+	ContenedorInformacionEmisionGasesViewModel getTheContenedorInformacionEmisionGasesViewModel();
 
 	/**
-	 * Sets the value of the '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorEscaneoViewModel#getTheContenedorFallasViewModel <em>The Contenedor Fallas View Model</em>}' containment reference.
+	 * Sets the value of the '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorEscaneoViewModel#getTheContenedorInformacionEmisionGasesViewModel <em>The Contenedor Informacion Emision Gases View Model</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>The Contenedor Fallas View Model</em>' containment reference.
-	 * @see #getTheContenedorFallasViewModel()
+	 * @param value the new value of the '<em>The Contenedor Informacion Emision Gases View Model</em>' containment reference.
+	 * @see #getTheContenedorInformacionEmisionGasesViewModel()
 	 * @generated
 	 */
-	void setTheContenedorFallasViewModel(ContenedorFallasViewModel value);
+	void setTheContenedorInformacionEmisionGasesViewModel(ContenedorInformacionEmisionGasesViewModel value);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="sma.String" eventoDataType="sma.String"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\t\t\tString action = \"\";\r\n\t\t\t\treturn action;\r\n\t\t\r\n\t'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\r\n\t\tString action = \"\";\r\n\t\treturn action;\r\n\r\n\t'"
 	 * @generated
 	 */
 	String upadateDialog(String evento);
@@ -121,16 +121,7 @@ public interface ContenedorEscaneoViewModel extends ViewModel {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="sma.EBooleanObject"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\tgetTheUI().escanearVehiculo(getTheContenedorSeleccionautoViewModel().getPlacavehiculo());\r\n\t\treturn true;\r\n\t\t\r\n\t'"
-	 * @generated
-	 */
-	Boolean escanearVehiculo();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\tContenedorSeleccionautoViewModel seleccionAutoVM \t= getTheContenedorSeleccionautoViewModel();\r\n\t\tContenedorFallasViewModel fallasVM\t\t\t\t\t= getTheContenedorFallasViewModel();\r\n\t\t\r\n\t\tif (seleccionAutoVM == null) \r\n\t\t{\r\n\t\t\tseleccionAutoVM\t\t= sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorescaneoviewmodelFactory\r\n\t\t\t\t\t\t\t\t\t.eINSTANCE.createContenedorSeleccionautoViewModel();\r\n\t\t}\r\n\t\t\r\n\t\tif (fallasVM == null) {\r\n\t\t\tfallasVM\t\t\t= sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorescaneoviewmodelFactory\r\n\t\t\t\t\t\t\t\t.eINSTANCE.createContenedorFallasViewModel();\r\n\t\t}\r\n\t\t\r\n\t\tsetTheContenedorFallasViewModel(fallasVM);\r\n\t\tsetTheContenedorSeleccionautoViewModel(seleccionAutoVM);\r\n\t\t\r\n\t'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\tContenedorSeleccionautoViewModel seleccionAutoVM = getTheContenedorSeleccionautoViewModel();\r\n\t\tContenedorInformacionEmisionGasesViewModel infoEmision = getTheContenedorInformacionEmisionGasesViewModel();\r\n\t\t\r\n\t\tif (seleccionAutoVM == null) {\r\n\t\t\tseleccionAutoVM = sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorescaneoviewmodelFactory.eINSTANCE\r\n\t\t\t\t\t\t\t.createContenedorSeleccionautoViewModel();\r\n\t\t}\r\n\t\t\r\n\t\tif (infoEmision == null) {\r\n\t\t\tinfoEmision = sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorescaneoviewmodelFactory.eINSTANCE\r\n\t\t\t\t\t\t\t.createContenedorInformacionEmisionGasesViewModel();\r\n\t\t}\r\n\t\t\r\n\t\tsetTheContenedorInformacionEmisionGasesViewModel(infoEmision);\r\n\t\tsetTheContenedorSeleccionautoViewModel(seleccionAutoVM);\r\n\t\t\r\n\t'"
 	 * @generated
 	 */
 	void implementarModelo();
@@ -138,9 +129,9 @@ public interface ContenedorEscaneoViewModel extends ViewModel {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\tgetTheUI().mostrarEstadoVehCliente(this);\r\n\t'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\r\n\t\tgetOwnedByUI().escanearVehiculo(this);\r\n\r\n\t'"
 	 * @generated
 	 */
-	void mostrarEstadoVehiculo();
+	void realizarEscaneo();
 
 } // ContenedorEscaneoViewModel

@@ -131,9 +131,9 @@ public class UiPackageImpl extends EPackageImpl implements UiPackage {
 		ContenedorcrudcmviewmodelPackageImpl theContenedorcrudcmviewmodelPackage = (ContenedorcrudcmviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorcrudcmviewmodelPackage.eNS_URI) instanceof ContenedorcrudcmviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorcrudcmviewmodelPackage.eNS_URI) : ContenedorcrudcmviewmodelPackage.eINSTANCE);
 		ContenedorregistrovehiculoviewmodelPackageImpl theContenedorregistrovehiculoviewmodelPackage = (ContenedorregistrovehiculoviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorregistrovehiculoviewmodelPackage.eNS_URI) instanceof ContenedorregistrovehiculoviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorregistrovehiculoviewmodelPackage.eNS_URI) : ContenedorregistrovehiculoviewmodelPackage.eINSTANCE);
 		ContenedorloginviewmodelPackageImpl theContenedorloginviewmodelPackage = (ContenedorloginviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorloginviewmodelPackage.eNS_URI) instanceof ContenedorloginviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorloginviewmodelPackage.eNS_URI) : ContenedorloginviewmodelPackage.eINSTANCE);
-		ContenedorescaneoviewmodelPackageImpl theContenedorescaneoviewmodelPackage = (ContenedorescaneoviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorescaneoviewmodelPackage.eNS_URI) instanceof ContenedorescaneoviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorescaneoviewmodelPackage.eNS_URI) : ContenedorescaneoviewmodelPackage.eINSTANCE);
 		ContenedorcontactarcmviewmodelPackageImpl theContenedorcontactarcmviewmodelPackage = (ContenedorcontactarcmviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorcontactarcmviewmodelPackage.eNS_URI) instanceof ContenedorcontactarcmviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorcontactarcmviewmodelPackage.eNS_URI) : ContenedorcontactarcmviewmodelPackage.eINSTANCE);
 		ContenedorsolicitudvisitaviewmodelPackageImpl theContenedorsolicitudvisitaviewmodelPackage = (ContenedorsolicitudvisitaviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorsolicitudvisitaviewmodelPackage.eNS_URI) instanceof ContenedorsolicitudvisitaviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorsolicitudvisitaviewmodelPackage.eNS_URI) : ContenedorsolicitudvisitaviewmodelPackage.eINSTANCE);
+		ContenedorescaneoviewmodelPackageImpl theContenedorescaneoviewmodelPackage = (ContenedorescaneoviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorescaneoviewmodelPackage.eNS_URI) instanceof ContenedorescaneoviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorescaneoviewmodelPackage.eNS_URI) : ContenedorescaneoviewmodelPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theUiPackage.createPackageContents();
@@ -146,9 +146,9 @@ public class UiPackageImpl extends EPackageImpl implements UiPackage {
 		theContenedorcrudcmviewmodelPackage.createPackageContents();
 		theContenedorregistrovehiculoviewmodelPackage.createPackageContents();
 		theContenedorloginviewmodelPackage.createPackageContents();
-		theContenedorescaneoviewmodelPackage.createPackageContents();
 		theContenedorcontactarcmviewmodelPackage.createPackageContents();
 		theContenedorsolicitudvisitaviewmodelPackage.createPackageContents();
+		theContenedorescaneoviewmodelPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theUiPackage.initializePackageContents();
@@ -161,9 +161,9 @@ public class UiPackageImpl extends EPackageImpl implements UiPackage {
 		theContenedorcrudcmviewmodelPackage.initializePackageContents();
 		theContenedorregistrovehiculoviewmodelPackage.initializePackageContents();
 		theContenedorloginviewmodelPackage.initializePackageContents();
-		theContenedorescaneoviewmodelPackage.initializePackageContents();
 		theContenedorcontactarcmviewmodelPackage.initializePackageContents();
 		theContenedorsolicitudvisitaviewmodelPackage.initializePackageContents();
+		theContenedorescaneoviewmodelPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theUiPackage.freeze();
@@ -269,7 +269,7 @@ public class UiPackageImpl extends EPackageImpl implements UiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getUI_TheContenedorEscaneoViewModel() {
+	public EReference getUI_TheContenedorContactarCmViewModel() {
 		return (EReference)uiEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -278,7 +278,7 @@ public class UiPackageImpl extends EPackageImpl implements UiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getUI_TheContenedorContactarCmViewModel() {
+	public EReference getUI_TheContenedorSolicitudVisitaViewModel() {
 		return (EReference)uiEClass.getEStructuralFeatures().get(10);
 	}
 
@@ -287,7 +287,7 @@ public class UiPackageImpl extends EPackageImpl implements UiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getUI_TheContenedorSolicitudVisitaViewModel() {
+	public EReference getUI_TheContenedorEscaneoViewModel() {
 		return (EReference)uiEClass.getEStructuralFeatures().get(11);
 	}
 
@@ -329,9 +329,9 @@ public class UiPackageImpl extends EPackageImpl implements UiPackage {
 		createEReference(uiEClass, UI__THE_CONTENEDOR_REGISTRO_VEHICULO_VIEW_MODEL);
 		createEReference(uiEClass, UI__THE_CONTENEDOR_LOGIN_VIEW_MODEL);
 		createEReference(uiEClass, UI__LST_VIEW_MODELS);
-		createEReference(uiEClass, UI__THE_CONTENEDOR_ESCANEO_VIEW_MODEL);
 		createEReference(uiEClass, UI__THE_CONTENEDOR_CONTACTAR_CM_VIEW_MODEL);
 		createEReference(uiEClass, UI__THE_CONTENEDOR_SOLICITUD_VISITA_VIEW_MODEL);
+		createEReference(uiEClass, UI__THE_CONTENEDOR_ESCANEO_VIEW_MODEL);
 	}
 
 	/**
@@ -365,9 +365,9 @@ public class UiPackageImpl extends EPackageImpl implements UiPackage {
 		ContenedorcrudcmviewmodelPackage theContenedorcrudcmviewmodelPackage = (ContenedorcrudcmviewmodelPackage)EPackage.Registry.INSTANCE.getEPackage(ContenedorcrudcmviewmodelPackage.eNS_URI);
 		ContenedorregistrovehiculoviewmodelPackage theContenedorregistrovehiculoviewmodelPackage = (ContenedorregistrovehiculoviewmodelPackage)EPackage.Registry.INSTANCE.getEPackage(ContenedorregistrovehiculoviewmodelPackage.eNS_URI);
 		ContenedorloginviewmodelPackage theContenedorloginviewmodelPackage = (ContenedorloginviewmodelPackage)EPackage.Registry.INSTANCE.getEPackage(ContenedorloginviewmodelPackage.eNS_URI);
-		ContenedorescaneoviewmodelPackage theContenedorescaneoviewmodelPackage = (ContenedorescaneoviewmodelPackage)EPackage.Registry.INSTANCE.getEPackage(ContenedorescaneoviewmodelPackage.eNS_URI);
 		ContenedorcontactarcmviewmodelPackage theContenedorcontactarcmviewmodelPackage = (ContenedorcontactarcmviewmodelPackage)EPackage.Registry.INSTANCE.getEPackage(ContenedorcontactarcmviewmodelPackage.eNS_URI);
 		ContenedorsolicitudvisitaviewmodelPackage theContenedorsolicitudvisitaviewmodelPackage = (ContenedorsolicitudvisitaviewmodelPackage)EPackage.Registry.INSTANCE.getEPackage(ContenedorsolicitudvisitaviewmodelPackage.eNS_URI);
+		ContenedorescaneoviewmodelPackage theContenedorescaneoviewmodelPackage = (ContenedorescaneoviewmodelPackage)EPackage.Registry.INSTANCE.getEPackage(ContenedorescaneoviewmodelPackage.eNS_URI);
 
 		// Add subpackages
 		getESubpackages().add(theViewmodelsPackage);
@@ -389,9 +389,9 @@ public class UiPackageImpl extends EPackageImpl implements UiPackage {
 		initEReference(getUI_TheContenedorRegistroVehiculoViewModel(), theContenedorregistrovehiculoviewmodelPackage.getContenedorRegistroVehiculoViewModel(), theContenedorregistrovehiculoviewmodelPackage.getContenedorRegistroVehiculoViewModel_OwnedByUI(), "theContenedorRegistroVehiculoViewModel", null, 0, 1, sma.ui.UI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUI_TheContenedorLoginViewModel(), theContenedorloginviewmodelPackage.getContenedorLoginViewModel(), theContenedorloginviewmodelPackage.getContenedorLoginViewModel_OwnedByUI(), "theContenedorLoginViewModel", null, 0, 1, sma.ui.UI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUI_LstViewModels(), theViewmodelsPackage.getViewModel(), theViewmodelsPackage.getViewModel_TheUI(), "lstViewModels", null, 0, -1, sma.ui.UI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getUI_TheContenedorEscaneoViewModel(), theContenedorescaneoviewmodelPackage.getContenedorEscaneoViewModel(), theContenedorescaneoviewmodelPackage.getContenedorEscaneoViewModel_OwnedByUI(), "theContenedorEscaneoViewModel", null, 0, 1, sma.ui.UI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUI_TheContenedorContactarCmViewModel(), theContenedorcontactarcmviewmodelPackage.getContenedorContactarCmViewModel(), theContenedorcontactarcmviewmodelPackage.getContenedorContactarCmViewModel_OwnedByUI(), "theContenedorContactarCmViewModel", null, 0, 1, sma.ui.UI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUI_TheContenedorSolicitudVisitaViewModel(), theContenedorsolicitudvisitaviewmodelPackage.getContenedorSolicitudVisitaViewModel(), theContenedorsolicitudvisitaviewmodelPackage.getContenedorSolicitudVisitaViewModel_OwnedByUI(), "theContenedorSolicitudVisitaViewModel", null, 0, 1, sma.ui.UI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUI_TheContenedorEscaneoViewModel(), theContenedorescaneoviewmodelPackage.getContenedorEscaneoViewModel(), theContenedorescaneoviewmodelPackage.getContenedorEscaneoViewModel_OwnedByUI(), "theContenedorEscaneoViewModel", null, 0, 1, sma.ui.UI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(uiEClass, null, "implementarModelo", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -417,7 +417,7 @@ public class UiPackageImpl extends EPackageImpl implements UiPackage {
 		addEParameter(op, theContenedorloginviewmodelPackage.getContenedorLoginViewModel(), "formulario", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		op = addEOperation(uiEClass, null, "escanearVehiculo", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, thesmaPackage.getString(), "placaVeh", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theContenedorescaneoviewmodelPackage.getContenedorEscaneoViewModel(), "formulario", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		op = addEOperation(uiEClass, null, "mostrarEstadoVehCliente", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theContenedorescaneoviewmodelPackage.getContenedorEscaneoViewModel(), "formulario", 0, 1, IS_UNIQUE, IS_ORDERED);
@@ -430,6 +430,8 @@ public class UiPackageImpl extends EPackageImpl implements UiPackage {
 
 		op = addEOperation(uiEClass, null, "mostrarInfoCmSolicitudVisita", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, thesmaPackage.getString(), "idCm", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		addEOperation(uiEClass, null, "hacerLogOut", 0, 1, IS_UNIQUE, IS_ORDERED);
 	}
 
 } //UiPackageImpl

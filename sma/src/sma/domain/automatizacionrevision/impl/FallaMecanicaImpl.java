@@ -29,8 +29,9 @@ import sma.domain.automatizacionrevision.FallaMecanica;
  * <ul>
  *   <li>{@link sma.domain.automatizacionrevision.impl.FallaMecanicaImpl#getPiesaAveriada <em>Piesa Averiada</em>}</li>
  *   <li>{@link sma.domain.automatizacionrevision.impl.FallaMecanicaImpl#getGravedad <em>Gravedad</em>}</li>
- *   <li>{@link sma.domain.automatizacionrevision.impl.FallaMecanicaImpl#getOrigen <em>Origen</em>}</li>
  *   <li>{@link sma.domain.automatizacionrevision.impl.FallaMecanicaImpl#getDescripcion <em>Descripcion</em>}</li>
+ *   <li>{@link sma.domain.automatizacionrevision.impl.FallaMecanicaImpl#getGasesNocivos <em>Gases Nocivos</em>}</li>
+ *   <li>{@link sma.domain.automatizacionrevision.impl.FallaMecanicaImpl#getGasesOfensivos <em>Gases Ofensivos</em>}</li>
  *   <li>{@link sma.domain.automatizacionrevision.impl.FallaMecanicaImpl#getTheAutomovil <em>The Automovil</em>}</li>
  * </ul>
  *
@@ -78,26 +79,6 @@ public class FallaMecanicaImpl extends EObjectImpl implements FallaMecanica {
 	protected String gravedad = GRAVEDAD_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getOrigen() <em>Origen</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOrigen()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ORIGEN_EDEFAULT = " ";
-
-	/**
-	 * The cached value of the '{@link #getOrigen() <em>Origen</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOrigen()
-	 * @generated
-	 * @ordered
-	 */
-	protected String origen = ORIGEN_EDEFAULT;
-
-	/**
 	 * The default value of the '{@link #getDescripcion() <em>Descripcion</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -116,6 +97,46 @@ public class FallaMecanicaImpl extends EObjectImpl implements FallaMecanica {
 	 * @ordered
 	 */
 	protected String descripcion = DESCRIPCION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getGasesNocivos() <em>Gases Nocivos</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGasesNocivos()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String GASES_NOCIVOS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getGasesNocivos() <em>Gases Nocivos</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGasesNocivos()
+	 * @generated
+	 * @ordered
+	 */
+	protected String gasesNocivos = GASES_NOCIVOS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getGasesOfensivos() <em>Gases Ofensivos</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGasesOfensivos()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String GASES_OFENSIVOS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getGasesOfensivos() <em>Gases Ofensivos</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGasesOfensivos()
+	 * @generated
+	 * @ordered
+	 */
+	protected String gasesOfensivos = GASES_OFENSIVOS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -183,27 +204,6 @@ public class FallaMecanicaImpl extends EObjectImpl implements FallaMecanica {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getOrigen() {
-		return origen;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setOrigen(String newOrigen) {
-		String oldOrigen = origen;
-		origen = newOrigen;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AutomatizacionrevisionPackage.FALLA_MECANICA__ORIGEN, oldOrigen, origen));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getDescripcion() {
 		return descripcion;
 	}
@@ -218,6 +218,48 @@ public class FallaMecanicaImpl extends EObjectImpl implements FallaMecanica {
 		descripcion = newDescripcion;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, AutomatizacionrevisionPackage.FALLA_MECANICA__DESCRIPCION, oldDescripcion, descripcion));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getGasesNocivos() {
+		return gasesNocivos;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setGasesNocivos(String newGasesNocivos) {
+		String oldGasesNocivos = gasesNocivos;
+		gasesNocivos = newGasesNocivos;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AutomatizacionrevisionPackage.FALLA_MECANICA__GASES_NOCIVOS, oldGasesNocivos, gasesNocivos));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getGasesOfensivos() {
+		return gasesOfensivos;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setGasesOfensivos(String newGasesOfensivos) {
+		String oldGasesOfensivos = gasesOfensivos;
+		gasesOfensivos = newGasesOfensivos;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AutomatizacionrevisionPackage.FALLA_MECANICA__GASES_OFENSIVOS, oldGasesOfensivos, gasesOfensivos));
 	}
 
 	/**
@@ -317,10 +359,12 @@ public class FallaMecanicaImpl extends EObjectImpl implements FallaMecanica {
 				return getPiesaAveriada();
 			case AutomatizacionrevisionPackage.FALLA_MECANICA__GRAVEDAD:
 				return getGravedad();
-			case AutomatizacionrevisionPackage.FALLA_MECANICA__ORIGEN:
-				return getOrigen();
 			case AutomatizacionrevisionPackage.FALLA_MECANICA__DESCRIPCION:
 				return getDescripcion();
+			case AutomatizacionrevisionPackage.FALLA_MECANICA__GASES_NOCIVOS:
+				return getGasesNocivos();
+			case AutomatizacionrevisionPackage.FALLA_MECANICA__GASES_OFENSIVOS:
+				return getGasesOfensivos();
 			case AutomatizacionrevisionPackage.FALLA_MECANICA__THE_AUTOMOVIL:
 				return getTheAutomovil();
 		}
@@ -341,11 +385,14 @@ public class FallaMecanicaImpl extends EObjectImpl implements FallaMecanica {
 			case AutomatizacionrevisionPackage.FALLA_MECANICA__GRAVEDAD:
 				setGravedad((String)newValue);
 				return;
-			case AutomatizacionrevisionPackage.FALLA_MECANICA__ORIGEN:
-				setOrigen((String)newValue);
-				return;
 			case AutomatizacionrevisionPackage.FALLA_MECANICA__DESCRIPCION:
 				setDescripcion((String)newValue);
+				return;
+			case AutomatizacionrevisionPackage.FALLA_MECANICA__GASES_NOCIVOS:
+				setGasesNocivos((String)newValue);
+				return;
+			case AutomatizacionrevisionPackage.FALLA_MECANICA__GASES_OFENSIVOS:
+				setGasesOfensivos((String)newValue);
 				return;
 			case AutomatizacionrevisionPackage.FALLA_MECANICA__THE_AUTOMOVIL:
 				setTheAutomovil((Automovil)newValue);
@@ -368,11 +415,14 @@ public class FallaMecanicaImpl extends EObjectImpl implements FallaMecanica {
 			case AutomatizacionrevisionPackage.FALLA_MECANICA__GRAVEDAD:
 				setGravedad(GRAVEDAD_EDEFAULT);
 				return;
-			case AutomatizacionrevisionPackage.FALLA_MECANICA__ORIGEN:
-				setOrigen(ORIGEN_EDEFAULT);
-				return;
 			case AutomatizacionrevisionPackage.FALLA_MECANICA__DESCRIPCION:
 				setDescripcion(DESCRIPCION_EDEFAULT);
+				return;
+			case AutomatizacionrevisionPackage.FALLA_MECANICA__GASES_NOCIVOS:
+				setGasesNocivos(GASES_NOCIVOS_EDEFAULT);
+				return;
+			case AutomatizacionrevisionPackage.FALLA_MECANICA__GASES_OFENSIVOS:
+				setGasesOfensivos(GASES_OFENSIVOS_EDEFAULT);
 				return;
 			case AutomatizacionrevisionPackage.FALLA_MECANICA__THE_AUTOMOVIL:
 				setTheAutomovil((Automovil)null);
@@ -393,10 +443,12 @@ public class FallaMecanicaImpl extends EObjectImpl implements FallaMecanica {
 				return PIESA_AVERIADA_EDEFAULT == null ? piesaAveriada != null : !PIESA_AVERIADA_EDEFAULT.equals(piesaAveriada);
 			case AutomatizacionrevisionPackage.FALLA_MECANICA__GRAVEDAD:
 				return GRAVEDAD_EDEFAULT == null ? gravedad != null : !GRAVEDAD_EDEFAULT.equals(gravedad);
-			case AutomatizacionrevisionPackage.FALLA_MECANICA__ORIGEN:
-				return ORIGEN_EDEFAULT == null ? origen != null : !ORIGEN_EDEFAULT.equals(origen);
 			case AutomatizacionrevisionPackage.FALLA_MECANICA__DESCRIPCION:
 				return DESCRIPCION_EDEFAULT == null ? descripcion != null : !DESCRIPCION_EDEFAULT.equals(descripcion);
+			case AutomatizacionrevisionPackage.FALLA_MECANICA__GASES_NOCIVOS:
+				return GASES_NOCIVOS_EDEFAULT == null ? gasesNocivos != null : !GASES_NOCIVOS_EDEFAULT.equals(gasesNocivos);
+			case AutomatizacionrevisionPackage.FALLA_MECANICA__GASES_OFENSIVOS:
+				return GASES_OFENSIVOS_EDEFAULT == null ? gasesOfensivos != null : !GASES_OFENSIVOS_EDEFAULT.equals(gasesOfensivos);
 			case AutomatizacionrevisionPackage.FALLA_MECANICA__THE_AUTOMOVIL:
 				return getTheAutomovil() != null;
 		}
@@ -417,10 +469,12 @@ public class FallaMecanicaImpl extends EObjectImpl implements FallaMecanica {
 		result.append(piesaAveriada);
 		result.append(", gravedad: ");
 		result.append(gravedad);
-		result.append(", origen: ");
-		result.append(origen);
 		result.append(", descripcion: ");
 		result.append(descripcion);
+		result.append(", gasesNocivos: ");
+		result.append(gasesNocivos);
+		result.append(", gasesOfensivos: ");
+		result.append(gasesOfensivos);
 		result.append(')');
 		return result.toString();
 	}

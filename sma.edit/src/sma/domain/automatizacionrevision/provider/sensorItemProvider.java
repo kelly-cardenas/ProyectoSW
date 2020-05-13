@@ -64,6 +64,10 @@ public class sensorItemProvider
 
 			addIdPropertyDescriptor(object);
 			addInfoCompPropertyDescriptor(object);
+			addIndiceEmisionGasesPropertyDescriptor(object);
+			addImpactoPropertyDescriptor(object);
+			addIndiceGasesOfensivosPropertyDescriptor(object);
+			addIndiceGasesNocivosPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -113,6 +117,94 @@ public class sensorItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Indice Emision Gases feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIndiceEmisionGasesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_sensor_indiceEmisionGases_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_sensor_indiceEmisionGases_feature", "_UI_sensor_type"),
+				 AutomatizacionrevisionPackage.Literals.SENSOR__INDICE_EMISION_GASES,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Impacto feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addImpactoPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_sensor_impacto_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_sensor_impacto_feature", "_UI_sensor_type"),
+				 AutomatizacionrevisionPackage.Literals.SENSOR__IMPACTO,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Indice Gases Ofensivos feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIndiceGasesOfensivosPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_sensor_indiceGasesOfensivos_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_sensor_indiceGasesOfensivos_feature", "_UI_sensor_type"),
+				 AutomatizacionrevisionPackage.Literals.SENSOR__INDICE_GASES_OFENSIVOS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Indice Gases Nocivos feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIndiceGasesNocivosPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_sensor_indiceGasesNocivos_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_sensor_indiceGasesNocivos_feature", "_UI_sensor_type"),
+				 AutomatizacionrevisionPackage.Literals.SENSOR__INDICE_GASES_NOCIVOS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns sensor.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -152,6 +244,10 @@ public class sensorItemProvider
 		switch (notification.getFeatureID(sensor.class)) {
 			case AutomatizacionrevisionPackage.SENSOR__ID:
 			case AutomatizacionrevisionPackage.SENSOR__INFO_COMP:
+			case AutomatizacionrevisionPackage.SENSOR__INDICE_EMISION_GASES:
+			case AutomatizacionrevisionPackage.SENSOR__IMPACTO:
+			case AutomatizacionrevisionPackage.SENSOR__INDICE_GASES_OFENSIVOS:
+			case AutomatizacionrevisionPackage.SENSOR__INDICE_GASES_NOCIVOS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

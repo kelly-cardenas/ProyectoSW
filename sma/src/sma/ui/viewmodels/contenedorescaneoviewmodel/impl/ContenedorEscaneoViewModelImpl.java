@@ -16,7 +16,7 @@ import sma.ui.UI;
 import sma.ui.UiPackage;
 
 import sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorEscaneoViewModel;
-import sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorFallasViewModel;
+import sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorInformacionEmisionGasesViewModel;
 import sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorSeleccionautoViewModel;
 import sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorescaneoviewmodelPackage;
 
@@ -32,7 +32,7 @@ import sma.ui.viewmodels.impl.ViewModelImpl;
  * <ul>
  *   <li>{@link sma.ui.viewmodels.contenedorescaneoviewmodel.impl.ContenedorEscaneoViewModelImpl#getOwnedByUI <em>Owned By UI</em>}</li>
  *   <li>{@link sma.ui.viewmodels.contenedorescaneoviewmodel.impl.ContenedorEscaneoViewModelImpl#getTheContenedorSeleccionautoViewModel <em>The Contenedor Seleccionauto View Model</em>}</li>
- *   <li>{@link sma.ui.viewmodels.contenedorescaneoviewmodel.impl.ContenedorEscaneoViewModelImpl#getTheContenedorFallasViewModel <em>The Contenedor Fallas View Model</em>}</li>
+ *   <li>{@link sma.ui.viewmodels.contenedorescaneoviewmodel.impl.ContenedorEscaneoViewModelImpl#getTheContenedorInformacionEmisionGasesViewModel <em>The Contenedor Informacion Emision Gases View Model</em>}</li>
  * </ul>
  *
  * @generated
@@ -49,14 +49,14 @@ public class ContenedorEscaneoViewModelImpl extends ViewModelImpl implements Con
 	protected ContenedorSeleccionautoViewModel theContenedorSeleccionautoViewModel;
 
 	/**
-	 * The cached value of the '{@link #getTheContenedorFallasViewModel() <em>The Contenedor Fallas View Model</em>}' containment reference.
+	 * The cached value of the '{@link #getTheContenedorInformacionEmisionGasesViewModel() <em>The Contenedor Informacion Emision Gases View Model</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTheContenedorFallasViewModel()
+	 * @see #getTheContenedorInformacionEmisionGasesViewModel()
 	 * @generated
 	 * @ordered
 	 */
-	protected ContenedorFallasViewModel theContenedorFallasViewModel;
+	protected ContenedorInformacionEmisionGasesViewModel theContenedorInformacionEmisionGasesViewModel;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -166,8 +166,8 @@ public class ContenedorEscaneoViewModelImpl extends ViewModelImpl implements Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ContenedorFallasViewModel getTheContenedorFallasViewModel() {
-		return theContenedorFallasViewModel;
+	public ContenedorInformacionEmisionGasesViewModel getTheContenedorInformacionEmisionGasesViewModel() {
+		return theContenedorInformacionEmisionGasesViewModel;
 	}
 
 	/**
@@ -175,11 +175,11 @@ public class ContenedorEscaneoViewModelImpl extends ViewModelImpl implements Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTheContenedorFallasViewModel(ContenedorFallasViewModel newTheContenedorFallasViewModel, NotificationChain msgs) {
-		ContenedorFallasViewModel oldTheContenedorFallasViewModel = theContenedorFallasViewModel;
-		theContenedorFallasViewModel = newTheContenedorFallasViewModel;
+	public NotificationChain basicSetTheContenedorInformacionEmisionGasesViewModel(ContenedorInformacionEmisionGasesViewModel newTheContenedorInformacionEmisionGasesViewModel, NotificationChain msgs) {
+		ContenedorInformacionEmisionGasesViewModel oldTheContenedorInformacionEmisionGasesViewModel = theContenedorInformacionEmisionGasesViewModel;
+		theContenedorInformacionEmisionGasesViewModel = newTheContenedorInformacionEmisionGasesViewModel;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ContenedorescaneoviewmodelPackage.CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_FALLAS_VIEW_MODEL, oldTheContenedorFallasViewModel, newTheContenedorFallasViewModel);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ContenedorescaneoviewmodelPackage.CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL, oldTheContenedorInformacionEmisionGasesViewModel, newTheContenedorInformacionEmisionGasesViewModel);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -190,18 +190,18 @@ public class ContenedorEscaneoViewModelImpl extends ViewModelImpl implements Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTheContenedorFallasViewModel(ContenedorFallasViewModel newTheContenedorFallasViewModel) {
-		if (newTheContenedorFallasViewModel != theContenedorFallasViewModel) {
+	public void setTheContenedorInformacionEmisionGasesViewModel(ContenedorInformacionEmisionGasesViewModel newTheContenedorInformacionEmisionGasesViewModel) {
+		if (newTheContenedorInformacionEmisionGasesViewModel != theContenedorInformacionEmisionGasesViewModel) {
 			NotificationChain msgs = null;
-			if (theContenedorFallasViewModel != null)
-				msgs = ((InternalEObject)theContenedorFallasViewModel).eInverseRemove(this, ContenedorescaneoviewmodelPackage.CONTENEDOR_FALLAS_VIEW_MODEL__OWNED_BY_CONTENEDOR_ESCANEO_VIEW_MODEL, ContenedorFallasViewModel.class, msgs);
-			if (newTheContenedorFallasViewModel != null)
-				msgs = ((InternalEObject)newTheContenedorFallasViewModel).eInverseAdd(this, ContenedorescaneoviewmodelPackage.CONTENEDOR_FALLAS_VIEW_MODEL__OWNED_BY_CONTENEDOR_ESCANEO_VIEW_MODEL, ContenedorFallasViewModel.class, msgs);
-			msgs = basicSetTheContenedorFallasViewModel(newTheContenedorFallasViewModel, msgs);
+			if (theContenedorInformacionEmisionGasesViewModel != null)
+				msgs = ((InternalEObject)theContenedorInformacionEmisionGasesViewModel).eInverseRemove(this, ContenedorescaneoviewmodelPackage.CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL__OWNED_BY_CONTENEDOR_ESCANEO_VIEW_MODEL, ContenedorInformacionEmisionGasesViewModel.class, msgs);
+			if (newTheContenedorInformacionEmisionGasesViewModel != null)
+				msgs = ((InternalEObject)newTheContenedorInformacionEmisionGasesViewModel).eInverseAdd(this, ContenedorescaneoviewmodelPackage.CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL__OWNED_BY_CONTENEDOR_ESCANEO_VIEW_MODEL, ContenedorInformacionEmisionGasesViewModel.class, msgs);
+			msgs = basicSetTheContenedorInformacionEmisionGasesViewModel(newTheContenedorInformacionEmisionGasesViewModel, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ContenedorescaneoviewmodelPackage.CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_FALLAS_VIEW_MODEL, newTheContenedorFallasViewModel, newTheContenedorFallasViewModel));
+			eNotify(new ENotificationImpl(this, Notification.SET, ContenedorescaneoviewmodelPackage.CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL, newTheContenedorInformacionEmisionGasesViewModel, newTheContenedorInformacionEmisionGasesViewModel));
 	}
 
 	/**
@@ -211,24 +211,10 @@ public class ContenedorEscaneoViewModelImpl extends ViewModelImpl implements Con
 	 */
 	public String upadateDialog(final String evento) {
 		
-				
-						String action = "";
-						return action;
-				
-			
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Boolean escanearVehiculo() {
 		
-				
-				getTheUI().escanearVehiculo(getTheContenedorSeleccionautoViewModel().getPlacavehiculo());
-				return true;
-				
+				String action = "";
+				return action;
+		
 			
 	}
 
@@ -240,20 +226,20 @@ public class ContenedorEscaneoViewModelImpl extends ViewModelImpl implements Con
 	public void implementarModelo() {
 		
 				
-				ContenedorSeleccionautoViewModel seleccionAutoVM 	= getTheContenedorSeleccionautoViewModel();
-				ContenedorFallasViewModel fallasVM					= getTheContenedorFallasViewModel();
+				ContenedorSeleccionautoViewModel seleccionAutoVM = getTheContenedorSeleccionautoViewModel();
+				ContenedorInformacionEmisionGasesViewModel infoEmision = getTheContenedorInformacionEmisionGasesViewModel();
 				
 				if (seleccionAutoVM == null) {
-					seleccionAutoVM		= sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorescaneoviewmodelFactory
-											.eINSTANCE.createContenedorSeleccionautoViewModel();
+					seleccionAutoVM = sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorescaneoviewmodelFactory.eINSTANCE
+									.createContenedorSeleccionautoViewModel();
 				}
 				
-				if (fallasVM == null) {
-					fallasVM			= sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorescaneoviewmodelFactory
-										.eINSTANCE.createContenedorFallasViewModel();
+				if (infoEmision == null) {
+					infoEmision = sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorescaneoviewmodelFactory.eINSTANCE
+									.createContenedorInformacionEmisionGasesViewModel();
 				}
 				
-				setTheContenedorFallasViewModel(fallasVM);
+				setTheContenedorInformacionEmisionGasesViewModel(infoEmision);
 				setTheContenedorSeleccionautoViewModel(seleccionAutoVM);
 				
 			
@@ -264,10 +250,11 @@ public class ContenedorEscaneoViewModelImpl extends ViewModelImpl implements Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void mostrarEstadoVehiculo() {
+	public void realizarEscaneo() {
 		
-				
-				getTheUI().mostrarEstadoVehCliente(this);
+		
+				getOwnedByUI().escanearVehiculo(this);
+		
 			
 	}
 
@@ -287,10 +274,10 @@ public class ContenedorEscaneoViewModelImpl extends ViewModelImpl implements Con
 				if (theContenedorSeleccionautoViewModel != null)
 					msgs = ((InternalEObject)theContenedorSeleccionautoViewModel).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ContenedorescaneoviewmodelPackage.CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_SELECCIONAUTO_VIEW_MODEL, null, msgs);
 				return basicSetTheContenedorSeleccionautoViewModel((ContenedorSeleccionautoViewModel)otherEnd, msgs);
-			case ContenedorescaneoviewmodelPackage.CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_FALLAS_VIEW_MODEL:
-				if (theContenedorFallasViewModel != null)
-					msgs = ((InternalEObject)theContenedorFallasViewModel).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ContenedorescaneoviewmodelPackage.CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_FALLAS_VIEW_MODEL, null, msgs);
-				return basicSetTheContenedorFallasViewModel((ContenedorFallasViewModel)otherEnd, msgs);
+			case ContenedorescaneoviewmodelPackage.CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL:
+				if (theContenedorInformacionEmisionGasesViewModel != null)
+					msgs = ((InternalEObject)theContenedorInformacionEmisionGasesViewModel).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ContenedorescaneoviewmodelPackage.CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL, null, msgs);
+				return basicSetTheContenedorInformacionEmisionGasesViewModel((ContenedorInformacionEmisionGasesViewModel)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -307,8 +294,8 @@ public class ContenedorEscaneoViewModelImpl extends ViewModelImpl implements Con
 				return basicSetOwnedByUI(null, msgs);
 			case ContenedorescaneoviewmodelPackage.CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_SELECCIONAUTO_VIEW_MODEL:
 				return basicSetTheContenedorSeleccionautoViewModel(null, msgs);
-			case ContenedorescaneoviewmodelPackage.CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_FALLAS_VIEW_MODEL:
-				return basicSetTheContenedorFallasViewModel(null, msgs);
+			case ContenedorescaneoviewmodelPackage.CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL:
+				return basicSetTheContenedorInformacionEmisionGasesViewModel(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -339,8 +326,8 @@ public class ContenedorEscaneoViewModelImpl extends ViewModelImpl implements Con
 				return getOwnedByUI();
 			case ContenedorescaneoviewmodelPackage.CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_SELECCIONAUTO_VIEW_MODEL:
 				return getTheContenedorSeleccionautoViewModel();
-			case ContenedorescaneoviewmodelPackage.CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_FALLAS_VIEW_MODEL:
-				return getTheContenedorFallasViewModel();
+			case ContenedorescaneoviewmodelPackage.CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL:
+				return getTheContenedorInformacionEmisionGasesViewModel();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -359,8 +346,8 @@ public class ContenedorEscaneoViewModelImpl extends ViewModelImpl implements Con
 			case ContenedorescaneoviewmodelPackage.CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_SELECCIONAUTO_VIEW_MODEL:
 				setTheContenedorSeleccionautoViewModel((ContenedorSeleccionautoViewModel)newValue);
 				return;
-			case ContenedorescaneoviewmodelPackage.CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_FALLAS_VIEW_MODEL:
-				setTheContenedorFallasViewModel((ContenedorFallasViewModel)newValue);
+			case ContenedorescaneoviewmodelPackage.CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL:
+				setTheContenedorInformacionEmisionGasesViewModel((ContenedorInformacionEmisionGasesViewModel)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -380,8 +367,8 @@ public class ContenedorEscaneoViewModelImpl extends ViewModelImpl implements Con
 			case ContenedorescaneoviewmodelPackage.CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_SELECCIONAUTO_VIEW_MODEL:
 				setTheContenedorSeleccionautoViewModel((ContenedorSeleccionautoViewModel)null);
 				return;
-			case ContenedorescaneoviewmodelPackage.CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_FALLAS_VIEW_MODEL:
-				setTheContenedorFallasViewModel((ContenedorFallasViewModel)null);
+			case ContenedorescaneoviewmodelPackage.CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL:
+				setTheContenedorInformacionEmisionGasesViewModel((ContenedorInformacionEmisionGasesViewModel)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -399,8 +386,8 @@ public class ContenedorEscaneoViewModelImpl extends ViewModelImpl implements Con
 				return getOwnedByUI() != null;
 			case ContenedorescaneoviewmodelPackage.CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_SELECCIONAUTO_VIEW_MODEL:
 				return theContenedorSeleccionautoViewModel != null;
-			case ContenedorescaneoviewmodelPackage.CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_FALLAS_VIEW_MODEL:
-				return theContenedorFallasViewModel != null;
+			case ContenedorescaneoviewmodelPackage.CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL:
+				return theContenedorInformacionEmisionGasesViewModel != null;
 		}
 		return super.eIsSet(featureID);
 	}

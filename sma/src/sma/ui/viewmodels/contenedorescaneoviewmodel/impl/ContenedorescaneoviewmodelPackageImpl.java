@@ -45,11 +45,10 @@ import sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelPack
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.impl.ContenedorcrudcmviewmodelPackageImpl;
 
 import sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorEscaneoViewModel;
-import sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorFallasViewModel;
+import sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorInformacionEmisionGasesViewModel;
 import sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorSeleccionautoViewModel;
 import sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorescaneoviewmodelFactory;
 import sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorescaneoviewmodelPackage;
-import sma.ui.viewmodels.contenedorescaneoviewmodel.ListaFallasViewModel;
 
 import sma.ui.viewmodels.contenedorloginviewmodel.ContenedorloginviewmodelPackage;
 
@@ -84,7 +83,7 @@ public class ContenedorescaneoviewmodelPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass contenedorFallasViewModelEClass = null;
+	private EClass contenedorInformacionEmisionGasesViewModelEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -92,13 +91,6 @@ public class ContenedorescaneoviewmodelPackageImpl extends EPackageImpl implemen
 	 * @generated
 	 */
 	private EClass contenedorSeleccionautoViewModelEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass listaFallasViewModelEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -231,7 +223,7 @@ public class ContenedorescaneoviewmodelPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getContenedorEscaneoViewModel_TheContenedorFallasViewModel() {
+	public EReference getContenedorEscaneoViewModel_TheContenedorInformacionEmisionGasesViewModel() {
 		return (EReference)contenedorEscaneoViewModelEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -240,8 +232,8 @@ public class ContenedorescaneoviewmodelPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getContenedorFallasViewModel() {
-		return contenedorFallasViewModelEClass;
+	public EClass getContenedorInformacionEmisionGasesViewModel() {
+		return contenedorInformacionEmisionGasesViewModelEClass;
 	}
 
 	/**
@@ -249,8 +241,8 @@ public class ContenedorescaneoviewmodelPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getContenedorFallasViewModel_OwnedByContenedorEscaneoViewModel() {
-		return (EReference)contenedorFallasViewModelEClass.getEStructuralFeatures().get(0);
+	public EReference getContenedorInformacionEmisionGasesViewModel_OwnedByContenedorEscaneoViewModel() {
+		return (EReference)contenedorInformacionEmisionGasesViewModelEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -258,8 +250,8 @@ public class ContenedorescaneoviewmodelPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getContenedorFallasViewModel_Numeroerrores() {
-		return (EAttribute)contenedorFallasViewModelEClass.getEStructuralFeatures().get(1);
+	public EAttribute getContenedorInformacionEmisionGasesViewModel_Gasesofensivos() {
+		return (EAttribute)contenedorInformacionEmisionGasesViewModelEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -267,8 +259,8 @@ public class ContenedorescaneoviewmodelPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getContenedorFallasViewModel_Estadoveh() {
-		return (EAttribute)contenedorFallasViewModelEClass.getEStructuralFeatures().get(2);
+	public EAttribute getContenedorInformacionEmisionGasesViewModel_Gasesnocivos() {
+		return (EAttribute)contenedorInformacionEmisionGasesViewModelEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -276,8 +268,8 @@ public class ContenedorescaneoviewmodelPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getContenedorFallasViewModel_ListaListaFallasViewModel() {
-		return (EReference)contenedorFallasViewModelEClass.getEStructuralFeatures().get(3);
+	public EAttribute getContenedorInformacionEmisionGasesViewModel_Estadovehiculo() {
+		return (EAttribute)contenedorInformacionEmisionGasesViewModelEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -312,60 +304,6 @@ public class ContenedorescaneoviewmodelPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getListaFallasViewModel() {
-		return listaFallasViewModelEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getListaFallasViewModel_OwnedByContenedorFallasViewModel() {
-		return (EReference)listaFallasViewModelEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getListaFallasViewModel_Gravedad() {
-		return (EAttribute)listaFallasViewModelEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getListaFallasViewModel_Piesaaveriada() {
-		return (EAttribute)listaFallasViewModelEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getListaFallasViewModel_Origen() {
-		return (EAttribute)listaFallasViewModelEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getListaFallasViewModel_Descripcion() {
-		return (EAttribute)listaFallasViewModelEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public ContenedorescaneoviewmodelFactory getContenedorescaneoviewmodelFactory() {
 		return (ContenedorescaneoviewmodelFactory)getEFactoryInstance();
 	}
@@ -392,24 +330,17 @@ public class ContenedorescaneoviewmodelPackageImpl extends EPackageImpl implemen
 		contenedorEscaneoViewModelEClass = createEClass(CONTENEDOR_ESCANEO_VIEW_MODEL);
 		createEReference(contenedorEscaneoViewModelEClass, CONTENEDOR_ESCANEO_VIEW_MODEL__OWNED_BY_UI);
 		createEReference(contenedorEscaneoViewModelEClass, CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_SELECCIONAUTO_VIEW_MODEL);
-		createEReference(contenedorEscaneoViewModelEClass, CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_FALLAS_VIEW_MODEL);
+		createEReference(contenedorEscaneoViewModelEClass, CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL);
 
-		contenedorFallasViewModelEClass = createEClass(CONTENEDOR_FALLAS_VIEW_MODEL);
-		createEReference(contenedorFallasViewModelEClass, CONTENEDOR_FALLAS_VIEW_MODEL__OWNED_BY_CONTENEDOR_ESCANEO_VIEW_MODEL);
-		createEAttribute(contenedorFallasViewModelEClass, CONTENEDOR_FALLAS_VIEW_MODEL__NUMEROERRORES);
-		createEAttribute(contenedorFallasViewModelEClass, CONTENEDOR_FALLAS_VIEW_MODEL__ESTADOVEH);
-		createEReference(contenedorFallasViewModelEClass, CONTENEDOR_FALLAS_VIEW_MODEL__LISTA_LISTA_FALLAS_VIEW_MODEL);
+		contenedorInformacionEmisionGasesViewModelEClass = createEClass(CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL);
+		createEReference(contenedorInformacionEmisionGasesViewModelEClass, CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL__OWNED_BY_CONTENEDOR_ESCANEO_VIEW_MODEL);
+		createEAttribute(contenedorInformacionEmisionGasesViewModelEClass, CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL__GASESOFENSIVOS);
+		createEAttribute(contenedorInformacionEmisionGasesViewModelEClass, CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL__GASESNOCIVOS);
+		createEAttribute(contenedorInformacionEmisionGasesViewModelEClass, CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL__ESTADOVEHICULO);
 
 		contenedorSeleccionautoViewModelEClass = createEClass(CONTENEDOR_SELECCIONAUTO_VIEW_MODEL);
 		createEReference(contenedorSeleccionautoViewModelEClass, CONTENEDOR_SELECCIONAUTO_VIEW_MODEL__OWNED_BY_CONTENEDOR_ESCANEO_VIEW_MODEL);
 		createEAttribute(contenedorSeleccionautoViewModelEClass, CONTENEDOR_SELECCIONAUTO_VIEW_MODEL__PLACAVEHICULO);
-
-		listaFallasViewModelEClass = createEClass(LISTA_FALLAS_VIEW_MODEL);
-		createEReference(listaFallasViewModelEClass, LISTA_FALLAS_VIEW_MODEL__OWNED_BY_CONTENEDOR_FALLAS_VIEW_MODEL);
-		createEAttribute(listaFallasViewModelEClass, LISTA_FALLAS_VIEW_MODEL__GRAVEDAD);
-		createEAttribute(listaFallasViewModelEClass, LISTA_FALLAS_VIEW_MODEL__PIESAAVERIADA);
-		createEAttribute(listaFallasViewModelEClass, LISTA_FALLAS_VIEW_MODEL__ORIGEN);
-		createEAttribute(listaFallasViewModelEClass, LISTA_FALLAS_VIEW_MODEL__DESCRIPCION);
 	}
 
 	/**
@@ -446,40 +377,31 @@ public class ContenedorescaneoviewmodelPackageImpl extends EPackageImpl implemen
 
 		// Add supertypes to classes
 		contenedorEscaneoViewModelEClass.getESuperTypes().add(theViewmodelsPackage.getViewModel());
-		contenedorFallasViewModelEClass.getESuperTypes().add(theViewmodelsPackage.getViewModel());
+		contenedorInformacionEmisionGasesViewModelEClass.getESuperTypes().add(theViewmodelsPackage.getViewModel());
 		contenedorSeleccionautoViewModelEClass.getESuperTypes().add(theViewmodelsPackage.getViewModel());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(contenedorEscaneoViewModelEClass, ContenedorEscaneoViewModel.class, "ContenedorEscaneoViewModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getContenedorEscaneoViewModel_OwnedByUI(), theUiPackage.getUI(), theUiPackage.getUI_TheContenedorEscaneoViewModel(), "ownedByUI", null, 0, 1, ContenedorEscaneoViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContenedorEscaneoViewModel_TheContenedorSeleccionautoViewModel(), this.getContenedorSeleccionautoViewModel(), this.getContenedorSeleccionautoViewModel_OwnedByContenedorEscaneoViewModel(), "theContenedorSeleccionautoViewModel", null, 0, 1, ContenedorEscaneoViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getContenedorEscaneoViewModel_TheContenedorFallasViewModel(), this.getContenedorFallasViewModel(), this.getContenedorFallasViewModel_OwnedByContenedorEscaneoViewModel(), "theContenedorFallasViewModel", null, 0, 1, ContenedorEscaneoViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getContenedorEscaneoViewModel_TheContenedorInformacionEmisionGasesViewModel(), this.getContenedorInformacionEmisionGasesViewModel(), this.getContenedorInformacionEmisionGasesViewModel_OwnedByContenedorEscaneoViewModel(), "theContenedorInformacionEmisionGasesViewModel", null, 0, 1, ContenedorEscaneoViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		EOperation op = addEOperation(contenedorEscaneoViewModelEClass, thesmaPackage.getString(), "upadateDialog", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, thesmaPackage.getString(), "evento", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		addEOperation(contenedorEscaneoViewModelEClass, thesmaPackage.getEBooleanObject(), "escanearVehiculo", 0, 1, IS_UNIQUE, IS_ORDERED);
-
 		addEOperation(contenedorEscaneoViewModelEClass, null, "implementarModelo", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		addEOperation(contenedorEscaneoViewModelEClass, null, "mostrarEstadoVehiculo", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEOperation(contenedorEscaneoViewModelEClass, null, "realizarEscaneo", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEClass(contenedorFallasViewModelEClass, ContenedorFallasViewModel.class, "ContenedorFallasViewModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getContenedorFallasViewModel_OwnedByContenedorEscaneoViewModel(), this.getContenedorEscaneoViewModel(), this.getContenedorEscaneoViewModel_TheContenedorFallasViewModel(), "ownedByContenedorEscaneoViewModel", null, 0, 1, ContenedorFallasViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getContenedorFallasViewModel_Numeroerrores(), thesmaPackage.getString(), "numeroerrores", " ", 0, 1, ContenedorFallasViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getContenedorFallasViewModel_Estadoveh(), thesmaPackage.getString(), "estadoveh", " ", 0, 1, ContenedorFallasViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getContenedorFallasViewModel_ListaListaFallasViewModel(), this.getListaFallasViewModel(), this.getListaFallasViewModel_OwnedByContenedorFallasViewModel(), "listaListaFallasViewModel", null, 0, -1, ContenedorFallasViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(contenedorInformacionEmisionGasesViewModelEClass, ContenedorInformacionEmisionGasesViewModel.class, "ContenedorInformacionEmisionGasesViewModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getContenedorInformacionEmisionGasesViewModel_OwnedByContenedorEscaneoViewModel(), this.getContenedorEscaneoViewModel(), this.getContenedorEscaneoViewModel_TheContenedorInformacionEmisionGasesViewModel(), "ownedByContenedorEscaneoViewModel", null, 0, 1, ContenedorInformacionEmisionGasesViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getContenedorInformacionEmisionGasesViewModel_Gasesofensivos(), thesmaPackage.getString(), "gasesofensivos", " ", 0, 1, ContenedorInformacionEmisionGasesViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getContenedorInformacionEmisionGasesViewModel_Gasesnocivos(), thesmaPackage.getString(), "gasesnocivos", " ", 0, 1, ContenedorInformacionEmisionGasesViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getContenedorInformacionEmisionGasesViewModel_Estadovehiculo(), thesmaPackage.getString(), "estadovehiculo", " ", 0, 1, ContenedorInformacionEmisionGasesViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(contenedorSeleccionautoViewModelEClass, ContenedorSeleccionautoViewModel.class, "ContenedorSeleccionautoViewModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getContenedorSeleccionautoViewModel_OwnedByContenedorEscaneoViewModel(), this.getContenedorEscaneoViewModel(), this.getContenedorEscaneoViewModel_TheContenedorSeleccionautoViewModel(), "ownedByContenedorEscaneoViewModel", null, 0, 1, ContenedorSeleccionautoViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getContenedorSeleccionautoViewModel_Placavehiculo(), thesmaPackage.getString(), "placavehiculo", " ", 0, 1, ContenedorSeleccionautoViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(listaFallasViewModelEClass, ListaFallasViewModel.class, "ListaFallasViewModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getListaFallasViewModel_OwnedByContenedorFallasViewModel(), this.getContenedorFallasViewModel(), this.getContenedorFallasViewModel_ListaListaFallasViewModel(), "ownedByContenedorFallasViewModel", null, 0, 1, ListaFallasViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getListaFallasViewModel_Gravedad(), thesmaPackage.getString(), "gravedad", " ", 0, 1, ListaFallasViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getListaFallasViewModel_Piesaaveriada(), thesmaPackage.getString(), "piesaaveriada", " ", 0, 1, ListaFallasViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getListaFallasViewModel_Origen(), thesmaPackage.getString(), "origen", " ", 0, 1, ListaFallasViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getListaFallasViewModel_Descripcion(), thesmaPackage.getString(), "descripcion", " ", 0, 1, ListaFallasViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //ContenedorescaneoviewmodelPackageImpl

@@ -72,6 +72,7 @@ public class AutomovilItemProvider
 			addModeloPropertyDescriptor(object);
 			addReferenciaPropertyDescriptor(object);
 			addTipoUsoPropertyDescriptor(object);
+			addEstadoEmisionGasesPropertyDescriptor(object);
 			addReparacionesHechasPropertyDescriptor(object);
 			addPropietarioPropertyDescriptor(object);
 		}
@@ -211,6 +212,28 @@ public class AutomovilItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Estado Emision Gases feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addEstadoEmisionGasesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Automovil_estadoEmisionGases_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Automovil_estadoEmisionGases_feature", "_UI_Automovil_type"),
+				 DomainPackage.Literals.AUTOMOVIL__ESTADO_EMISION_GASES,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Reparaciones Hechas feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -329,6 +352,7 @@ public class AutomovilItemProvider
 			case DomainPackage.AUTOMOVIL__MODELO:
 			case DomainPackage.AUTOMOVIL__REFERENCIA:
 			case DomainPackage.AUTOMOVIL__TIPO_USO:
+			case DomainPackage.AUTOMOVIL__ESTADO_EMISION_GASES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case DomainPackage.AUTOMOVIL__SENSOR:

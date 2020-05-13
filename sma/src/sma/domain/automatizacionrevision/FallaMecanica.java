@@ -17,8 +17,9 @@ import sma.domain.Automovil;
  * <ul>
  *   <li>{@link sma.domain.automatizacionrevision.FallaMecanica#getPiesaAveriada <em>Piesa Averiada</em>}</li>
  *   <li>{@link sma.domain.automatizacionrevision.FallaMecanica#getGravedad <em>Gravedad</em>}</li>
- *   <li>{@link sma.domain.automatizacionrevision.FallaMecanica#getOrigen <em>Origen</em>}</li>
  *   <li>{@link sma.domain.automatizacionrevision.FallaMecanica#getDescripcion <em>Descripcion</em>}</li>
+ *   <li>{@link sma.domain.automatizacionrevision.FallaMecanica#getGasesNocivos <em>Gases Nocivos</em>}</li>
+ *   <li>{@link sma.domain.automatizacionrevision.FallaMecanica#getGasesOfensivos <em>Gases Ofensivos</em>}</li>
  *   <li>{@link sma.domain.automatizacionrevision.FallaMecanica#getTheAutomovil <em>The Automovil</em>}</li>
  * </ul>
  *
@@ -82,33 +83,6 @@ public interface FallaMecanica extends EObject {
 	void setGravedad(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Origen</b></em>' attribute.
-	 * The default value is <code>" "</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Origen</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Origen</em>' attribute.
-	 * @see #setOrigen(String)
-	 * @see sma.domain.automatizacionrevision.AutomatizacionrevisionPackage#getFallaMecanica_Origen()
-	 * @model default=" " dataType="sma.String"
-	 * @generated
-	 */
-	String getOrigen();
-
-	/**
-	 * Sets the value of the '{@link sma.domain.automatizacionrevision.FallaMecanica#getOrigen <em>Origen</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Origen</em>' attribute.
-	 * @see #getOrigen()
-	 * @generated
-	 */
-	void setOrigen(String value);
-
-	/**
 	 * Returns the value of the '<em><b>Descripcion</b></em>' attribute.
 	 * The default value is <code>" "</code>.
 	 * <!-- begin-user-doc -->
@@ -134,6 +108,58 @@ public interface FallaMecanica extends EObject {
 	 * @generated
 	 */
 	void setDescripcion(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Gases Nocivos</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Gases Nocivos</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Gases Nocivos</em>' attribute.
+	 * @see #setGasesNocivos(String)
+	 * @see sma.domain.automatizacionrevision.AutomatizacionrevisionPackage#getFallaMecanica_GasesNocivos()
+	 * @model dataType="sma.String"
+	 * @generated
+	 */
+	String getGasesNocivos();
+
+	/**
+	 * Sets the value of the '{@link sma.domain.automatizacionrevision.FallaMecanica#getGasesNocivos <em>Gases Nocivos</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Gases Nocivos</em>' attribute.
+	 * @see #getGasesNocivos()
+	 * @generated
+	 */
+	void setGasesNocivos(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Gases Ofensivos</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Gases Ofensivos</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Gases Ofensivos</em>' attribute.
+	 * @see #setGasesOfensivos(String)
+	 * @see sma.domain.automatizacionrevision.AutomatizacionrevisionPackage#getFallaMecanica_GasesOfensivos()
+	 * @model dataType="sma.String"
+	 * @generated
+	 */
+	String getGasesOfensivos();
+
+	/**
+	 * Sets the value of the '{@link sma.domain.automatizacionrevision.FallaMecanica#getGasesOfensivos <em>Gases Ofensivos</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Gases Ofensivos</em>' attribute.
+	 * @see #getGasesOfensivos()
+	 * @generated
+	 */
+	void setGasesOfensivos(String value);
 
 	/**
 	 * Returns the value of the '<em><b>The Automovil</b></em>' container reference.

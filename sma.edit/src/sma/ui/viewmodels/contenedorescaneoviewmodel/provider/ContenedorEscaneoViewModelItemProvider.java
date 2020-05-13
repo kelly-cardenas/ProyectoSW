@@ -69,7 +69,7 @@ public class ContenedorEscaneoViewModelItemProvider extends ViewModelItemProvide
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ContenedorescaneoviewmodelPackage.Literals.CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_SELECCIONAUTO_VIEW_MODEL);
-			childrenFeatures.add(ContenedorescaneoviewmodelPackage.Literals.CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_FALLAS_VIEW_MODEL);
+			childrenFeatures.add(ContenedorescaneoviewmodelPackage.Literals.CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL);
 		}
 		return childrenFeatures;
 	}
@@ -123,7 +123,7 @@ public class ContenedorEscaneoViewModelItemProvider extends ViewModelItemProvide
 
 		switch (notification.getFeatureID(ContenedorEscaneoViewModel.class)) {
 			case ContenedorescaneoviewmodelPackage.CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_SELECCIONAUTO_VIEW_MODEL:
-			case ContenedorescaneoviewmodelPackage.CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_FALLAS_VIEW_MODEL:
+			case ContenedorescaneoviewmodelPackage.CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -148,8 +148,8 @@ public class ContenedorEscaneoViewModelItemProvider extends ViewModelItemProvide
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ContenedorescaneoviewmodelPackage.Literals.CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_FALLAS_VIEW_MODEL,
-				 ContenedorescaneoviewmodelFactory.eINSTANCE.createContenedorFallasViewModel()));
+				(ContenedorescaneoviewmodelPackage.Literals.CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL,
+				 ContenedorescaneoviewmodelFactory.eINSTANCE.createContenedorInformacionEmisionGasesViewModel()));
 	}
 
 	/**

@@ -95,26 +95,26 @@ public class ContenedorescaneoviewmodelItemProviderAdapterFactory extends Conten
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorFallasViewModel} instances.
+	 * This keeps track of the one adapter used for all {@link sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorInformacionEmisionGasesViewModel} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ContenedorFallasViewModelItemProvider contenedorFallasViewModelItemProvider;
+	protected ContenedorInformacionEmisionGasesViewModelItemProvider contenedorInformacionEmisionGasesViewModelItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorFallasViewModel}.
+	 * This creates an adapter for a {@link sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorInformacionEmisionGasesViewModel}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createContenedorFallasViewModelAdapter() {
-		if (contenedorFallasViewModelItemProvider == null) {
-			contenedorFallasViewModelItemProvider = new ContenedorFallasViewModelItemProvider(this);
+	public Adapter createContenedorInformacionEmisionGasesViewModelAdapter() {
+		if (contenedorInformacionEmisionGasesViewModelItemProvider == null) {
+			contenedorInformacionEmisionGasesViewModelItemProvider = new ContenedorInformacionEmisionGasesViewModelItemProvider(this);
 		}
 
-		return contenedorFallasViewModelItemProvider;
+		return contenedorInformacionEmisionGasesViewModelItemProvider;
 	}
 
 	/**
@@ -138,29 +138,6 @@ public class ContenedorescaneoviewmodelItemProviderAdapterFactory extends Conten
 		}
 
 		return contenedorSeleccionautoViewModelItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link sma.ui.viewmodels.contenedorescaneoviewmodel.ListaFallasViewModel} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ListaFallasViewModelItemProvider listaFallasViewModelItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link sma.ui.viewmodels.contenedorescaneoviewmodel.ListaFallasViewModel}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createListaFallasViewModelAdapter() {
-		if (listaFallasViewModelItemProvider == null) {
-			listaFallasViewModelItemProvider = new ListaFallasViewModelItemProvider(this);
-		}
-
-		return listaFallasViewModelItemProvider;
 	}
 
 	/**
@@ -263,9 +240,8 @@ public class ContenedorescaneoviewmodelItemProviderAdapterFactory extends Conten
 	 */
 	public void dispose() {
 		if (contenedorEscaneoViewModelItemProvider != null) contenedorEscaneoViewModelItemProvider.dispose();
-		if (contenedorFallasViewModelItemProvider != null) contenedorFallasViewModelItemProvider.dispose();
+		if (contenedorInformacionEmisionGasesViewModelItemProvider != null) contenedorInformacionEmisionGasesViewModelItemProvider.dispose();
 		if (contenedorSeleccionautoViewModelItemProvider != null) contenedorSeleccionautoViewModelItemProvider.dispose();
-		if (listaFallasViewModelItemProvider != null) listaFallasViewModelItemProvider.dispose();
 	}
 
 }

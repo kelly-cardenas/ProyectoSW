@@ -734,9 +734,9 @@ public class ContenedorcontactarcmviewmodelEditor
 		adapterFactory.addAdapterFactory(new ContenedorcrudcmviewmodelItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ContenedorregistrovehiculoviewmodelItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ContenedorloginviewmodelItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new ContenedorescaneoviewmodelItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ContenedorcontactarcmviewmodelItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ContenedorsolicitudvisitaviewmodelItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new ContenedorescaneoviewmodelItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.

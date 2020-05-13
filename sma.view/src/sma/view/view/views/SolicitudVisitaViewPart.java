@@ -11,9 +11,9 @@ import sma.ui.viewmodels.contenedorcrudclienteviewmodel.*;
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.*;
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.*;
 import sma.ui.viewmodels.contenedorloginviewmodel.*;
-import sma.ui.viewmodels.contenedorescaneoviewmodel.*;
 import sma.ui.viewmodels.contenedorcontactarcmviewmodel.*;
 import sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.*;
+import sma.ui.viewmodels.contenedorescaneoviewmodel.*;
 
 import sma.view.model.ModelFactoryModel;
 import org.eclipse.wb.swt.SWTResourceManager;
@@ -108,12 +108,14 @@ public class SolicitudVisitaViewPart  extends ViewPart {
          public void cargarContenedores(){
             mfm 								= ModelFactoryModel.getInstance(); 
             contenedorsolicitudVisitaViewModel = mfm.getTheContenedorSolicitudVisitaViewModel();
-            contenedordatosCmViewModel = mfm.getTheContenedorDatosCmViewModel();
-            contenedorbusquedaViewModel = mfm.getTheContenedorBusquedaViewModel();
+            contenedordatosCmViewModel = mfm.getTheSolicitudVisitagetTheContenedorDatosCmViewModel();
+            contenedorbusquedaViewModel = mfm.getTheSolicitudVisitagetTheContenedorBusquedaViewModel();
       
-}
+         }
       public void updateData(){
-           mfm.cargar();
+           if(!mfm.getEstado().equals("ACTUALIZADO")) {
+               mfm.cargar();
+           };
            cargarContenedores();
            try {
                 initDataBindings();
@@ -179,7 +181,7 @@ public class SolicitudVisitaViewPart  extends ViewPart {
 		public void widgetSelected(SelectionEvent e) {
 				//TODO Action ButtonSolicitarde la view SolicitudVisita
 				        
-      solicitarAction ( "event" );
+	      solicitarAction ( "event" );
 
 		 }
 		});
@@ -193,7 +195,7 @@ public class SolicitudVisitaViewPart  extends ViewPart {
 		public void widgetSelected(SelectionEvent e) {
 				//TODO Action ButtonCancelarde la view SolicitudVisita
 				        
-      cancelarAction ( "event" );
+	      cancelarAction ( "event" );
 
 		 }
 		});
@@ -221,7 +223,7 @@ public class SolicitudVisitaViewPart  extends ViewPart {
 		public void widgetSelected(SelectionEvent e) {
 				//TODO Action ButtonBuscarde la view SolicitudVisita
 				        
-      buscarAction ( "event" );
+	      buscarAction ( "event" );
 
 		 }
 		});
@@ -243,12 +245,13 @@ public class SolicitudVisitaViewPart  extends ViewPart {
 
         try {
 	       initDataBindings();
-            }catch (Exception e) {
+          }catch (Exception e) {
         }
 
-   }      public void setFocus() {
-         // Set the focus
-    }
+      }
+     public void setFocus() {
+           // Set the focus
+     }
       protected DataBindingContext initDataBindings() {
 //
         DataBindingContext bindingContext = new DataBindingContext();

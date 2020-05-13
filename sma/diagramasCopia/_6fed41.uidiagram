@@ -7,7 +7,8 @@
         <listIndividualWidge xmi:type="tooldataform.ui:TextComponent" xmi:id="_C4R2oIGHEeq3SZhHD-Kemw" name="usuario" id="cardusuario" font="Segoe UI" width="193" height="-1" positionX="151" positionY="27" textColor="0" textSize="9" textStyle="false"/>
         <listIndividualWidge xmi:type="tooldataform.ui:TextView" xmi:id="_12B9AINiEeq3efEK2p2TDA" name="Contrasenia" id="cardContrasenia" font="Segoe UI" width="-1" height="-1" positionX="43" positionY="62" textColor="0" textSize="9" textStyle="false"/>
         <listIndividualWidge xmi:type="tooldataform.ui:TextComponent" xmi:id="_3qeWIINiEeq3efEK2p2TDA" name="contrasenia" id="cardcontrasenia" font="Segoe UI" width="193" height="-1" positionX="151" positionY="63" textColor="0" textSize="9" textStyle="false"/>
-        <listIndividualWidge xmi:type="tooldataform.ui:Button" xmi:id="_B_lv0INjEeq3efEK2p2TDA" name="INGRESAR" colour="0" font="Segoe UI" width="-1" height="-1" positionX="151" positionY="111" idWidget="_B_nlAINjEeq3efEK2p2TDA" textColor="0" textSize="9" textStyle="false"/>
+        <listIndividualWidge xmi:type="tooldataform.ui:Button" xmi:id="_B_lv0INjEeq3efEK2p2TDA" name="Login" colour="0" font="Segoe UI" width="-1" height="-1" positionX="79" positionY="111" idWidget="_B_nlAINjEeq3efEK2p2TDA" textColor="0" textSize="9" textStyle="false"/>
+        <listIndividualWidge xmi:type="tooldataform.ui:Button" xmi:id="_1OHMIJSfEeqFbvesYn-jWw" name="Log out" colour="0" font="Segoe UI" width="-1" height="-1" positionX="235" positionY="111" idWidget="_1OHzMJSfEeqFbvesYn-jWw" textColor="0" textSize="9" textStyle="false"/>
       </listWidget>
     </theUserInterface>
   </tooldataform.ui:UI_Diagram>
@@ -51,7 +52,14 @@
               <styles xmi:type="notation:DescriptionStyle" xmi:id="_B_ozIYNjEeq3efEK2p2TDA"/>
               <styles xmi:type="notation:FontStyle" xmi:id="_B_ozIoNjEeq3efEK2p2TDA" fontName="Segoe UI"/>
               <styles xmi:type="notation:LineStyle" xmi:id="_B_ozI4NjEeq3efEK2p2TDA"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_B_ozJINjEeq3efEK2p2TDA" x="151" y="111"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_B_ozJINjEeq3efEK2p2TDA" x="79" y="111"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_1OJBUJSfEeqFbvesYn-jWw" type="3005" element="_1OHMIJSfEeqFbvesYn-jWw">
+              <children xmi:type="notation:DecorationNode" xmi:id="_1OJoYJSfEeqFbvesYn-jWw" type="5003"/>
+              <styles xmi:type="notation:DescriptionStyle" xmi:id="_1OJBUZSfEeqFbvesYn-jWw"/>
+              <styles xmi:type="notation:FontStyle" xmi:id="_1OJBUpSfEeqFbvesYn-jWw" fontName="Segoe UI"/>
+              <styles xmi:type="notation:LineStyle" xmi:id="_1OJBU5SfEeqFbvesYn-jWw"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1OJBVJSfEeqFbvesYn-jWw" x="235" y="111"/>
             </children>
           </children>
           <styles xmi:type="notation:DescriptionStyle" xmi:id="__EZ8YYGGEeq3SZhHD-Kemw"/>

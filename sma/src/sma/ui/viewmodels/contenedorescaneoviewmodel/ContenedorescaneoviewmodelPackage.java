@@ -95,13 +95,13 @@ public interface ContenedorescaneoviewmodelPackage extends EPackage {
 	int CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_SELECCIONAUTO_VIEW_MODEL = ViewmodelsPackage.VIEW_MODEL_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>The Contenedor Fallas View Model</b></em>' containment reference.
+	 * The feature id for the '<em><b>The Contenedor Informacion Emision Gases View Model</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_FALLAS_VIEW_MODEL = ViewmodelsPackage.VIEW_MODEL_FEATURE_COUNT + 2;
+	int CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL = ViewmodelsPackage.VIEW_MODEL_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Contenedor Escaneo View Model</em>' class.
@@ -113,14 +113,14 @@ public interface ContenedorescaneoviewmodelPackage extends EPackage {
 	int CONTENEDOR_ESCANEO_VIEW_MODEL_FEATURE_COUNT = ViewmodelsPackage.VIEW_MODEL_FEATURE_COUNT + 3;
 
 	/**
-	 * The meta object id for the '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.impl.ContenedorFallasViewModelImpl <em>Contenedor Fallas View Model</em>}' class.
+	 * The meta object id for the '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.impl.ContenedorInformacionEmisionGasesViewModelImpl <em>Contenedor Informacion Emision Gases View Model</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.impl.ContenedorFallasViewModelImpl
-	 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.impl.ContenedorescaneoviewmodelPackageImpl#getContenedorFallasViewModel()
+	 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.impl.ContenedorInformacionEmisionGasesViewModelImpl
+	 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.impl.ContenedorescaneoviewmodelPackageImpl#getContenedorInformacionEmisionGasesViewModel()
 	 * @generated
 	 */
-	int CONTENEDOR_FALLAS_VIEW_MODEL = 1;
+	int CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL = 1;
 
 	/**
 	 * The feature id for the '<em><b>The UI</b></em>' reference.
@@ -129,7 +129,7 @@ public interface ContenedorescaneoviewmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENEDOR_FALLAS_VIEW_MODEL__THE_UI = ViewmodelsPackage.VIEW_MODEL__THE_UI;
+	int CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL__THE_UI = ViewmodelsPackage.VIEW_MODEL__THE_UI;
 
 	/**
 	 * The feature id for the '<em><b>Owned By Contenedor Escaneo View Model</b></em>' container reference.
@@ -138,43 +138,43 @@ public interface ContenedorescaneoviewmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENEDOR_FALLAS_VIEW_MODEL__OWNED_BY_CONTENEDOR_ESCANEO_VIEW_MODEL = ViewmodelsPackage.VIEW_MODEL_FEATURE_COUNT + 0;
+	int CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL__OWNED_BY_CONTENEDOR_ESCANEO_VIEW_MODEL = ViewmodelsPackage.VIEW_MODEL_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Numeroerrores</b></em>' attribute.
+	 * The feature id for the '<em><b>Gasesofensivos</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENEDOR_FALLAS_VIEW_MODEL__NUMEROERRORES = ViewmodelsPackage.VIEW_MODEL_FEATURE_COUNT + 1;
+	int CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL__GASESOFENSIVOS = ViewmodelsPackage.VIEW_MODEL_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Estadoveh</b></em>' attribute.
+	 * The feature id for the '<em><b>Gasesnocivos</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENEDOR_FALLAS_VIEW_MODEL__ESTADOVEH = ViewmodelsPackage.VIEW_MODEL_FEATURE_COUNT + 2;
+	int CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL__GASESNOCIVOS = ViewmodelsPackage.VIEW_MODEL_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Lista Lista Fallas View Model</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Estadovehiculo</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENEDOR_FALLAS_VIEW_MODEL__LISTA_LISTA_FALLAS_VIEW_MODEL = ViewmodelsPackage.VIEW_MODEL_FEATURE_COUNT + 3;
+	int CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL__ESTADOVEHICULO = ViewmodelsPackage.VIEW_MODEL_FEATURE_COUNT + 3;
 
 	/**
-	 * The number of structural features of the '<em>Contenedor Fallas View Model</em>' class.
+	 * The number of structural features of the '<em>Contenedor Informacion Emision Gases View Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENEDOR_FALLAS_VIEW_MODEL_FEATURE_COUNT = ViewmodelsPackage.VIEW_MODEL_FEATURE_COUNT + 4;
+	int CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL_FEATURE_COUNT = ViewmodelsPackage.VIEW_MODEL_FEATURE_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.impl.ContenedorSeleccionautoViewModelImpl <em>Contenedor Seleccionauto View Model</em>}' class.
@@ -222,70 +222,6 @@ public interface ContenedorescaneoviewmodelPackage extends EPackage {
 	 */
 	int CONTENEDOR_SELECCIONAUTO_VIEW_MODEL_FEATURE_COUNT = ViewmodelsPackage.VIEW_MODEL_FEATURE_COUNT + 2;
 
-	/**
-	 * The meta object id for the '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.impl.ListaFallasViewModelImpl <em>Lista Fallas View Model</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.impl.ListaFallasViewModelImpl
-	 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.impl.ContenedorescaneoviewmodelPackageImpl#getListaFallasViewModel()
-	 * @generated
-	 */
-	int LISTA_FALLAS_VIEW_MODEL = 3;
-
-	/**
-	 * The feature id for the '<em><b>Owned By Contenedor Fallas View Model</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LISTA_FALLAS_VIEW_MODEL__OWNED_BY_CONTENEDOR_FALLAS_VIEW_MODEL = 0;
-
-	/**
-	 * The feature id for the '<em><b>Gravedad</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LISTA_FALLAS_VIEW_MODEL__GRAVEDAD = 1;
-
-	/**
-	 * The feature id for the '<em><b>Piesaaveriada</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LISTA_FALLAS_VIEW_MODEL__PIESAAVERIADA = 2;
-
-	/**
-	 * The feature id for the '<em><b>Origen</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LISTA_FALLAS_VIEW_MODEL__ORIGEN = 3;
-
-	/**
-	 * The feature id for the '<em><b>Descripcion</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LISTA_FALLAS_VIEW_MODEL__DESCRIPCION = 4;
-
-	/**
-	 * The number of structural features of the '<em>Lista Fallas View Model</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LISTA_FALLAS_VIEW_MODEL_FEATURE_COUNT = 5;
-
 
 	/**
 	 * Returns the meta object for class '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorEscaneoViewModel <em>Contenedor Escaneo View Model</em>}'.
@@ -320,69 +256,69 @@ public interface ContenedorescaneoviewmodelPackage extends EPackage {
 	EReference getContenedorEscaneoViewModel_TheContenedorSeleccionautoViewModel();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorEscaneoViewModel#getTheContenedorFallasViewModel <em>The Contenedor Fallas View Model</em>}'.
+	 * Returns the meta object for the containment reference '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorEscaneoViewModel#getTheContenedorInformacionEmisionGasesViewModel <em>The Contenedor Informacion Emision Gases View Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>The Contenedor Fallas View Model</em>'.
-	 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorEscaneoViewModel#getTheContenedorFallasViewModel()
+	 * @return the meta object for the containment reference '<em>The Contenedor Informacion Emision Gases View Model</em>'.
+	 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorEscaneoViewModel#getTheContenedorInformacionEmisionGasesViewModel()
 	 * @see #getContenedorEscaneoViewModel()
 	 * @generated
 	 */
-	EReference getContenedorEscaneoViewModel_TheContenedorFallasViewModel();
+	EReference getContenedorEscaneoViewModel_TheContenedorInformacionEmisionGasesViewModel();
 
 	/**
-	 * Returns the meta object for class '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorFallasViewModel <em>Contenedor Fallas View Model</em>}'.
+	 * Returns the meta object for class '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorInformacionEmisionGasesViewModel <em>Contenedor Informacion Emision Gases View Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Contenedor Fallas View Model</em>'.
-	 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorFallasViewModel
+	 * @return the meta object for class '<em>Contenedor Informacion Emision Gases View Model</em>'.
+	 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorInformacionEmisionGasesViewModel
 	 * @generated
 	 */
-	EClass getContenedorFallasViewModel();
+	EClass getContenedorInformacionEmisionGasesViewModel();
 
 	/**
-	 * Returns the meta object for the container reference '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorFallasViewModel#getOwnedByContenedorEscaneoViewModel <em>Owned By Contenedor Escaneo View Model</em>}'.
+	 * Returns the meta object for the container reference '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorInformacionEmisionGasesViewModel#getOwnedByContenedorEscaneoViewModel <em>Owned By Contenedor Escaneo View Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Owned By Contenedor Escaneo View Model</em>'.
-	 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorFallasViewModel#getOwnedByContenedorEscaneoViewModel()
-	 * @see #getContenedorFallasViewModel()
+	 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorInformacionEmisionGasesViewModel#getOwnedByContenedorEscaneoViewModel()
+	 * @see #getContenedorInformacionEmisionGasesViewModel()
 	 * @generated
 	 */
-	EReference getContenedorFallasViewModel_OwnedByContenedorEscaneoViewModel();
+	EReference getContenedorInformacionEmisionGasesViewModel_OwnedByContenedorEscaneoViewModel();
 
 	/**
-	 * Returns the meta object for the attribute '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorFallasViewModel#getNumeroerrores <em>Numeroerrores</em>}'.
+	 * Returns the meta object for the attribute '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorInformacionEmisionGasesViewModel#getGasesofensivos <em>Gasesofensivos</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Numeroerrores</em>'.
-	 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorFallasViewModel#getNumeroerrores()
-	 * @see #getContenedorFallasViewModel()
+	 * @return the meta object for the attribute '<em>Gasesofensivos</em>'.
+	 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorInformacionEmisionGasesViewModel#getGasesofensivos()
+	 * @see #getContenedorInformacionEmisionGasesViewModel()
 	 * @generated
 	 */
-	EAttribute getContenedorFallasViewModel_Numeroerrores();
+	EAttribute getContenedorInformacionEmisionGasesViewModel_Gasesofensivos();
 
 	/**
-	 * Returns the meta object for the attribute '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorFallasViewModel#getEstadoveh <em>Estadoveh</em>}'.
+	 * Returns the meta object for the attribute '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorInformacionEmisionGasesViewModel#getGasesnocivos <em>Gasesnocivos</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Estadoveh</em>'.
-	 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorFallasViewModel#getEstadoveh()
-	 * @see #getContenedorFallasViewModel()
+	 * @return the meta object for the attribute '<em>Gasesnocivos</em>'.
+	 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorInformacionEmisionGasesViewModel#getGasesnocivos()
+	 * @see #getContenedorInformacionEmisionGasesViewModel()
 	 * @generated
 	 */
-	EAttribute getContenedorFallasViewModel_Estadoveh();
+	EAttribute getContenedorInformacionEmisionGasesViewModel_Gasesnocivos();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorFallasViewModel#getListaListaFallasViewModel <em>Lista Lista Fallas View Model</em>}'.
+	 * Returns the meta object for the attribute '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorInformacionEmisionGasesViewModel#getEstadovehiculo <em>Estadovehiculo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Lista Lista Fallas View Model</em>'.
-	 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorFallasViewModel#getListaListaFallasViewModel()
-	 * @see #getContenedorFallasViewModel()
+	 * @return the meta object for the attribute '<em>Estadovehiculo</em>'.
+	 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorInformacionEmisionGasesViewModel#getEstadovehiculo()
+	 * @see #getContenedorInformacionEmisionGasesViewModel()
 	 * @generated
 	 */
-	EReference getContenedorFallasViewModel_ListaListaFallasViewModel();
+	EAttribute getContenedorInformacionEmisionGasesViewModel_Estadovehiculo();
 
 	/**
 	 * Returns the meta object for class '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorSeleccionautoViewModel <em>Contenedor Seleccionauto View Model</em>}'.
@@ -415,71 +351,6 @@ public interface ContenedorescaneoviewmodelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getContenedorSeleccionautoViewModel_Placavehiculo();
-
-	/**
-	 * Returns the meta object for class '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.ListaFallasViewModel <em>Lista Fallas View Model</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Lista Fallas View Model</em>'.
-	 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.ListaFallasViewModel
-	 * @generated
-	 */
-	EClass getListaFallasViewModel();
-
-	/**
-	 * Returns the meta object for the container reference '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.ListaFallasViewModel#getOwnedByContenedorFallasViewModel <em>Owned By Contenedor Fallas View Model</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Owned By Contenedor Fallas View Model</em>'.
-	 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.ListaFallasViewModel#getOwnedByContenedorFallasViewModel()
-	 * @see #getListaFallasViewModel()
-	 * @generated
-	 */
-	EReference getListaFallasViewModel_OwnedByContenedorFallasViewModel();
-
-	/**
-	 * Returns the meta object for the attribute '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.ListaFallasViewModel#getGravedad <em>Gravedad</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Gravedad</em>'.
-	 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.ListaFallasViewModel#getGravedad()
-	 * @see #getListaFallasViewModel()
-	 * @generated
-	 */
-	EAttribute getListaFallasViewModel_Gravedad();
-
-	/**
-	 * Returns the meta object for the attribute '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.ListaFallasViewModel#getPiesaaveriada <em>Piesaaveriada</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Piesaaveriada</em>'.
-	 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.ListaFallasViewModel#getPiesaaveriada()
-	 * @see #getListaFallasViewModel()
-	 * @generated
-	 */
-	EAttribute getListaFallasViewModel_Piesaaveriada();
-
-	/**
-	 * Returns the meta object for the attribute '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.ListaFallasViewModel#getOrigen <em>Origen</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Origen</em>'.
-	 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.ListaFallasViewModel#getOrigen()
-	 * @see #getListaFallasViewModel()
-	 * @generated
-	 */
-	EAttribute getListaFallasViewModel_Origen();
-
-	/**
-	 * Returns the meta object for the attribute '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.ListaFallasViewModel#getDescripcion <em>Descripcion</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Descripcion</em>'.
-	 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.ListaFallasViewModel#getDescripcion()
-	 * @see #getListaFallasViewModel()
-	 * @generated
-	 */
-	EAttribute getListaFallasViewModel_Descripcion();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -530,22 +401,22 @@ public interface ContenedorescaneoviewmodelPackage extends EPackage {
 		EReference CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_SELECCIONAUTO_VIEW_MODEL = eINSTANCE.getContenedorEscaneoViewModel_TheContenedorSeleccionautoViewModel();
 
 		/**
-		 * The meta object literal for the '<em><b>The Contenedor Fallas View Model</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>The Contenedor Informacion Emision Gases View Model</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_FALLAS_VIEW_MODEL = eINSTANCE.getContenedorEscaneoViewModel_TheContenedorFallasViewModel();
+		EReference CONTENEDOR_ESCANEO_VIEW_MODEL__THE_CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL = eINSTANCE.getContenedorEscaneoViewModel_TheContenedorInformacionEmisionGasesViewModel();
 
 		/**
-		 * The meta object literal for the '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.impl.ContenedorFallasViewModelImpl <em>Contenedor Fallas View Model</em>}' class.
+		 * The meta object literal for the '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.impl.ContenedorInformacionEmisionGasesViewModelImpl <em>Contenedor Informacion Emision Gases View Model</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.impl.ContenedorFallasViewModelImpl
-		 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.impl.ContenedorescaneoviewmodelPackageImpl#getContenedorFallasViewModel()
+		 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.impl.ContenedorInformacionEmisionGasesViewModelImpl
+		 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.impl.ContenedorescaneoviewmodelPackageImpl#getContenedorInformacionEmisionGasesViewModel()
 		 * @generated
 		 */
-		EClass CONTENEDOR_FALLAS_VIEW_MODEL = eINSTANCE.getContenedorFallasViewModel();
+		EClass CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL = eINSTANCE.getContenedorInformacionEmisionGasesViewModel();
 
 		/**
 		 * The meta object literal for the '<em><b>Owned By Contenedor Escaneo View Model</b></em>' container reference feature.
@@ -553,31 +424,31 @@ public interface ContenedorescaneoviewmodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONTENEDOR_FALLAS_VIEW_MODEL__OWNED_BY_CONTENEDOR_ESCANEO_VIEW_MODEL = eINSTANCE.getContenedorFallasViewModel_OwnedByContenedorEscaneoViewModel();
+		EReference CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL__OWNED_BY_CONTENEDOR_ESCANEO_VIEW_MODEL = eINSTANCE.getContenedorInformacionEmisionGasesViewModel_OwnedByContenedorEscaneoViewModel();
 
 		/**
-		 * The meta object literal for the '<em><b>Numeroerrores</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Gasesofensivos</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CONTENEDOR_FALLAS_VIEW_MODEL__NUMEROERRORES = eINSTANCE.getContenedorFallasViewModel_Numeroerrores();
+		EAttribute CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL__GASESOFENSIVOS = eINSTANCE.getContenedorInformacionEmisionGasesViewModel_Gasesofensivos();
 
 		/**
-		 * The meta object literal for the '<em><b>Estadoveh</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Gasesnocivos</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CONTENEDOR_FALLAS_VIEW_MODEL__ESTADOVEH = eINSTANCE.getContenedorFallasViewModel_Estadoveh();
+		EAttribute CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL__GASESNOCIVOS = eINSTANCE.getContenedorInformacionEmisionGasesViewModel_Gasesnocivos();
 
 		/**
-		 * The meta object literal for the '<em><b>Lista Lista Fallas View Model</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Estadovehiculo</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONTENEDOR_FALLAS_VIEW_MODEL__LISTA_LISTA_FALLAS_VIEW_MODEL = eINSTANCE.getContenedorFallasViewModel_ListaListaFallasViewModel();
+		EAttribute CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL__ESTADOVEHICULO = eINSTANCE.getContenedorInformacionEmisionGasesViewModel_Estadovehiculo();
 
 		/**
 		 * The meta object literal for the '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.impl.ContenedorSeleccionautoViewModelImpl <em>Contenedor Seleccionauto View Model</em>}' class.
@@ -604,56 +475,6 @@ public interface ContenedorescaneoviewmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CONTENEDOR_SELECCIONAUTO_VIEW_MODEL__PLACAVEHICULO = eINSTANCE.getContenedorSeleccionautoViewModel_Placavehiculo();
-
-		/**
-		 * The meta object literal for the '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.impl.ListaFallasViewModelImpl <em>Lista Fallas View Model</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.impl.ListaFallasViewModelImpl
-		 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.impl.ContenedorescaneoviewmodelPackageImpl#getListaFallasViewModel()
-		 * @generated
-		 */
-		EClass LISTA_FALLAS_VIEW_MODEL = eINSTANCE.getListaFallasViewModel();
-
-		/**
-		 * The meta object literal for the '<em><b>Owned By Contenedor Fallas View Model</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LISTA_FALLAS_VIEW_MODEL__OWNED_BY_CONTENEDOR_FALLAS_VIEW_MODEL = eINSTANCE.getListaFallasViewModel_OwnedByContenedorFallasViewModel();
-
-		/**
-		 * The meta object literal for the '<em><b>Gravedad</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LISTA_FALLAS_VIEW_MODEL__GRAVEDAD = eINSTANCE.getListaFallasViewModel_Gravedad();
-
-		/**
-		 * The meta object literal for the '<em><b>Piesaaveriada</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LISTA_FALLAS_VIEW_MODEL__PIESAAVERIADA = eINSTANCE.getListaFallasViewModel_Piesaaveriada();
-
-		/**
-		 * The meta object literal for the '<em><b>Origen</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LISTA_FALLAS_VIEW_MODEL__ORIGEN = eINSTANCE.getListaFallasViewModel_Origen();
-
-		/**
-		 * The meta object literal for the '<em><b>Descripcion</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LISTA_FALLAS_VIEW_MODEL__DESCRIPCION = eINSTANCE.getListaFallasViewModel_Descripcion();
 
 	}
 

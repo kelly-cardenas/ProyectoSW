@@ -11,9 +11,9 @@ import sma.ui.viewmodels.contenedorcrudclienteviewmodel.*;
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.*;
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.*;
 import sma.ui.viewmodels.contenedorloginviewmodel.*;
-import sma.ui.viewmodels.contenedorescaneoviewmodel.*;
 import sma.ui.viewmodels.contenedorcontactarcmviewmodel.*;
 import sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.*;
+import sma.ui.viewmodels.contenedorescaneoviewmodel.*;
 
 import sma.view.model.ModelFactoryModel;
 import org.eclipse.wb.swt.SWTResourceManager;
@@ -94,9 +94,9 @@ public class CrudClienteViewPart  extends ViewPart {
 		public Group groupDatosdelacuenta; 
 		ContenedorDatosdelacuentaViewModel   contenedordatosdelacuentaViewModel;
 		public Label lblUsuarioDatosdelacuenta; 
-		public Label lblContraseñaDatosdelacuenta; 
+		public Label lblContrasenaDatosdelacuenta; 
 		public Text textUsuarioDatosdelacuenta; 
-		public Text textContraseñaDatosdelacuenta; 
+		public Text textContrasenaDatosdelacuenta; 
 		public Group groupMaestroCliente; 
 		ContenedorMaestroClienteViewModel   contenedormaestroClienteViewModel;
 		public Table tableCliente;
@@ -119,14 +119,16 @@ public class CrudClienteViewPart  extends ViewPart {
          public void cargarContenedores(){
             mfm 								= ModelFactoryModel.getInstance(); 
             contenedorcrudClienteViewModel = mfm.getTheContenedorCrudClienteViewModel();
-            contenedordetalleClienteViewModel = mfm.getTheContenedorDetalleClienteViewModel();
-            contenedordatosPersonalesViewModel = mfm.getTheContenedorDatosPersonalesViewModel();
-            contenedordatosdelacuentaViewModel = mfm.getTheContenedorDatosdelacuentaViewModel();
-            contenedormaestroClienteViewModel = mfm.getTheContenedorMaestroClienteViewModel();
+            contenedordetalleClienteViewModel = mfm.getTheCrudClientegetTheContenedorDetalleClienteViewModel();
+            contenedordatosPersonalesViewModel = mfm.getTheCrudClientegetTheContenedorDatosPersonalesViewModel();
+            contenedordatosdelacuentaViewModel = mfm.getTheCrudClientegetTheContenedorDatosdelacuentaViewModel();
+            contenedormaestroClienteViewModel = mfm.getTheCrudClientegetTheContenedorMaestroClienteViewModel();
       
-}
+         }
       public void updateData(){
-           mfm.cargar();
+           if(!mfm.getEstado().equals("ACTUALIZADO")) {
+               mfm.cargar();
+           };
            cargarContenedores();
            try {
                 initDataBindings();
@@ -156,8 +158,8 @@ public class CrudClienteViewPart  extends ViewPart {
 		public void widgetSelected(SelectionEvent e) {
 				//TODO Action ButtonCANCELARde la view CrudCliente
 				        
-      cancelarAction ( "event" );
-      System.out.println("Detalle");
+	      cancelarAction ( "event" );
+
 		 }
 		});
 		btnCANCELARDetalleCliente.setBounds(134,314,90,21);
@@ -170,7 +172,7 @@ public class CrudClienteViewPart  extends ViewPart {
 		public void widgetSelected(SelectionEvent e) {
 				//TODO Action ButtonREGISTRARde la view CrudCliente
 				        
-      registrarAction ( "event" );
+	      registrarAction ( "event" );
 
 		 }
 		});
@@ -260,11 +262,11 @@ public class CrudClienteViewPart  extends ViewPart {
 
         lblUsuarioDatosdelacuenta.setFont(SWTResourceManager.getFont("Segoe UI",10,SWT.NORMAL));
 
-        lblContraseñaDatosdelacuenta = formToolkit.createLabel(groupDatosdelacuenta,"Contraseña",SWT.NONE);
-        lblContraseñaDatosdelacuenta.setForeground(SWTResourceManager.getColor(0, 0, 139)) ;
-        lblContraseñaDatosdelacuenta.setBounds(67,48,80,21);
+        lblContrasenaDatosdelacuenta = formToolkit.createLabel(groupDatosdelacuenta,"Contraseña",SWT.NONE);
+        lblContrasenaDatosdelacuenta.setForeground(SWTResourceManager.getColor(0, 0, 139)) ;
+        lblContrasenaDatosdelacuenta.setBounds(67,48,80,21);
 
-        lblContraseñaDatosdelacuenta.setFont(SWTResourceManager.getFont("Segoe UI",10,SWT.NORMAL));
+        lblContrasenaDatosdelacuenta.setFont(SWTResourceManager.getFont("Segoe UI",10,SWT.NORMAL));
 
 		textUsuarioDatosdelacuenta = formToolkit.createText(groupDatosdelacuenta, "New Text", SWT.NONE);
 		textUsuarioDatosdelacuenta.setText("");
@@ -272,11 +274,11 @@ public class CrudClienteViewPart  extends ViewPart {
 
 		textUsuarioDatosdelacuenta.setFont(SWTResourceManager.getFont("Segoe UI",10,SWT.NORMAL));
 
-		textContraseñaDatosdelacuenta = formToolkit.createText(groupDatosdelacuenta, "New Text", SWT.NONE);
-		textContraseñaDatosdelacuenta.setText("");
-		textContraseñaDatosdelacuenta.setBounds(212,49,180,21);
+		textContrasenaDatosdelacuenta = formToolkit.createText(groupDatosdelacuenta, "New Text", SWT.NONE);
+		textContrasenaDatosdelacuenta.setText("");
+		textContrasenaDatosdelacuenta.setBounds(212,49,180,21);
 
-		textContraseñaDatosdelacuenta.setFont(SWTResourceManager.getFont("Segoe UI",10,SWT.NORMAL));
+		textContrasenaDatosdelacuenta.setFont(SWTResourceManager.getFont("Segoe UI",10,SWT.NORMAL));
 
 		groupMaestroCliente = new Group(container, SWT.NONE);
 		groupMaestroCliente.setBounds(30,415,613,193);
@@ -301,34 +303,35 @@ public class CrudClienteViewPart  extends ViewPart {
 		         clienteViewModelSeleccionado  = (ClienteViewModel)e.item.getData();
 		  } 
           });
-		TableViewerColumn  tableViewerColumn17Identificacion = new TableViewerColumn(tableViewerCliente, SWT.NONE);
-		TableColumn tblclmn17Identificacion = tableViewerColumn17Identificacion.getColumn();
-		tblclmn17Identificacion.setWidth(100);
-		tblclmn17Identificacion .setText("identificacion");
+		TableViewerColumn  tableViewerColumn0Identificacion = new TableViewerColumn(tableViewerCliente, SWT.NONE);
+		TableColumn tblclmn0Identificacion = tableViewerColumn0Identificacion.getColumn();
+		tblclmn0Identificacion.setWidth(100);
+		tblclmn0Identificacion .setText("identificacion");
 
-		TableViewerColumn  tableViewerColumn18Nombre = new TableViewerColumn(tableViewerCliente, SWT.NONE);
-		TableColumn tblclmn18Nombre = tableViewerColumn18Nombre.getColumn();
-		tblclmn18Nombre.setWidth(100);
-		tblclmn18Nombre .setText("Nombre");
+		TableViewerColumn  tableViewerColumn1Nombre = new TableViewerColumn(tableViewerCliente, SWT.NONE);
+		TableColumn tblclmn1Nombre = tableViewerColumn1Nombre.getColumn();
+		tblclmn1Nombre.setWidth(100);
+		tblclmn1Nombre .setText("Nombre                                                  ");
 
-		TableViewerColumn  tableViewerColumn19Email = new TableViewerColumn(tableViewerCliente, SWT.NONE);
-		TableColumn tblclmn19Email = tableViewerColumn19Email.getColumn();
-		tblclmn19Email.setWidth(100);
-		tblclmn19Email .setText("Email");
+		TableViewerColumn  tableViewerColumn2Email = new TableViewerColumn(tableViewerCliente, SWT.NONE);
+		TableColumn tblclmn2Email = tableViewerColumn2Email.getColumn();
+		tblclmn2Email.setWidth(100);
+		tblclmn2Email .setText("Email                                                     ");
 
-		TableViewerColumn  tableViewerColumn20Edad = new TableViewerColumn(tableViewerCliente, SWT.NONE);
-		TableColumn tblclmn20Edad = tableViewerColumn20Edad.getColumn();
-		tblclmn20Edad.setWidth(100);
-		tblclmn20Edad .setText("Edad");
+		TableViewerColumn  tableViewerColumn3Edad = new TableViewerColumn(tableViewerCliente, SWT.NONE);
+		TableColumn tblclmn3Edad = tableViewerColumn3Edad.getColumn();
+		tblclmn3Edad.setWidth(100);
+		tblclmn3Edad .setText("Edad");
 
         try {
 	       initDataBindings();
-            }catch (Exception e) {
+          }catch (Exception e) {
         }
 
-   }      public void setFocus() {
-         // Set the focus
-    }
+      }
+     public void setFocus() {
+           // Set the focus
+     }
       protected DataBindingContext initDataBindings() {
 //
         DataBindingContext bindingContext = new DataBindingContext();
@@ -356,20 +359,20 @@ public class CrudClienteViewPart  extends ViewPart {
         IObservableValue contenedordatosdelacuentaUsuarioDatosdelacuentaObserveValue = EMFObservables.observeValue(contenedordatosdelacuentaViewModel,ContenedorcrudclienteviewmodelPackage.Literals.CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__USUARIO);
         bindingContext.bindValue(observeTextUsuarioDatosdelacuentaObserveWidget,contenedordatosdelacuentaUsuarioDatosdelacuentaObserveValue, null, null);
         //
-        IObservableValue observeTextContraseñaDatosdelacuentaObserveWidget = WidgetProperties.text(SWT.Modify).observe(textContraseñaDatosdelacuenta);
-        IObservableValue contenedordatosdelacuentaContraseñaDatosdelacuentaObserveValue = EMFObservables.observeValue(contenedordatosdelacuentaViewModel,ContenedorcrudclienteviewmodelPackage.Literals.CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__CONTRASEÑA);
-        bindingContext.bindValue(observeTextContraseñaDatosdelacuentaObserveWidget,contenedordatosdelacuentaContraseñaDatosdelacuentaObserveValue, null, null);
+        IObservableValue observeTextContrasenaDatosdelacuentaObserveWidget = WidgetProperties.text(SWT.Modify).observe(textContrasenaDatosdelacuenta);
+        IObservableValue contenedordatosdelacuentaContrasenaDatosdelacuentaObserveValue = EMFObservables.observeValue(contenedordatosdelacuentaViewModel,ContenedorcrudclienteviewmodelPackage.Literals.CONTENEDOR_DATOSDELACUENTA_VIEW_MODEL__CONTRASENIA);
+        bindingContext.bindValue(observeTextContrasenaDatosdelacuentaObserveWidget,contenedordatosdelacuentaContrasenaDatosdelacuentaObserveValue, null, null);
         //
-        ObservableListContentProvider listContentProvider5 = new ObservableListContentProvider();
-        IObservableMap[] observeMaps5= EMFObservables.observeMaps(listContentProvider5.getKnownElements(),
-        new EStructuralFeature[]{ContenedorcrudclienteviewmodelPackage.Literals.CLIENTE_VIEW_MODEL__IDENTIFICACION,ContenedorcrudclienteviewmodelPackage.Literals.CLIENTE_VIEW_MODEL__NOMBRE                                                  ,ContenedorcrudclienteviewmodelPackage.Literals.CLIENTE_VIEW_MODEL__EMAIL                                                     ,ContenedorcrudclienteviewmodelPackage.Literals.CLIENTE_VIEW_MODEL__EDAD});
-        tableViewerCliente.setLabelProvider(new ObservableMapLabelProvider(observeMaps5));
-        tableViewerCliente.setContentProvider(listContentProvider5);
+        ObservableListContentProvider listContentProvider0 = new ObservableListContentProvider();
+        IObservableMap[] observeMaps0= EMFObservables.observeMaps(listContentProvider0.getKnownElements(),
+        new EStructuralFeature[]{ContenedorcrudclienteviewmodelPackage.Literals.CLIENTE_VIEW_MODEL__IDENTIFICACION,ContenedorcrudclienteviewmodelPackage.Literals.CLIENTE_VIEW_MODEL__NOMBRE,ContenedorcrudclienteviewmodelPackage.Literals.CLIENTE_VIEW_MODEL__EMAIL,ContenedorcrudclienteviewmodelPackage.Literals.CLIENTE_VIEW_MODEL__EDAD});
+        tableViewerCliente.setLabelProvider(new ObservableMapLabelProvider(observeMaps0));
+        tableViewerCliente.setContentProvider(listContentProvider0);
 
         //
-        IObservableList observeList5= EMFObservables.observeList(Realm.getDefault(),contenedormaestroClienteViewModel,
-        ContenedorcrudclienteviewmodelPackage.Literals.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__LISTA_CLIENTE_VIEW_MODEL);
-        tableViewerCliente.setInput(observeList5);
+        IObservableList observeList0= EMFObservables.observeList(Realm.getDefault(),contenedormaestroClienteViewModel,
+        ContenedorcrudclienteviewmodelPackage.Literals.CONTENEDOR_MAESTRO_CLIENTE_VIEW_MODEL__LISTA_CLIENTE);
+        tableViewerCliente.setInput(observeList0);
             //
 
          return bindingContext;
@@ -434,7 +437,7 @@ String arreglo [][] = {{"1085445", "13565555", "1578665"},
     	  textEdadDatosPersonales.setText("");
     	  textCorreoElectronicoDatosPersonales.setText("");
     	  textUsuarioDatosdelacuenta.setText("");
-    	  textContraseñaDatosdelacuenta.setText("");
+    	  textContrasenaDatosdelacuenta.setText("");
       }
 
 }

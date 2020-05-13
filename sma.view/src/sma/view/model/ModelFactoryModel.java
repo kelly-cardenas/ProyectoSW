@@ -10,9 +10,9 @@ import sma.ui.viewmodels.contenedorcrudclienteviewmodel.*;
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.*;
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.*;
 import sma.ui.viewmodels.contenedorloginviewmodel.*;
-import sma.ui.viewmodels.contenedorescaneoviewmodel.*;
 import sma.ui.viewmodels.contenedorcontactarcmviewmodel.*;
 import sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.*;
+import sma.ui.viewmodels.contenedorescaneoviewmodel.*;
 
 
 
@@ -102,7 +102,8 @@ public class ModelFactoryModel {
       this.solicitudVisitaViewPart = solicitudVisitaViewPart ;
    }
 
-   ModelFactory modelFactory = smaFactory.eINSTANCE.createModelFactory();
+     private String estado = "NOINICIALIZADO";
+     ModelFactory modelFactory = smaFactory.eINSTANCE.createModelFactory();
 
    static String URL = "/test/src/model/model.sma";
                
@@ -135,74 +136,96 @@ public class ModelFactoryModel {
    public ContenedorCrudClienteViewModel getTheContenedorCrudClienteViewModel() {
      return getTheUI().getTheContenedorCrudClienteViewModel();
    }
-   public ContenedorDetalleClienteViewModel getTheContenedorDetalleClienteViewModel() {
+   public ContenedorDetalleClienteViewModel getTheCrudClientegetTheContenedorDetalleClienteViewModel() {
      return getTheContenedorCrudClienteViewModel().getTheContenedorDetalleClienteViewModel();
    }
-   public ContenedorDatosPersonalesViewModel getTheContenedorDatosPersonalesViewModel() {
-     return getTheContenedorDetalleClienteViewModel().getTheContenedorDatosPersonalesViewModel();
+   public ContenedorDatosPersonalesViewModel getTheCrudClientegetTheContenedorDatosPersonalesViewModel() {
+     return getTheCrudClientegetTheContenedorDetalleClienteViewModel().getTheContenedorDatosPersonalesViewModel();
    }
-   public ContenedorDatosdelacuentaViewModel getTheContenedorDatosdelacuentaViewModel() {
-     return getTheContenedorDetalleClienteViewModel().getTheContenedorDatosdelacuentaViewModel();
+   public ContenedorDatosdelacuentaViewModel getTheCrudClientegetTheContenedorDatosdelacuentaViewModel() {
+     return getTheCrudClientegetTheContenedorDetalleClienteViewModel().getTheContenedorDatosdelacuentaViewModel();
    }
-   public ContenedorMaestroClienteViewModel getTheContenedorMaestroClienteViewModel() {
+   public ContenedorMaestroClienteViewModel getTheCrudClientegetTheContenedorMaestroClienteViewModel() {
      return getTheContenedorCrudClienteViewModel().getTheContenedorMaestroClienteViewModel();
    }
    public ContenedorCRUDCMViewModel getTheContenedorCRUDCMViewModel() {
      return getTheUI().getTheContenedorCRUDCMViewModel();
    }
-   public ContenedorDetalleCMViewModel getTheContenedorDetalleCMViewModel() {
+   public ContenedorDetalleCMViewModel getTheCRUDCMgetTheContenedorDetalleCMViewModel() {
      return getTheContenedorCRUDCMViewModel().getTheContenedorDetalleCMViewModel();
    }
-   public ContenedorInformacionCMViewModel getTheContenedorInformacionCMViewModel() {
-     return getTheContenedorDetalleCMViewModel().getTheContenedorInformacionCMViewModel();
+   public ContenedorInformacionCMViewModel getTheCRUDCMgetTheContenedorInformacionCMViewModel() {
+     return getTheCRUDCMgetTheContenedorDetalleCMViewModel().getTheContenedorInformacionCMViewModel();
    }
-   public ContenedorUbicacionViewModel getTheContenedorUbicacionViewModel() {
-     return getTheContenedorDetalleCMViewModel().getTheContenedorUbicacionViewModel();
+   public ContenedorUbicacionViewModel getTheCRUDCMgetTheContenedorUbicacionViewModel() {
+     return getTheCRUDCMgetTheContenedorDetalleCMViewModel().getTheContenedorUbicacionViewModel();
    }
-   public ContenedorMaestroCMViewModel getTheContenedorMaestroCMViewModel() {
+   public ContenedorMaestroCMViewModel getTheCRUDCMgetTheContenedorMaestroCMViewModel() {
      return getTheContenedorCRUDCMViewModel().getTheContenedorMaestroCMViewModel();
    }
    public ContenedorRegistroVehiculoViewModel getTheContenedorRegistroVehiculoViewModel() {
      return getTheUI().getTheContenedorRegistroVehiculoViewModel();
    }
-   public ContenedorDetalleVehiculoViewModel getTheContenedorDetalleVehiculoViewModel() {
+   public ContenedorDetalleVehiculoViewModel getTheRegistroVehiculogetTheContenedorDetalleVehiculoViewModel() {
      return getTheContenedorRegistroVehiculoViewModel().getTheContenedorDetalleVehiculoViewModel();
    }
-   public ContenedorVehiculosRegistradosViewModel getTheContenedorVehiculosRegistradosViewModel() {
+   public ContenedorVehiculosRegistradosViewModel getTheRegistroVehiculogetTheContenedorVehiculosRegistradosViewModel() {
      return getTheContenedorRegistroVehiculoViewModel().getTheContenedorVehiculosRegistradosViewModel();
    }
    public ContenedorLoginViewModel getTheContenedorLoginViewModel() {
      return getTheUI().getTheContenedorLoginViewModel();
    }
-   public ContenedorDetalleLoginViewModel getTheContenedorDetalleLoginViewModel() {
+   public ContenedorDetalleLoginViewModel getTheLogingetTheContenedorDetalleLoginViewModel() {
      return getTheContenedorLoginViewModel().getTheContenedorDetalleLoginViewModel();
    }
    public ContenedorEscaneoViewModel getTheContenedorEscaneoViewModel() {
      return getTheUI().getTheContenedorEscaneoViewModel();
    }
-   public ContenedorSeleccionautoViewModel getTheContenedorSeleccionautoViewModel() {
+   public ContenedorSeleccionautoViewModel getTheEscaneogetTheContenedorSeleccionautoViewModel() {
      return getTheContenedorEscaneoViewModel().getTheContenedorSeleccionautoViewModel();
    }
-   public ContenedorFallasViewModel getTheContenedorFallasViewModel() {
-     return getTheContenedorEscaneoViewModel().getTheContenedorFallasViewModel();
+   public ContenedorInformacionEmisionGasesViewModel getTheEscaneogetTheContenedorInformacionEmisionGasesViewModel() {
+     return getTheContenedorEscaneoViewModel().getTheContenedorInformacionEmisionGasesViewModel();
    }
    public ContenedorContactarCmViewModel getTheContenedorContactarCmViewModel() {
      return getTheUI().getTheContenedorContactarCmViewModel();
    }
-   public ContenedorUbicacionactualViewModel getTheContenedorUbicacionactualViewModel() {
+   public ContenedorUbicacionactualViewModel getTheContactarCmgetTheContenedorUbicacionactualViewModel() {
      return getTheContenedorContactarCmViewModel().getTheContenedorUbicacionactualViewModel();
    }
-   public ContenedorCmrecomendadosViewModel getTheContenedorCmrecomendadosViewModel() {
+   public ContenedorCmrecomendadosViewModel getTheContactarCmgetTheContenedorCmrecomendadosViewModel() {
      return getTheContenedorContactarCmViewModel().getTheContenedorCmrecomendadosViewModel();
    }
    public ContenedorSolicitudVisitaViewModel getTheContenedorSolicitudVisitaViewModel() {
      return getTheUI().getTheContenedorSolicitudVisitaViewModel();
    }
-   public ContenedorDatosCmViewModel getTheContenedorDatosCmViewModel() {
+   public ContenedorDatosCmViewModel getTheSolicitudVisitagetTheContenedorDatosCmViewModel() {
      return getTheContenedorSolicitudVisitaViewModel().getTheContenedorDatosCmViewModel();
    }
-   public ContenedorBusquedaViewModel getTheContenedorBusquedaViewModel() {
+   public ContenedorBusquedaViewModel getTheSolicitudVisitagetTheContenedorBusquedaViewModel() {
      return getTheContenedorSolicitudVisitaViewModel().getTheContenedorBusquedaViewModel();
+   }
+   public void actualizarEstado(String evento) {
+	   if(this.estado.equals("NOINICIALIZADO")) {
+		   if(evento.equals("iniciar")) {
+			   this.estado = "DESACTUALIZADO";
+		   }
+	   }
+	   if(this.estado.equals("ACTUALIZADO")) {
+		   if(evento.equals("iniciar")) {
+			   this.estado = "DESACTUALIZADO";
+		   }
+	   }
+	   if(this.estado.equals("DESACTUALIZADO")) {
+		   if(evento.equals("actualizar")) {
+			   this.estado = "ACTUALIZADO";
+		   }
+	   }
+   }
+
+   public String getEstado() {
+	   // TODO Auto-generated method stub
+	   return estado;
    }
 
 }

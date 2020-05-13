@@ -75,10 +75,10 @@ public class ContenedorescaneoviewmodelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ContenedorescaneoviewmodelPackage.CONTENEDOR_FALLAS_VIEW_MODEL: {
-				ContenedorFallasViewModel contenedorFallasViewModel = (ContenedorFallasViewModel)theEObject;
-				T result = caseContenedorFallasViewModel(contenedorFallasViewModel);
-				if (result == null) result = caseViewModel(contenedorFallasViewModel);
+			case ContenedorescaneoviewmodelPackage.CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL: {
+				ContenedorInformacionEmisionGasesViewModel contenedorInformacionEmisionGasesViewModel = (ContenedorInformacionEmisionGasesViewModel)theEObject;
+				T result = caseContenedorInformacionEmisionGasesViewModel(contenedorInformacionEmisionGasesViewModel);
+				if (result == null) result = caseViewModel(contenedorInformacionEmisionGasesViewModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -86,12 +86,6 @@ public class ContenedorescaneoviewmodelSwitch<T> extends Switch<T> {
 				ContenedorSeleccionautoViewModel contenedorSeleccionautoViewModel = (ContenedorSeleccionautoViewModel)theEObject;
 				T result = caseContenedorSeleccionautoViewModel(contenedorSeleccionautoViewModel);
 				if (result == null) result = caseViewModel(contenedorSeleccionautoViewModel);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ContenedorescaneoviewmodelPackage.LISTA_FALLAS_VIEW_MODEL: {
-				ListaFallasViewModel listaFallasViewModel = (ListaFallasViewModel)theEObject;
-				T result = caseListaFallasViewModel(listaFallasViewModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -115,17 +109,17 @@ public class ContenedorescaneoviewmodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Contenedor Fallas View Model</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Contenedor Informacion Emision Gases View Model</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Contenedor Fallas View Model</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Contenedor Informacion Emision Gases View Model</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseContenedorFallasViewModel(ContenedorFallasViewModel object) {
+	public T caseContenedorInformacionEmisionGasesViewModel(ContenedorInformacionEmisionGasesViewModel object) {
 		return null;
 	}
 
@@ -141,21 +135,6 @@ public class ContenedorescaneoviewmodelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseContenedorSeleccionautoViewModel(ContenedorSeleccionautoViewModel object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Lista Fallas View Model</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Lista Fallas View Model</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseListaFallasViewModel(ListaFallasViewModel object) {
 		return null;
 	}
 

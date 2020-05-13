@@ -70,6 +70,9 @@
         <genFeatures createChild="false">
           <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/Automovil/tipoUso"/>
         </genFeatures>
+        <genFeatures createChild="false">
+          <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/Automovil/estadoEmisionGases"/>
+        </genFeatures>
         <genFeatures notify="false" createChild="false" propertySortChoices="true">
           <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//domain/Automovil/reparacionesHechas"/>
         </genFeatures>
@@ -217,7 +220,7 @@
         <genOperations>
           <ecoreOperation href="sma.ecore#//domain/Domain/escanearVehiculo"/>
           <genParameters>
-            <ecoreParameter href="sma.ecore#//domain/Domain/escanearVehiculo/placaVeh"/>
+            <ecoreParameter href="sma.ecore#//domain/Domain/escanearVehiculo/formulario"/>
           </genParameters>
         </genOperations>
         <genOperations>
@@ -364,10 +367,13 @@
             <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/automatizacionrevision/FallaMecanica/gravedad"/>
           </genFeatures>
           <genFeatures createChild="false">
-            <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/automatizacionrevision/FallaMecanica/origen"/>
+            <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/automatizacionrevision/FallaMecanica/descripcion"/>
           </genFeatures>
           <genFeatures createChild="false">
-            <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/automatizacionrevision/FallaMecanica/descripcion"/>
+            <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/automatizacionrevision/FallaMecanica/gasesNocivos"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/automatizacionrevision/FallaMecanica/gasesOfensivos"/>
           </genFeatures>
           <genFeatures property="None" notify="false" createChild="false">
             <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//domain/automatizacionrevision/FallaMecanica/theAutomovil"/>
@@ -384,6 +390,21 @@
           <genFeatures createChild="false">
             <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/automatizacionrevision/sensor/infoComp"/>
           </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/automatizacionrevision/sensor/indiceEmisionGases"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/automatizacionrevision/sensor/impacto"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/automatizacionrevision/sensor/indiceGasesOfensivos"/>
+          </genFeatures>
+          <genFeatures createChild="false">
+            <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//domain/automatizacionrevision/sensor/indiceGasesNocivos"/>
+          </genFeatures>
+          <genOperations>
+            <ecoreOperation href="sma.ecore#//domain/automatizacionrevision/sensor/ActualizarIndiceGases"/>
+          </genOperations>
         </genClasses>
       </nestedGenPackages>
     </nestedGenPackages>
@@ -419,13 +440,13 @@
           <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/UI/lstViewModels"/>
         </genFeatures>
         <genFeatures property="None" children="true" createChild="true">
-          <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/UI/theContenedorEscaneoViewModel"/>
-        </genFeatures>
-        <genFeatures property="None" children="true" createChild="true">
           <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/UI/theContenedorContactarCmViewModel"/>
         </genFeatures>
         <genFeatures property="None" children="true" createChild="true">
           <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/UI/theContenedorSolicitudVisitaViewModel"/>
+        </genFeatures>
+        <genFeatures property="None" children="true" createChild="true">
+          <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/UI/theContenedorEscaneoViewModel"/>
         </genFeatures>
         <genOperations>
           <ecoreOperation href="sma.ecore#//ui/UI/implementarModelo"/>
@@ -475,7 +496,7 @@
         <genOperations>
           <ecoreOperation href="sma.ecore#//ui/UI/escanearVehiculo"/>
           <genParameters>
-            <ecoreParameter href="sma.ecore#//ui/UI/escanearVehiculo/placaVeh"/>
+            <ecoreParameter href="sma.ecore#//ui/UI/escanearVehiculo/formulario"/>
           </genParameters>
         </genOperations>
         <genOperations>
@@ -501,6 +522,9 @@
           <genParameters>
             <ecoreParameter href="sma.ecore#//ui/UI/mostrarInfoCmSolicitudVisita/idCm"/>
           </genParameters>
+        </genOperations>
+        <genOperations>
+          <ecoreOperation href="sma.ecore#//ui/UI/hacerLogOut"/>
         </genOperations>
       </genClasses>
       <nestedGenPackages prefix="Viewmodels" disposableProviderFactory="true">
@@ -833,78 +857,9 @@
             <genOperations>
               <ecoreOperation href="sma.ecore#//ui/viewmodels/contenedorloginviewmodel/ContenedorLoginViewModel/implementarModelo"/>
             </genOperations>
-          </genClasses>
-        </nestedGenPackages>
-        <nestedGenPackages prefix="Contenedorescaneoviewmodel" disposableProviderFactory="true">
-          <ecorePackage href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel"/>
-          <genClasses>
-            <ecoreClass href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorEscaneoViewModel"/>
-            <genFeatures property="None" notify="false" createChild="false">
-              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorEscaneoViewModel/ownedByUI"/>
-            </genFeatures>
-            <genFeatures property="None" children="true" createChild="true">
-              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorEscaneoViewModel/theContenedorSeleccionautoViewModel"/>
-            </genFeatures>
-            <genFeatures property="None" children="true" createChild="true">
-              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorEscaneoViewModel/theContenedorFallasViewModel"/>
-            </genFeatures>
             <genOperations>
-              <ecoreOperation href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorEscaneoViewModel/upadateDialog"/>
-              <genParameters>
-                <ecoreParameter href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorEscaneoViewModel/upadateDialog/evento"/>
-              </genParameters>
+              <ecoreOperation href="sma.ecore#//ui/viewmodels/contenedorloginviewmodel/ContenedorLoginViewModel/hacerLogOut"/>
             </genOperations>
-            <genOperations>
-              <ecoreOperation href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorEscaneoViewModel/escanearVehiculo"/>
-            </genOperations>
-            <genOperations>
-              <ecoreOperation href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorEscaneoViewModel/implementarModelo"/>
-            </genOperations>
-            <genOperations>
-              <ecoreOperation href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorEscaneoViewModel/mostrarEstadoVehiculo"/>
-            </genOperations>
-          </genClasses>
-          <genClasses>
-            <ecoreClass href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorFallasViewModel"/>
-            <genFeatures property="None" notify="false" createChild="false">
-              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorFallasViewModel/ownedByContenedorEscaneoViewModel"/>
-            </genFeatures>
-            <genFeatures createChild="false">
-              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorFallasViewModel/numeroerrores"/>
-            </genFeatures>
-            <genFeatures createChild="false">
-              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorFallasViewModel/estadoveh"/>
-            </genFeatures>
-            <genFeatures property="None" children="true" createChild="true">
-              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorFallasViewModel/listaListaFallasViewModel"/>
-            </genFeatures>
-          </genClasses>
-          <genClasses>
-            <ecoreClass href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorSeleccionautoViewModel"/>
-            <genFeatures property="None" notify="false" createChild="false">
-              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorSeleccionautoViewModel/ownedByContenedorEscaneoViewModel"/>
-            </genFeatures>
-            <genFeatures createChild="false">
-              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorSeleccionautoViewModel/placavehiculo"/>
-            </genFeatures>
-          </genClasses>
-          <genClasses>
-            <ecoreClass href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ListaFallasViewModel"/>
-            <genFeatures property="None" notify="false" createChild="false">
-              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ListaFallasViewModel/ownedByContenedorFallasViewModel"/>
-            </genFeatures>
-            <genFeatures createChild="false">
-              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ListaFallasViewModel/gravedad"/>
-            </genFeatures>
-            <genFeatures createChild="false">
-              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ListaFallasViewModel/piesaaveriada"/>
-            </genFeatures>
-            <genFeatures createChild="false">
-              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ListaFallasViewModel/origen"/>
-            </genFeatures>
-            <genFeatures createChild="false">
-              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ListaFallasViewModel/descripcion"/>
-            </genFeatures>
           </genClasses>
         </nestedGenPackages>
         <nestedGenPackages prefix="Contenedorcontactarcmviewmodel" disposableProviderFactory="true">
@@ -1031,6 +986,57 @@
                 <ecoreParameter href="sma.ecore#//ui/viewmodels/contenedorsolicitudvisitaviewmodel/ContenedorSolicitudVisitaViewModel/mostrarInfoCmSolicitudVisita/idCm"/>
               </genParameters>
             </genOperations>
+          </genClasses>
+        </nestedGenPackages>
+        <nestedGenPackages prefix="Contenedorescaneoviewmodel" disposableProviderFactory="true">
+          <ecorePackage href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel"/>
+          <genClasses>
+            <ecoreClass href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorEscaneoViewModel"/>
+            <genFeatures property="None" notify="false" createChild="false">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorEscaneoViewModel/ownedByUI"/>
+            </genFeatures>
+            <genFeatures property="None" children="true" createChild="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorEscaneoViewModel/theContenedorSeleccionautoViewModel"/>
+            </genFeatures>
+            <genFeatures property="None" children="true" createChild="true">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorEscaneoViewModel/theContenedorInformacionEmisionGasesViewModel"/>
+            </genFeatures>
+            <genOperations>
+              <ecoreOperation href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorEscaneoViewModel/upadateDialog"/>
+              <genParameters>
+                <ecoreParameter href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorEscaneoViewModel/upadateDialog/evento"/>
+              </genParameters>
+            </genOperations>
+            <genOperations>
+              <ecoreOperation href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorEscaneoViewModel/implementarModelo"/>
+            </genOperations>
+            <genOperations>
+              <ecoreOperation href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorEscaneoViewModel/realizarEscaneo"/>
+            </genOperations>
+          </genClasses>
+          <genClasses>
+            <ecoreClass href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorInformacionEmisionGasesViewModel"/>
+            <genFeatures property="None" notify="false" createChild="false">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorInformacionEmisionGasesViewModel/ownedByContenedorEscaneoViewModel"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorInformacionEmisionGasesViewModel/gasesofensivos"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorInformacionEmisionGasesViewModel/gasesnocivos"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorInformacionEmisionGasesViewModel/estadovehiculo"/>
+            </genFeatures>
+          </genClasses>
+          <genClasses>
+            <ecoreClass href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorSeleccionautoViewModel"/>
+            <genFeatures property="None" notify="false" createChild="false">
+              <ecoreFeature xsi:type="ecore:EReference" href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorSeleccionautoViewModel/ownedByContenedorEscaneoViewModel"/>
+            </genFeatures>
+            <genFeatures createChild="false">
+              <ecoreFeature xsi:type="ecore:EAttribute" href="sma.ecore#//ui/viewmodels/contenedorescaneoviewmodel/ContenedorSeleccionautoViewModel/placavehiculo"/>
+            </genFeatures>
           </genClasses>
         </nestedGenPackages>
       </nestedGenPackages>

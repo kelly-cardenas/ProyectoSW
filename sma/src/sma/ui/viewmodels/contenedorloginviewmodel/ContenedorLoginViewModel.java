@@ -134,4 +134,12 @@ public interface ContenedorLoginViewModel extends EObject {
 	 */
 	void implementarModelo();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='//TODO hacerLogOut\n'"
+	 * @generated
+	 */
+	void hacerLogOut();
+
 } // ContenedorLoginViewModel

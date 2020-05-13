@@ -31,13 +31,13 @@ public interface ContenedorescaneoviewmodelFactory extends EFactory {
 	ContenedorEscaneoViewModel createContenedorEscaneoViewModel();
 
 	/**
-	 * Returns a new object of class '<em>Contenedor Fallas View Model</em>'.
+	 * Returns a new object of class '<em>Contenedor Informacion Emision Gases View Model</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Contenedor Fallas View Model</em>'.
+	 * @return a new object of class '<em>Contenedor Informacion Emision Gases View Model</em>'.
 	 * @generated
 	 */
-	ContenedorFallasViewModel createContenedorFallasViewModel();
+	ContenedorInformacionEmisionGasesViewModel createContenedorInformacionEmisionGasesViewModel();
 
 	/**
 	 * Returns a new object of class '<em>Contenedor Seleccionauto View Model</em>'.
@@ -47,15 +47,6 @@ public interface ContenedorescaneoviewmodelFactory extends EFactory {
 	 * @generated
 	 */
 	ContenedorSeleccionautoViewModel createContenedorSeleccionautoViewModel();
-
-	/**
-	 * Returns a new object of class '<em>Lista Fallas View Model</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Lista Fallas View Model</em>'.
-	 * @generated
-	 */
-	ListaFallasViewModel createListaFallasViewModel();
 
 	/**
 	 * Returns the package supported by this factory.

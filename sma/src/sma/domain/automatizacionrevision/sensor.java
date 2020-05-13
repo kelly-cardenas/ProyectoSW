@@ -18,6 +18,10 @@ import sma.domain.Automovil;
  *   <li>{@link sma.domain.automatizacionrevision.sensor#getOwnerBy <em>Owner By</em>}</li>
  *   <li>{@link sma.domain.automatizacionrevision.sensor#getId <em>Id</em>}</li>
  *   <li>{@link sma.domain.automatizacionrevision.sensor#getInfoComp <em>Info Comp</em>}</li>
+ *   <li>{@link sma.domain.automatizacionrevision.sensor#getIndiceEmisionGases <em>Indice Emision Gases</em>}</li>
+ *   <li>{@link sma.domain.automatizacionrevision.sensor#getImpacto <em>Impacto</em>}</li>
+ *   <li>{@link sma.domain.automatizacionrevision.sensor#getIndiceGasesOfensivos <em>Indice Gases Ofensivos</em>}</li>
+ *   <li>{@link sma.domain.automatizacionrevision.sensor#getIndiceGasesNocivos <em>Indice Gases Nocivos</em>}</li>
  * </ul>
  *
  * @see sma.domain.automatizacionrevision.AutomatizacionrevisionPackage#getsensor()
@@ -106,5 +110,121 @@ public interface sensor extends EObject {
 	 * @generated
 	 */
 	void setInfoComp(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Indice Emision Gases</b></em>' attribute.
+	 * The default value is <code>"0"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Indice Emision Gases</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Indice Emision Gases</em>' attribute.
+	 * @see #setIndiceEmisionGases(Integer)
+	 * @see sma.domain.automatizacionrevision.AutomatizacionrevisionPackage#getsensor_IndiceEmisionGases()
+	 * @model default="0" dataType="sma.EIntegerObject"
+	 * @generated
+	 */
+	Integer getIndiceEmisionGases();
+
+	/**
+	 * Sets the value of the '{@link sma.domain.automatizacionrevision.sensor#getIndiceEmisionGases <em>Indice Emision Gases</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Indice Emision Gases</em>' attribute.
+	 * @see #getIndiceEmisionGases()
+	 * @generated
+	 */
+	void setIndiceEmisionGases(Integer value);
+
+	/**
+	 * Returns the value of the '<em><b>Impacto</b></em>' attribute.
+	 * The default value is <code>"0"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Impacto</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Impacto</em>' attribute.
+	 * @see #setImpacto(Integer)
+	 * @see sma.domain.automatizacionrevision.AutomatizacionrevisionPackage#getsensor_Impacto()
+	 * @model default="0" dataType="sma.EIntegerObject"
+	 * @generated
+	 */
+	Integer getImpacto();
+
+	/**
+	 * Sets the value of the '{@link sma.domain.automatizacionrevision.sensor#getImpacto <em>Impacto</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Impacto</em>' attribute.
+	 * @see #getImpacto()
+	 * @generated
+	 */
+	void setImpacto(Integer value);
+
+	/**
+	 * Returns the value of the '<em><b>Indice Gases Ofensivos</b></em>' attribute.
+	 * The default value is <code>"0"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Indice Gases Ofensivos</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Indice Gases Ofensivos</em>' attribute.
+	 * @see #setIndiceGasesOfensivos(Integer)
+	 * @see sma.domain.automatizacionrevision.AutomatizacionrevisionPackage#getsensor_IndiceGasesOfensivos()
+	 * @model default="0" dataType="sma.EIntegerObject"
+	 * @generated
+	 */
+	Integer getIndiceGasesOfensivos();
+
+	/**
+	 * Sets the value of the '{@link sma.domain.automatizacionrevision.sensor#getIndiceGasesOfensivos <em>Indice Gases Ofensivos</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Indice Gases Ofensivos</em>' attribute.
+	 * @see #getIndiceGasesOfensivos()
+	 * @generated
+	 */
+	void setIndiceGasesOfensivos(Integer value);
+
+	/**
+	 * Returns the value of the '<em><b>Indice Gases Nocivos</b></em>' attribute.
+	 * The default value is <code>"0"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Indice Gases Nocivos</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Indice Gases Nocivos</em>' attribute.
+	 * @see #setIndiceGasesNocivos(Integer)
+	 * @see sma.domain.automatizacionrevision.AutomatizacionrevisionPackage#getsensor_IndiceGasesNocivos()
+	 * @model default="0" dataType="sma.EIntegerObject"
+	 * @generated
+	 */
+	Integer getIndiceGasesNocivos();
+
+	/**
+	 * Sets the value of the '{@link sma.domain.automatizacionrevision.sensor#getIndiceGasesNocivos <em>Indice Gases Nocivos</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Indice Gases Nocivos</em>' attribute.
+	 * @see #getIndiceGasesNocivos()
+	 * @generated
+	 */
+	void setIndiceGasesNocivos(Integer value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\tsetIndiceGasesNocivos((int)Math.random()*600+50);\r\n\t\tsetIndiceGasesOfensivos((int)Math.random()*600 + 50);'"
+	 * @generated
+	 */
+	void ActualizarIndiceGases();
 
 } // sensor

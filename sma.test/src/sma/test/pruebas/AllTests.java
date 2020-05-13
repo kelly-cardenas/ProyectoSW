@@ -12,7 +12,8 @@ import sma.smaFactory;
 @SuiteClasses({ 
 	RegistrosTest.class,
 	RegistroVehiculoTest.class,
-	GestionDeVisitaTest.class})
+	GestionDeVisitaTest.class,
+	LogOutTest.class})
 public class AllTests {
 	
 	static ModelFactory modelFactory;

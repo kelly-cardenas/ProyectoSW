@@ -26,6 +26,7 @@ import sma.domain.reparacionvehiculo.Reparacion;
  *   <li>{@link sma.domain.Automovil#getModelo <em>Modelo</em>}</li>
  *   <li>{@link sma.domain.Automovil#getReferencia <em>Referencia</em>}</li>
  *   <li>{@link sma.domain.Automovil#getTipoUso <em>Tipo Uso</em>}</li>
+ *   <li>{@link sma.domain.Automovil#getEstadoEmisionGases <em>Estado Emision Gases</em>}</li>
  *   <li>{@link sma.domain.Automovil#getReparacionesHechas <em>Reparaciones Hechas</em>}</li>
  *   <li>{@link sma.domain.Automovil#getSensor <em>Sensor</em>}</li>
  *   <li>{@link sma.domain.Automovil#getPropietario <em>Propietario</em>}</li>
@@ -200,6 +201,32 @@ public interface Automovil extends EObject {
 	void setTipoUso(String value);
 
 	/**
+	 * Returns the value of the '<em><b>Estado Emision Gases</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Estado Emision Gases</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Estado Emision Gases</em>' attribute.
+	 * @see #setEstadoEmisionGases(String)
+	 * @see sma.domain.DomainPackage#getAutomovil_EstadoEmisionGases()
+	 * @model dataType="sma.String"
+	 * @generated
+	 */
+	String getEstadoEmisionGases();
+
+	/**
+	 * Sets the value of the '{@link sma.domain.Automovil#getEstadoEmisionGases <em>Estado Emision Gases</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Estado Emision Gases</em>' attribute.
+	 * @see #getEstadoEmisionGases()
+	 * @generated
+	 */
+	void setEstadoEmisionGases(String value);
+
+	/**
 	 * Returns the value of the '<em><b>Reparaciones Hechas</b></em>' reference list.
 	 * The list contents are of type {@link sma.domain.reparacionvehiculo.Reparacion}.
 	 * It is bidirectional and its opposite is '{@link sma.domain.reparacionvehiculo.Reparacion#getTheAutomovil <em>The Automovil</em>}'.
@@ -294,9 +321,9 @@ public interface Automovil extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='//TODO asignarFallas'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='getSensor().ActualizarIndiceGases();\r\n\t\t\r\n\t\tif (getSensor().getIndiceGasesNocivos() &lt; 200 &amp;&amp; getSensor().getIndiceGasesOfensivos() &lt; 200) {\r\n\t\t\tsetEstadoEmisionGases(\"optimo\");\r\n\t\t}\r\n\t\t\r\n\t\tif ((getSensor().getIndiceGasesNocivos() &gt; 200\r\n\t\t\t&amp;&amp; getSensor().getIndiceGasesNocivos() &lt; 400)\r\n\t\t\t||( getSensor().getIndiceGasesOfensivos()&gt; 200\r\n\t\t\t&amp;&amp; getSensor().getIndiceGasesOfensivos() &lt; 400)){\r\n\t\t\tsetEstadoEmisionGases(\"Fuera De rango\");\r\n\t\t}\r\n\t\t\r\n\t\tif (getSensor().getIndiceGasesNocivos() &gt; 400 || \r\n\t\t\t\tgetSensor().getIndiceGasesOfensivos() &gt; 400) {\r\n\t\t\tsetEstadoEmisionGases(\"Critico\");\r\n\t\t}\r\n\t\t\t\t\r\n\t\t\t\treturn null;'"
 	 * @generated
 	 */
-	void hacerEscaneo();
+	FallaMecanica hacerEscaneo();
 
 } // Automovil

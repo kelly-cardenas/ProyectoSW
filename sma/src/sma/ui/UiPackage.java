@@ -147,22 +147,13 @@ public interface UiPackage extends EPackage {
 	int UI__LST_VIEW_MODELS = 8;
 
 	/**
-	 * The feature id for the '<em><b>The Contenedor Escaneo View Model</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UI__THE_CONTENEDOR_ESCANEO_VIEW_MODEL = 9;
-
-	/**
 	 * The feature id for the '<em><b>The Contenedor Contactar Cm View Model</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UI__THE_CONTENEDOR_CONTACTAR_CM_VIEW_MODEL = 10;
+	int UI__THE_CONTENEDOR_CONTACTAR_CM_VIEW_MODEL = 9;
 
 	/**
 	 * The feature id for the '<em><b>The Contenedor Solicitud Visita View Model</b></em>' containment reference.
@@ -171,7 +162,16 @@ public interface UiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UI__THE_CONTENEDOR_SOLICITUD_VISITA_VIEW_MODEL = 11;
+	int UI__THE_CONTENEDOR_SOLICITUD_VISITA_VIEW_MODEL = 10;
+
+	/**
+	 * The feature id for the '<em><b>The Contenedor Escaneo View Model</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UI__THE_CONTENEDOR_ESCANEO_VIEW_MODEL = 11;
 
 	/**
 	 * The number of structural features of the '<em>UI</em>' class.
@@ -293,17 +293,6 @@ public interface UiPackage extends EPackage {
 	EReference getUI_LstViewModels();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link sma.ui.UI#getTheContenedorEscaneoViewModel <em>The Contenedor Escaneo View Model</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>The Contenedor Escaneo View Model</em>'.
-	 * @see sma.ui.UI#getTheContenedorEscaneoViewModel()
-	 * @see #getUI()
-	 * @generated
-	 */
-	EReference getUI_TheContenedorEscaneoViewModel();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link sma.ui.UI#getTheContenedorContactarCmViewModel <em>The Contenedor Contactar Cm View Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -324,6 +313,17 @@ public interface UiPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getUI_TheContenedorSolicitudVisitaViewModel();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link sma.ui.UI#getTheContenedorEscaneoViewModel <em>The Contenedor Escaneo View Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>The Contenedor Escaneo View Model</em>'.
+	 * @see sma.ui.UI#getTheContenedorEscaneoViewModel()
+	 * @see #getUI()
+	 * @generated
+	 */
+	EReference getUI_TheContenedorEscaneoViewModel();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -430,14 +430,6 @@ public interface UiPackage extends EPackage {
 		EReference UI__LST_VIEW_MODELS = eINSTANCE.getUI_LstViewModels();
 
 		/**
-		 * The meta object literal for the '<em><b>The Contenedor Escaneo View Model</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference UI__THE_CONTENEDOR_ESCANEO_VIEW_MODEL = eINSTANCE.getUI_TheContenedorEscaneoViewModel();
-
-		/**
 		 * The meta object literal for the '<em><b>The Contenedor Contactar Cm View Model</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -452,6 +444,14 @@ public interface UiPackage extends EPackage {
 		 * @generated
 		 */
 		EReference UI__THE_CONTENEDOR_SOLICITUD_VISITA_VIEW_MODEL = eINSTANCE.getUI_TheContenedorSolicitudVisitaViewModel();
+
+		/**
+		 * The meta object literal for the '<em><b>The Contenedor Escaneo View Model</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference UI__THE_CONTENEDOR_ESCANEO_VIEW_MODEL = eINSTANCE.getUI_TheContenedorEscaneoViewModel();
 
 	}
 

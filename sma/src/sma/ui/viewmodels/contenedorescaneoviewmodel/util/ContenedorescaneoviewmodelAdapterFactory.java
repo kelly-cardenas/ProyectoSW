@@ -74,16 +74,12 @@ public class ContenedorescaneoviewmodelAdapterFactory extends AdapterFactoryImpl
 				return createContenedorEscaneoViewModelAdapter();
 			}
 			@Override
-			public Adapter caseContenedorFallasViewModel(ContenedorFallasViewModel object) {
-				return createContenedorFallasViewModelAdapter();
+			public Adapter caseContenedorInformacionEmisionGasesViewModel(ContenedorInformacionEmisionGasesViewModel object) {
+				return createContenedorInformacionEmisionGasesViewModelAdapter();
 			}
 			@Override
 			public Adapter caseContenedorSeleccionautoViewModel(ContenedorSeleccionautoViewModel object) {
 				return createContenedorSeleccionautoViewModelAdapter();
-			}
-			@Override
-			public Adapter caseListaFallasViewModel(ListaFallasViewModel object) {
-				return createListaFallasViewModelAdapter();
 			}
 			@Override
 			public Adapter caseViewModel(ViewModel object) {
@@ -124,16 +120,16 @@ public class ContenedorescaneoviewmodelAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorFallasViewModel <em>Contenedor Fallas View Model</em>}'.
+	 * Creates a new adapter for an object of class '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorInformacionEmisionGasesViewModel <em>Contenedor Informacion Emision Gases View Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorFallasViewModel
+	 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorInformacionEmisionGasesViewModel
 	 * @generated
 	 */
-	public Adapter createContenedorFallasViewModelAdapter() {
+	public Adapter createContenedorInformacionEmisionGasesViewModelAdapter() {
 		return null;
 	}
 
@@ -148,20 +144,6 @@ public class ContenedorescaneoviewmodelAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createContenedorSeleccionautoViewModelAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.ListaFallasViewModel <em>Lista Fallas View Model</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.ListaFallasViewModel
-	 * @generated
-	 */
-	public Adapter createListaFallasViewModelAdapter() {
 		return null;
 	}
 

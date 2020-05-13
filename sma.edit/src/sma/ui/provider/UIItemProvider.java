@@ -190,9 +190,9 @@ public class UIItemProvider
 			childrenFeatures.add(UiPackage.Literals.UI__THE_CONTENEDOR_CRUDCM_VIEW_MODEL);
 			childrenFeatures.add(UiPackage.Literals.UI__THE_CONTENEDOR_REGISTRO_VEHICULO_VIEW_MODEL);
 			childrenFeatures.add(UiPackage.Literals.UI__THE_CONTENEDOR_LOGIN_VIEW_MODEL);
-			childrenFeatures.add(UiPackage.Literals.UI__THE_CONTENEDOR_ESCANEO_VIEW_MODEL);
 			childrenFeatures.add(UiPackage.Literals.UI__THE_CONTENEDOR_CONTACTAR_CM_VIEW_MODEL);
 			childrenFeatures.add(UiPackage.Literals.UI__THE_CONTENEDOR_SOLICITUD_VISITA_VIEW_MODEL);
+			childrenFeatures.add(UiPackage.Literals.UI__THE_CONTENEDOR_ESCANEO_VIEW_MODEL);
 		}
 		return childrenFeatures;
 	}
@@ -256,9 +256,9 @@ public class UIItemProvider
 			case UiPackage.UI__THE_CONTENEDOR_CRUDCM_VIEW_MODEL:
 			case UiPackage.UI__THE_CONTENEDOR_REGISTRO_VEHICULO_VIEW_MODEL:
 			case UiPackage.UI__THE_CONTENEDOR_LOGIN_VIEW_MODEL:
-			case UiPackage.UI__THE_CONTENEDOR_ESCANEO_VIEW_MODEL:
 			case UiPackage.UI__THE_CONTENEDOR_CONTACTAR_CM_VIEW_MODEL:
 			case UiPackage.UI__THE_CONTENEDOR_SOLICITUD_VISITA_VIEW_MODEL:
+			case UiPackage.UI__THE_CONTENEDOR_ESCANEO_VIEW_MODEL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -298,11 +298,6 @@ public class UIItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(UiPackage.Literals.UI__THE_CONTENEDOR_ESCANEO_VIEW_MODEL,
-				 ContenedorescaneoviewmodelFactory.eINSTANCE.createContenedorEscaneoViewModel()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(UiPackage.Literals.UI__THE_CONTENEDOR_CONTACTAR_CM_VIEW_MODEL,
 				 ContenedorcontactarcmviewmodelFactory.eINSTANCE.createContenedorContactarCmViewModel()));
 
@@ -310,6 +305,11 @@ public class UIItemProvider
 			(createChildParameter
 				(UiPackage.Literals.UI__THE_CONTENEDOR_SOLICITUD_VISITA_VIEW_MODEL,
 				 ContenedorsolicitudvisitaviewmodelFactory.eINSTANCE.createContenedorSolicitudVisitaViewModel()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(UiPackage.Literals.UI__THE_CONTENEDOR_ESCANEO_VIEW_MODEL,
+				 ContenedorescaneoviewmodelFactory.eINSTANCE.createContenedorEscaneoViewModel()));
 	}
 
 	/**

@@ -234,6 +234,16 @@ public class ContenedorLoginViewModelImpl extends EObjectImpl implements Contene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public void hacerLogOut() {
+		
+		getOwnedByUI().hacerLogOut();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {

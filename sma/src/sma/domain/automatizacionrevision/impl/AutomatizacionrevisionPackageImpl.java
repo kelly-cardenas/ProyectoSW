@@ -139,9 +139,9 @@ public class AutomatizacionrevisionPackageImpl extends EPackageImpl implements A
 		ContenedorcrudcmviewmodelPackageImpl theContenedorcrudcmviewmodelPackage = (ContenedorcrudcmviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorcrudcmviewmodelPackage.eNS_URI) instanceof ContenedorcrudcmviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorcrudcmviewmodelPackage.eNS_URI) : ContenedorcrudcmviewmodelPackage.eINSTANCE);
 		ContenedorregistrovehiculoviewmodelPackageImpl theContenedorregistrovehiculoviewmodelPackage = (ContenedorregistrovehiculoviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorregistrovehiculoviewmodelPackage.eNS_URI) instanceof ContenedorregistrovehiculoviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorregistrovehiculoviewmodelPackage.eNS_URI) : ContenedorregistrovehiculoviewmodelPackage.eINSTANCE);
 		ContenedorloginviewmodelPackageImpl theContenedorloginviewmodelPackage = (ContenedorloginviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorloginviewmodelPackage.eNS_URI) instanceof ContenedorloginviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorloginviewmodelPackage.eNS_URI) : ContenedorloginviewmodelPackage.eINSTANCE);
-		ContenedorescaneoviewmodelPackageImpl theContenedorescaneoviewmodelPackage = (ContenedorescaneoviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorescaneoviewmodelPackage.eNS_URI) instanceof ContenedorescaneoviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorescaneoviewmodelPackage.eNS_URI) : ContenedorescaneoviewmodelPackage.eINSTANCE);
 		ContenedorcontactarcmviewmodelPackageImpl theContenedorcontactarcmviewmodelPackage = (ContenedorcontactarcmviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorcontactarcmviewmodelPackage.eNS_URI) instanceof ContenedorcontactarcmviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorcontactarcmviewmodelPackage.eNS_URI) : ContenedorcontactarcmviewmodelPackage.eINSTANCE);
 		ContenedorsolicitudvisitaviewmodelPackageImpl theContenedorsolicitudvisitaviewmodelPackage = (ContenedorsolicitudvisitaviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorsolicitudvisitaviewmodelPackage.eNS_URI) instanceof ContenedorsolicitudvisitaviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorsolicitudvisitaviewmodelPackage.eNS_URI) : ContenedorsolicitudvisitaviewmodelPackage.eINSTANCE);
+		ContenedorescaneoviewmodelPackageImpl theContenedorescaneoviewmodelPackage = (ContenedorescaneoviewmodelPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ContenedorescaneoviewmodelPackage.eNS_URI) instanceof ContenedorescaneoviewmodelPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ContenedorescaneoviewmodelPackage.eNS_URI) : ContenedorescaneoviewmodelPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theAutomatizacionrevisionPackage.createPackageContents();
@@ -154,9 +154,9 @@ public class AutomatizacionrevisionPackageImpl extends EPackageImpl implements A
 		theContenedorcrudcmviewmodelPackage.createPackageContents();
 		theContenedorregistrovehiculoviewmodelPackage.createPackageContents();
 		theContenedorloginviewmodelPackage.createPackageContents();
-		theContenedorescaneoviewmodelPackage.createPackageContents();
 		theContenedorcontactarcmviewmodelPackage.createPackageContents();
 		theContenedorsolicitudvisitaviewmodelPackage.createPackageContents();
+		theContenedorescaneoviewmodelPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theAutomatizacionrevisionPackage.initializePackageContents();
@@ -169,9 +169,9 @@ public class AutomatizacionrevisionPackageImpl extends EPackageImpl implements A
 		theContenedorcrudcmviewmodelPackage.initializePackageContents();
 		theContenedorregistrovehiculoviewmodelPackage.initializePackageContents();
 		theContenedorloginviewmodelPackage.initializePackageContents();
-		theContenedorescaneoviewmodelPackage.initializePackageContents();
 		theContenedorcontactarcmviewmodelPackage.initializePackageContents();
 		theContenedorsolicitudvisitaviewmodelPackage.initializePackageContents();
+		theContenedorescaneoviewmodelPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theAutomatizacionrevisionPackage.freeze();
@@ -214,7 +214,7 @@ public class AutomatizacionrevisionPackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getFallaMecanica_Origen() {
+	public EAttribute getFallaMecanica_Descripcion() {
 		return (EAttribute)fallaMecanicaEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -223,7 +223,7 @@ public class AutomatizacionrevisionPackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getFallaMecanica_Descripcion() {
+	public EAttribute getFallaMecanica_GasesNocivos() {
 		return (EAttribute)fallaMecanicaEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -232,8 +232,17 @@ public class AutomatizacionrevisionPackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getFallaMecanica_GasesOfensivos() {
+		return (EAttribute)fallaMecanicaEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getFallaMecanica_TheAutomovil() {
-		return (EReference)fallaMecanicaEClass.getEStructuralFeatures().get(4);
+		return (EReference)fallaMecanicaEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -277,6 +286,42 @@ public class AutomatizacionrevisionPackageImpl extends EPackageImpl implements A
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getsensor_IndiceEmisionGases() {
+		return (EAttribute)sensorEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getsensor_Impacto() {
+		return (EAttribute)sensorEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getsensor_IndiceGasesOfensivos() {
+		return (EAttribute)sensorEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getsensor_IndiceGasesNocivos() {
+		return (EAttribute)sensorEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public AutomatizacionrevisionFactory getAutomatizacionrevisionFactory() {
 		return (AutomatizacionrevisionFactory)getEFactoryInstance();
 	}
@@ -303,14 +348,19 @@ public class AutomatizacionrevisionPackageImpl extends EPackageImpl implements A
 		fallaMecanicaEClass = createEClass(FALLA_MECANICA);
 		createEAttribute(fallaMecanicaEClass, FALLA_MECANICA__PIESA_AVERIADA);
 		createEAttribute(fallaMecanicaEClass, FALLA_MECANICA__GRAVEDAD);
-		createEAttribute(fallaMecanicaEClass, FALLA_MECANICA__ORIGEN);
 		createEAttribute(fallaMecanicaEClass, FALLA_MECANICA__DESCRIPCION);
+		createEAttribute(fallaMecanicaEClass, FALLA_MECANICA__GASES_NOCIVOS);
+		createEAttribute(fallaMecanicaEClass, FALLA_MECANICA__GASES_OFENSIVOS);
 		createEReference(fallaMecanicaEClass, FALLA_MECANICA__THE_AUTOMOVIL);
 
 		sensorEClass = createEClass(SENSOR);
 		createEReference(sensorEClass, SENSOR__OWNER_BY);
 		createEAttribute(sensorEClass, SENSOR__ID);
 		createEAttribute(sensorEClass, SENSOR__INFO_COMP);
+		createEAttribute(sensorEClass, SENSOR__INDICE_EMISION_GASES);
+		createEAttribute(sensorEClass, SENSOR__IMPACTO);
+		createEAttribute(sensorEClass, SENSOR__INDICE_GASES_OFENSIVOS);
+		createEAttribute(sensorEClass, SENSOR__INDICE_GASES_NOCIVOS);
 	}
 
 	/**
@@ -350,14 +400,21 @@ public class AutomatizacionrevisionPackageImpl extends EPackageImpl implements A
 		initEClass(fallaMecanicaEClass, FallaMecanica.class, "FallaMecanica", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFallaMecanica_PiesaAveriada(), thesmaPackage.getString(), "piesaAveriada", " ", 0, 1, FallaMecanica.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFallaMecanica_Gravedad(), thesmaPackage.getString(), "gravedad", " ", 0, 1, FallaMecanica.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFallaMecanica_Origen(), thesmaPackage.getString(), "origen", " ", 0, 1, FallaMecanica.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFallaMecanica_Descripcion(), thesmaPackage.getString(), "descripcion", " ", 0, 1, FallaMecanica.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFallaMecanica_GasesNocivos(), thesmaPackage.getString(), "gasesNocivos", null, 0, 1, FallaMecanica.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFallaMecanica_GasesOfensivos(), thesmaPackage.getString(), "gasesOfensivos", null, 0, 1, FallaMecanica.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFallaMecanica_TheAutomovil(), theDomainPackage.getAutomovil(), theDomainPackage.getAutomovil_ListaDeFallas(), "theAutomovil", null, 0, 1, FallaMecanica.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(sensorEClass, sensor.class, "sensor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getsensor_OwnerBy(), theDomainPackage.getAutomovil(), theDomainPackage.getAutomovil_Sensor(), "ownerBy", null, 0, 1, sensor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getsensor_Id(), thesmaPackage.getString(), "id", " ", 0, 1, sensor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getsensor_InfoComp(), thesmaPackage.getString(), "infoComp", " ", 0, 1, sensor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getsensor_IndiceEmisionGases(), thesmaPackage.getEIntegerObject(), "indiceEmisionGases", "0", 0, 1, sensor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getsensor_Impacto(), thesmaPackage.getEIntegerObject(), "impacto", "0", 0, 1, sensor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getsensor_IndiceGasesOfensivos(), thesmaPackage.getEIntegerObject(), "indiceGasesOfensivos", "0", 0, 1, sensor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getsensor_IndiceGasesNocivos(), thesmaPackage.getEIntegerObject(), "indiceGasesNocivos", "0", 0, 1, sensor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		addEOperation(sensorEClass, null, "ActualizarIndiceGases", 0, 1, IS_UNIQUE, IS_ORDERED);
 	}
 
 } //AutomatizacionrevisionPackageImpl

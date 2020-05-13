@@ -44,6 +44,7 @@ import sma.domain.reparacionvehiculo.ReparacionvehiculoPackage;
  *   <li>{@link sma.domain.impl.AutomovilImpl#getModelo <em>Modelo</em>}</li>
  *   <li>{@link sma.domain.impl.AutomovilImpl#getReferencia <em>Referencia</em>}</li>
  *   <li>{@link sma.domain.impl.AutomovilImpl#getTipoUso <em>Tipo Uso</em>}</li>
+ *   <li>{@link sma.domain.impl.AutomovilImpl#getEstadoEmisionGases <em>Estado Emision Gases</em>}</li>
  *   <li>{@link sma.domain.impl.AutomovilImpl#getReparacionesHechas <em>Reparaciones Hechas</em>}</li>
  *   <li>{@link sma.domain.impl.AutomovilImpl#getSensor <em>Sensor</em>}</li>
  *   <li>{@link sma.domain.impl.AutomovilImpl#getPropietario <em>Propietario</em>}</li>
@@ -172,6 +173,26 @@ public class AutomovilImpl extends EObjectImpl implements Automovil {
 	 * @ordered
 	 */
 	protected String tipoUso = TIPO_USO_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getEstadoEmisionGases() <em>Estado Emision Gases</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEstadoEmisionGases()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ESTADO_EMISION_GASES_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getEstadoEmisionGases() <em>Estado Emision Gases</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEstadoEmisionGases()
+	 * @generated
+	 * @ordered
+	 */
+	protected String estadoEmisionGases = ESTADO_EMISION_GASES_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getReparacionesHechas() <em>Reparaciones Hechas</em>}' reference list.
@@ -363,6 +384,27 @@ public class AutomovilImpl extends EObjectImpl implements Automovil {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getEstadoEmisionGases() {
+		return estadoEmisionGases;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEstadoEmisionGases(String newEstadoEmisionGases) {
+		String oldEstadoEmisionGases = estadoEmisionGases;
+		estadoEmisionGases = newEstadoEmisionGases;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, DomainPackage.AUTOMOVIL__ESTADO_EMISION_GASES, oldEstadoEmisionGases, estadoEmisionGases));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<Reparacion> getReparacionesHechas() {
 		if (reparacionesHechas == null) {
 			reparacionesHechas = new EObjectWithInverseResolvingEList<Reparacion>(Reparacion.class, this, DomainPackage.AUTOMOVIL__REPARACIONES_HECHAS, ReparacionvehiculoPackage.REPARACION__THE_AUTOMOVIL);
@@ -490,8 +532,26 @@ public class AutomovilImpl extends EObjectImpl implements Automovil {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void hacerEscaneo() {
-		//TODO asignarFallas
+	public FallaMecanica hacerEscaneo() {
+		getSensor().ActualizarIndiceGases();
+				
+				if (getSensor().getIndiceGasesNocivos() < 200 && getSensor().getIndiceGasesOfensivos() < 200) {
+					setEstadoEmisionGases("optimo");
+				}
+				
+				if ((getSensor().getIndiceGasesNocivos() > 200
+					&& getSensor().getIndiceGasesNocivos() < 400)
+					||( getSensor().getIndiceGasesOfensivos()> 200
+					&& getSensor().getIndiceGasesOfensivos() < 400)){
+					setEstadoEmisionGases("Fuera De rango");
+				}
+				
+				if (getSensor().getIndiceGasesNocivos() > 400 || 
+						getSensor().getIndiceGasesOfensivos() > 400) {
+					setEstadoEmisionGases("Critico");
+				}
+						
+						return null;
 	}
 
 	/**
@@ -559,6 +619,8 @@ public class AutomovilImpl extends EObjectImpl implements Automovil {
 				return getReferencia();
 			case DomainPackage.AUTOMOVIL__TIPO_USO:
 				return getTipoUso();
+			case DomainPackage.AUTOMOVIL__ESTADO_EMISION_GASES:
+				return getEstadoEmisionGases();
 			case DomainPackage.AUTOMOVIL__REPARACIONES_HECHAS:
 				return getReparacionesHechas();
 			case DomainPackage.AUTOMOVIL__SENSOR:
@@ -598,6 +660,9 @@ public class AutomovilImpl extends EObjectImpl implements Automovil {
 				return;
 			case DomainPackage.AUTOMOVIL__TIPO_USO:
 				setTipoUso((String)newValue);
+				return;
+			case DomainPackage.AUTOMOVIL__ESTADO_EMISION_GASES:
+				setEstadoEmisionGases((String)newValue);
 				return;
 			case DomainPackage.AUTOMOVIL__REPARACIONES_HECHAS:
 				getReparacionesHechas().clear();
@@ -643,6 +708,9 @@ public class AutomovilImpl extends EObjectImpl implements Automovil {
 			case DomainPackage.AUTOMOVIL__TIPO_USO:
 				setTipoUso(TIPO_USO_EDEFAULT);
 				return;
+			case DomainPackage.AUTOMOVIL__ESTADO_EMISION_GASES:
+				setEstadoEmisionGases(ESTADO_EMISION_GASES_EDEFAULT);
+				return;
 			case DomainPackage.AUTOMOVIL__REPARACIONES_HECHAS:
 				getReparacionesHechas().clear();
 				return;
@@ -679,6 +747,8 @@ public class AutomovilImpl extends EObjectImpl implements Automovil {
 				return REFERENCIA_EDEFAULT == null ? referencia != null : !REFERENCIA_EDEFAULT.equals(referencia);
 			case DomainPackage.AUTOMOVIL__TIPO_USO:
 				return TIPO_USO_EDEFAULT == null ? tipoUso != null : !TIPO_USO_EDEFAULT.equals(tipoUso);
+			case DomainPackage.AUTOMOVIL__ESTADO_EMISION_GASES:
+				return ESTADO_EMISION_GASES_EDEFAULT == null ? estadoEmisionGases != null : !ESTADO_EMISION_GASES_EDEFAULT.equals(estadoEmisionGases);
 			case DomainPackage.AUTOMOVIL__REPARACIONES_HECHAS:
 				return reparacionesHechas != null && !reparacionesHechas.isEmpty();
 			case DomainPackage.AUTOMOVIL__SENSOR:
@@ -713,6 +783,8 @@ public class AutomovilImpl extends EObjectImpl implements Automovil {
 		result.append(referencia);
 		result.append(", tipoUso: ");
 		result.append(tipoUso);
+		result.append(", estadoEmisionGases: ");
+		result.append(estadoEmisionGases);
 		result.append(')');
 		return result.toString();
 	}

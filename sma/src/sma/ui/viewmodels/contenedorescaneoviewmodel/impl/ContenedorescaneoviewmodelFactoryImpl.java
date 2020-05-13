@@ -57,9 +57,8 @@ public class ContenedorescaneoviewmodelFactoryImpl extends EFactoryImpl implemen
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case ContenedorescaneoviewmodelPackage.CONTENEDOR_ESCANEO_VIEW_MODEL: return createContenedorEscaneoViewModel();
-			case ContenedorescaneoviewmodelPackage.CONTENEDOR_FALLAS_VIEW_MODEL: return createContenedorFallasViewModel();
+			case ContenedorescaneoviewmodelPackage.CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL: return createContenedorInformacionEmisionGasesViewModel();
 			case ContenedorescaneoviewmodelPackage.CONTENEDOR_SELECCIONAUTO_VIEW_MODEL: return createContenedorSeleccionautoViewModel();
-			case ContenedorescaneoviewmodelPackage.LISTA_FALLAS_VIEW_MODEL: return createListaFallasViewModel();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -80,9 +79,9 @@ public class ContenedorescaneoviewmodelFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ContenedorFallasViewModel createContenedorFallasViewModel() {
-		ContenedorFallasViewModelImpl contenedorFallasViewModel = new ContenedorFallasViewModelImpl();
-		return contenedorFallasViewModel;
+	public ContenedorInformacionEmisionGasesViewModel createContenedorInformacionEmisionGasesViewModel() {
+		ContenedorInformacionEmisionGasesViewModelImpl contenedorInformacionEmisionGasesViewModel = new ContenedorInformacionEmisionGasesViewModelImpl();
+		return contenedorInformacionEmisionGasesViewModel;
 	}
 
 	/**
@@ -93,16 +92,6 @@ public class ContenedorescaneoviewmodelFactoryImpl extends EFactoryImpl implemen
 	public ContenedorSeleccionautoViewModel createContenedorSeleccionautoViewModel() {
 		ContenedorSeleccionautoViewModelImpl contenedorSeleccionautoViewModel = new ContenedorSeleccionautoViewModelImpl();
 		return contenedorSeleccionautoViewModel;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ListaFallasViewModel createListaFallasViewModel() {
-		ListaFallasViewModelImpl listaFallasViewModel = new ListaFallasViewModelImpl();
-		return listaFallasViewModel;
 	}
 
 	/**

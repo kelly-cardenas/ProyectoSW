@@ -11,9 +11,9 @@ import sma.ui.viewmodels.contenedorcrudclienteviewmodel.*;
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.*;
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.*;
 import sma.ui.viewmodels.contenedorloginviewmodel.*;
-import sma.ui.viewmodels.contenedorescaneoviewmodel.*;
 import sma.ui.viewmodels.contenedorcontactarcmviewmodel.*;
 import sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.*;
+import sma.ui.viewmodels.contenedorescaneoviewmodel.*;
 
 import sma.view.model.ModelFactoryModel;
 import org.eclipse.wb.swt.SWTResourceManager;
@@ -81,7 +81,8 @@ public class LoginViewPart  extends ViewPart {
 		public Text textUsuarioDetalleLogin; 
 		public Label lblContraseniaDetalleLogin; 
 		public Text textContraseniaDetalleLogin; 
-		public Button btnINGRESARDetalleLogin;
+		public Button btnLoginDetalleLogin;
+ 		public Button btnLogoutDetalleLogin;
  		private final FormToolkit formToolkit = new FormToolkit(Display.getDefault());
 
 		public LoginViewPart() {
@@ -99,11 +100,13 @@ public class LoginViewPart  extends ViewPart {
          public void cargarContenedores(){
             mfm 								= ModelFactoryModel.getInstance(); 
             contenedorloginViewModel = mfm.getTheContenedorLoginViewModel();
-            contenedordetalleLoginViewModel = mfm.getTheContenedorDetalleLoginViewModel();
+            contenedordetalleLoginViewModel = mfm.getTheLogingetTheContenedorDetalleLoginViewModel();
       
-}
+         }
       public void updateData(){
-           mfm.cargar();
+           if(!mfm.getEstado().equals("ACTUALIZADO")) {
+               mfm.cargar();
+           };
            cargarContenedores();
            try {
                 initDataBindings();
@@ -151,28 +154,43 @@ public class LoginViewPart  extends ViewPart {
 
 		textContraseniaDetalleLogin.setFont(SWTResourceManager.getFont("Segoe UI",10,SWT.NORMAL));
 
-		btnINGRESARDetalleLogin = formToolkit.createButton(groupDetalleLogin,"INGRESAR",SWT.NONE);
-		btnINGRESARDetalleLogin.addSelectionListener(new SelectionAdapter() {
+		btnLoginDetalleLogin = formToolkit.createButton(groupDetalleLogin,"Login",SWT.NONE);
+		btnLoginDetalleLogin.addSelectionListener(new SelectionAdapter() {
 
 		public void widgetSelected(SelectionEvent e) {
-				//TODO Action ButtonINGRESARde la view Login
+				//TODO Action ButtonLoginde la view Login
 				        
-      ingresarAction ( "event" );
+	      loginAction ( "event" );
 
 		 }
 		});
-		btnINGRESARDetalleLogin.setBounds(151,126,64,21);
+		btnLoginDetalleLogin.setBounds(79,126,40,21);
 
-		btnINGRESARDetalleLogin.setFont(SWTResourceManager.getFont("Segoe UI",10,SWT.NORMAL));
+		btnLoginDetalleLogin.setFont(SWTResourceManager.getFont("Segoe UI",10,SWT.NORMAL));
+
+		btnLogoutDetalleLogin = formToolkit.createButton(groupDetalleLogin,"Logout",SWT.NONE);
+		btnLogoutDetalleLogin.addSelectionListener(new SelectionAdapter() {
+
+		public void widgetSelected(SelectionEvent e) {
+				//TODO Action ButtonLogoutde la view Login
+				        
+	      logoutAction ( "event" );
+
+		 }
+		});
+		btnLogoutDetalleLogin.setBounds(235,126,56,21);
+
+		btnLogoutDetalleLogin.setFont(SWTResourceManager.getFont("Segoe UI",10,SWT.NORMAL));
 
         try {
 	       initDataBindings();
-            }catch (Exception e) {
+          }catch (Exception e) {
         }
 
-   }      public void setFocus() {
-         // Set the focus
-    }
+      }
+     public void setFocus() {
+           // Set the focus
+     }
       protected DataBindingContext initDataBindings() {
 //
         DataBindingContext bindingContext = new DataBindingContext();
@@ -188,32 +206,24 @@ public class LoginViewPart  extends ViewPart {
          return bindingContext;
 //
       }
-      public void ingresarAction ( String  event ){
-contenedordetalleLoginViewModel.setUsuario(textUsuarioDetalleLogin.getText());
-    	  contenedordetalleLoginViewModel.setContrasenia(textContraseniaDetalleLogin.getText());
-    	  
-    	  if (contenedorloginViewModel.prueba()) {
-			System.out.println("Usuario "+mfm.getTheUI().getIdLogueado()+ " logueado");
-		}
-    	  else
-    	  {
-    		  System.out.println("No hay registros con ese usuario o contraseña");
-    	  }
-    	  mfm.salvar();
-    	  limpiarCampos();
+      public void loginAction ( String  event ){
+           //semantics
+
+      }
+
+      public void logoutAction ( String  event ){
+           //semantics
+
       }
 
       public void constructorContenedorLoginViewPart (){
-             //semantics
+                          //semantics
+
       }
 
       public void syncModel (){
-             //semantics
-      }
+                          //semantics
 
-      public void limpiarCampos (){
-             textUsuarioDetalleLogin.setText("");
-    	  textContraseniaDetalleLogin.setText("");
       }
 
 }

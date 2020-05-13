@@ -139,19 +139,6 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated sma -->
       <factory
-            uri="http:///sma/ui/viewmodels/contenedorescaneoviewmodel.ecore"
-            class="sma.ui.viewmodels.contenedorescaneoviewmodel.provider.ContenedorescaneoviewmodelItemProviderAdapterFactory"
-            supportedTypes=
-              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
-               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
-               org.eclipse.emf.edit.provider.ITreeItemContentProvider
-               org.eclipse.emf.edit.provider.IItemLabelProvider
-               org.eclipse.emf.edit.provider.IItemPropertySource"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated sma -->
-      <factory
             uri="http:///sma/ui/viewmodels/contenedorcontactarcmviewmodel.ecore"
             class="sma.ui.viewmodels.contenedorcontactarcmviewmodel.provider.ContenedorcontactarcmviewmodelItemProviderAdapterFactory"
             supportedTypes=
@@ -167,6 +154,19 @@
       <factory
             uri="http:///sma/ui/viewmodels/contenedorsolicitudvisitaviewmodel.ecore"
             class="sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.provider.ContenedorsolicitudvisitaviewmodelItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated sma -->
+      <factory
+            uri="http:///sma/ui/viewmodels/contenedorescaneoviewmodel.ecore"
+            class="sma.ui.viewmodels.contenedorescaneoviewmodel.provider.ContenedorescaneoviewmodelItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

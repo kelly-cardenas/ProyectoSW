@@ -120,13 +120,22 @@ public interface DomainPackage extends EPackage {
 	int AUTOMOVIL__TIPO_USO = 5;
 
 	/**
+	 * The feature id for the '<em><b>Estado Emision Gases</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTOMOVIL__ESTADO_EMISION_GASES = 6;
+
+	/**
 	 * The feature id for the '<em><b>Reparaciones Hechas</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AUTOMOVIL__REPARACIONES_HECHAS = 6;
+	int AUTOMOVIL__REPARACIONES_HECHAS = 7;
 
 	/**
 	 * The feature id for the '<em><b>Sensor</b></em>' containment reference.
@@ -135,7 +144,7 @@ public interface DomainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTOMOVIL__SENSOR = 7;
+	int AUTOMOVIL__SENSOR = 8;
 
 	/**
 	 * The feature id for the '<em><b>Propietario</b></em>' reference.
@@ -144,7 +153,7 @@ public interface DomainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTOMOVIL__PROPIETARIO = 8;
+	int AUTOMOVIL__PROPIETARIO = 9;
 
 	/**
 	 * The feature id for the '<em><b>Lista De Fallas</b></em>' containment reference list.
@@ -153,7 +162,7 @@ public interface DomainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTOMOVIL__LISTA_DE_FALLAS = 9;
+	int AUTOMOVIL__LISTA_DE_FALLAS = 10;
 
 	/**
 	 * The number of structural features of the '<em>Automovil</em>' class.
@@ -162,7 +171,7 @@ public interface DomainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUTOMOVIL_FEATURE_COUNT = 10;
+	int AUTOMOVIL_FEATURE_COUNT = 11;
 
 	/**
 	 * The meta object id for the '{@link sma.domain.impl.CentroMantImpl <em>Centro Mant</em>}' class.
@@ -695,6 +704,17 @@ public interface DomainPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAutomovil_TipoUso();
+
+	/**
+	 * Returns the meta object for the attribute '{@link sma.domain.Automovil#getEstadoEmisionGases <em>Estado Emision Gases</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Estado Emision Gases</em>'.
+	 * @see sma.domain.Automovil#getEstadoEmisionGases()
+	 * @see #getAutomovil()
+	 * @generated
+	 */
+	EAttribute getAutomovil_EstadoEmisionGases();
 
 	/**
 	 * Returns the meta object for the reference list '{@link sma.domain.Automovil#getReparacionesHechas <em>Reparaciones Hechas</em>}'.
@@ -1309,6 +1329,14 @@ public interface DomainPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute AUTOMOVIL__TIPO_USO = eINSTANCE.getAutomovil_TipoUso();
+
+		/**
+		 * The meta object literal for the '<em><b>Estado Emision Gases</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute AUTOMOVIL__ESTADO_EMISION_GASES = eINSTANCE.getAutomovil_EstadoEmisionGases();
 
 		/**
 		 * The meta object literal for the '<em><b>Reparaciones Hechas</b></em>' reference list feature.

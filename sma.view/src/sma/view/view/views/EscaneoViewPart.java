@@ -11,9 +11,9 @@ import sma.ui.viewmodels.contenedorcrudclienteviewmodel.*;
 import sma.ui.viewmodels.contenedorcrudcmviewmodel.*;
 import sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.*;
 import sma.ui.viewmodels.contenedorloginviewmodel.*;
-import sma.ui.viewmodels.contenedorescaneoviewmodel.*;
 import sma.ui.viewmodels.contenedorcontactarcmviewmodel.*;
 import sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.*;
+import sma.ui.viewmodels.contenedorescaneoviewmodel.*;
 
 import sma.view.model.ModelFactoryModel;
 import org.eclipse.wb.swt.SWTResourceManager;
@@ -80,15 +80,14 @@ public class EscaneoViewPart  extends ViewPart {
 		public Label lblVehiculoSeleccionauto; 
 		public Button btnESCANEARSeleccionauto;
  		public Text textPlacaVehiculoSeleccionauto; 
-		public Group groupFallas; 
-		ContenedorFallasViewModel   contenedorfallasViewModel;
-		public Label lblFallasFallas; 
-		public Text textNumeroerroresFallas; 
-		public Label lblEstadoFallas; 
-		public Text textEstadoVehFallas; 
-		public Table tableListaFallas;
- 		public TableViewer tableViewerListaFallas;
- 		ListaFallasViewModel   listaFallasViewModelSeleccionado; 
+		public Group groupInformacionEmisionGases; 
+		ContenedorInformacionEmisionGasesViewModel   contenedorinformacionEmisionGasesViewModel;
+		public Text textGasesOfensivosInformacionEmisionGases; 
+		public Label lblGasesnocivosInformacionEmisionGases; 
+		public Text textGasesNocivosInformacionEmisionGases; 
+		public Label lblGasesofensivosInformacionEmisionGases; 
+		public Label lblEvaluaciongeneralemisionesInformacionEmisionGases; 
+		public Text textEstadoVehiculoInformacionEmisionGases; 
 		private final FormToolkit formToolkit = new FormToolkit(Display.getDefault());
 
 		public EscaneoViewPart() {
@@ -106,12 +105,14 @@ public class EscaneoViewPart  extends ViewPart {
          public void cargarContenedores(){
             mfm 								= ModelFactoryModel.getInstance(); 
             contenedorescaneoViewModel = mfm.getTheContenedorEscaneoViewModel();
-            contenedorseleccionautoViewModel = mfm.getTheContenedorSeleccionautoViewModel();
-            contenedorfallasViewModel = mfm.getTheContenedorFallasViewModel();
+            contenedorseleccionautoViewModel = mfm.getTheEscaneogetTheContenedorSeleccionautoViewModel();
+            contenedorinformacionEmisionGasesViewModel = mfm.getTheEscaneogetTheContenedorInformacionEmisionGasesViewModel();
       
-}
+         }
       public void updateData(){
-           mfm.cargar();
+           if(!mfm.getEstado().equals("ACTUALIZADO")) {
+               mfm.cargar();
+           };
            cargarContenedores();
            try {
                 initDataBindings();
@@ -124,7 +125,7 @@ public class EscaneoViewPart  extends ViewPart {
 		sc.setContent(container);
 		sc.setExpandHorizontal(true);
 		sc.setExpandVertical(true);
-		sc.setMinSize(container.computeSize(529, 421));
+		sc.setMinSize(container.computeSize(529, 337));
 		formToolkit.paintBordersFor(container);
 
 		groupSeleccionauto = new Group(container, SWT.NONE);
@@ -147,7 +148,7 @@ public class EscaneoViewPart  extends ViewPart {
 		public void widgetSelected(SelectionEvent e) {
 				//TODO Action ButtonESCANEARde la view Escaneo
 				        
-      eSCANEARAction ( "event" );
+	      eSCANEARAction ( "event" );
 
 		 }
 		});
@@ -161,81 +162,59 @@ public class EscaneoViewPart  extends ViewPart {
 
 		textPlacaVehiculoSeleccionauto.setFont(SWTResourceManager.getFont("Segoe UI",10,SWT.NORMAL));
 
-		groupFallas = new Group(container, SWT.NONE);
-		groupFallas.setBounds(18,163,481,217);
-		groupFallas.setText("fallas");
-		groupFallas.setFont(SWTResourceManager.getFont("Segoe UI",10,SWT.NORMAL));
+		groupInformacionEmisionGases = new Group(container, SWT.NONE);
+		groupInformacionEmisionGases.setBounds(18,163,481,145);
+		groupInformacionEmisionGases.setText("Informacion Emision Gases");
+		groupInformacionEmisionGases.setFont(SWTResourceManager.getFont("Segoe UI",10,SWT.NORMAL));
 
-		formToolkit.adapt(groupFallas);
-		formToolkit.paintBordersFor(groupFallas);
+		formToolkit.adapt(groupInformacionEmisionGases);
+		formToolkit.paintBordersFor(groupInformacionEmisionGases);
 
-        lblFallasFallas = formToolkit.createLabel(groupFallas,"Fallas:",SWT.NONE);
-        lblFallasFallas.setForeground(SWTResourceManager.getColor(0, 0, 139)) ;
-        lblFallasFallas.setBounds(21,31,35,21);
+		textGasesOfensivosInformacionEmisionGases = formToolkit.createText(groupInformacionEmisionGases, "New Text", SWT.NONE);
+		textGasesOfensivosInformacionEmisionGases.setText("");
+		textGasesOfensivosInformacionEmisionGases.setBounds(379,31,37,21);
 
-        lblFallasFallas.setFont(SWTResourceManager.getFont("Segoe UI",10,SWT.NORMAL));
+		textGasesOfensivosInformacionEmisionGases.setFont(SWTResourceManager.getFont("Segoe UI",10,SWT.NORMAL));
 
-		textNumeroerroresFallas = formToolkit.createText(groupFallas, "New Text", SWT.NONE);
-		textNumeroerroresFallas.setText("");
-		textNumeroerroresFallas.setBounds(79,32,37,21);
+        lblGasesnocivosInformacionEmisionGases = formToolkit.createLabel(groupInformacionEmisionGases,"gases nocivos",SWT.NONE);
+        lblGasesnocivosInformacionEmisionGases.setForeground(SWTResourceManager.getColor(0, 0, 139)) ;
+        lblGasesnocivosInformacionEmisionGases.setBounds(19,30,85,21);
 
-		textNumeroerroresFallas.setFont(SWTResourceManager.getFont("Segoe UI",10,SWT.NORMAL));
+        lblGasesnocivosInformacionEmisionGases.setFont(SWTResourceManager.getFont("Segoe UI",10,SWT.NORMAL));
 
-        lblEstadoFallas = formToolkit.createLabel(groupFallas,"Estado",SWT.NONE);
-        lblEstadoFallas.setForeground(SWTResourceManager.getColor(0, 0, 139)) ;
-        lblEstadoFallas.setBounds(247,31,45,21);
+		textGasesNocivosInformacionEmisionGases = formToolkit.createText(groupInformacionEmisionGases, "New Text", SWT.NONE);
+		textGasesNocivosInformacionEmisionGases.setText("");
+		textGasesNocivosInformacionEmisionGases.setBounds(139,31,37,21);
 
-        lblEstadoFallas.setFont(SWTResourceManager.getFont("Segoe UI",10,SWT.NORMAL));
+		textGasesNocivosInformacionEmisionGases.setFont(SWTResourceManager.getFont("Segoe UI",10,SWT.NORMAL));
 
-		textEstadoVehFallas = formToolkit.createText(groupFallas, "New Text", SWT.NONE);
-		textEstadoVehFallas.setText("");
-		textEstadoVehFallas.setBounds(307,32,109,21);
+        lblGasesofensivosInformacionEmisionGases = formToolkit.createLabel(groupInformacionEmisionGases,"Gases ofensivos",SWT.NONE);
+        lblGasesofensivosInformacionEmisionGases.setForeground(SWTResourceManager.getColor(0, 0, 139)) ;
+        lblGasesofensivosInformacionEmisionGases.setBounds(247,30,120,21);
 
-		textEstadoVehFallas.setFont(SWTResourceManager.getFont("Segoe UI",10,SWT.NORMAL));
+        lblGasesofensivosInformacionEmisionGases.setFont(SWTResourceManager.getFont("Segoe UI",10,SWT.NORMAL));
 
-		tableViewerListaFallas = new TableViewer(groupFallas, SWT.BORDER | SWT.FULL_SELECTION);
-		tableListaFallas = tableViewerListaFallas.getTable();
-		tableListaFallas.setLinesVisible(true);
-		tableListaFallas.setHeaderVisible(true);
-		tableListaFallas.setBounds(7,66,457,121);
-		tableListaFallas.setFont(SWTResourceManager.getFont("Segoe UI",10,SWT.NORMAL));
+        lblEvaluaciongeneralemisionesInformacionEmisionGases = formToolkit.createLabel(groupInformacionEmisionGases,"Evaluacion general emisiones",SWT.NONE);
+        lblEvaluaciongeneralemisionesInformacionEmisionGases.setForeground(SWTResourceManager.getColor(0, 0, 139)) ;
+        lblEvaluaciongeneralemisionesInformacionEmisionGases.setBounds(79,78,157,21);
 
-		formToolkit.paintBordersFor(tableListaFallas);
+        lblEvaluaciongeneralemisionesInformacionEmisionGases.setFont(SWTResourceManager.getFont("Segoe UI",10,SWT.NORMAL));
 
-		tableListaFallas.addSelectionListener(new SelectionAdapter(){
-		    public void widgetSelected(SelectionEvent e) {
-		    //TODO ActionTable ViewtableListaFallasde la viewEscaneo
-		         listaFallasViewModelSeleccionado  = (ListaFallasViewModel)e.item.getData();
-		  } 
-          });
-		TableViewerColumn  tableViewerColumn27Gravedad = new TableViewerColumn(tableViewerListaFallas, SWT.NONE);
-		TableColumn tblclmn27Gravedad = tableViewerColumn27Gravedad.getColumn();
-		tblclmn27Gravedad.setWidth(100);
-		tblclmn27Gravedad .setText("gravedad");
+		textEstadoVehiculoInformacionEmisionGases = formToolkit.createText(groupInformacionEmisionGases, "New Text", SWT.NONE);
+		textEstadoVehiculoInformacionEmisionGases.setText("");
+		textEstadoVehiculoInformacionEmisionGases.setBounds(260,79,112,21);
 
-		TableViewerColumn  tableViewerColumn28PiesaAveriada = new TableViewerColumn(tableViewerListaFallas, SWT.NONE);
-		TableColumn tblclmn28PiesaAveriada = tableViewerColumn28PiesaAveriada.getColumn();
-		tblclmn28PiesaAveriada.setWidth(100);
-		tblclmn28PiesaAveriada .setText("piesaAveriada");
-
-		TableViewerColumn  tableViewerColumn29Origen = new TableViewerColumn(tableViewerListaFallas, SWT.NONE);
-		TableColumn tblclmn29Origen = tableViewerColumn29Origen.getColumn();
-		tblclmn29Origen.setWidth(100);
-		tblclmn29Origen .setText("origen");
-
-		TableViewerColumn  tableViewerColumn30Descripcion = new TableViewerColumn(tableViewerListaFallas, SWT.NONE);
-		TableColumn tblclmn30Descripcion = tableViewerColumn30Descripcion.getColumn();
-		tblclmn30Descripcion.setWidth(100);
-		tblclmn30Descripcion .setText("descripcion");
+		textEstadoVehiculoInformacionEmisionGases.setFont(SWTResourceManager.getFont("Segoe UI",10,SWT.NORMAL));
 
         try {
 	       initDataBindings();
-            }catch (Exception e) {
+          }catch (Exception e) {
         }
 
-   }      public void setFocus() {
-         // Set the focus
-    }
+      }
+     public void setFocus() {
+           // Set the focus
+     }
       protected DataBindingContext initDataBindings() {
 //
         DataBindingContext bindingContext = new DataBindingContext();
@@ -243,42 +222,33 @@ public class EscaneoViewPart  extends ViewPart {
         IObservableValue contenedorseleccionautoPlacaVehiculoSeleccionautoObserveValue = EMFObservables.observeValue(contenedorseleccionautoViewModel,ContenedorescaneoviewmodelPackage.Literals.CONTENEDOR_SELECCIONAUTO_VIEW_MODEL__PLACAVEHICULO);
         bindingContext.bindValue(observeTextPlacaVehiculoSeleccionautoObserveWidget,contenedorseleccionautoPlacaVehiculoSeleccionautoObserveValue, null, null);
         //
-        IObservableValue observeTextNumeroerroresFallasObserveWidget = WidgetProperties.text(SWT.Modify).observe(textNumeroerroresFallas);
-        IObservableValue contenedorfallasNumeroerroresFallasObserveValue = EMFObservables.observeValue(contenedorfallasViewModel,ContenedorescaneoviewmodelPackage.Literals.CONTENEDOR_FALLAS_VIEW_MODEL__NUMEROERRORES);
-        bindingContext.bindValue(observeTextNumeroerroresFallasObserveWidget,contenedorfallasNumeroerroresFallasObserveValue, null, null);
+        IObservableValue observeTextGasesOfensivosInformacionEmisionGasesObserveWidget = WidgetProperties.text(SWT.Modify).observe(textGasesOfensivosInformacionEmisionGases);
+        IObservableValue contenedorinformacionEmisionGasesGasesOfensivosInformacionEmisionGasesObserveValue = EMFObservables.observeValue(contenedorinformacionEmisionGasesViewModel,ContenedorescaneoviewmodelPackage.Literals.CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL__GASESOFENSIVOS);
+        bindingContext.bindValue(observeTextGasesOfensivosInformacionEmisionGasesObserveWidget,contenedorinformacionEmisionGasesGasesOfensivosInformacionEmisionGasesObserveValue, null, null);
         //
-        IObservableValue observeTextEstadoVehFallasObserveWidget = WidgetProperties.text(SWT.Modify).observe(textEstadoVehFallas);
-        IObservableValue contenedorfallasEstadoVehFallasObserveValue = EMFObservables.observeValue(contenedorfallasViewModel,ContenedorescaneoviewmodelPackage.Literals.CONTENEDOR_FALLAS_VIEW_MODEL__ESTADOVEH);
-        bindingContext.bindValue(observeTextEstadoVehFallasObserveWidget,contenedorfallasEstadoVehFallasObserveValue, null, null);
+        IObservableValue observeTextGasesNocivosInformacionEmisionGasesObserveWidget = WidgetProperties.text(SWT.Modify).observe(textGasesNocivosInformacionEmisionGases);
+        IObservableValue contenedorinformacionEmisionGasesGasesNocivosInformacionEmisionGasesObserveValue = EMFObservables.observeValue(contenedorinformacionEmisionGasesViewModel,ContenedorescaneoviewmodelPackage.Literals.CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL__GASESNOCIVOS);
+        bindingContext.bindValue(observeTextGasesNocivosInformacionEmisionGasesObserveWidget,contenedorinformacionEmisionGasesGasesNocivosInformacionEmisionGasesObserveValue, null, null);
         //
-        ObservableListContentProvider listContentProvider8 = new ObservableListContentProvider();
-        IObservableMap[] observeMaps8= EMFObservables.observeMaps(listContentProvider8.getKnownElements(),
-        new EStructuralFeature[]{ContenedorescaneoviewmodelPackage.Literals.LISTA_FALLAS_VIEW_MODEL__GRAVEDAD,ContenedorescaneoviewmodelPackage.Literals.LISTA_FALLAS_VIEW_MODEL__PIESAAVERIADA,ContenedorescaneoviewmodelPackage.Literals.LISTA_FALLAS_VIEW_MODEL__ORIGEN,ContenedorescaneoviewmodelPackage.Literals.LISTA_FALLAS_VIEW_MODEL__DESCRIPCION});
-        tableViewerListaFallas.setLabelProvider(new ObservableMapLabelProvider(observeMaps8));
-        tableViewerListaFallas.setContentProvider(listContentProvider8);
-
+        IObservableValue observeTextEstadoVehiculoInformacionEmisionGasesObserveWidget = WidgetProperties.text(SWT.Modify).observe(textEstadoVehiculoInformacionEmisionGases);
+        IObservableValue contenedorinformacionEmisionGasesEstadoVehiculoInformacionEmisionGasesObserveValue = EMFObservables.observeValue(contenedorinformacionEmisionGasesViewModel,ContenedorescaneoviewmodelPackage.Literals.CONTENEDOR_INFORMACION_EMISION_GASES_VIEW_MODEL__ESTADOVEHICULO);
+        bindingContext.bindValue(observeTextEstadoVehiculoInformacionEmisionGasesObserveWidget,contenedorinformacionEmisionGasesEstadoVehiculoInformacionEmisionGasesObserveValue, null, null);
         //
-        IObservableList observeList8= EMFObservables.observeList(Realm.getDefault(),contenedorfallasViewModel,
-        ContenedorescaneoviewmodelPackage.Literals.CONTENEDOR_FALLAS_VIEW_MODEL__LISTA_LISTA_FALLAS_VIEW_MODEL);
-        tableViewerListaFallas.setInput(observeList8);
-            //
 
          return bindingContext;
 //
       }
       public void eSCANEARAction ( String  event ){
 contenedorseleccionautoViewModel.setPlacavehiculo(textPlacaVehiculoSeleccionauto.getText());
-    	  contenedorescaneoViewModel.escanearVehiculo();
-    	  
-    	  contenedorescaneoViewModel.mostrarEstadoVehiculo();
+		contenedorescaneoViewModel.realizarEscaneo();
       }
 
       public void constructorContenedorEscaneoViewPart (){
-             //semantics
+             // semantics
       }
 
       public void syncModel (){
-             //semantics
+             // semantics
       }
 
 }

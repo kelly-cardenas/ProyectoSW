@@ -44,9 +44,9 @@ import sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.ContenedorSolicitudV
  *   <li>{@link sma.ui.UI#getTheContenedorRegistroVehiculoViewModel <em>The Contenedor Registro Vehiculo View Model</em>}</li>
  *   <li>{@link sma.ui.UI#getTheContenedorLoginViewModel <em>The Contenedor Login View Model</em>}</li>
  *   <li>{@link sma.ui.UI#getLstViewModels <em>Lst View Models</em>}</li>
- *   <li>{@link sma.ui.UI#getTheContenedorEscaneoViewModel <em>The Contenedor Escaneo View Model</em>}</li>
  *   <li>{@link sma.ui.UI#getTheContenedorContactarCmViewModel <em>The Contenedor Contactar Cm View Model</em>}</li>
  *   <li>{@link sma.ui.UI#getTheContenedorSolicitudVisitaViewModel <em>The Contenedor Solicitud Visita View Model</em>}</li>
+ *   <li>{@link sma.ui.UI#getTheContenedorEscaneoViewModel <em>The Contenedor Escaneo View Model</em>}</li>
  * </ul>
  *
  * @see sma.ui.UiPackage#getUI()
@@ -293,34 +293,6 @@ public interface UI extends EObject {
 	EList<ViewModel> getLstViewModels();
 
 	/**
-	 * Returns the value of the '<em><b>The Contenedor Escaneo View Model</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorEscaneoViewModel#getOwnedByUI <em>Owned By UI</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>The Contenedor Escaneo View Model</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>The Contenedor Escaneo View Model</em>' containment reference.
-	 * @see #setTheContenedorEscaneoViewModel(ContenedorEscaneoViewModel)
-	 * @see sma.ui.UiPackage#getUI_TheContenedorEscaneoViewModel()
-	 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorEscaneoViewModel#getOwnedByUI
-	 * @model opposite="ownedByUI" containment="true"
-	 * @generated
-	 */
-	ContenedorEscaneoViewModel getTheContenedorEscaneoViewModel();
-
-	/**
-	 * Sets the value of the '{@link sma.ui.UI#getTheContenedorEscaneoViewModel <em>The Contenedor Escaneo View Model</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>The Contenedor Escaneo View Model</em>' containment reference.
-	 * @see #getTheContenedorEscaneoViewModel()
-	 * @generated
-	 */
-	void setTheContenedorEscaneoViewModel(ContenedorEscaneoViewModel value);
-
-	/**
 	 * Returns the value of the '<em><b>The Contenedor Contactar Cm View Model</b></em>' containment reference.
 	 * It is bidirectional and its opposite is '{@link sma.ui.viewmodels.contenedorcontactarcmviewmodel.ContenedorContactarCmViewModel#getOwnedByUI <em>Owned By UI</em>}'.
 	 * <!-- begin-user-doc -->
@@ -377,9 +349,37 @@ public interface UI extends EObject {
 	void setTheContenedorSolicitudVisitaViewModel(ContenedorSolicitudVisitaViewModel value);
 
 	/**
+	 * Returns the value of the '<em><b>The Contenedor Escaneo View Model</b></em>' containment reference.
+	 * It is bidirectional and its opposite is '{@link sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorEscaneoViewModel#getOwnedByUI <em>Owned By UI</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>The Contenedor Escaneo View Model</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>The Contenedor Escaneo View Model</em>' containment reference.
+	 * @see #setTheContenedorEscaneoViewModel(ContenedorEscaneoViewModel)
+	 * @see sma.ui.UiPackage#getUI_TheContenedorEscaneoViewModel()
+	 * @see sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorEscaneoViewModel#getOwnedByUI
+	 * @model opposite="ownedByUI" containment="true"
+	 * @generated
+	 */
+	ContenedorEscaneoViewModel getTheContenedorEscaneoViewModel();
+
+	/**
+	 * Sets the value of the '{@link sma.ui.UI#getTheContenedorEscaneoViewModel <em>The Contenedor Escaneo View Model</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\r\n\t\tContenedorCrudClienteViewModel crudCLienteVM = getTheContenedorCrudClienteViewModel();\r\n\t\tContenedorCRUDCMViewModel crudCMVM = getTheContenedorCRUDCMViewModel();\r\n\t\tContenedorRegistroVehiculoViewModel registroVehiVM = getTheContenedorRegistroVehiculoViewModel();\r\n\t\tContenedorLoginViewModel loginVM = getTheContenedorLoginViewModel();\r\n\t\tContenedorEscaneoViewModel escaneoClienteVM = getTheContenedorEscaneoViewModel();\r\n\t\tContenedorContactarCmViewModel contactarCmVM = getTheContenedorContactarCmViewModel();\r\n\t\tContenedorSolicitudVisitaViewModel solicitudVisitaVM = getTheContenedorSolicitudVisitaViewModel();\r\n\r\n\t\tif (crudCLienteVM == null) {\r\n\t\t\tcrudCLienteVM = sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelFactory.eINSTANCE\r\n\t\t\t\t\t.createContenedorCrudClienteViewModel();\r\n\t\t}\r\n\r\n\t\tif (crudCMVM == null) {\r\n\t\t\tcrudCMVM = sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelFactory.eINSTANCE\r\n\t\t\t\t\t.createContenedorCRUDCMViewModel();\r\n\t\t}\r\n\r\n\t\tif (registroVehiVM == null) {\r\n\t\t\tregistroVehiVM = sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorregistrovehiculoviewmodelFactory.eINSTANCE\r\n\t\t\t\t\t.createContenedorRegistroVehiculoViewModel();\r\n\t\t}\r\n\r\n\t\tif (loginVM == null) {\r\n\t\t\tloginVM = sma.ui.viewmodels.contenedorloginviewmodel.ContenedorloginviewmodelFactory.eINSTANCE\r\n\t\t\t\t\t.createContenedorLoginViewModel();\r\n\t\t}\r\n\r\n\t\tif (escaneoClienteVM == null) {\r\n\t\t\tescaneoClienteVM = sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorescaneoviewmodelFactory.eINSTANCE\r\n\t\t\t\t\t.createContenedorEscaneoViewModel();\r\n\t\t}\r\n\r\n\t\tif (contactarCmVM == null) {\r\n\t\t\tcontactarCmVM = sma.ui.viewmodels.contenedorcontactarcmviewmodel.ContenedorcontactarcmviewmodelFactory.eINSTANCE\r\n\t\t\t\t\t.createContenedorContactarCmViewModel();\r\n\t\t}\r\n\r\n\t\tif (solicitudVisitaVM == null) {\r\n\t\t\tsolicitudVisitaVM = sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.ContenedorsolicitudvisitaviewmodelFactory.eINSTANCE\r\n\t\t\t\t\t.createContenedorSolicitudVisitaViewModel();\r\n\t\t}\r\n\r\n\t\tsetTheContenedorCrudClienteViewModel(crudCLienteVM);\r\n\t\tsetTheContenedorCRUDCMViewModel(crudCMVM);\r\n\t\tsetTheContenedorRegistroVehiculoViewModel(registroVehiVM);\r\n\t\tsetTheContenedorLoginViewModel(loginVM);\r\n\t\tsetTheContenedorEscaneoViewModel(escaneoClienteVM);\r\n\t\tsetTheContenedorContactarCmViewModel(contactarCmVM);\r\n\t\tsetTheContenedorSolicitudVisitaViewModel(solicitudVisitaVM);\r\n\r\n\t\tcrudCLienteVM.implementarModelo();\r\n\t\tcrudCMVM.implementarModelo();\r\n\t\tregistroVehiVM.implementarModelo();\r\n\t\tloginVM.implementarModelo();\r\n\t\tescaneoClienteVM.implementarModelo();\r\n\t\tcontactarCmVM.implementarModelo();\r\n\t\tsolicitudVisitaVM.implementarModelo();\r\n\r\n\t'"
+	 * @param value the new value of the '<em>The Contenedor Escaneo View Model</em>' containment reference.
+	 * @see #getTheContenedorEscaneoViewModel()
+	 * @generated
+	 */
+	void setTheContenedorEscaneoViewModel(ContenedorEscaneoViewModel value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\t\t\t\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\tContenedorCrudClienteViewModel crudCLienteVM = getTheContenedorCrudClienteViewModel();\r\n\t\t\t\t\t\t\t\t\t\t\t\tContenedorCRUDCMViewModel crudCMVM = getTheContenedorCRUDCMViewModel();\r\n\t\t\t\t\t\t\t\t\t\t\t\tContenedorRegistroVehiculoViewModel registroVehiVM = getTheContenedorRegistroVehiculoViewModel();\r\n\t\t\t\t\t\t\t\t\t\t\t\tContenedorLoginViewModel loginVM = getTheContenedorLoginViewModel();\r\n\t\t\t\t\t\t\t\t\t\t\t\tContenedorEscaneoViewModel escaneoClienteVM = getTheContenedorEscaneoViewModel();\r\n\t\t\t\t\t\t\t\t\t\t\t\tContenedorContactarCmViewModel contactarCmVM = getTheContenedorContactarCmViewModel();\r\n\t\t\t\t\t\t\t\t\t\t\t\tContenedorSolicitudVisitaViewModel solicitudVisitaVM = getTheContenedorSolicitudVisitaViewModel();\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\tif (crudCLienteVM == null) {\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tcrudCLienteVM = sma.ui.viewmodels.contenedorcrudclienteviewmodel.ContenedorcrudclienteviewmodelFactory.eINSTANCE\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t.createContenedorCrudClienteViewModel();\r\n\t\t\t\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\tif (crudCMVM == null) {\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tcrudCMVM = sma.ui.viewmodels.contenedorcrudcmviewmodel.ContenedorcrudcmviewmodelFactory.eINSTANCE\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t.createContenedorCRUDCMViewModel();\r\n\t\t\t\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\tif (registroVehiVM == null) {\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tregistroVehiVM = sma.ui.viewmodels.contenedorregistrovehiculoviewmodel.ContenedorregistrovehiculoviewmodelFactory.eINSTANCE\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t.createContenedorRegistroVehiculoViewModel();\r\n\t\t\t\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\tif (loginVM == null) {\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tloginVM = sma.ui.viewmodels.contenedorloginviewmodel.ContenedorloginviewmodelFactory.eINSTANCE\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t.createContenedorLoginViewModel();\r\n\t\t\t\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\tif (escaneoClienteVM == null) {\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tescaneoClienteVM = sma.ui.viewmodels.contenedorescaneoviewmodel.ContenedorescaneoviewmodelFactory.eINSTANCE\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t.createContenedorEscaneoViewModel();\r\n\t\t\t\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\tif (contactarCmVM == null) {\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tcontactarCmVM = sma.ui.viewmodels.contenedorcontactarcmviewmodel.ContenedorcontactarcmviewmodelFactory.eINSTANCE\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t.createContenedorContactarCmViewModel();\r\n\t\t\t\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\tif (solicitudVisitaVM == null) {\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tsolicitudVisitaVM = sma.ui.viewmodels.contenedorsolicitudvisitaviewmodel.ContenedorsolicitudvisitaviewmodelFactory.eINSTANCE\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t.createContenedorSolicitudVisitaViewModel();\r\n\t\t\t\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\tsetTheContenedorCrudClienteViewModel(crudCLienteVM);\r\n\t\t\t\t\t\t\t\t\t\t\t\tsetTheContenedorCRUDCMViewModel(crudCMVM);\r\n\t\t\t\t\t\t\t\t\t\t\t\tsetTheContenedorRegistroVehiculoViewModel(registroVehiVM);\r\n\t\t\t\t\t\t\t\t\t\t\t\tsetTheContenedorLoginViewModel(loginVM);\r\n\t\t\t\t\t\t\t\t\t\t\t\tsetTheContenedorEscaneoViewModel(escaneoClienteVM);\r\n\t\t\t\t\t\t\t\t\t\t\t\tsetTheContenedorContactarCmViewModel(contactarCmVM);\r\n\t\t\t\t\t\t\t\t\t\t\t\tsetTheContenedorSolicitudVisitaViewModel(solicitudVisitaVM);\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\tcrudCLienteVM.implementarModelo();\r\n\t\t\t\t\t\t\t\t\t\t\t\tcrudCMVM.implementarModelo();\r\n\t\t\t\t\t\t\t\t\t\t\t\tregistroVehiVM.implementarModelo();\r\n\t\t\t\t\t\t\t\t\t\t\t\tloginVM.implementarModelo();\r\n\t\t\t\t\t\t\t\t\t\t\t\tescaneoClienteVM.implementarModelo();\r\n\t\t\t\t\t\t\t\t\t\t\t\tcontactarCmVM.implementarModelo();\r\n\t\t\t\t\t\t\t\t\t\t\t\tsolicitudVisitaVM.implementarModelo();\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\r\n\t'"
 	 * @generated
 	 */
 	void implementarModelo();
@@ -387,7 +387,7 @@ public interface UI extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\r\n\t\tgetTheDomain().registrarUsuario(formulario);\r\n\r\n\t'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\t\t\t\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\tgetTheDomain().registrarUsuario(formulario);\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\r\n\t'"
 	 * @generated
 	 */
 	void registrarCliente(ContenedorCrudClienteViewModel formulario);
@@ -395,7 +395,7 @@ public interface UI extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\r\n\t\tgetTheDomain().registrarCm(formulario);\r\n\r\n\t'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\t\t\t\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\tgetTheDomain().registrarCm(formulario);\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\r\n\t'"
 	 * @generated
 	 */
 	void RegistrarCm(ContenedorCRUDCMViewModel formulario);
@@ -403,7 +403,7 @@ public interface UI extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\r\n\t\tif (getTipoLogueado() != null) {\r\n\t\t\tif (getTipoLogueado().equals(\"sin logueo\")) {\r\n\t\t\t\tSystem.out.println(\"no hay usuarios logueados\");\r\n\t\t\t} else {\r\n\t\t\t\tif (getTipoLogueado().equals(\"cm\")) {\r\n\t\t\t\t\tSystem.out.println(\"el usuario logueado no tiene acceso a registrar vehiculos\");\r\n\t\t\t\t} else {\r\n\t\t\t\t\tif (getTipoLogueado().equals(\"cliente\")) {\r\n\t\t\t\t\t\tgetTheDomain().registrarAutomovil(formulario, getIdLogueado());\r\n\t\t\t\t\t}\r\n\r\n\t\t\t\t}\r\n\r\n\t\t\t}\r\n\t\t} else {\r\n\t\t\tSystem.out.println(\"no hay usuarios logueados\");\r\n\t\t}\r\n\r\n\t'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\t\t\t\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\tif (getTipoLogueado() != null) {\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tif (getTipoLogueado().equals(\"sin logueo\")) {\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tSystem.out.println(\"no hay usuarios logueados\");\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t} else {\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tif (getTipoLogueado().equals(\"cm\")) {\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSystem.out.println(\"el usuario logueado no tiene acceso a registrar vehiculos\");\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t} else {\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tif (getTipoLogueado().equals(\"cliente\")) {\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tgetTheDomain().registrarAutomovil(formulario, getIdLogueado());\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\t\t\t\t} else {\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tSystem.out.println(\"no hay usuarios logueados\");\r\n\t\t\t\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\r\n\t'"
 	 * @generated
 	 */
 	void registrarVehiculo(ContenedorRegistroVehiculoViewModel formulario);
@@ -411,7 +411,7 @@ public interface UI extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\r\n\t\tgetTheDomain().actualizarCrudCliente(formulario);\r\n\r\n\t'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\t\t\t\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\tgetTheDomain().actualizarCrudCliente(formulario);\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\r\n\t'"
 	 * @generated
 	 */
 	void actualizarCrudCliente(ContenedorCrudClienteViewModel formulario);
@@ -419,7 +419,7 @@ public interface UI extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\r\n\t\tgetTheDomain().actualizarCrudCm(formulario);\r\n\r\n\t'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\t\t\t\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\tgetTheDomain().actualizarCrudCm(formulario);\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\r\n\t'"
 	 * @generated
 	 */
 	void actualizarCrudCm(ContenedorCRUDCMViewModel formulario);
@@ -427,7 +427,7 @@ public interface UI extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\r\n\t\tgetTheDomain().actualizarVentanaRegistroCliente(formulario);\r\n\r\n\t'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\t\t\t\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\tgetTheDomain().actualizarVentanaRegistroCliente(formulario);\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\r\n\t'"
 	 * @generated
 	 */
 	void actualizarVentanaRegistroVehiculo(ContenedorRegistroVehiculoViewModel formulario);
@@ -436,7 +436,7 @@ public interface UI extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="sma.EBooleanObject"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\r\n\t\tboolean login;\r\n\t\tlogin = getTheDomain().hacerLogin(formulario);\r\n\r\n\t\tif (login) {\r\n\t\t\tactualizarVentanaRegistroVehiculo(getTheContenedorRegistroVehiculoViewModel());\r\n\t\t}\r\n\t\treturn login;\r\n\r\n\t'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\t\t\t\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\tboolean login;\r\n\t\t\t\t\t\t\t\t\t\t\t\tlogin = getTheDomain().hacerLogin(formulario);\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\tif (login) {\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tactualizarVentanaRegistroVehiculo(getTheContenedorRegistroVehiculoViewModel());\r\n\t\t\t\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\t\t\t\treturn login;\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\r\n\t'"
 	 * @generated
 	 */
 	Boolean hacerLogin(ContenedorLoginViewModel formulario);
@@ -444,16 +444,15 @@ public interface UI extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model placaVehDataType="sma.String"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\r\n\t\tgetTheDomain().escanearVehiculo(placaVeh);\r\n\r\n\t'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\t\t\t\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\tgetTheDomain().escanearVehiculo(formulario);\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\r\n\t'"
 	 * @generated
 	 */
-	void escanearVehiculo(String placaVeh);
+	void escanearVehiculo(ContenedorEscaneoViewModel formulario);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\r\n\t\tgetTheDomain().mostrarEstadoVehCliente(formulario);\r\n\r\n\t'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\t\t\t\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\tgetTheDomain().mostrarEstadoVehCliente(formulario);\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\r\n\t'"
 	 * @generated
 	 */
 	void mostrarEstadoVehCliente(ContenedorEscaneoViewModel formulario);
@@ -461,7 +460,7 @@ public interface UI extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\r\n\t\tgetTheDomain().mostrarCmsCercanos(formulario);\r\n\r\n\t'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\t\t\t\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\tgetTheDomain().mostrarCmsCercanos(formulario);\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\r\n\t'"
 	 * @generated
 	 */
 	void mostrarCmsCercanos(ContenedorContactarCmViewModel formulario);
@@ -469,7 +468,7 @@ public interface UI extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\r\n\t\tif (getTipoLogueado() != null) {\r\n\t\t\tif (getTipoLogueado().equals(\"sin logueo\")) {\r\n\t\t\t\tSystem.out.println(\"no hay usuarios logueados\");\r\n\t\t\t} else {\r\n\t\t\t\tif (getTipoLogueado().equals(\"cm\")) {\r\n\t\t\t\t\tSystem.out.println(\"el usuario logueado no tiene acceso a registrar vehiculos\");\r\n\t\t\t\t} else {\r\n\t\t\t\t\tif (getTipoLogueado().equals(\"cliente\")) {\r\n\t\t\t\t\t\tgetTheDomain().solicitarVisita(formulario);\r\n\t\t\t\t\t}\r\n\r\n\t\t\t\t}\r\n\r\n\t\t\t}\r\n\t\t} else {\r\n\t\t\tSystem.out.println(\"no hay usuarios logueados\");\r\n\t\t}\r\n\t'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\t\t\t\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\tif (getTipoLogueado() != null) {\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tif (getTipoLogueado().equals(\"sin logueo\")) {\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tSystem.out.println(\"no hay usuarios logueados\");\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t} else {\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tif (getTipoLogueado().equals(\"cm\")) {\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSystem.out.println(\"el usuario logueado no tiene acceso a registrar vehiculos\");\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t} else {\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tif (getTipoLogueado().equals(\"cliente\")) {\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tgetTheDomain().solicitarVisita(formulario);\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\t\t\t\t} else {\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tSystem.out.println(\"no hay usuarios logueados\");\r\n\t\t\t\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\r\n\t'"
 	 * @generated
 	 */
 	void solicitarVisita(ContenedorSolicitudVisitaViewModel formulario);
@@ -478,9 +477,17 @@ public interface UI extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model idCmDataType="sma.String"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='\t\r\n\t\t\r\n\t\tif (getTipoLogueado() != null) {\r\n\t\t\tif (getTipoLogueado().equals(\"sin logueo\")) {\r\n\t\t\t\tSystem.out.println(\"no hay usuarios logueados\");\r\n\t\t\t} else {\r\n\t\t\t\tif (getTipoLogueado().equals(\"cm\")) {\r\n\t\t\t\t\tSystem.out.println(\"el usuario logueado no tiene acceso a registrar vehiculos\");\r\n\t\t\t\t} else {\r\n\t\t\t\t\tif (getTipoLogueado().equals(\"cliente\")) {\r\n\t\t\t\t\t\tgetTheDomain().mostrarInfoCmSolicitudVisita(idCm, getTheContenedorSolicitudVisitaViewModel());\r\n\t\t\t\t\t}\r\n\r\n\t\t\t\t}\r\n\r\n\t\t\t}\r\n\t\t} else {\r\n\t\t\tSystem.out.println(\"no hay usuarios logueados\");\r\n\t\t}\r\n\t\t\r\n\t'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='\r\n\t\t\r\n\t\t\t\t\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\tif (getTipoLogueado() != null) {\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tif (getTipoLogueado().equals(\"sin logueo\")) {\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tSystem.out.println(\"no hay usuarios logueados\");\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t} else {\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tif (getTipoLogueado().equals(\"cm\")) {\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSystem.out.println(\"el usuario logueado no tiene acceso a registrar vehiculos\");\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t} else {\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tif (getTipoLogueado().equals(\"cliente\")) {\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tgetTheDomain().mostrarInfoCmSolicitudVisita(idCm, getTheContenedorSolicitudVisitaViewModel());\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\t\t\t\t} else {\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tSystem.out.println(\"no hay usuarios logueados\");\r\n\t\t\t\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\r\n\t\t\t\r\n\t'"
 	 * @generated
 	 */
 	void mostrarInfoCmSolicitudVisita(String idCm);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='//TODO hacerLogOut\n'"
+	 * @generated
+	 */
+	void hacerLogOut();
 
 } // UI

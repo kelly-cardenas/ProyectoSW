@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:tooldataform.ui="http:///tooldataform/ui.ecore" xsi:schemaLocation="http:///tooldataform/ui.ecore http:///tooldataform.ecore#//ui">
   <tooldataform.ui:UI_Diagram xmi:id="_NXkzcI7iEeql8utp8Vp7EQ" name="ViewPart: Escaneo">
-    <theUserInterface xmi:type="tooldataform.ui:UserInterface" xmi:id="_xS0SwY7iEeql8utp8Vp7EQ" name="Escaneo" id="_xS0SwI7iEeql8utp8Vp7EQ" width="529" height="421" positionX="84" positionY="24">
+    <theUserInterface xmi:type="tooldataform.ui:UserInterface" xmi:id="_xS0SwY7iEeql8utp8Vp7EQ" name="Escaneo" id="_xS0SwI7iEeql8utp8Vp7EQ" width="529" height="337" positionX="84" positionY="24">
       <listWidget xmi:type="tooldataform.ui:Group" xmi:id="_Vyeb0I7lEeql8utp8Vp7EQ" name="seleccion auto" id="cardseleccionauto" font="Segoe UI" width="481" height="121" positionX="18" positionY="16" textColor="0" textSize="9" textStyle="false">
         <listIndividualWidge xmi:type="tooldataform.ui:TextView" xmi:id="_0gav0I7lEeql8utp8Vp7EQ" name="Vehiculo:" id="cardVehiculo" font="Segoe UI" width="109" height="25" positionX="79" positionY="15" textColor="0" textSize="9" textStyle="false"/>
         <listIndividualWidge xmi:type="tooldataform.ui:Button" xmi:id="_7Wh2kI7mEeql8utp8Vp7EQ" name="ESCANEAR" colour="0" font="Segoe UI" width="-1" height="-1" positionX="187" positionY="59" idWidget="_7Wh2kY7mEeql8utp8Vp7EQ" textColor="0" textSize="9" textStyle="false"/>
         <listIndividualWidge xmi:type="tooldataform.ui:TextComponent" xmi:id="_PrlmYI9DEeq3IuJzw6yj9w" name="placaVehiculo" id="cardplacaVehiculo" font="Segoe UI" width="145" height="25" positionX="259" positionY="15" textColor="0" textSize="9" textStyle="false"/>
       </listWidget>
-      <listWidget xmi:type="tooldataform.ui:Group" xmi:id="_ZadPII7lEeql8utp8Vp7EQ" name="fallas" id="cardfallas" font="Segoe UI" width="481" height="217" positionX="18" positionY="148" textColor="0" textSize="9" textStyle="false">
-        <listIndividualWidge xmi:type="tooldataform.ui:TextView" xmi:id="_CJCIUI7rEeql8utp8Vp7EQ" name="Fallas:" id="cardFallas" font="Segoe UI" width="35" height="-1" positionX="21" positionY="16" textColor="0" textSize="9" textStyle="false"/>
-        <listIndividualWidge xmi:type="tooldataform.ui:TextComponent" xmi:id="_kCZPcI7rEeql8utp8Vp7EQ" name="numero errores" id="cardnumeroerrores" font="Segoe UI" width="37" height="-1" positionX="79" positionY="17" textColor="0" textSize="9" textStyle="false"/>
-        <listIndividualWidge xmi:type="tooldataform.ui:TextView" xmi:id="_qh0xAI7rEeql8utp8Vp7EQ" name="Estado" id="cardEstado" font="Segoe UI" width="45" height="-1" positionX="247" positionY="16" textColor="0" textSize="9" textStyle="false"/>
-        <listIndividualWidge xmi:type="tooldataform.ui:TextComponent" xmi:id="_ssnNkI7rEeql8utp8Vp7EQ" name="estadoVeh" id="cardestadoVeh" font="Segoe UI" width="109" height="-1" positionX="307" positionY="17" textColor="0" textSize="9" textStyle="false"/>
-        <listGraphicalContainerWidget xmi:type="tooldataform.ui:TableView" xmi:id="_Nhi1gI7nEeql8utp8Vp7EQ" name="listaFallas" id="cardlistaFallas" width="457" height="121" positionX="7" positionY="51">
-          <listColumView xmi:type="tooldataform.ui:ColumView" xmi:id="_sGyOkI7pEeql8utp8Vp7EQ" name="gravedad"/>
-          <listColumView xmi:type="tooldataform.ui:ColumView" xmi:id="_47aXoI7pEeql8utp8Vp7EQ" name="piesaAveriada"/>
-          <listColumView xmi:type="tooldataform.ui:ColumView" xmi:id="_CGlGsI7qEeql8utp8Vp7EQ" name="origen"/>
-          <listColumView xmi:type="tooldataform.ui:ColumView" xmi:id="_PBMjAI7qEeql8utp8Vp7EQ" name="descripcion"/>
-        </listGraphicalContainerWidget>
+      <listWidget xmi:type="tooldataform.ui:Group" xmi:id="_ZadPII7lEeql8utp8Vp7EQ" name="Informacion Emision Gases" id="cardInformacionEmisionGases" font="Segoe UI" width="481" height="145" positionX="18" positionY="148" textColor="0" textSize="9" textStyle="false">
+        <listIndividualWidge xmi:type="tooldataform.ui:TextComponent" xmi:id="_kCZPcI7rEeql8utp8Vp7EQ" name="gasesOfensivos" id="cardgasesOfensivos" font="Segoe UI" width="37" height="-1" positionX="379" positionY="16" textColor="0" textSize="9" textStyle="false"/>
+        <listIndividualWidge xmi:type="tooldataform.ui:TextView" xmi:id="_qh0xAI7rEeql8utp8Vp7EQ" name="gases nocivos" id="cardgasesnocivos" font="Segoe UI" width="85" height="-1" positionX="19" positionY="15" textColor="0" textSize="9" textStyle="false"/>
+        <listIndividualWidge xmi:type="tooldataform.ui:TextComponent" xmi:id="_ssnNkI7rEeql8utp8Vp7EQ" name="gasesNocivos" id="cardgasesNocivos" font="Segoe UI" width="37" height="-1" positionX="139" positionY="16" textColor="0" textSize="9" textStyle="false"/>
+        <listIndividualWidge xmi:type="tooldataform.ui:TextView" xmi:id="_Vo1BQJRvEeqFbvesYn-jWw" name="Gases ofensivos" id="cardGasesofensivos" font="Segoe UI" width="-1" height="-1" positionX="247" positionY="15" textColor="0" textSize="9" textStyle="false"/>
+        <listIndividualWidge xmi:type="tooldataform.ui:TextView" xmi:id="_vK3REJRvEeqFbvesYn-jWw" name="Evaluacion general emisiones" id="cardEvaluaciongeneralemisiones" font="Segoe UI" width="157" height="-1" positionX="79" positionY="63" textColor="0" textSize="9" textStyle="false"/>
+        <listIndividualWidge xmi:type="tooldataform.ui:TextComponent" xmi:id="_yJEuoJRvEeqFbvesYn-jWw" name="estadoVehiculo" id="cardestadoVehiculo" font="Segoe UI" width="-1" height="-1" positionX="260" positionY="64" textColor="0" textSize="9" textStyle="false"/>
       </listWidget>
     </theUserInterface>
   </tooldataform.ui:UI_Diagram>
@@ -58,84 +54,59 @@
         <children xmi:type="notation:Node" xmi:id="_ZagScI7lEeql8utp8Vp7EQ" type="3027" element="_ZadPII7lEeql8utp8Vp7EQ">
           <children xmi:type="notation:DecorationNode" xmi:id="_ZahgkI7lEeql8utp8Vp7EQ" type="5033"/>
           <children xmi:type="notation:BasicCompartment" xmi:id="_ZahgkY7lEeql8utp8Vp7EQ" type="7008">
-            <children xmi:type="notation:Node" xmi:id="_NhkqsI7nEeql8utp8Vp7EQ" type="3032" element="_Nhi1gI7nEeql8utp8Vp7EQ">
-              <children xmi:type="notation:DecorationNode" xmi:id="_Nhl40I7nEeql8utp8Vp7EQ" type="5031"/>
-              <children xmi:type="notation:DecorationNode" xmi:id="_NhoVEI7nEeql8utp8Vp7EQ" type="7012">
-                <children xmi:type="notation:Node" xmi:id="_sGzcsI7pEeql8utp8Vp7EQ" type="3033" element="_sGyOkI7pEeql8utp8Vp7EQ">
-                  <children xmi:type="notation:DecorationNode" xmi:id="_sG0DwI7pEeql8utp8Vp7EQ" type="5030"/>
-                  <styles xmi:type="notation:DescriptionStyle" xmi:id="_sGzcsY7pEeql8utp8Vp7EQ"/>
-                  <styles xmi:type="notation:FontStyle" xmi:id="_sGzcso7pEeql8utp8Vp7EQ" fontName="Segoe UI"/>
-                  <styles xmi:type="notation:FillStyle" xmi:id="_sGzcs47pEeql8utp8Vp7EQ"/>
-                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sGzctI7pEeql8utp8Vp7EQ"/>
-                </children>
-                <children xmi:type="notation:Node" xmi:id="_47a-sI7pEeql8utp8Vp7EQ" type="3033" element="_47aXoI7pEeql8utp8Vp7EQ">
-                  <children xmi:type="notation:DecorationNode" xmi:id="_47a-tY7pEeql8utp8Vp7EQ" type="5030"/>
-                  <styles xmi:type="notation:DescriptionStyle" xmi:id="_47a-sY7pEeql8utp8Vp7EQ"/>
-                  <styles xmi:type="notation:FontStyle" xmi:id="_47a-so7pEeql8utp8Vp7EQ" fontName="Segoe UI"/>
-                  <styles xmi:type="notation:FillStyle" xmi:id="_47a-s47pEeql8utp8Vp7EQ"/>
-                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_47a-tI7pEeql8utp8Vp7EQ"/>
-                </children>
-                <children xmi:type="notation:Node" xmi:id="_CGmU0I7qEeql8utp8Vp7EQ" type="3033" element="_CGlGsI7qEeql8utp8Vp7EQ">
-                  <children xmi:type="notation:DecorationNode" xmi:id="_CGmU1Y7qEeql8utp8Vp7EQ" type="5030"/>
-                  <styles xmi:type="notation:DescriptionStyle" xmi:id="_CGmU0Y7qEeql8utp8Vp7EQ"/>
-                  <styles xmi:type="notation:FontStyle" xmi:id="_CGmU0o7qEeql8utp8Vp7EQ" fontName="Segoe UI"/>
-                  <styles xmi:type="notation:FillStyle" xmi:id="_CGmU047qEeql8utp8Vp7EQ"/>
-                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CGmU1I7qEeql8utp8Vp7EQ"/>
-                </children>
-                <children xmi:type="notation:Node" xmi:id="_PBNxII7qEeql8utp8Vp7EQ" type="3033" element="_PBMjAI7qEeql8utp8Vp7EQ">
-                  <children xmi:type="notation:DecorationNode" xmi:id="_PBOYMI7qEeql8utp8Vp7EQ" type="5030"/>
-                  <styles xmi:type="notation:DescriptionStyle" xmi:id="_PBNxIY7qEeql8utp8Vp7EQ"/>
-                  <styles xmi:type="notation:FontStyle" xmi:id="_PBNxIo7qEeql8utp8Vp7EQ" fontName="Segoe UI"/>
-                  <styles xmi:type="notation:FillStyle" xmi:id="_PBNxI47qEeql8utp8Vp7EQ"/>
-                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PBNxJI7qEeql8utp8Vp7EQ"/>
-                </children>
-                <styles xmi:type="notation:SortingStyle" xmi:id="_NhoVEY7nEeql8utp8Vp7EQ"/>
-                <styles xmi:type="notation:FilteringStyle" xmi:id="_NhoVEo7nEeql8utp8Vp7EQ"/>
-              </children>
-              <styles xmi:type="notation:DescriptionStyle" xmi:id="_NhkqsY7nEeql8utp8Vp7EQ"/>
-              <styles xmi:type="notation:FontStyle" xmi:id="_Nhkqso7nEeql8utp8Vp7EQ" fontName="Segoe UI"/>
-              <styles xmi:type="notation:FillStyle" xmi:id="_Nhkqs47nEeql8utp8Vp7EQ"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NhkqtI7nEeql8utp8Vp7EQ" x="7" y="51" width="457" height="121"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_CJDWcI7rEeql8utp8Vp7EQ" type="3012" element="_CJCIUI7rEeql8utp8Vp7EQ">
-              <children xmi:type="notation:DecorationNode" xmi:id="_CJDWdY7rEeql8utp8Vp7EQ" type="5010"/>
-              <styles xmi:type="notation:DescriptionStyle" xmi:id="_CJDWcY7rEeql8utp8Vp7EQ"/>
-              <styles xmi:type="notation:FontStyle" xmi:id="_CJDWco7rEeql8utp8Vp7EQ" fontName="Segoe UI"/>
-              <styles xmi:type="notation:FillStyle" xmi:id="_CJDWc47rEeql8utp8Vp7EQ"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CJDWdI7rEeql8utp8Vp7EQ" x="21" y="16" width="35"/>
-            </children>
             <children xmi:type="notation:Node" xmi:id="_kCZ2gI7rEeql8utp8Vp7EQ" type="3013" element="_kCZPcI7rEeql8utp8Vp7EQ">
               <children xmi:type="notation:DecorationNode" xmi:id="_kCadkI7rEeql8utp8Vp7EQ" type="5011"/>
               <styles xmi:type="notation:DescriptionStyle" xmi:id="_kCZ2gY7rEeql8utp8Vp7EQ"/>
               <styles xmi:type="notation:FontStyle" xmi:id="_kCZ2go7rEeql8utp8Vp7EQ" fontName="Segoe UI"/>
               <styles xmi:type="notation:FillStyle" xmi:id="_kCZ2g47rEeql8utp8Vp7EQ"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kCZ2hI7rEeql8utp8Vp7EQ" x="79" y="17" width="37"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kCZ2hI7rEeql8utp8Vp7EQ" x="379" y="16" width="37"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_qh2mMI7rEeql8utp8Vp7EQ" type="3012" element="_qh0xAI7rEeql8utp8Vp7EQ">
               <children xmi:type="notation:DecorationNode" xmi:id="_qh3NQI7rEeql8utp8Vp7EQ" type="5010"/>
               <styles xmi:type="notation:DescriptionStyle" xmi:id="_qh2mMY7rEeql8utp8Vp7EQ"/>
               <styles xmi:type="notation:FontStyle" xmi:id="_qh2mMo7rEeql8utp8Vp7EQ" fontName="Segoe UI"/>
               <styles xmi:type="notation:FillStyle" xmi:id="_qh2mM47rEeql8utp8Vp7EQ"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qh2mNI7rEeql8utp8Vp7EQ" x="247" y="16" width="45"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qh2mNI7rEeql8utp8Vp7EQ" x="19" y="15" width="85"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_ssn0oI7rEeql8utp8Vp7EQ" type="3013" element="_ssnNkI7rEeql8utp8Vp7EQ">
               <children xmi:type="notation:DecorationNode" xmi:id="_sspCwI7rEeql8utp8Vp7EQ" type="5011"/>
               <styles xmi:type="notation:DescriptionStyle" xmi:id="_ssn0oY7rEeql8utp8Vp7EQ"/>
               <styles xmi:type="notation:FontStyle" xmi:id="_ssn0oo7rEeql8utp8Vp7EQ" fontName="Segoe UI"/>
               <styles xmi:type="notation:FillStyle" xmi:id="_ssn0o47rEeql8utp8Vp7EQ"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ssn0pI7rEeql8utp8Vp7EQ" x="307" y="17" width="109"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ssn0pI7rEeql8utp8Vp7EQ" x="139" y="16" width="37"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_Vo-yQJRvEeqFbvesYn-jWw" type="3012" element="_Vo1BQJRvEeqFbvesYn-jWw">
+              <children xmi:type="notation:DecorationNode" xmi:id="_Vo_ZUJRvEeqFbvesYn-jWw" type="5010"/>
+              <styles xmi:type="notation:DescriptionStyle" xmi:id="_Vo-yQZRvEeqFbvesYn-jWw"/>
+              <styles xmi:type="notation:FontStyle" xmi:id="_Vo-yQpRvEeqFbvesYn-jWw" fontName="Segoe UI"/>
+              <styles xmi:type="notation:FillStyle" xmi:id="_Vo-yQ5RvEeqFbvesYn-jWw"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Vo-yRJRvEeqFbvesYn-jWw" x="247" y="15"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_vK9XsJRvEeqFbvesYn-jWw" type="3012" element="_vK3REJRvEeqFbvesYn-jWw">
+              <children xmi:type="notation:DecorationNode" xmi:id="_vK-l0JRvEeqFbvesYn-jWw" type="5010"/>
+              <styles xmi:type="notation:DescriptionStyle" xmi:id="_vK9XsZRvEeqFbvesYn-jWw"/>
+              <styles xmi:type="notation:FontStyle" xmi:id="_vK9XspRvEeqFbvesYn-jWw" fontName="Segoe UI"/>
+              <styles xmi:type="notation:FillStyle" xmi:id="_vK9Xs5RvEeqFbvesYn-jWw"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vK9XtJRvEeqFbvesYn-jWw" x="79" y="63" width="157"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_yJHK4JRvEeqFbvesYn-jWw" type="3013" element="_yJEuoJRvEeqFbvesYn-jWw">
+              <children xmi:type="notation:DecorationNode" xmi:id="_yJHK5ZRvEeqFbvesYn-jWw" type="5011"/>
+              <styles xmi:type="notation:DescriptionStyle" xmi:id="_yJHK4ZRvEeqFbvesYn-jWw"/>
+              <styles xmi:type="notation:FontStyle" xmi:id="_yJHK4pRvEeqFbvesYn-jWw" fontName="Segoe UI"/>
+              <styles xmi:type="notation:FillStyle" xmi:id="_yJHK45RvEeqFbvesYn-jWw"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yJHK5JRvEeqFbvesYn-jWw" x="260" y="64"/>
             </children>
           </children>
           <styles xmi:type="notation:DescriptionStyle" xmi:id="_ZagScY7lEeql8utp8Vp7EQ"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_ZagSco7lEeql8utp8Vp7EQ" fontName="Segoe UI"/>
           <styles xmi:type="notation:FillStyle" xmi:id="_ZagSc47lEeql8utp8Vp7EQ"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZagSdI7lEeql8utp8Vp7EQ" x="18" y="148" width="481" height="217"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZagSdI7lEeql8utp8Vp7EQ" x="18" y="148" width="481" height="145"/>
         </children>
       </children>
       <styles xmi:type="notation:DescriptionStyle" xmi:id="_xYzmAY7iEeql8utp8Vp7EQ"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_xYzmAo7iEeql8utp8Vp7EQ" fontName="Segoe UI"/>
       <styles xmi:type="notation:FillStyle" xmi:id="_xYzmA47iEeql8utp8Vp7EQ"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xYzmBI7iEeql8utp8Vp7EQ" x="84" y="24" width="529" height="421"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xYzmBI7iEeql8utp8Vp7EQ" x="84" y="24" width="529" height="337"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_Na2w8Y7iEeql8utp8Vp7EQ"/>
   </notation:Diagram>

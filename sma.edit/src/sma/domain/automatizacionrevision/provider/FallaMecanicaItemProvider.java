@@ -64,8 +64,9 @@ public class FallaMecanicaItemProvider
 
 			addPiesaAveriadaPropertyDescriptor(object);
 			addGravedadPropertyDescriptor(object);
-			addOrigenPropertyDescriptor(object);
 			addDescripcionPropertyDescriptor(object);
+			addGasesNocivosPropertyDescriptor(object);
+			addGasesOfensivosPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -115,28 +116,6 @@ public class FallaMecanicaItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Origen feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addOrigenPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_FallaMecanica_origen_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_FallaMecanica_origen_feature", "_UI_FallaMecanica_type"),
-				 AutomatizacionrevisionPackage.Literals.FALLA_MECANICA__ORIGEN,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Descripcion feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -150,6 +129,50 @@ public class FallaMecanicaItemProvider
 				 getString("_UI_FallaMecanica_descripcion_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FallaMecanica_descripcion_feature", "_UI_FallaMecanica_type"),
 				 AutomatizacionrevisionPackage.Literals.FALLA_MECANICA__DESCRIPCION,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Gases Nocivos feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addGasesNocivosPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FallaMecanica_gasesNocivos_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FallaMecanica_gasesNocivos_feature", "_UI_FallaMecanica_type"),
+				 AutomatizacionrevisionPackage.Literals.FALLA_MECANICA__GASES_NOCIVOS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Gases Ofensivos feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addGasesOfensivosPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FallaMecanica_gasesOfensivos_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FallaMecanica_gasesOfensivos_feature", "_UI_FallaMecanica_type"),
+				 AutomatizacionrevisionPackage.Literals.FALLA_MECANICA__GASES_OFENSIVOS,
 				 true,
 				 false,
 				 false,
@@ -198,8 +221,9 @@ public class FallaMecanicaItemProvider
 		switch (notification.getFeatureID(FallaMecanica.class)) {
 			case AutomatizacionrevisionPackage.FALLA_MECANICA__PIESA_AVERIADA:
 			case AutomatizacionrevisionPackage.FALLA_MECANICA__GRAVEDAD:
-			case AutomatizacionrevisionPackage.FALLA_MECANICA__ORIGEN:
 			case AutomatizacionrevisionPackage.FALLA_MECANICA__DESCRIPCION:
+			case AutomatizacionrevisionPackage.FALLA_MECANICA__GASES_NOCIVOS:
+			case AutomatizacionrevisionPackage.FALLA_MECANICA__GASES_OFENSIVOS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
